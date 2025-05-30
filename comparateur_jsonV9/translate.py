@@ -55,7 +55,8 @@ def traduire(text, target_lang):
             temperature=0.3
         )
 
-        translated_text = response.choices[0].message.content.strip()
+        content = response.choices[0].message.content
+        translated_text = content.strip() if content else ""
         return translated_text
 
     except Exception as e:
