@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 9,
+    "Language": "en",
+    "Filename": "faults_000_007_001_009_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_009_Drive_Right_PAC425T100C_Fault09",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the motor module: BaseErrorCode_32 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the motor module: BaseErrorCode_32 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the motor module: BaseErrorCode_32 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Initialization of the engine module: BaseErrorCode_32 SecondaryErrorCode_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialization of the motor module: BaseErrorCode_32 SecondaryErrorCode_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module configuration: BaseErrorCode_33 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module configuration: BaseErrorCode_33 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module configuration: BaseErrorCode_33 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module configuration: BaseErrorCode_33 SecondaryErrorCode_4",
+      "IsExpandable": false
+    }
+  ]
+}

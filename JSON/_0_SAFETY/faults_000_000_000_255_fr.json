@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 0,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_000_000_255_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+  "Version": 5,
+  "FaultDetailList": [
+    {
+      "Description": "Version code sécurité non compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bouton arrêt d'urgence enfoncé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accessoire arrêt d'urgence",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Encodeur : désynchronisation de vitesse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Version code SoFtPLC non compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mouvement AMR non reconnue",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Groupe sortie PLC",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Contact aux. contacteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mouvement non autorisé avec clé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeur laser ralentissement avant gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeur laser ralentissement arrière droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeur laser arrêt avant gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeur laser arrêt arrière droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeu laser arrêt d'urgence avant gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Balayeu laser arrêt d'urgence arrière droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Encodeur : communication à gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Encodeur : communication à droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

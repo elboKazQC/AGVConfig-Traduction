@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 10,
+    "Language": "en",
+    "Filename": "faults_000_007_001_010_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_010_Drive_Right_PAC425T100C_Fault10",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BasicErrorCode_34 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_12",
+      "IsExpandable": false
+    }
+  ]
+}

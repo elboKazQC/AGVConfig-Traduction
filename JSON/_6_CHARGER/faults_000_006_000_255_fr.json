@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 6,
+        "IdLevel2": 0,
+        "IdLevel3": 255,
+        "Language": "fr",
+        "Filename": "faults_000_006_000_255_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Erreur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur CRC de communication",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de température de la batterie",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de délai d'attente logiciel de précharge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de batterie",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de délai d'attente de communication CAN",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de tension du réseau",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de bobine",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur du capteur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Erreur de mauvais positionnement",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement de ventilateur",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement de déclassement par température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement de déclassement de la batterie",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement d'erreur de positionnement",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement de déclassement de tension du réseau",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement de déclassement de puissance du réseau",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Avertissement d'état de déclassement par température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

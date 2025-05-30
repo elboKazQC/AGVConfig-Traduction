@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 2,
+    "IdLevel3": 255,
+    "language": "en",
+    "Filename": "faults_000_001_002_255_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_002_255_Accessory_MiniPL_LiftingPlatform",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "General status update",
+      "IsExpandable": false
+    },
+    {
+      "Description": "AGV Mode: Stop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Frontal Induction Detection Unavailable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Retro-induction detection unavailable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Moving upwards: Front laser detection not available",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Moving upwards: Rear detection by laser not available",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tunnel detection: Stop alert",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator position fault",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator position error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

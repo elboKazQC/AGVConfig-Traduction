@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 0,
+    "Language": "es",
+    "Filename": "faults_000_007_000_000_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_000_Drive_Left_PAC425T100C_Fault00",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Límite de par debido a la temperatura del controlador",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido a la temperatura del motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente de la tabla de rendimiento",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente temporal",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente I2T etapa 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente I2T etapa 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente I2T etapa 3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de torque debido al límite de alta tensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de baja tensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite del freno de mano",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al modo avanzado SPD1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al modo avanzado SPD2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente máxima de la batería",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par debido al límite de corriente de regeneración de la batería",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par de torsión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de torque para mantener el límite de velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ningún torque durante la limitación de frenado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Par de mantenimiento en pendiente",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par en modo avanzado e IA",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par en modo IA",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par CAN",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de par de torsión velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener el torque",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener la velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener el Flujo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener la corriente de Flujo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener la limitación del círculo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de mantener el límite hexagonal",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Limitación circular del motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor incapaz de posicionarse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

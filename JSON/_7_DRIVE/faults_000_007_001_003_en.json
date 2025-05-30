@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 3,
+    "Language": "en",
+    "Filename": "faults_000_007_001_003_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_003_Drive_Right_PAC425T100C_Fault03",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_61",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_62",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_63",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_64",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_65",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_66",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_67",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_68",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_69",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_70",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_71",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_72",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_73",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_74",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_75",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_76",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_77",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_78",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_79",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_80",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_81",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_82",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_83",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_84",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_85",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_86",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_87",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_998",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_>999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Default adjustments used: BaseErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Memory chip failure: BaseErrorCode_9 SecondaryErrorCode_>0",
+      "IsExpandable": false
+    }
+  ]
+}

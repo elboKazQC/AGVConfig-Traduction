@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 7,
+    "Language": "en",
+    "Filename": "faults_000_007_001_007_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_007_Drive_Right_PAC425T100C_Fault07",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Thermal stop failure: BaseErrorCode_26 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Thermal stop failure: BaseErrorCode_26 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Thermal stop failure: BaseErrorCode_26 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Thermal stop failure: BaseErrorCode_26 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit of the low-side MOSFETs. M1: BaseErrorCode_27 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit of the low-side MOSFETs. M2: BaseErrorCode_27 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit of the low-side MOSFETs. M3: BaseErrorCode_27 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Disconnected wire detected: BaseErrorCode_28 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_23",
+      "IsExpandable": false
+    }
+  ]
+}

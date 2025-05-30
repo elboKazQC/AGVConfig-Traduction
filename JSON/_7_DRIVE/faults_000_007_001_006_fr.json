@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 1,
+        "IdLevel3": 6,
+        "Language": "fr",
+        "Filename": "faults_000_007_001_006_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_001_006_Drive_Right_PAC425T100C_Fault06",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit MOSFET côté bas.M1 : CodeErreurDeBase_23 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit MOSFET côté bas.M2 : CodeErreurDeBase_23 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit MOSFET côté bas.M3 : CodeErreurDeBase_23 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_5",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_6",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_7",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_8",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_9",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_10",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_11",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_12",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_13",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_14",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_15",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_16",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_17",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_18",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_19",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        }
+    ]
+}

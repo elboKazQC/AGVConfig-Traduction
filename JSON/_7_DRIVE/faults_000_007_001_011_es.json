@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 11,
+    "Language": "es",
+    "Filename": "faults_000_007_001_011_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_011_Drive_Right_PAC425T100C_Fault11",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErrorDeBase_34 CodeErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErrorBase_34 CodeErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parámetros del módulo del motor: CodeErreurDeBase_34 CodeErreurSecondaire_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Calibración del sensor actual: CodeErreurDeBase_35 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Calibración del sensor actual: CodeErreurDeBase_35 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperatura del controlador superior a 100 grados: CodeErreurDeBase_36",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tiempo de espera genérico: CodeErrorBase_39 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tiempo de espera genérico: CodeErrorBase_39 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tiempo de espera genérico: CodeErrorBase_39 CodeErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del sistema: CodeErreurDeBase_40",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

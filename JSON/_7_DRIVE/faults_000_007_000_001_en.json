@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 1,
+    "Language": "en",
+    "Filename": "faults_000_007_000_001_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_001_Drive_Left_PAC425T100C_Fault01",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Voltage becomes low: BaseErrorCode_2 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes low: BaseErrorCode_2 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes low: BaseErrorCode_2 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes low: BaseErrorCode_2 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Drive Inhibition/CutBDI/BLC via CAN: BaseErrorCode_3 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Drive Inhibition/BDI Cut/BLC via CAN: BaseErrorCode_3 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CutOffBDI/BLC via CAN: BasicError Code_3 SecondaryError Code_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/BDI Cut-off/BLC via CAN: BaseErrorCode_3 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/Cut-off BDI/BLC via CAN: BasicError Code_3 SecondaryError Code_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CutOffBDI/BLC via CAN: BasicErrorcode_3 SecondaryErrorcode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Drive Inhibition/BDI Cut/BLC via CAN: BaseErrorCode_3 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes high: BaseErrorCode_4 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes high: BaseErrorCode_4 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes high: BaseErrorCode_4 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "The voltage becomes high: BaseErrorCode_4 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "High engine temperature: BaseErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "High controller temperature: BaseErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Out of range adjustment: BaseErrorCode_7 SecondaryErrorCode_21",
+      "IsExpandable": false
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "es",
+    "IdLevel0": 0,
+    "IdLevel1": 6,
+    "IdLevel2": 0,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Error de temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de CRC en la comunicación",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de temperatura de la batería",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de tiempo de espera del software de precarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de batería",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de tiempo de espera de comunicación CAN",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de tensión de la red",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de bobina",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error del sensor de temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de posicionamiento incorrecto",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de ventilador",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de degradación por temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de degradación de la batería",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de error de posicionamiento",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de degradación de la tensión de la red",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de degradación de potencia de la red",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Advertencia de estado de degradación por temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

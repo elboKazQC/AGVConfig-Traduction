@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 8,
+    "Language": "en",
+    "Filename": "faults_000_007_000_008_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_25",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_30",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_31",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_40",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_41",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_42",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_43",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_44",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor overspeed: BaseErrorcode_30 SecondaryErrorcode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor overspeed: BaseErrorcode_30 SecondaryErrorcode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor overspeed: BaseErrorCode_30 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine failure: BaseErrorCode_31 SecondaryErrorCode_20",
+      "IsExpandable": false
+    }
+  ]
+}

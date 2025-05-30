@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 0,
+        "IdLevel3": 12,
+        "Language": "fr",
+        "Filename": "faults_000_001_000_012_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_000_012_Accessory_CSTE2010E_Faute12",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Actionneur gauche: Erreur de paramètre",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Surcharge de courant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Erreur de voltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Erreur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Mouvement non contrôlé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Délai d'attente du message",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Erreur Fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur gauche: Erreur de mémoire",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Erreur de paramètre",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Surcharge de courant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Erreur de voltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Erreur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Mouvement non contrôlé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Délai d'attente du message",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Erreur Fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur droite: Erreur de mémoire",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Erreur de paramètre ",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Surcharge de courant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Erreur de voltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Erreur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Détection de contre-rotation",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Délai d'attente du message",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Erreur Fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur avant: Erreur de mémoire",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Erreur de paramètre",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Surcharge de courant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Erreur de voltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Erreur de température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Mouvement non contrôlé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Délai d'attente du message",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Erreur Fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneur arrière: Erreur de mémoire",
+            "IsExpandable": false
+        }
+    ]
+}

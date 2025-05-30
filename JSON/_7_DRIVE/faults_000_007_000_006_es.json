@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 6,
+    "Language": "es",
+    "Filename": "faults_000_007_000_006_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_006_Drive_Left_PAC425T100C_Fault06",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Tensión de la batería demasiado alta: CodeErreurDeBase_22 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado alta: CodeErreurDeBase_22 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado alta: CodeErreurDeBase_22 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET lado bajo. M1: CódigoErrorBase_23 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET lado bajo. M2: CódigoErrorBase_23 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET en el lado bajo. M3: CódigoErrorBase_23 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErrorBase_24 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErreurDeBase_24 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErrorBase_24 CodeErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErrorBase_24 CodeErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErrorBase_24 CodeErrorSecundario_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErrorBase_24 CodeErrorSecundario_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CódigoErrorBase_24 CódigoErrorSecundario_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad de hardware: CodeErrorBase_24 CodeErrorSecundario_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de seguridad del hardware: CodeErreurDeBase_24 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del contactor de línea: CodeErreurDeBase_25 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del contactor de línea: CodeErreurDeBase_25 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del contactor de línea: CodeErreurDeBase_25 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del contactor de línea: CodeErreurDeBase_25 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErrorBase_26 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    }
+  ]
+}

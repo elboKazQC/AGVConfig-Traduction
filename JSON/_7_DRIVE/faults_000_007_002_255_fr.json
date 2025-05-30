@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "fr",
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 2,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_002_255_Drive_Left_SBL2360T",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Surchauffe",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surtension",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sous-tension",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Arrêt d'urgence",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaut de capteur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillance MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuration par défaut chargée",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur moteur gauche (calculée)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur moteur droit (calculée)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 2,
+    "IdLevel3": 255,
+    "language": "fr",
+    "Filename": "faults_000_001_002_255_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_002_255_Accessory_MiniPL_LiftingPlatform",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "Mise à jour générale de l'état",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mode AGV : Arrêt",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Détection d'Induction Frontale Indisponible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Détection de rétro-induction indisponible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Déplacement vers le haut : Détection laser avant non disponible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Déplacement vers le haut : Détection arrière par laser non disponible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Détection de tunnel : Alerte d'arrêt",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaut de position de l'actionneur avant",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de position de l'actionneur arrière",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

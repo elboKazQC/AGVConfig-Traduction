@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 0,
+        "IdLevel3": 0,
+        "Language": "fr",
+        "Filename": "faults_000_007_000_000_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_000_000_Drive_Left_PAC425T100C_Fault00",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Torque limit due à la temprérature du contrôleur",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la temprérature du moteur",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant de la table de performance",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant temporel",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant I2T étape 1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant I2T étape 2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant I2T étape 3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de haute tension",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de basse tension",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite du frein a main",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due au mode avancé SPD1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due au mode avancé SPD2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant maximal de la batterie",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due à la limite de courant de régénération de la batterie",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit pour maintenir la limite de vitesse",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Aucun torque pendant la limitation de freinage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque de maintien en côte",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit en mode avancé et IA",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit en mode IA",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit CAN",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit moteur",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit vitesse",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir le torque",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir la vitesse",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir le Flux",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir le courant de Flux",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir la limitation du cercle",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de maintenir la limite hexagonale",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Limitation circulaire du moteur",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Moteur incapable de se positionner ",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

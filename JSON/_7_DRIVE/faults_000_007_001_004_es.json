@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 4,
+    "Language": "es",
+    "Filename": "faults_000_007_001_004_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_004_Drive_Right_PAC425T100C_Fault04",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Las entradas delantera y trasera están activas: CodeErreurDeBase_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conducción no autorizada: CodeErrorBase_11 CodeErrorSecundario_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conducción no autorizada: CodeErrorBase_11 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conducción no autorizada: CodeErrorBase_11 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo al encender: CodeErrorBase_12 CodeErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Acelerador a más del 50 %: CodeErrorBase_13 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Acelerador a más del 50 %: CodeErrorBase_13 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErreurDeBase_14 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErreurDeBase_14 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallos de micro-desplazamiento: CodeErrorBase_14 CodeErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CodeErrorBase_15 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CodeErrorBase_15 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CodeErrorBase_15 CodeErrorSecundario_3",
+      "IsExpandable": false
+    }
+  ]
+}

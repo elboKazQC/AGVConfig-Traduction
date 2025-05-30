@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 0,
+    "IdLevel3": 12,
+    "Language": "en",
+    "Filename": "faults_000_001_000_012_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_012_Accessory_CSTE2010E_Faute12",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Left actuator: Parameter error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Current overload",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Uncontrolled movement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Message waiting delay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Fatal Error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left actuator: Memory error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Parameter error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Current overload",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Uncontrolled movement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Message waiting delay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Fatal error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right actuator: Memory error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Parameter error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Current overload",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Counter-rotation detection",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Message waiting delay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front Actuator: Fatal Error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front actuator: Memory error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Parameter error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Current overload",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Uncontrolled movement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Message waiting delay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear Actuator: Fatal Error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear actuator: Memory error",
+      "IsExpandable": false
+    }
+  ]
+}

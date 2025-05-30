@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_007_000_255_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_255_Drive_Left_PAC425T100C",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Torque limit",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 1",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 2",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 3",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 4",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 5",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 6",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 7",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 8",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 9",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 10",
+      "IsExpandable": true
+    },
+    {
+      "Description": "CAN Info 11",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

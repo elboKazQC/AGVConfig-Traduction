@@ -1,0 +1,19 @@
+{
+    "FaultDetailList": [
+        {
+            "Id": 0,
+            "Description": "Arrêt d'urgence activé",
+            "IsExpandable": false
+        },
+        {
+            "Id": 1,
+            "Description": "Zone de sécurité violée",
+            "IsExpandable": true
+        },
+        {
+            "Id": 2,
+            "Description": "Capteur de sécurité défaillant",
+            "IsExpandable": false
+        }
+    ]
+}

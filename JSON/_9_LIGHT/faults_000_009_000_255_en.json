@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "en",
+    "IdLevel0": 0,
+    "IdLevel1": 9,
+    "IdLevel2": 0,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_009_000_255_Light_Led_4Relay",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "25",
+      "IsExpandable": false
+    },
+    {
+      "Description": "26",
+      "IsExpandable": false
+    },
+    {
+      "Description": "27",
+      "IsExpandable": false
+    },
+    {
+      "Description": "28",
+      "IsExpandable": false
+    },
+    {
+      "Description": "29",
+      "IsExpandable": false
+    },
+    {
+      "Description": "30",
+      "IsExpandable": false
+    },
+    {
+      "Description": "31",
+      "IsExpandable": false
+    }
+  ]
+}

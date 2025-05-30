@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "fr",
+    "IdLevel0": 0,
+    "IdLevel1": 10,
+    "IdLevel2": 3,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_010_003_255_MagSensor_Front_MLSE_0300A2NP0",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Aucune donnée en sortie du capteur magnétique",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Données du capteur magnétique non actualisées",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Détection de ligne non effectuée",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Capteur inversé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Champ magnétique trop fort",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Température trop élevée",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Température trop basse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

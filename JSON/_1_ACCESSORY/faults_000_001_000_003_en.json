@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 0,
+    "IdLevel3": 3,
+    "Language": "en",
+    "Filename": "faults_000_001_000_003_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_003_Accessory_CSTE2010E_Faute03",
+  "Version": 5,
+  "FaultDetailList": [
+    {
+      "Description": "Left laser scanner: slowdown area",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right laser scanner: slowdown area",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left laser scanner: stop area",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right laser scanner: stop zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left laser scanner: safety stop zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right laser scanner: safety stop zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Front laser scanner: safety stop zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rear laser scanner: safety stop zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

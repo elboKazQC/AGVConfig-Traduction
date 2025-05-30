@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "en",
+    "IdLevel0": 0,
+    "IdLevel1": 12,
+    "IdLevel2": 1,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_012_001_255_Rfid_DTC510_Front",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "Error detected at the front",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Buffer overflow",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Reading Error: ISO Command Error - No Response",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Reading error: ISO command error - RX error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Writing error: ISO command error - No response",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Writing error: ISO command error - RX error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Unspecified Command",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Command Syntax",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Option not supported",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Other",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Block Not Usable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Block already blocked",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Block not updatable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO tag error: Block write verification",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ISO Tag Error: Block Lock Verification",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

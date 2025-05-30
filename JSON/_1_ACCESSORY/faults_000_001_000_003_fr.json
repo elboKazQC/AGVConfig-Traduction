@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 0,
+        "IdLevel3": 3,
+        "Language": "fr",
+        "Filename": "faults_000_001_000_003_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_000_003_Accessory_CSTE2010E_Faute03",
+    "Version": 5,
+    "FaultDetailList": [
+        {
+            "Description": "Balayeur laser gauche: zone de ralentissement",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser droite: zone de ralentissement",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser gauche: zone arrêt",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser droite: zone arrêt",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser gauche: zone arrêt sécurité",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser droite: zone arrêt sécurité",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser avant: zone arrêt sécurité",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser arrière: zone arrêt sécurité",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

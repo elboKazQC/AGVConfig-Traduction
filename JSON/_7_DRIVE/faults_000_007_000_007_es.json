@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 7,
+    "Language": "es",
+    "Filename": "faults_000_007_000_007_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_007_Drive_Left_PAC425T100C_Fault07",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErrorBase_26 CodeErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET en el lado bajo. M1: CódigoErrorBase_27 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET en el lado bajo. M2: CodeErreurBase_27 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET en el lado bajo. M3: CódigoErrorBase_27 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErrorBase_28 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CodeErrorBase_29 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_23",
+      "IsExpandable": false
+    }
+  ]
+}

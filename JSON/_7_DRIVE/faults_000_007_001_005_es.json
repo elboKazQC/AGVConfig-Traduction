@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 5,
+    "Language": "es",
+    "Filename": "faults_000_007_001_005_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Tensión de alimentación: CodeErreurDeBase_15 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de software del motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de software del motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error de software del motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado baja: CodeErreurDeBase_17 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado baja: CodeErreurDeBase_17 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado baja: CodeErreurDeBase_17 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado baja: CodeErreurDeBase_17 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET lado alto. M1: CódigoErrorBase_18 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET lado alto. M2: CódigoErrorBase_18 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito MOSFET lado alto. M3: CódigoErrorBase_18 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor en atasco: CodeErrorBase_19 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor en bloqueo: CodeErrorBase_19 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobrecorriente detectada: CodeErreurDeBase_20 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobrecorriente detectada: CodeErrorBase_20 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobrecorriente detectada: CodeErrorBase_20 CodeErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobrecorriente detectada: CodeErrorBase_20 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobrecorriente detectada: CodeErrorBase_20 CodeErrorSecundario_>4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CódigoErrorBase_21 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CódigoErrorBase_21 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito contactor digital 1: CodeErrorBase_21 CodeErrorSecundario_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tensión de la batería demasiado alta: CodeErreurDeBase_22 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    }
+  ]
+}

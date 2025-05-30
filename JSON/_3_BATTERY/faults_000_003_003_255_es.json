@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "es",
+    "IdLevel0": 0,
+    "IdLevel1": 3,
+    "IdLevel2": 3,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_003_003_255_Battery_03_48V60TRX",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Carga de batería: Alta temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Baja temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Sobrecalentamiento",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Sobretensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Otro fallo de carga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Temperatura MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Baja tensión severa",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Comunicación con AFE fallida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Protección secundaria contra sobretensión del equipo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Fallo en la pre-carga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Error de paralelismo del paquete",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Protección contra la sobrecorriente de carga (OPC)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Fallo en la pre-descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Fallo en la comunicación interna",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Alta temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Baja temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Sobrecalentamiento",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Bajo voltaje",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Otro fallo de descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Temperatura MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Baja tensión severa",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Comunicación con AFE fallida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Protección secundaria contra sobretensión del equipo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Error de paralelismo del paquete",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Fallo en la pre-descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Fallo en la comunicación interna",
+      "IsExpandable": false
+    }
+  ]
+}

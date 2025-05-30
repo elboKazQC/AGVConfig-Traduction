@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 4,
+    "Language": "en",
+    "Filename": "faults_000_007_000_004_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_004_Drive_Left_PAC425T100C_Fault04",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "The front and rear inputs are active: BaseErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized driving: BaseErrorCode_11 SecondaryErrorCode_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized operation: BaseErrorCode_11 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized driving: BaseErrorCode_11 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power on failure: BaseErrorCode_12 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorCode_12 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power on failure: BaseErrorCode_12 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-up failure: BaseErrorCode_12 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-up failure: BaseErrorCode_12 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorCode_12 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorCode_12 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-up failure: BaseErrorCode_12 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorCode_12 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorCode_12 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-up failure: BaseErrorCode_12 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power on failure: BaseErrorCode_12 SecondaryErrorCode_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-up failure: BaseErrorCode_12 SecondaryErrorCode_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power-on failure: BaseErrorcode_12 SecondaryErrorcode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power up failure: BaseErrorCode_12 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accelerator over 50%: BaseErrorCode_13 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accelerator over 50%: BaseErrorCode_13 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power supply failure: BaseErrorCode_15 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power supply failure: BaseErrorCode_15 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Power supply failure: BaseErrorCode_15 SecondaryErrorCode_3",
+      "IsExpandable": false
+    }
+  ]
+}

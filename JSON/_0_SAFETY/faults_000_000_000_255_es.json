@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 0,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_000_000_255_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Versión de código de seguridad no compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Botón de emergencia presionado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accesorio de parada de emergencia",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Codificador: desincronización de velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Versión de código SoFtPLC no compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Movimiento AMR no reconocido",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Grupo de salida PLC",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Contacto aux. contactor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Movimiento no autorizado con llave",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner desaceleración antes izquierda",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner ralentimiento atrás derecha",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner parada antes izquierda",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner parada trasera derecha",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner parada de emergencia delantero izquierdo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner parada de emergencia trasera derecha",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Codificador: comunicación a la izquierda",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Codificador: comunicación a la derecha",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

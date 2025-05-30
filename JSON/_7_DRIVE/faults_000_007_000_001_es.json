@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 1,
+    "Language": "es",
+    "Filename": "faults_000_007_000_001_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_001_Drive_Left_PAC425T100C_Fault01",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "La tensión se vuelve baja: CodeErreurDeBase_2 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve baja: CodeErrorBase_2 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve baja: CodeErreurDeBase_2 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve baja: CodeErrorBase_2 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibición Drive/CorteBDI/BLC vía CAN: CodeErrorBase_3 CodeErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve alta: CodeErrorBase_4 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve alta: CodeErreurDeBase_4 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve alta: CodeErrorBase_4 CodeErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tensión se vuelve alta: CodeErreurDeBase_4 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperatura del motor elevada: CodeErrorDeBase_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperatura del controlador alta: CódigoErrorBase_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    }
+  ]
+}

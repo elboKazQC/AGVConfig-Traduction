@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 5,
+    "Language": "en",
+    "Filename": "faults_000_007_001_005_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Supply voltage: BaseErrorCode_15 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Software error of the dual motor: BaseErrorCode_16 SecondaryErrorCode_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Dual motor software error: BaseErrorCode_16 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Software error of the dual motor: BaseErrorCode_16 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery voltage too low: BaseErrorCode_17 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery voltage too low: BaseErrorCode_17 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery voltage too low: BaseErrorcode_17 SecondaryErrorcode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery voltage too low: BaseErrorCode_17 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "High-side MOSFET short circuit. M1: BaseErrorCode_18 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "High-side MOSFET short-circuit.M2: BaseErrorCode_18 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "High-side MOSFET short circuit. M3: BaseErrorCode_18 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine in stalling: BaseErrorCode_19 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine in stalling: BaseErrorCode_19 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overcurrent detected: BaseErrorCode_20 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overcurrent detected: BaseErrorCode_20 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overcurrent detected: BaseErrorCode_20 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overcurrent detected: BaseErrorCode_20 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overcurrent detected: BaseErrorCode_20 SecondaryErrorCode_>4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Digital contactor short-circuit 1: BaseErrorCode_21 SecondaryErrorCode_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Digital contactor short circuit 1: BaseErrorCode_21 SecondaryErrorCode_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery voltage too high: BaseErrorCode_22 SecondaryErrorCode_1",
+      "IsExpandable": false
+    }
+  ]
+}

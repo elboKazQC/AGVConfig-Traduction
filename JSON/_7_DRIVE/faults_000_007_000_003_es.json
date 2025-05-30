@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 3,
+    "Language": "es",
+    "Filename": "faults_000_007_000_003_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_003_Drive_Left_PAC425T100C_Fault03",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_61",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_62",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_63",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_64",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_65",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_66",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_67",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_68",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_69",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_70",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_71",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_72",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_73",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_74",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_75",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_76",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_77",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_78",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_79",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_80",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_81",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_82",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_83",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_84",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_85",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_86",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_87",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_998",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CodeErrorBase_7 CodeErrorSecundario_999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_>999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustes por defecto utilizados: CodeErreurDeBase_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del chip de memoria: CódigoErrorBase_9 CódigoErrorSecundario_>0",
+      "IsExpandable": false
+    }
+  ]
+}

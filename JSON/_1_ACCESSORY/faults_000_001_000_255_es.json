@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_001_000_255_es.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Parada de seguridad AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Botón de parada de emergencia presionado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parada de seguridad asociada a la máquina",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Versión de código de seguridad no compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accesorio de comunicación ethernet AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mesa elevadora posición no-baja",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Combinación de comando inválida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Grupos de salidas PLC",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Velocidad AMR inválida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Estación Fija botón de parada de emergencia enPulsado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descenso de mesa no autorizado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Actuadores",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Sensores y detector de proximidad",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Contactor K1 o K2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relé controlador de la estación externa del transportador",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Rele R3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperatura del PLC",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Corriente de estación externa",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Velocidad inválida AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Límite de velocidad inválida AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Orden inválida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga no autorizada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tiempo de secuencia expirado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Brazo de contacto: estación no alcanzada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Actuador de la mesa elevadora desincronizado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mesa elevadora sobrecargada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Estación externa no detectada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paleta mal posicionada en el transportador superior",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paleta mal posicionada en el transportador de abajo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Controlador de cinta transportadora estación externa",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "FaultDetailList": [
+        {
+            "Id": 0,
+            "Description": "Niveau de batterie faible",
+            "IsExpandable": false
+        },
+        {
+            "Id": 1,
+            "Description": "Température de batterie élevée",
+            "IsExpandable": false
+        },
+        {
+            "Id": 2,
+            "Description": "Défaut de chargement",
+            "IsExpandable": true
+        }
+    ]
+}

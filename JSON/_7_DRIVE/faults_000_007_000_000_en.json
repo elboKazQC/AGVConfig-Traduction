@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 0,
+    "Language": "en",
+    "Filename": "faults_000_007_000_000_en.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_000_Drive_Left_PAC425T100C_Fault00",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Torque limit due to the controller's temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to motor temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the current limit of the performance table",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the temporal current limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the I2T current limit step 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the I2T current limit stage 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to I2T current limit step 3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to high voltage limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to low voltage limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the handbrake limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to advanced SPD1 mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to advanced SPD2 mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the maximum current limit of the battery",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the battery regeneration current limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit to maintain speed limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "No torque during braking limitation",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hill hold torque",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit in advanced and AI mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit in AI mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN Torque Limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor torque limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit speed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain torque",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain speed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain the Flow",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain Flux current",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain circle limitation",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to maintain the hexagonal limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Circular limitation of the motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Engine unable to position itself",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 3,
+        "IdLevel2": 1,
+        "IdLevel3": 255,
+        "Language": "fr",
+        "Filename": "faults_000_003_001_255_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_003_001_255_Battery_01_48V60TRX",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Charge de batterie: Haute température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Basse température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Surtempérature",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Surtension",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Court-circuit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Autre défaut de charge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Température MOSFET",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Sous-tension sévère",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Communication avec AFE échouée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Protection secondaire contre surtension du matériel",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Réservé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Échec de la pré-charge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Erreur de parallélisme du pack",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Protection contre le surcourant de charge (OPC)",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Échec de la pré-décharge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Charge de batterie: Échec de la communication interne",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Haute température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Basse température",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Surtempérature",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Sous-tension",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Court-circuit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Autre défaut de décharge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Température MOSFET",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Sous-tension sévère",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Communication avec AFE échouée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Protection secondaire contre surtension du matériel",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Réservé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Réservé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Erreur de parallélisme du pack",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Réservé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Échec de la pré-décharge",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Décharge de batterie: Échec de la communication interne",
+            "IsExpandable": false
+        }
+    ]
+}

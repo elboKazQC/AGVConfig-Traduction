@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "es",
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 3,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_003_255_Drive_Right_SBL2360T",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Sobrecalentamiento",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sobretensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bajo voltaje",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parada de emergencia",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del sensor del motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración por defecto cargada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error en el motor izquierdo (calculada)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error en el motor derecho (calculada)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

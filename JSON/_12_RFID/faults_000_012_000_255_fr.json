@@ -1,0 +1,141 @@
+{
+  "Header": {
+    "language": "fr",
+    "IdLevel0": 0,
+    "IdLevel1": 12,
+    "IdLevel2": 0,
+    "IdLevel3": 255
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_012_000_255_Rfid_DTC510_Back",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Erreur détectée à l'avant",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Débordement de tampon",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de lecture : Erreur de commande ISO - Pas de réponse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de lecture : Erreur de commande ISO - Erreur RX",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur d'écriture : Erreur de commande ISO - Pas de réponse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur d'écriture : Erreur de commande ISO - Erreur RX",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Commande non spécifiée",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Syntaxe de commande",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Option non prise en charge",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Autre",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Bloc non utilisable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Bloc déjà bloqué",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Bloc non actualisable",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Vérification d'écriture de bloc",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur de tag ISO : Vérification de verrouillage de bloc",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}
