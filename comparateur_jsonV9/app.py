@@ -115,10 +115,10 @@ class FaultEditor:
         search_btn.pack(side="right", padx=(10, 2))
 
         # Boutons d'ouverture de fichiers
-        open_btn = ttk.Button(buttons_frame, text="📂 Ouvrir", command=self.open_folder)
+        open_btn = ttk.Button(buttons_frame, text="📂 Ouvrir un dossier", command=self.open_folder)
         open_btn.pack(side="right", padx=2)
 
-        load_flat_btn = ttk.Button(buttons_frame, text="📄 JSON Plat", command=self.load_flat_json)
+        load_flat_btn = ttk.Button(buttons_frame, text="📄 Charger JSON plat", command=self.load_flat_json)
         load_flat_btn.pack(side="right", padx=2)
 
         # Sélecteur de langue
@@ -135,13 +135,13 @@ class FaultEditor:
         self.tools_frame.pack(fill="x", side="top", pady=(0, 5))
         self.tools_frame.pack_propagate(False)
 
-        btn_sync_all = ttk.Button(self.tools_frame, text="Sync ALL", command=self.run_sync_all)
+        btn_sync_all = ttk.Button(self.tools_frame, text="Synchroniser tous les fichiers", command=self.run_sync_all)
         btn_sync_all.pack(side="left", padx=5)
 
         self.sync_one_var = tk.StringVar()
-        tk.Label(self.tools_frame, text="sync_one arg:", bg="#2a2a2a", fg="white").pack(side="left", padx=(10,1))
+        tk.Label(self.tools_frame, text="Fichier à synchroniser:", bg="#2a2a2a", fg="white").pack(side="left", padx=(10,1))
         ttk.Entry(self.tools_frame, textvariable=self.sync_one_var, width=25).pack(side="left")
-        btn_sync_one = ttk.Button(self.tools_frame, text="Sync ONE", command=self.run_sync_one)
+        btn_sync_one = ttk.Button(self.tools_frame, text="Synchroniser ce fichier", command=self.run_sync_one)
         btn_sync_one.pack(side="left", padx=5)
 
         self.genfichier_file_var = tk.StringVar()
@@ -156,10 +156,10 @@ class FaultEditor:
         btn_genfichier = ttk.Button(self.tools_frame, text="Générer fichier", command=self.run_generer_fichier)
         btn_genfichier.pack(side="left", padx=5)
 
-        btn_gen_manquant = ttk.Button(self.tools_frame, text="Générer manquant", command=self.run_generer_manquant)
+        btn_gen_manquant = ttk.Button(self.tools_frame, text="Générer les fichiers manquants", command=self.run_generer_manquant)
         btn_gen_manquant.pack(side="left", padx=5)
 
-        btn_check = ttk.Button(self.tools_frame, text="Check Coherence", command=self.run_check_coherence)
+        btn_check = ttk.Button(self.tools_frame, text="Vérifier la cohérence", command=self.run_check_coherence)
         btn_check.pack(side="left", padx=5)
 
         self.selected_file_label = tk.Label(self.tools_frame, text="Fichier sélectionné :", bg="#2a2a2a", fg="white", font=FONT_DEFAULT)
@@ -306,7 +306,7 @@ class FaultEditor:
     # --- Fonctions pour lancer les scripts externes ---
     def run_sync_all(self):
         cmd = ["python", "sync_all.py"]
-        self.run_command(cmd, desc="Sync ALL")
+        self.run_command(cmd, desc="Synchroniser tous les fichiers")
 
     def run_sync_one(self):
         arg = self.sync_one_var.get().strip()
@@ -324,7 +324,7 @@ class FaultEditor:
 
         print(f"🔄 Lancement de sync_one pour : {file_path}")
         cmd = ["python", "sync_one.py", file_path]
-        self.run_command(cmd, desc=f"Sync ONE {arg}")
+        self.run_command(cmd, desc=f"Synchroniser {arg}")
 
     def run_generer_fichier(self):
         if not self.base_dir:
@@ -348,7 +348,7 @@ class FaultEditor:
             return
 
         cmd = ["python", "generer_manquant.py", self.base_dir]
-        self.run_command(cmd, desc="Générer manquant")
+        self.run_command(cmd, desc="Générer les fichiers manquants")
 
     def run_check_coherence(self):
         if not hasattr(self, 'file_map') or not self.file_map:
@@ -361,7 +361,7 @@ class FaultEditor:
 
         print(f"🔍 Vérification de cohérence dans : {dossier_base}")
         cmd = ["python", "check_coherence.py", dossier_base]
-        self.run_command(cmd, desc="Check Coherence")
+        self.run_command(cmd, desc="Vérifier la cohérence")
 
     def run_command(self, cmd, desc=""):
         logger.info(f"Exécution de la commande: {' '.join(cmd)}")
