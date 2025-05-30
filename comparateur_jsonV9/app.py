@@ -9,6 +9,9 @@ import re
 import logging
 from datetime import datetime
 
+# Créer le dossier logs s'il n'existe pas
+os.makedirs('logs', exist_ok=True)
+
 # Configuration du logging
 logging.basicConfig(
     level=logging.INFO,
@@ -55,8 +58,6 @@ ALARM_STYLES = {
 
 class FaultEditor:
     def __init__(self, root):
-        # Créer le dossier logs s'il n'existe pas
-        os.makedirs('logs', exist_ok=True)
         logger.info("Démarrage de l'application Fault Editor")
         self.root = root
         self.root.title("Fault Editor - Auto Reload")
@@ -301,9 +302,7 @@ class FaultEditor:
                 if hasattr(widget, 'config'):
                     widget.config(state=state)  # type: ignore
             except tk.TclError:
-                pass
-
-    # --- Fonctions pour lancer les scripts externes ---
+                pass    # --- Fonctions pour lancer les scripts externes ---
     def run_sync_all(self):
         cmd = ["python", "sync_all.py"]
         self.run_command(cmd, desc="Synchroniser tous les fichiers")
@@ -320,10 +319,8 @@ class FaultEditor:
         if not file_path or not os.path.exists(file_path):
             self.status.config(text=f"❌ Fichier introuvable : {arg}")
             print(f"❌ Fichier introuvable : {arg}")
-            return
-
-        print(f"🔄 Lancement de sync_one pour : {file_path}")
-        cmd = ["python", "sync_one.py", file_path]
+            return        print(f"🔄 Lancement de sync_one_v3 pour : {file_path}")
+        cmd = ["python", "sync_one_v3.py", file_path, "--force"]
         self.run_command(cmd, desc=f"Synchroniser {arg}")
 
     def run_generer_fichier(self):
@@ -353,9 +350,7 @@ class FaultEditor:
     def run_check_coherence(self):
         if not hasattr(self, 'file_map') or not self.file_map:
             self.status.config(text="❌ Aucun dossier ouvert")
-            return
-
-        # Obtenir le dossier parent du premier fichier trouvé
+            return        # Obtenir le dossier parent du premier fichier trouvé
         premier_fichier = next(iter(self.file_map.values()))
         dossier_base = os.path.dirname(premier_fichier)
 
@@ -390,15 +385,55 @@ class FaultEditor:
                 cwd=script_dir  # Utiliser le dossier du script comme dossier de travail
             )
 
+            # Afficher la sortie du script dans la console
+            if result.stdout:
+                print(f"\n📋 Sortie de {desc}:")
+                print("=" * 50)
+                print(result.stdout)
+                print("=" * 50)
+
             if result.returncode == 0:
                 logger.info(f"Commande terminée avec succès: {desc}")
                 logger.debug(f"Sortie de la commande:\n{result.stdout}")
-                self.status.config(text=f"✅ Terminé : {desc}")
+
+                # Analyser la sortie pour voir si des traductions ont été effectuées
+                success_indicators = ["✅", "🎉", "mis à jour", "terminée avec succès"]
+                warning_indicators = ["⚠️", "aucune", "déjà", "identique"]
+
+                # Afficher les résultats dans une fenêtre de dialogue
+                if result.stdout:
+                    self.show_script_results(f"✅ {desc} - Terminé", result.stdout, True)
+
+                if any(indicator in result.stdout for indicator in success_indicators):
+                    if any(indicator in result.stdout for indicator in warning_indicators):
+                        self.status.config(text=f"⚠️ {desc} - Voir détails dans la fenêtre")
+                    else:
+                        self.status.config(text=f"✅ {desc} - Traductions effectuées")
+                else:
+                    self.status.config(text=f"⚠️ {desc} - Aucune traduction détectée")
             else:
                 logger.error(f"Erreur lors de l'exécution de {desc}: {result.stderr}")
+
+                # Préparer le message d'erreur complet
+                error_message = f"Code de retour: {result.returncode}\n\n"
+                if result.stderr:
+                    error_message += f"Erreur:\n{result.stderr}\n\n"
+                if result.stdout:
+                    error_message += f"Sortie:\n{result.stdout}"
+                else:
+                    error_message += "Aucune sortie disponible"
+
+                print(f"\n❌ Erreur lors de {desc}:")
+                print("=" * 50)
+                print(error_message)
+                print("=" * 50)
+
+                # Afficher l'erreur dans une fenêtre de dialogue
+                self.show_script_results(f"❌ Erreur - {desc}", error_message, False)
                 self.status.config(text=f"❌ Erreur : {desc}")
         except Exception as e:
             logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
+            print(f"\n❌ Exception lors de {desc}: {str(e)}")
             self.status.config(text=f"❌ Exception : {desc}")
         finally:
             popup.destroy()
@@ -1395,6 +1430,64 @@ class FaultEditor:
         except Exception as e:
             self.status.config(text=f"❌ Erreur lors de la sauvegarde: {str(e)}")
             print(f"Erreur lors de la sauvegarde des fichiers plats: {e}")
+
+    def show_script_results(self, title, content, is_success=True):
+        """Affiche les résultats d'un script dans une fenêtre de dialogue"""
+        popup = tk.Toplevel(self.root)
+        popup.title(title)
+        popup.geometry("800x600")
+        popup.transient(self.root)
+        popup.resizable(True, True)
+
+        # Configuration de la couleur de fond selon le succès
+        bg_color = COL_BG_MAIN
+        text_color = COL_FG_TEXT if is_success else COL_RED
+
+        popup.configure(bg=bg_color)
+
+        # Frame pour le titre
+        title_frame = tk.Frame(popup, bg=bg_color)
+        title_frame.pack(fill="x", padx=10, pady=5)
+
+        title_label = tk.Label(title_frame,
+                              text=title,
+                              font=FONT_TITLE,
+                              bg=bg_color,
+                              fg=text_color)
+        title_label.pack()
+
+        # Zone de texte avec scrollbar
+        text_frame = tk.Frame(popup, bg=bg_color)
+        text_frame.pack(fill="both", expand=True, padx=10, pady=5)
+
+        text_widget = tk.Text(text_frame,
+                             bg=COL_EDIT_BG,
+                             fg=COL_FG_TEXT,
+                             font=FONT_DEFAULT,
+                             wrap=tk.WORD)
+
+        scrollbar = ttk.Scrollbar(text_frame, orient="vertical", command=text_widget.yview)
+        text_widget.configure(yscrollcommand=scrollbar.set)
+
+        text_widget.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+        # Insérer le contenu
+        text_widget.insert(tk.END, content)
+        text_widget.config(state=tk.DISABLED)
+
+        # Bouton de fermeture
+        button_frame = tk.Frame(popup, bg=bg_color)
+        button_frame.pack(fill="x", padx=10, pady=5)
+
+        close_btn = ttk.Button(button_frame, text="Fermer", command=popup.destroy)
+        close_btn.pack(side="right")
+
+        # Centrer la fenêtre
+        popup.update_idletasks()
+        x = (popup.winfo_screenwidth() // 2) - (popup.winfo_width() // 2)
+        y = (popup.winfo_screenheight() // 2) - (popup.winfo_height() // 2)
+        popup.geometry(f"+{x}+{y}")
 
 def launch_app():
     root = tk.Tk()

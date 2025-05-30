@@ -4,7 +4,7 @@
     "IdLevel1": 255,
     "IdLevel2": 255,
     "IdLevel3": 255,
-    "Language": "fr",
+    "Language": "en",
     "Filename": "faults_000_255_255_255_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_255_255_255_Vehicle_All",
@@ -39,7 +39,7 @@
       "IsExpandable": true
     },
     {
-      "Description": "Motor Drives",
+      "Description": "Motor drives",
       "IsExpandable": true
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Magnetic readers",
+      "Description": "Magnetic card readers",
       "IsExpandable": true
     },
     {
@@ -67,7 +67,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "house",
+      "Description": "",
       "IsExpandable": false
     },
     {

@@ -4,7 +4,19 @@
 """
 Script pour synchroniser un fichier JSON avec ses équivalents dans d'autres langues.
 Utilise l'API OpenAI pour traduire les textes.
-Version améliorée avec détection de langue et traduction forcée.
+Version améliorée avec détection de            else:
+                # Synchroniser récursivement
+                if isinstance(value, (dict, list)):
+                    if key not in target_data:
+                        target_data[key] = {} if isinstance(value, dict) else []
+                    sub_modifications = sync_data_structure_improved(
+                        value, target_data[key], source_lang, target_lang,
+                        force_retranslate, filename
+                    )
+                    modifications += sub_modifications
+                else:
+                    # Pour les valeurs primitives, copier directement
+                    target_data[key] = valueet traduction forcée.
 """
 
 import os
@@ -74,7 +86,8 @@ def detecter_langue(texte):
     except Exception:
         return None
 
-def sync_file(source_file_path, force_retranslate=False):    """
+def sync_file(source_file_path, force_retranslate=False):
+    """
     Synchronise un fichier JSON source avec ses équivalents dans d'autres langues.
 
     Args:
@@ -102,7 +115,7 @@ def sync_file(source_file_path, force_retranslate=False):    """
         source_lang = 'es'
         target_langs = ['fr', 'en']
     else:
-        print(f"❌ Impossible de déterminer la langue du fichier : {basename}")
+        print(f"{ROUGE}❌ Impossible de déterminer la langue du fichier : {basename}{RESET}")
         return False
 
     print(f"📝 Langue source détectée : {source_lang}")
@@ -128,46 +141,108 @@ def sync_file(source_file_path, force_retranslate=False):    """
                     print(f"⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier")
                     target_data = {}
 
-            # Synchroniser les données
-            target_data = sync_data_structure(source_data, target_data, source_lang, target_lang)
+            # Synchroniser les données avec la logique améliorée
+            modifications = sync_data_structure_improved(
+                source_data, target_data, source_lang, target_lang,
+                force_retranslate, basename
+            )
 
             # Sauvegarder le fichier cible
             os.makedirs(os.path.dirname(target_file), exist_ok=True)
             with open(target_file, 'w', encoding='utf-8') as f:
                 json.dump(target_data, f, ensure_ascii=False, indent=2)
 
-            print(f"✅ Fichier {os.path.basename(target_file)} mis à jour")
+            if modifications > 0:
+                print(f"{VERT}✅ Fichier {os.path.basename(target_file)} mis à jour ({modifications} modifications){RESET}")
+            else:
+                print(f"✅ Fichier {os.path.basename(target_file)} déjà à jour")
 
         print(f"\n🎉 Synchronisation terminée avec succès !")
         return True
 
     except Exception as e:
-        print(f"❌ Erreur lors de la synchronisation : {e}")
+        print(f"{ROUGE}❌ Erreur lors de la synchronisation : {e}{RESET}")
         return False
 
-def sync_data_structure(source_data, target_data, source_lang, target_lang):
+def sync_data_structure_improved(source_data, target_data, source_lang, target_lang, force_retranslate=False, filename=""):
     """
-    Synchronise récursivement les structures de données.
+    Synchronise récursivement les structures de données avec logique améliorée.
+    Retourne le nombre de modifications effectuées.
     """
+    modifications = 0
+
     if isinstance(source_data, dict):
         if not isinstance(target_data, dict):
             target_data = {}
 
         for key, value in source_data.items():
             if key == "Description" and isinstance(value, str) and value.strip():
-                # Traduire la description si elle n'existe pas ou est vide
-                if key not in target_data or not target_data[key].strip():
-                    print(f"  🔤 Traduction de '{value[:50]}...' vers {target_lang}")
-                    target_data[key] = traduire(value, target_lang)
+                source_desc = value.strip()
+                current_desc = target_data.get(key, "").strip()
+
+                # Si c'est un code technique, copier directement
+                if est_code_technique(source_desc):
+                    if current_desc != source_desc:
+                        print(f"{JAUNE}🔁 Correction code technique [{target_lang.upper()}] : {current_desc} → {source_desc}{RESET}")
+                        log_changement(target_lang, "N/A", current_desc, source_desc, filename)
+                        target_data[key] = source_desc
+                        modifications += 1
+                    continue
+
+                # Décider si on doit traduire
+                should_translate = False
+                reason = ""
+
+                if not current_desc:
+                    should_translate = True
+                    reason = "description vide"
+                elif force_retranslate:
+                    should_translate = True
+                    reason = "retraduction forcée"
+                else:
+                    # Vérifier la langue de la description existante
+                    detected_lang = detecter_langue(current_desc)
+                    if detected_lang and detected_lang != target_lang:
+                        should_translate = True
+                        reason = f"langue détectée: {detected_lang} ≠ {target_lang}"
+                    else:
+                        # Comparer avec une nouvelle traduction pour voir si elle a changé
+                        new_translation = traduire(source_desc, target_lang).strip()
+                        if current_desc.lower() != new_translation.lower():
+                            should_translate = True
+                            reason = "traduction mise à jour"
+
+                if should_translate:
+                    new_translation = traduire(source_desc, target_lang).strip()
+                    print(f"{BLEU}🔄 [{target_lang.upper()}] {reason}{RESET}")
+                    print(f"    Source ({source_lang}) : {source_desc}")
+                    print(f"    Ancien : {current_desc}")
+                    print(f"    Nouveau : {new_translation}")
+                    log_changement(target_lang, "N/A", current_desc, new_translation, filename)
+                    target_data[key] = new_translation
+                    modifications += 1
                 else:
                     # Garder la traduction existante
-                    target_data[key] = target_data[key]
+                    target_data[key] = current_desc
+
+            elif key == "Language":
+                # Corriger l'en-tête de langue
+                correct_lang = target_lang
+                if target_data.get(key) != correct_lang:
+                    print(f"{JAUNE}🔧 Correction en-tête langue : {target_data.get(key)} → {correct_lang}{RESET}")
+                    target_data[key] = correct_lang
+                    modifications += 1
             elif key in ["Id", "IsExpandable", "CategoryId", "SubCategoryId", "FaultId"]:
                 # Copier les valeurs numériques et booléennes directement
                 target_data[key] = value
             else:
                 # Synchroniser récursivement
-                target_data[key] = sync_data_structure(value, target_data.get(key, {}), source_lang, target_lang)
+                sub_modifications = sync_data_structure_improved(
+                    value, target_data.get(key, {}), source_lang, target_lang,
+                    force_retranslate, filename
+                )
+                modifications += sub_modifications
+                target_data[key] = target_data.get(key, {})
 
     elif isinstance(source_data, list):
         if not isinstance(target_data, list):
@@ -180,27 +255,38 @@ def sync_data_structure(source_data, target_data, source_lang, target_lang):
         # Synchroniser chaque élément
         for i, source_item in enumerate(source_data):
             if i < len(target_data):
-                target_data[i] = sync_data_structure(source_item, target_data[i], source_lang, target_lang)
+                sub_modifications = sync_data_structure_improved(
+                    source_item, target_data[i], source_lang, target_lang,
+                    force_retranslate, filename
+                )
+                modifications += sub_modifications
             else:
-                target_data.append(sync_data_structure(source_item, {}, source_lang, target_lang))
-
-    else:
-        # Pour les types primitifs, copier directement
+                # Ajouter un nouvel élément
+                new_item = {}
+                sub_modifications = sync_data_structure_improved(
+                    source_item, new_item, source_lang, target_lang,
+                    force_retranslate, filename
+                )
+                modifications += sub_modifications
+                target_data.append(new_item)    else:
+        # Pour les types primitifs, retourner la valeur source
         return source_data
 
-    return target_data
+    return modifications
 
 def main():
     parser = argparse.ArgumentParser(description='Synchronise un fichier JSON avec ses équivalents dans d\'autres langues')
     parser.add_argument('source_file', help='Chemin vers le fichier JSON source')
+    parser.add_argument('--force', '-f', action='store_true',
+                       help='Force la retraduction même si une traduction existe')
 
     args = parser.parse_args()
 
     if not args.source_file:
-        print("❌ Aucun fichier source spécifié")
+        print(f"{ROUGE}❌ Aucun fichier source spécifié{RESET}")
         sys.exit(1)
 
-    success = sync_file(args.source_file)
+    success = sync_file(args.source_file, force_retranslate=args.force)
     sys.exit(0 if success else 1)
 
 if __name__ == "__main__":

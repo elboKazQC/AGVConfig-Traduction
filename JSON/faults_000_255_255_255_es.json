@@ -6,7 +6,7 @@
     "IdLevel3": 255,
     "language": "es",
     "Filename": "faults_000_255_255_255_fr.json",
-    "Language": "fr"
+    "Language": "es"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_255_255_255_Vehicle_All",
   "Version": 1,
@@ -40,7 +40,7 @@
       "IsExpandable": true
     },
     {
-      "Description": "Motores drives",
+      "Description": "Motores de conducción",
       "IsExpandable": true
     },
     {
@@ -68,7 +68,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "casa",
+      "Description": "",
       "IsExpandable": false
     },
     {
