@@ -6,7 +6,7 @@
     "IdLevel2": 1,
     "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_STD_MiniPL",
+  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_WARNING",
   "Version": 1,
   "FaultDetailList": [
     {
@@ -26,39 +26,39 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Besoin de réinitialisation bientot",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence 4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence distant",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arret d'urgence manette",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Alerte de reponse de control de décélération",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Alerte de reponse d'arret de décélération",
       "IsExpandable": false
     },
     {

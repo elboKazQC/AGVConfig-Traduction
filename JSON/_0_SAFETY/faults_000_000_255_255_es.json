@@ -4,26 +4,28 @@
     "IdLevel0": 0,
     "IdLevel1": 0,
     "IdLevel2": 255,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_000_255_255_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_000_255_255_Safety_All",
-  "Version": 1,
+  "Version": 2,
   "FaultDetailList": [
     {
-      "Description": "PL",
+      "Description": "Alerta de seguridad crítica",
       "IsExpandable": true
     },
     {
-      "Description": "",
-      "IsExpandable": false
+      "Description": "Advertencia de seguridad",
+      "IsExpandable": true
     },
     {
-      "Description": "",
-      "IsExpandable": false
+      "Description": "Escáner láser",
+      "IsExpandable": true
     },
     {
-      "Description": "",
-      "IsExpandable": false
+      "Description": "Advertencia de contacto.",
+      "IsExpandable": true
     },
     {
       "Description": "",

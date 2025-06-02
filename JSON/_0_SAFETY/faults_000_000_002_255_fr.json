@@ -1,113 +1,108 @@
 {
   "Header": {
+    "language": "fr",
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 0,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_000_000_255_fr.json"
+    "IdLevel2": 2,
+    "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_CRITICAL",
-  "Version": 5,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_002_255_Safety_LASER_SCANNER",
+  "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Version code sécurité non compatible",
+      "Description": "Zone ralentissement 1 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Bouton arrêt d'urgence enfoncé",
+      "Description": "Zone d'arret 1 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Accessoire arrêt d'urgence",
+      "Description": "Zone d'alarme 1 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence balayeur laser",
+      "Description": "Zone d'alarme OSSD 1 fil 1",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence bouton a distance",
+      "Description": "Zone d'alarme OSSD 1 fil 2",
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : désynchronisation de vitesse",
+      "Description": "Zone d'alarme OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "Version code SoFtPLC non compatible",
+      "Description": "Zone ralentissement 2 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement AMR non reconnue",
+      "Description": "Zone d'arret 2 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Groupe sortie PLC",
+      "Description": "Zone d'alarme 2 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Contact aux. contacteur",
+      "Description": "Zone d'alarme OSSD 2 fil 1",
       "IsExpandable": false
     },
     {
-      "Description": "Mode sélecteur erreur",
+      "Description": "Zone d'alarme OSSD 2 fil 2",
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement non autorisé avec clé",
+      "Description": "Zone d'alarme OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone ralentissement 3 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence PLC standard",
+      "Description": "Zone d'arret 3 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "Perte communication avec PLC standard",
+      "Description": "Zone d'alarme 3 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "délai de redemarage expiré",
+      "Description": "Zone d'alarme OSSD 3 fil 1",
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : commande de synchronisation de vitesse",
+      "Description": "Zone d'alarme OSSD 3 fil 2",
       "IsExpandable": false
     },
     {
-      "Description": "Arrêt d'urgence: Bouton manette",
+      "Description": "Zone d'alarme OSSD 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone ralentissement 4 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone d'arret 4 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone d'alarme 4 déclenchée",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone d'alarme OSSD 4 fil 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zone d'alarme OSSD 4 fil 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
+      "Description": "Zone d'alarme OSSD 4",
       "IsExpandable": false
     },
     {
@@ -136,6 +131,10 @@
     },
     {
       "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Renitialisation balayeurs lasers",
       "IsExpandable": false
     }
   ]

@@ -1,49 +1,48 @@
 {
   "Header": {
+    "language": "fr",
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 255,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_000_255_255_fr.json"
+    "IdLevel2": 3,
+    "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_255_255_Safety_All",
-  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_003_255_Safety_CONTACTOR",
+  "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Alerte sécurité critique",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Avertissement sécurité",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Avertissement Balayeur laser",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Avertissement Contacteur",
-      "IsExpandable": true
-    },
-    {
-      "Description": "",
+      "Description": "Puissance drive 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Puissance drive 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Puissance drive 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Puissance drive 4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Drive préchargement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Frein droit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Frein gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "STO 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "STO 2",
       "IsExpandable": false
     },
     {

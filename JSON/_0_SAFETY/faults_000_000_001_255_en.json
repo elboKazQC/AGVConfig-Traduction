@@ -6,8 +6,8 @@
     "IdLevel2": 1,
     "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_STD_MiniPL",
-  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_WARNING",
+  "Version": 1,
   "FaultDetailList": [
     {
       "Description": "",
@@ -26,39 +26,39 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Need reset soon",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Emergency stop button 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Emergency stop button 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Emergency stop button 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Emergency stop button 4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Remote emergency stop button",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Emergency stop button joystick",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Deceleration control response alert.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Deceleration stop response alert",
       "IsExpandable": false
     },
     {

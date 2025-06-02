@@ -3,32 +3,106 @@
     "language": "en",
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 255,
-    "IdLevel3": 255,
-    "Language": "en",
-    "Filename": "faults_000_000_255_255_fr.json"
+    "IdLevel2": 2,
+    "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_255_255_Safety_All",
-  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_002_255_Safety_LASER_SCANNER",
+  "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Critical security alert",
-      "IsExpandable": true
+      "Description": "Slowdown zone 1 triggered",
+      "IsExpandable": false
     },
     {
-      "Description": "Security warning",
-      "IsExpandable": true
+      "Description": "Stop zone 1 triggered.",
+      "IsExpandable": false
     },
     {
-      "Description": "Laser scanner",
-      "IsExpandable": true
+      "Description": "Alarm zone 1 triggered",
+      "IsExpandable": false
     },
     {
-      "Description": "Warning Contact Switch",
-      "IsExpandable": true
+      "Description": "OSSD 1 wire 1 alarm zone",
+      "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "OSSD 1 wire 2 alarm zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 1 alarm zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Slow down zone 2 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Stop zone 2 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone 2 triggered.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone OSSD 2-wire 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone OSSD 2-wire 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 2 alarm zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Slow down zone 3 activated",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Stop zone 3 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone 3 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 3-wire 1 zone alarm circuit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone OSSD 3 wire 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 3 alarm zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Slowdown zone 4 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Stop zone 4 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alarm zone 4 triggered",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 4-wire 1 alarm zone",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 4-wire 2-zone alarm area",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OSSD 4 alarm zone",
       "IsExpandable": false
     },
     {
@@ -60,83 +134,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
+      "Description": "Reset Laser scanner",
       "IsExpandable": false
     }
   ]

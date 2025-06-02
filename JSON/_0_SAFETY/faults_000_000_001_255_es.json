@@ -6,7 +6,7 @@
     "IdLevel2": 1,
     "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_STD_MiniPL",
+  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_WARNING",
   "Version": 1,
   "FaultDetailList": [
     {
@@ -26,39 +26,39 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Necesidad de reinicio pronto.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia 4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia remoto.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia del joystick",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Alerta de respuesta de control de desaceleración.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Alerta de respuesta de parada de desaceleración.",
       "IsExpandable": false
     },
     {

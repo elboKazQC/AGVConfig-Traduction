@@ -5,17 +5,17 @@
     "IdLevel2": 0,
     "IdLevel3": 255,
     "Language": "es",
-    "Filename": "faults_000_000_000_255_es.json"
+    "Filename": "faults_000_000_000_255_fr.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
-  "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_CRITICAL",
+  "Version": 5,
   "FaultDetailList": [
     {
-      "Description": "Versión de código de seguridad no compatible",
+      "Description": "Versión de código de seguridad no compatible.",
       "IsExpandable": false
     },
     {
-      "Description": "Botón de emergencia presionado",
+      "Description": "Botón de parada de emergencia presionado",
       "IsExpandable": false
     },
     {
@@ -23,11 +23,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Escáner láser",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia remoto",
       "IsExpandable": false
     },
     {
@@ -35,11 +35,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Versión de código SoFtPLC no compatible",
+      "Description": "Versión de SoFtPLC no compatible.",
       "IsExpandable": false
     },
     {
-      "Description": "Movimiento AMR no reconocido",
+      "Description": "Movimiento AMR no reconocido.",
       "IsExpandable": false
     },
     {
@@ -47,11 +47,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Contacto aux. contactor",
+      "Description": "Contactar. Contacto.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Modo de selección de error",
       "IsExpandable": false
     },
     {
@@ -59,19 +59,27 @@
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner desaceleración antes izquierda",
+      "Description": "",
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner ralentimiento atrás derecha",
+      "Description": "Parada de emergencia estándar de PLC.",
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner parada antes izquierda",
+      "Description": "Pérdida de comunicación con PLC estándar.",
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner parada trasera derecha",
+      "Description": "plazo de reinicio expirado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Codificador: orden de sincronización de velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parada de emergencia: Botón de control",
       "IsExpandable": false
     },
     {
@@ -99,19 +107,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner parada de emergencia delantero izquierdo",
+      "Description": "",
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner parada de emergencia trasera derecha",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Codificador: comunicación a la izquierda",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Codificador: comunicación a la derecha",
+      "Description": "",
       "IsExpandable": false
     },
     {

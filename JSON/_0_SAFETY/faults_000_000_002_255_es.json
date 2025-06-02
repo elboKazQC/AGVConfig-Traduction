@@ -1,113 +1,108 @@
 {
   "Header": {
+    "language": "es",
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 0,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_000_000_255_fr.json"
+    "IdLevel2": 2,
+    "IdLevel3": 255
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_CRITICAL",
-  "Version": 5,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_002_255_Safety_LASER_SCANNER",
+  "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Version code sécurité non compatible",
+      "Description": "Zona de desaceleración 1 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Bouton arrêt d'urgence enfoncé",
+      "Description": "Zona de parada 1 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Accessoire arrêt d'urgence",
+      "Description": "Alarma de zona 1 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence balayeur laser",
+      "Description": "Zona de alarma OSSD 1 hilo 1.",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence bouton a distance",
+      "Description": "Zona de alarma OSSD de 1 hilo 2.",
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : désynchronisation de vitesse",
+      "Description": "Zona de alarma OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "Version code SoFtPLC non compatible",
+      "Description": "Zona de ralentización 2 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement AMR non reconnue",
+      "Description": "Zona de parada 2 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Groupe sortie PLC",
+      "Description": "Zona de alarma 2 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Contact aux. contacteur",
+      "Description": "Zona de alarma OSSD de 2 hilos 1.",
       "IsExpandable": false
     },
     {
-      "Description": "Mode sélecteur erreur",
+      "Description": "Zona de alarma OSSD de 2 hilos 2.",
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement non autorisé avec clé",
+      "Description": "Zona de alarma OSSD 2.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de reducción de velocidad 3 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence PLC standard",
+      "Description": "Zona de parada 3 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "Perte communication avec PLC standard",
+      "Description": "Alarma de zona 3 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "délai de redemarage expiré",
+      "Description": "Zona de alarma OSSD de 3 hilos 1.",
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : commande de synchronisation de vitesse",
+      "Description": "Zona de alarma OSSD de 3 hilos 2.",
       "IsExpandable": false
     },
     {
-      "Description": "Arrêt d'urgence: Bouton manette",
+      "Description": "Zona de alarma OSSD 3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de desaceleración 4 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de parada 4 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de alarma 4 activada.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de alarma OSSD de 4 hilos 1.",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Zona de alarma OSSD de 4 hilos 2.",
       "IsExpandable": false
     },
     {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
+      "Description": "Zona de alarma OSSD 4",
       "IsExpandable": false
     },
     {
@@ -136,6 +131,10 @@
     },
     {
       "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Escáner láser",
       "IsExpandable": false
     }
   ]
