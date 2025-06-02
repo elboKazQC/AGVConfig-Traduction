@@ -18,7 +18,6 @@ import json
 import argparse
 import re
 import logging
-import configparser
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Union
 from translate import traduire
@@ -36,23 +35,23 @@ def setup_logging() -> logging.Logger:
     """Configure le système de logging avec rotation et niveaux multiples."""
     logger = logging.getLogger('sync_one')
     logger.setLevel(logging.INFO)
-
+    
     if not logger.handlers:
         # Handler pour fichier
         script_dir = os.path.dirname(os.path.abspath(__file__))
         logs_dir = os.path.join(script_dir, "logs")
         os.makedirs(logs_dir, exist_ok=True)
-
+        
         file_handler = logging.FileHandler(
-            os.path.join(logs_dir, "sync_one.log"),
+            os.path.join(logs_dir, "sync_one.log"), 
             encoding='utf-8'
         )
         file_handler.setLevel(logging.INFO)
-
+        
         # Handler pour console
         console_handler = logging.StreamHandler()
         console_handler.setLevel(logging.WARNING)
-
+        
         # Format des messages
         formatter = logging.Formatter(
             '[%(asctime)s] %(levelname)s - %(message)s',
@@ -60,10 +59,10 @@ def setup_logging() -> logging.Logger:
         )
         file_handler.setFormatter(formatter)
         console_handler.setFormatter(formatter)
-
+        
         logger.addHandler(file_handler)
         logger.addHandler(console_handler)
-
+    
     return logger
 
 logger = setup_logging()
@@ -87,7 +86,7 @@ else:
 def log_changement(langue: str, index: int, ancien: str, nouveau: str, fichier: str) -> None:
     """
     Enregistre les changements dans un fichier de log avec horodatage.
-
+    
     Args:
         langue: Code de langue (fr, en, es)
         index: Index de l'élément modifié
@@ -99,14 +98,14 @@ def log_changement(langue: str, index: int, ancien: str, nouveau: str, fichier: 
     logs_dir = os.path.join(script_dir, "logs")
     os.makedirs(logs_dir, exist_ok=True)
     chemin_log = os.path.join(logs_dir, "changements.log")
-
+    
     try:
         with open(chemin_log, "a", encoding="utf-8") as log:
             timestamp = datetime.now().isoformat(sep=' ', timespec='seconds')
             log.write(f"[{timestamp}] {fichier} - {langue.upper()}[index {index}]\n")
             log.write(f"  Ancien : {ancien}\n")
             log.write(f"  Nouveau : {nouveau}\n\n")
-
+        
         logger.info(f"Changement enregistré: {fichier} - {langue}[{index}]")
     except Exception as e:
         logger.error(f"Erreur lors de l'enregistrement du changement: {e}")
@@ -114,10 +113,10 @@ def log_changement(langue: str, index: int, ancien: str, nouveau: str, fichier: 
 def est_code_technique(texte: str) -> bool:
     """
     Détermine si un texte est un code technique qui ne doit pas être traduit.
-
+    
     Args:
         texte: Le texte à analyser
-
+        
     Returns:
         True si le texte est considéré comme un code technique
     """
@@ -143,10 +142,10 @@ def est_code_technique(texte: str) -> bool:
 def detecter_langue(texte: str) -> Optional[str]:
     """
     Détecte la langue d'un texte (si langdetect est disponible).
-
+    
     Args:
         texte: Le texte à analyser
-
+        
     Returns:
         Code de langue détecté ou None si impossible
     """
@@ -162,37 +161,25 @@ def detecter_langue(texte: str) -> Optional[str]:
 def special_translations(text: str, target_lang: str) -> Optional[str]:
     """
     Gère les cas spéciaux de traduction qui nécessitent des règles particulières.
-    Utilise la configuration pour les traductions spéciales.
-
+    
     Args:
         text: Texte source à traduire
         target_lang: Langue cible (fr, en, es)
-
+        
     Returns:
         Traduction spéciale ou None si aucune règle ne s'applique
     """
-    # Charger les traductions spéciales depuis la configuration
-    translations = {}
-    if CONFIG.has_section('special_translations'):
-        for key, value in CONFIG['special_translations'].items():
-            # Format: term_lang = translation
-            if '_' in key:
-                term, lang = key.rsplit('_', 1)
-                if term not in translations:
-                    translations[term] = {}
-                translations[term][lang] = value
-      # Fallback vers les traductions par défaut si la config est vide
-    if not translations:
-        translations = {
-            "balayeur": {"en": "laser scanner", "es": "escáner láser"},
-            "gauche": {"en": "left", "es": "izquierdo"},
-            "droit": {"en": "right", "es": "derecho"},
-            "avant": {"en": "front", "es": "delantero"},
-            "arrière": {"en": "rear", "es": "trasero"},
-            "capteur": {"en": "sensor", "es": "sensor"},
-            "moteur": {"en": "motor", "es": "motor"},
-            "batterie": {"en": "battery", "es": "batería"}
-        }
+    # Dictionnaire des traductions spéciales
+    translations = {
+        "balayeur": {"en": "laser scanner", "es": "escáner láser"},
+        "gauche": {"en": "left", "es": "izquierdo"},
+        "droit": {"en": "right", "es": "derecho"},
+        "avant": {"en": "front", "es": "delantero"},
+        "arrière": {"en": "rear", "es": "trasero"},
+        "capteur": {"en": "sensor", "es": "sensor"},
+        "moteur": {"en": "motor", "es": "motor"},
+        "batterie": {"en": "battery", "es": "batería"}
+    }
 
     text_lower = text.lower()
 
@@ -233,26 +220,26 @@ def special_translations(text: str, target_lang: str) -> Optional[str]:
 def validate_json_structure(data: Dict[str, Any]) -> bool:
     """
     Valide la structure JSON pour s'assurer qu'elle contient les champs attendus.
-
+    
     Args:
         data: Données JSON à valider
-
+        
     Returns:
         True si la structure est valide
     """
     try:
         if not isinstance(data, dict):
             return False
-
+        
         # Vérifier la présence de FaultDetailList
         if "FaultDetailList" not in data:
             logger.warning("Structure JSON manque FaultDetailList")
             return False
-
+        
         if not isinstance(data["FaultDetailList"], list):
             logger.warning("FaultDetailList n'est pas une liste")
             return False
-
+        
         return True
     except Exception as e:
         logger.error(f"Erreur validation structure JSON: {e}")
@@ -265,7 +252,7 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
     Args:
         source_file_path: Chemin vers le fichier JSON source
         force_retranslate: Force la retraduction même si une traduction existe
-
+        
     Returns:
         True si la synchronisation s'est bien passée
     """
@@ -335,7 +322,7 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
 
             # Synchroniser les données
             modifications = process_translations(
-                source_data, target_data, source_lang, target_lang,
+                source_data, target_data, source_lang, target_lang, 
                 basename, force_retranslate
             )
 
@@ -375,16 +362,16 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
         return False
 
 def process_translations(
-    source_data: Dict[str, Any],
-    target_data: Dict[str, Any],
-    source_lang: str,
-    target_lang: str,
-    basename: str,
+    source_data: Dict[str, Any], 
+    target_data: Dict[str, Any], 
+    source_lang: str, 
+    target_lang: str, 
+    basename: str, 
     force_retranslate: bool
 ) -> int:
     """
     Traite les traductions pour une langue cible spécifique.
-
+    
     Args:
         source_data: Données source
         target_data: Données cible
@@ -392,12 +379,12 @@ def process_translations(
         target_lang: Langue cible
         basename: Nom du fichier pour les logs
         force_retranslate: Force la retraduction
-
+        
     Returns:
         Nombre de modifications effectuées
     """
     modifications = 0
-
+    
     # Initialiser la structure cible si nécessaire
     if "FaultDetailList" not in target_data:
         target_data["FaultDetailList"] = []
@@ -475,32 +462,6 @@ def process_translations(
 
     return modifications
 
-# Configuration management
-def load_config() -> configparser.ConfigParser:
-    """
-    Charge la configuration depuis le fichier sync_config.ini
-
-    Returns:
-        ConfigParser avec la configuration chargée
-    """
-    config = configparser.ConfigParser()
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, "sync_config.ini")
-
-    if os.path.exists(config_path):
-        try:
-            config.read(config_path, encoding='utf-8')
-            logger.info(f"Configuration chargée depuis: {config_path}")
-        except Exception as e:
-            logger.warning(f"Erreur chargement configuration: {e}")
-    else:
-        logger.warning(f"Fichier de configuration non trouvé: {config_path}")
-
-    return config
-
-# Charger la configuration globale
-CONFIG = load_config()
-
 def main():
     """Point d'entrée principal du script."""
     parser = argparse.ArgumentParser(
@@ -528,12 +489,12 @@ def main():
 
     logger.info(f"Démarrage avec fichier: {args.source_file}, force: {args.force}")
     success = sync_file(args.source_file, force_retranslate=args.force)
-
+    
     if success:
         logger.info("Script terminé avec succès")
     else:
         logger.error("Script terminé avec erreur")
-
+    
     sys.exit(0 if success else 1)
 
 if __name__ == "__main__":

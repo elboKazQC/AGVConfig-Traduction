@@ -1,0 +1,33 @@
+# AGVConfig-Traduction Dependencies
+# Core dependencies for the AGV Configuration Translation Tool
+
+# OpenAI API for translation services
+openai>=1.3.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Optional: Language detection for improved translation quality
+# Install with: pip install langdetect
+langdetect>=1.0.9
+
+# Development dependencies (uncomment for development)
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+
+# GUI dependencies (typically included with Python)
+# tkinter (included with standard Python installation)
+
+# Standard library modules used (no installation required):
+# - os
+# - sys
+# - json
+# - subprocess
+# - argparse
+# - re
+# - logging
+# - datetime
+# - functools

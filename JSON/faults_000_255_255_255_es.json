@@ -39,7 +39,7 @@
       "IsExpandable": true
     },
     {
-      "Description": "Motores de unidades.",
+      "Description": "Motores de conducción",
       "IsExpandable": true
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Lectores magnéticos.",
+      "Description": "Lectores magnéticos",
       "IsExpandable": true
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

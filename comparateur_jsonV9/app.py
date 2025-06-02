@@ -312,15 +312,15 @@ class FaultEditor:
         if not arg:
             self.status.config(text="❌ Argument sync_one manquant")
             print("❌ Aucun argument fourni pour sync_one")
-            return
-
-        # Valider que le fichier existe
+            return        # Valider que le fichier existe
         file_path = self.file_map.get(arg)
         if not file_path or not os.path.exists(file_path):
             self.status.config(text=f"❌ Fichier introuvable : {arg}")
             print(f"❌ Fichier introuvable : {arg}")
-            return        print(f"🔄 Lancement de sync_one_v3 pour : {file_path}")
-        cmd = ["python", "sync_one_v3.py", file_path, "--force"]
+            return
+
+        print(f"🔄 Lancement de sync_one pour : {file_path}")
+        cmd = ["python", "sync_one.py", file_path, "--force"]
         self.run_command(cmd, desc=f"Synchroniser {arg}")
 
     def run_generer_fichier(self):
@@ -516,12 +516,15 @@ class FaultEditor:
             print(f"❌ Fichiers manquants : {', '.join(missing_files)}")
             print(f"📁 Dossier recherché : {script_dir}")
             return False
+
         return True
 
     # --- Navigation et chargement des colonnes ---
     def reload_lang(self):
         self.lang = self.lang_var.get()
         print(f"Changement de langue : {self.lang}")
+        # Clear any active editing state before rebuilding UI
+        self.editing_info = None
         # Réinitialise le chemin courant pour éviter les erreurs
         self.current_path = [0, 255, 255, 255]
         self.clear_columns_from(0)
@@ -654,8 +657,12 @@ class FaultEditor:
 
     def render_row(self, row, fault, idx, path, level, filename):
         """Rend un row en mode lecture seule (utile pour annuler l'édition)"""
-        for w in row.winfo_children():
-            w.destroy()
+        try:
+            for w in row.winfo_children():
+                w.destroy()
+        except tk.TclError:
+            # Widget has been destroyed (e.g., during language change), skip rendering
+            return
         color = COL_GREEN if fault.get("IsExpandable") else COL_RED
         dot = tk.Canvas(row, width=14, height=14, bg=COL_BG_ROW, highlightthickness=0)
         dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
@@ -670,19 +677,32 @@ class FaultEditor:
         """Rétablit l'ancien row en mode lecture seule."""
         if not self.editing_info:
             return
+
         row  = self.editing_info["row"]
         fault = self.editing_info["fault"]
         idx   = self.editing_info["idx"]
         filename = self.editing_info["filename"]
         path = self.editing_info["path"]
         level = self.editing_info["level"]
-        self.render_row(row, fault, idx, path, level, filename)
+
+        try:
+            # Check if the widget still exists before trying to render it
+            row.winfo_exists()
+            self.render_row(row, fault, idx, path, level, filename)
+        except tk.TclError:
+            # Widget has been destroyed (e.g., during language change), just clear the editing info
+            pass
+
         self.editing_info = None
 
     def make_editable(self, row, fault, idx, filename, path, level):
         print(f"✏️ Modification déclenchée sur l'item {idx} dans {filename}")
-        for widget in row.winfo_children():
-            widget.destroy()
+        try:
+            for widget in row.winfo_children():
+                widget.destroy()
+        except tk.TclError:
+            # Widget has been destroyed (e.g., during language change), abort editing
+            return
         desc_var = tk.StringVar(value=fault.get("Description", ""))
         desc_entry = tk.Entry(row, textvariable=desc_var, bg=COL_EDIT_BG, fg=COL_EDIT_FG,
                               highlightthickness=0, relief="flat", font=FONT_DEFAULT)

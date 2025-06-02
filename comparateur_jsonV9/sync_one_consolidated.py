@@ -18,7 +18,6 @@ import json
 import argparse
 import re
 import logging
-import configparser
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Union
 from translate import traduire
@@ -162,7 +161,6 @@ def detecter_langue(texte: str) -> Optional[str]:
 def special_translations(text: str, target_lang: str) -> Optional[str]:
     """
     Gère les cas spéciaux de traduction qui nécessitent des règles particulières.
-    Utilise la configuration pour les traductions spéciales.
 
     Args:
         text: Texte source à traduire
@@ -171,28 +169,17 @@ def special_translations(text: str, target_lang: str) -> Optional[str]:
     Returns:
         Traduction spéciale ou None si aucune règle ne s'applique
     """
-    # Charger les traductions spéciales depuis la configuration
-    translations = {}
-    if CONFIG.has_section('special_translations'):
-        for key, value in CONFIG['special_translations'].items():
-            # Format: term_lang = translation
-            if '_' in key:
-                term, lang = key.rsplit('_', 1)
-                if term not in translations:
-                    translations[term] = {}
-                translations[term][lang] = value
-      # Fallback vers les traductions par défaut si la config est vide
-    if not translations:
-        translations = {
-            "balayeur": {"en": "laser scanner", "es": "escáner láser"},
-            "gauche": {"en": "left", "es": "izquierdo"},
-            "droit": {"en": "right", "es": "derecho"},
-            "avant": {"en": "front", "es": "delantero"},
-            "arrière": {"en": "rear", "es": "trasero"},
-            "capteur": {"en": "sensor", "es": "sensor"},
-            "moteur": {"en": "motor", "es": "motor"},
-            "batterie": {"en": "battery", "es": "batería"}
-        }
+    # Dictionnaire des traductions spéciales
+    translations = {
+        "balayeur": {"en": "laser scanner", "es": "escáner láser"},
+        "gauche": {"en": "left", "es": "izquierdo"},
+        "droit": {"en": "right", "es": "derecho"},
+        "avant": {"en": "front", "es": "delantero"},
+        "arrière": {"en": "rear", "es": "trasero"},
+        "capteur": {"en": "sensor", "es": "sensor"},
+        "moteur": {"en": "motor", "es": "motor"},
+        "batterie": {"en": "battery", "es": "batería"}
+    }
 
     text_lower = text.lower()
 
@@ -474,32 +461,6 @@ def process_translations(
                 print(f"{ROUGE}❌ Erreur traduction index {i}: {e}{RESET}")
 
     return modifications
-
-# Configuration management
-def load_config() -> configparser.ConfigParser:
-    """
-    Charge la configuration depuis le fichier sync_config.ini
-
-    Returns:
-        ConfigParser avec la configuration chargée
-    """
-    config = configparser.ConfigParser()
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, "sync_config.ini")
-
-    if os.path.exists(config_path):
-        try:
-            config.read(config_path, encoding='utf-8')
-            logger.info(f"Configuration chargée depuis: {config_path}")
-        except Exception as e:
-            logger.warning(f"Erreur chargement configuration: {e}")
-    else:
-        logger.warning(f"Fichier de configuration non trouvé: {config_path}")
-
-    return config
-
-# Charger la configuration globale
-CONFIG = load_config()
 
 def main():
     """Point d'entrée principal du script."""

@@ -55,7 +55,7 @@
       "IsExpandable": true
     },
     {
-      "Description": "Programmable Logic Controller",
+      "Description": "PLC",
       "IsExpandable": true
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }
