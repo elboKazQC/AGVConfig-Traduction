@@ -18,55 +18,55 @@
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de lecture : Erreur de commande ISO - Pas de réponse",
+      "Description": "Erreur de lecture: Erreur de commande ISO - Pas de réponse",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de lecture : Erreur de commande ISO - Erreur RX",
+      "Description": "Erreur de lecture: Erreur de commande ISO - Erreur RX",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur d'écriture : Erreur de commande ISO - Pas de réponse",
+      "Description": "Erreur d'écriture: Erreur de commande ISO - Pas de réponse",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur d'écriture : Erreur de commande ISO - Erreur RX",
+      "Description": "Erreur d'écriture: Erreur de commande ISO - Erreur RX",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Commande non spécifiée",
+      "Description": "Erreur de tag ISO: Commande non spécifiée",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Syntaxe de commande",
+      "Description": "Erreur de tag ISO: Syntaxe de commande",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Option non prise en charge",
+      "Description": "Erreur de tag ISO: Option non prise en charge",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Autre",
+      "Description": "Erreur de tag ISO: Autre",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Bloc non utilisable",
+      "Description": "Erreur de tag ISO: Bloc non utilisable",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Bloc déjà bloqué",
+      "Description": "Erreur de tag ISO: Bloc déjà bloqué",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Bloc non actualisable",
+      "Description": "Erreur de tag ISO: Bloc non actualisable",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Vérification d'écriture de bloc",
+      "Description": "Erreur de tag ISO: Vérification d'écriture de bloc",
       "IsExpandable": false
     },
     {
-      "Description": "Erreur de tag ISO : Vérification de verrouillage de bloc",
+      "Description": "Erreur de tag ISO: Vérification de verrouillage de bloc",
       "IsExpandable": false
     },
     {

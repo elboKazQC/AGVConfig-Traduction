@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 3,
-        "Language": "fr",
-        "Filename": "faults_000_007_000_003_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 3,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_003_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_003_Drive_Left_PAC425T100C_Fault03",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_61",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_003_Drive_Left_PAC425T100C_Fault03",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_61",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_62",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_63",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_64",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_65",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_66",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_67",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_68",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_69",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_70",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_71",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_72",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_73",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_74",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_75",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_76",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_77",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_78",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_79",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_80",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_81",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_82",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_83",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_84",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_85",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_86",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_87",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_998",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_999",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_>999",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustements par défaut utilisés : CodeErreurDeBase_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance de la puce mémoire : CodeErreurDeBase_9 CodeErreurSecondaire_>0",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_62",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_63",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_64",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_65",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_66",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_67",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_68",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_69",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_70",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_71",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_72",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_73",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_74",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_75",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_76",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_77",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_78",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_79",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_80",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_81",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_82",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_83",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_84",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_85",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_86",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_87",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_998",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_>999",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustements par défaut utilisés: CodeErreurDeBase_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé de la puce mémoire: CodeErreurDeBase_9 CodeErreurSecondaire_>0",
+      "IsExpandable": false
+    }
+  ]
 }

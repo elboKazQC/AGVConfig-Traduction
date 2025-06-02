@@ -1,0 +1,2967 @@
+# RAPPORT DE CORRECTION ORTHOGRAPHIQUE
+==================================================
+Fichiers modifiés: 32
+Total corrections: 724
+
+## DÉTAIL DES CORRECTIONS
+------------------------------
+
+### faults_000_000_000_255_fr.json
+  Index 3:
+    AVANT: Arret d'urgence balayeur laser
+    APRÈS: Arrêt d'urgence balayeur laser
+    DÉTAILS: 'Arret' → 'Arrêt'
+  Index 4:
+    AVANT: Arret d'urgence bouton a distance
+    APRÈS: Arrêt d'urgence bouton à distance
+    DÉTAILS: 'Arret' → 'Arrêt', 'a distance' → 'à distance'
+  Index 5:
+    AVANT: Encodeur : désynchronisation de vitesse
+    APRÈS: Encodeur: désynchronisation de vitesse
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Mouvement AMR non reconnue
+    APRÈS: Mouvement AMR non reconnu
+    DÉTAILS: 'reconnue' → 'reconnu'
+  Index 13:
+    AVANT: Arret d'urgence PLC standard
+    APRÈS: Arrêt d'urgence PLC standard
+    DÉTAILS: 'Arret' → 'Arrêt'
+  Index 16:
+    AVANT: Encodeur : commande de synchronisation de vitesse
+    APRÈS: Encodeur: commande de synchronisation de vitesse
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_000_001_255_fr.json
+  Index 5:
+    AVANT: Bouton d'arret d'urgence 1
+    APRÈS: Bouton d'arrêt d'urgence 1
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 6:
+    AVANT: Bouton d'arret d'urgence 2
+    APRÈS: Bouton d'arrêt d'urgence 2
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 7:
+    AVANT: Bouton d'arret d'urgence 3
+    APRÈS: Bouton d'arrêt d'urgence 3
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 8:
+    AVANT: Bouton d'arret d'urgence 4
+    APRÈS: Bouton d'arrêt d'urgence 4
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 9:
+    AVANT: Bouton d'arret d'urgence distant
+    APRÈS: Bouton d'arrêt d'urgence distant
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 10:
+    AVANT: Bouton d'arret d'urgence manette
+    APRÈS: Bouton d'arrêt d'urgence manette
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 11:
+    AVANT: Alerte de reponse de control de décélération
+    APRÈS: Alerte de réponse de control de décélération
+    DÉTAILS: 'reponse' → 'réponse'
+  Index 12:
+    AVANT: Alerte de reponse d'arret de décélération
+    APRÈS: Alerte de réponse d'arrêt de décélération
+    DÉTAILS: 'arret' → 'arrêt', 'reponse' → 'réponse'
+
+### faults_000_000_002_255_fr.json
+  Index 1:
+    AVANT: Zone d'arret 1 déclenchée
+    APRÈS: Zone d'arrêt 1 déclenchée
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 7:
+    AVANT: Zone d'arret 2 déclenchée
+    APRÈS: Zone d'arrêt 2 déclenchée
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 13:
+    AVANT: Zone d'arret 3 déclenchée
+    APRÈS: Zone d'arrêt 3 déclenchée
+    DÉTAILS: 'arret' → 'arrêt'
+  Index 19:
+    AVANT: Zone d'arret 4 déclenchée
+    APRÈS: Zone d'arrêt 4 déclenchée
+    DÉTAILS: 'arret' → 'arrêt'
+
+### faults_000_012_000_255_fr.json
+  Index 2:
+    AVANT: Erreur de lecture : Erreur de commande ISO - Pas de réponse
+    APRÈS: Erreur de lecture: Erreur de commande ISO - Pas de réponse
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Erreur de lecture : Erreur de commande ISO - Erreur RX
+    APRÈS: Erreur de lecture: Erreur de commande ISO - Erreur RX
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Erreur d'écriture : Erreur de commande ISO - Pas de réponse
+    APRÈS: Erreur d'écriture: Erreur de commande ISO - Pas de réponse
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Erreur d'écriture : Erreur de commande ISO - Erreur RX
+    APRÈS: Erreur d'écriture: Erreur de commande ISO - Erreur RX
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Erreur de tag ISO : Commande non spécifiée
+    APRÈS: Erreur de tag ISO: Commande non spécifiée
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Erreur de tag ISO : Syntaxe de commande
+    APRÈS: Erreur de tag ISO: Syntaxe de commande
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Erreur de tag ISO : Option non prise en charge
+    APRÈS: Erreur de tag ISO: Option non prise en charge
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Erreur de tag ISO : Autre
+    APRÈS: Erreur de tag ISO: Autre
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Erreur de tag ISO : Bloc non utilisable
+    APRÈS: Erreur de tag ISO: Bloc non utilisable
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Erreur de tag ISO : Bloc déjà bloqué
+    APRÈS: Erreur de tag ISO: Bloc déjà bloqué
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Erreur de tag ISO : Bloc non actualisable
+    APRÈS: Erreur de tag ISO: Bloc non actualisable
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Erreur de tag ISO : Vérification d'écriture de bloc
+    APRÈS: Erreur de tag ISO: Vérification d'écriture de bloc
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Erreur de tag ISO : Vérification de verrouillage de bloc
+    APRÈS: Erreur de tag ISO: Vérification de verrouillage de bloc
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_012_001_255_fr.json
+  Index 2:
+    AVANT: Erreur de lecture : Erreur de commande ISO - Pas de réponse
+    APRÈS: Erreur de lecture: Erreur de commande ISO - Pas de réponse
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Erreur de lecture : Erreur de commande ISO - Erreur RX
+    APRÈS: Erreur de lecture: Erreur de commande ISO - Erreur RX
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Erreur d'écriture : Erreur de commande ISO - Pas de réponse
+    APRÈS: Erreur d'écriture: Erreur de commande ISO - Pas de réponse
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Erreur d'écriture : Erreur de commande ISO - Erreur RX
+    APRÈS: Erreur d'écriture: Erreur de commande ISO - Erreur RX
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Erreur de tag ISO : Commande non spécifiée
+    APRÈS: Erreur de tag ISO: Commande non spécifiée
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Erreur de tag ISO : Syntaxe de commande
+    APRÈS: Erreur de tag ISO: Syntaxe de commande
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Erreur de tag ISO : Option non prise en charge
+    APRÈS: Erreur de tag ISO: Option non prise en charge
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Erreur de tag ISO : Autre
+    APRÈS: Erreur de tag ISO: Autre
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Erreur de tag ISO : Bloc non utilisable
+    APRÈS: Erreur de tag ISO: Bloc non utilisable
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Erreur de tag ISO : Bloc déjà bloqué
+    APRÈS: Erreur de tag ISO: Bloc déjà bloqué
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Erreur de tag ISO : Bloc non actualisable
+    APRÈS: Erreur de tag ISO: Bloc non actualisable
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Erreur de tag ISO : Vérification d'écriture de bloc
+    APRÈS: Erreur de tag ISO: Vérification d'écriture de bloc
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Erreur de tag ISO : Vérification de verrouillage de bloc
+    APRÈS: Erreur de tag ISO: Vérification de verrouillage de bloc
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_001_000_255_fr.json
+  Index 7:
+    AVANT: Combinaison de commande invalide
+    APRÈS: Combinaison de commande invalidé
+    DÉTAILS: 'valide' → 'validé'
+  Index 9:
+    AVANT: Vitesse AMR invalide
+    APRÈS: Vitesse AMR invalidé
+    DÉTAILS: 'valide' → 'validé'
+  Index 15:
+    AVANT: Relais controleur du convoyeur station externe
+    APRÈS: Relais contrôleur du convoyeur station externe
+    DÉTAILS: 'controle' → 'contrôle'
+  Index 19:
+    AVANT: Vitesse invalide AMR
+    APRÈS: Vitesse invalidé AMR
+    DÉTAILS: 'valide' → 'validé'
+  Index 20:
+    AVANT: Limite de vitesse invalide AMR
+    APRÈS: Limite de vitesse invalidé AMR
+    DÉTAILS: 'valide' → 'validé'
+  Index 21:
+    AVANT: Commande invalide
+    APRÈS: Commande invalidé
+    DÉTAILS: 'valide' → 'validé'
+  Index 30:
+    AVANT: Controleur convoyeur station externe
+    APRÈS: Contrôleur convoyeur station externe
+    DÉTAILS: 'Controle' → 'Contrôle'
+
+### faults_000_001_001_255_fr.json
+  Index 15:
+    AVANT: Relais controleur du convoyeur station Fixe
+    APRÈS: Relais contrôleur du convoyeur station Fixe
+    DÉTAILS: 'controle' → 'contrôle'
+  Index 21:
+    AVANT: Commande invalide
+    APRÈS: Commande invalidé
+    DÉTAILS: 'valide' → 'validé'
+  Index 30:
+    AVANT: Controleur convoyeur station fixe
+    APRÈS: Contrôleur convoyeur station fixe
+    DÉTAILS: 'Controle' → 'Contrôle'
+
+### faults_000_001_002_255_fr.json
+  Index 1:
+    AVANT: Mode AGV : Arrêt
+    APRÈS: Mode AGV: Arrêt
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Déplacement vers le haut : Détection laser avant non disponible
+    APRÈS: Déplacement vers le haut: Détection laser avant non disponible
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Déplacement vers le haut : Détection arrière par laser non disponible
+    APRÈS: Déplacement vers le haut: Détection arrière par laser non disponible
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Détection de tunnel : Alerte d'arrêt
+    APRÈS: Détection de tunnel: Alerte d'arrêt
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_001_fr.json
+  Index 0:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_1
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_2
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_3
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_4
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_1
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_2
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_3
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_4
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Température du moteur élevée : CodeErreurDeBase_5
+    APRÈS: Température du moteur élevée: CodeErreurDeBase_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Température du contrôleur élevée : CodeErreurDeBase_6
+    APRÈS: Température du contrôleur élevée: CodeErreurDeBase_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_1
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_2
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_4
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_5
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_6
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_8
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_9
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_11
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_14
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_16
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_17
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_18
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_19
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_20
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_21
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_002_fr.json
+  Index 0:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_22
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_24
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_25
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_25
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_26
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_26
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_31
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_31
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_32
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_32
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_33
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_33
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_34
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_34
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_35
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_35
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_36
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_36
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_37
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_37
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_38
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_38
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_39
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_39
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_40
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_40
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_41
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_41
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_42
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_42
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_43
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_43
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_44
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_44
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_47
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_47
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_48
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_48
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_49
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_49
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_50
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_50
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_51
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_51
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_52
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_52
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_53
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_53
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_54
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_54
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_55
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_55
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_56
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_56
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_57
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_57
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_58
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_58
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_59
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_59
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_60
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_60
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_003_fr.json
+  Index 0:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_61
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_61
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_62
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_62
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_63
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_63
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_64
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_64
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_65
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_65
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_66
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_66
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_67
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_67
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_68
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_68
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_69
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_69
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_70
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_70
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_71
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_71
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_72
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_72
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_73
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_73
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_74
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_74
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_75
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_75
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_76
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_76
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_77
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_77
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_78
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_78
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_79
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_79
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_80
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_80
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_81
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_81
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_82
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_82
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_83
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_83
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_84
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_84
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_85
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_85
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_86
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_86
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_87
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_87
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_998
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_998
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_999
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_999
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_>999
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_>999
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustements par défaut utilisés : CodeErreurDeBase_8
+    APRÈS: Ajustements par défaut utilisés: CodeErreurDeBase_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance de la puce mémoire : CodeErreurDeBase_9 CodeErreurSecondaire_>0
+    APRÈS: Défaillancé de la puce mémoire: CodeErreurDeBase_9 CodeErreurSecondaire_>0
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_000_004_fr.json
+  Index 0:
+    AVANT: Les entrées avant et arrière sont actives : CodeErreurDeBase_10
+    APRÈS: Les entrées avant et arrière sont activés: CodeErreurDeBase_10
+    DÉTAILS: 'active' → 'activé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_0
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_0
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_2
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_4
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_1
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_2
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_3
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_4
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_5
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_6
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_7
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_8
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_9
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_10
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_11
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_12
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_15
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_16
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_17
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_1
+    APRÈS: Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_2
+    APRÈS: Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_1
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_2
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_3
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_4
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_5
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_6
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_7
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_8
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_1
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_2
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_3
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_000_005_fr.json
+  Index 0:
+    AVANT: Tension de l'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_4 
+    APRÈS: Tension de l'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_4 
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_0
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_0
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_1
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_2
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_1
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_2
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_3
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_4
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Court-circuit MOSFET côté haut.M1 : CodeErreurDeBase_18 CodeErreurSecondaire_1
+    APRÈS: Court-circuit MOSFET côté haut.M1: CodeErreurDeBase_18 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Court-circuit MOSFET côté haut.M2 : CodeErreurDeBase_18 CodeErreurSecondaire_2
+    APRÈS: Court-circuit MOSFET côté haut.M2: CodeErreurDeBase_18 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Court-circuit MOSFET côté haut.M3 : CodeErreurDeBase_18 CodeErreurSecondaire_3
+    APRÈS: Court-circuit MOSFET côté haut.M3: CodeErreurDeBase_18 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_1
+    APRÈS: Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_2
+    APRÈS: Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_1
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_2
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_3
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_4
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_>4
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_>4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_1
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_2
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_3
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_4
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_5
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_6
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_7
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_8
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_9
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_10
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_11
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_12
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_13
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_1
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_006_fr.json
+  Index 0:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_2
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_3
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_4
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Court-circuit MOSFET côté bas.M1 : CodeErreurDeBase_23 CodeErreurSecondaire_1
+    APRÈS: Court-circuit MOSFET côté bas.M1: CodeErreurDeBase_23 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Court-circuit MOSFET côté bas.M2 : CodeErreurDeBase_23 CodeErreurSecondaire_2
+    APRÈS: Court-circuit MOSFET côté bas.M2: CodeErreurDeBase_23 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Court-circuit MOSFET côté bas.M3 : CodeErreurDeBase_23 CodeErreurSecondaire_3
+    APRÈS: Court-circuit MOSFET côté bas.M3: CodeErreurDeBase_23 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_1
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_2
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_3
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_4
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_5
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_6
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_7
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_8
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_9
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_10
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_11
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_12
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_12
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_13
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_13
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_14
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_14
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_15
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_15
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_16
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_16
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_17
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_17
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_18
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_18
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_19
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_19
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_1
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_2
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_3
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_000_007_fr.json
+  Index 0:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_4
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_5
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_6
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_7
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Court-circuit des MOSFET côté bas.M1 : CodeErreurBase_27 CodeErreurSecondaire_1
+    APRÈS: Court-circuit des MOSFET côté bas.M1: CodeErreurBase_27 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Court-circuit des MOSFET côté bas.M2 : CodeErreurBase_27 CodeErreurSecondaire_2
+    APRÈS: Court-circuit des MOSFET côté bas.M2: CodeErreurBase_27 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Court-circuit des MOSFET côté bas.M3 : CodeErreurBase_27 CodeErreurSecondaire_3
+    APRÈS: Court-circuit des MOSFET côté bas.M3: CodeErreurBase_27 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_1
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_2
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_3
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_4
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_5
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_6
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_7
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_8
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_9
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_10
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_5
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_6
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_7
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_8
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_9
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_10
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_11
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_20
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_20
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_21
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_21
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_22
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_22
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_23
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_23
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_000_008_fr.json
+  Index 0:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_24
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_24
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_25
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_25
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_30
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_30
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_31
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_31
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_40
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_40
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_41
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_41
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_42
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_42
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_43
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_43
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_44
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_44
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_1
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_2
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_3
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_5
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_6
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_7
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_8
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_9
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_10
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_11
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_12
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_12
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_13
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_13
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_14
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_14
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_15
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_15
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_16
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_16
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_17
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_17
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_18
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_18
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_19
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_19
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_20
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_20
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_000_009_fr.json
+  Index 0:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_21
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_21
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_22
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_22
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_23
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_23
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_24
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_24
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_1
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_2
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_3
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_4
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_5
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_6
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_7
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_8
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_9
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_10
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_11
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_12
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_13
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_14
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_15
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_16
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_17
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_18
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_19
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_20
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_21
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_22
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_23
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_24
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_1
+    APRÈS: configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_2
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_3
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_4
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_010_fr.json
+  Index 0:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_5
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_6
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_7
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_8
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_9
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_10
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_11
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_12
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_13
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_14
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_15
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_16
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_17
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_18
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_19
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_20
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_21
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_22
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_23
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_24
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_1
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_2
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_3
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_4
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_5
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_6
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_7
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_8
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_9
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_10
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_11
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_12
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_000_011_fr.json
+  Index 0:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_14
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_15
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_16
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_17
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_18
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_19
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_20
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_21
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_22
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_23
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_24
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_13
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_1
+    APRÈS: Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_2
+    APRÈS: Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Température du contrôleur supérieure à 100 degrés : CodeErreurDeBase_36
+    APRÈS: Température du contrôleur supérieure à 100 degrés: CodeErreurDeBase_36
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_1
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_2
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_3
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du système : CodeErreurDeBase_40
+    APRÈS: Défaillancé du système: CodeErreurDeBase_40
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_001_fr.json
+  Index 0:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_1
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_2
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_3
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_4
+    APRÈS: La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_1
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_2
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_3
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_4
+    APRÈS: La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Température du moteur élevée : CodeErreurDeBase_5
+    APRÈS: Température du moteur élevée: CodeErreurDeBase_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Température du contrôleur élevée : CodeErreurDeBase_6
+    APRÈS: Température du contrôleur élevée: CodeErreurDeBase_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_1
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_2
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_4
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_5
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_6
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_8
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_9
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_11
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_14
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_16
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_17
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_18
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_19
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_20
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_21
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_001_002_fr.json
+  Index 0:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_22
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_24
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_25
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_25
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_26
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_26
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_31
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_31
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_32
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_32
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_33
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_33
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_34
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_34
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_35
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_35
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_36
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_36
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_37
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_37
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_38
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_38
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_39
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_39
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_40
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_40
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_41
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_41
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_42
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_42
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_43
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_43
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_44
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_44
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_47
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_47
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_48
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_48
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_49
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_49
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_50
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_50
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_51
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_51
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_52
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_52
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_53
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_53
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_54
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_54
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_55
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_55
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_56
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_56
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_57
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_57
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_58
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_58
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_59
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_59
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_60
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_60
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_001_003_fr.json
+  Index 0:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_61
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_61
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_62
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_62
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_63
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_63
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_64
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_64
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_65
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_65
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_66
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_66
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_67
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_67
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_68
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_68
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_69
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_69
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_70
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_70
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_71
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_71
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_72
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_72
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_73
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_73
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_74
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_74
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_75
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_75
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_76
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_76
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_77
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_77
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_78
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_78
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_79
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_79
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_80
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_80
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_81
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_81
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_82
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_82
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_83
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_83
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_84
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_84
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_85
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_85
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_86
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_86
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_87
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_87
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_998
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_998
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_999
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_999
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_>999
+    APRÈS: Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_>999
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Ajustements par défaut utilisés : CodeErreurDeBase_8
+    APRÈS: Ajustements par défaut utilisés: CodeErreurDeBase_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance de la puce mémoire : CodeErreurDeBase_9 CodeErreurSecondaire_>0
+    APRÈS: Défaillancé de la puce mémoire: CodeErreurDeBase_9 CodeErreurSecondaire_>0
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_004_fr.json
+  Index 0:
+    AVANT: Les entrées avant et arrière sont actives : CodeErreurDeBase_10
+    APRÈS: Les entrées avant et arrière sont activés: CodeErreurDeBase_10
+    DÉTAILS: 'active' → 'activé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_0
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_0
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_2
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_4
+    APRÈS: Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_1
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_2
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_3
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_4
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_5
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_6
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_7
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_8
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_9
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_10
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_11
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_12
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_15
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_16
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_17
+    APRÈS: Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_1
+    APRÈS: Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_2
+    APRÈS: Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_1
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_2
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_3
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_4
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_5
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_6
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_7
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_8
+    APRÈS: Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_1
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_2
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_3
+    APRÈS: Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_005_fr.json
+  Index 0:
+    AVANT: Tension de l'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_4 
+    APRÈS: Tension de l'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_4 
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_0
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_0
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_1
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_2
+    APRÈS: Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_1
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_2
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_3
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_4
+    APRÈS: Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Court-circuit MOSFET côté haut.M1 : CodeErreurDeBase_18 CodeErreurSecondaire_1
+    APRÈS: Court-circuit MOSFET côté haut.M1: CodeErreurDeBase_18 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Court-circuit MOSFET côté haut.M2 : CodeErreurDeBase_18 CodeErreurSecondaire_2
+    APRÈS: Court-circuit MOSFET côté haut.M2: CodeErreurDeBase_18 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Court-circuit MOSFET côté haut.M3 : CodeErreurDeBase_18 CodeErreurSecondaire_3
+    APRÈS: Court-circuit MOSFET côté haut.M3: CodeErreurDeBase_18 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_1
+    APRÈS: Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_2
+    APRÈS: Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_1
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_2
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_3
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_4
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_>4
+    APRÈS: Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_>4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_1
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_2
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_3
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_4
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_5
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_6
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_7
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_8
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_9
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_10
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_11
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_12
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_13
+    APRÈS: Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_1
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_001_006_fr.json
+  Index 0:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_2
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_3
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_4
+    APRÈS: Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Court-circuit MOSFET côté bas.M1 : CodeErreurDeBase_23 CodeErreurSecondaire_1
+    APRÈS: Court-circuit MOSFET côté bas.M1: CodeErreurDeBase_23 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Court-circuit MOSFET côté bas.M2 : CodeErreurDeBase_23 CodeErreurSecondaire_2
+    APRÈS: Court-circuit MOSFET côté bas.M2: CodeErreurDeBase_23 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Court-circuit MOSFET côté bas.M3 : CodeErreurDeBase_23 CodeErreurSecondaire_3
+    APRÈS: Court-circuit MOSFET côté bas.M3: CodeErreurDeBase_23 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_1
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_2
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_3
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_4
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_5
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_6
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_7
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_8
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_9
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_10
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_11
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_12
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_12
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_13
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_13
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_14
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_14
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_15
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_15
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_16
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_16
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_17
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_17
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_18
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_18
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance de sécurité matérielle : CodeErreurDeBase_24 CodeErreurSecondaire_19
+    APRÈS: Défaillancé de sécurité matérielle: CodeErreurDeBase_24 CodeErreurSecondaire_19
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du contacteur de ligne : CodeErreurDeBase_25 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du contacteur de ligne: CodeErreurDeBase_25 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_1
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_2
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_3
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_007_fr.json
+  Index 0:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_4
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_5
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_6
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_7
+    APRÈS: Défaillancé de l'arrêt thermique: CodeErreurDeBase_26 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Court-circuit des MOSFET côté bas.M1 : CodeErreurBase_27 CodeErreurSecondaire_1
+    APRÈS: Court-circuit des MOSFET côté bas.M1: CodeErreurBase_27 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Court-circuit des MOSFET côté bas.M2 : CodeErreurBase_27 CodeErreurSecondaire_2
+    APRÈS: Court-circuit des MOSFET côté bas.M2: CodeErreurBase_27 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Court-circuit des MOSFET côté bas.M3 : CodeErreurBase_27 CodeErreurSecondaire_3
+    APRÈS: Court-circuit des MOSFET côté bas.M3: CodeErreurBase_27 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_1
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_2
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_3
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_4
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_5
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_6
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_7
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_8
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_9
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_10
+    APRÈS: Fil déconnecté détecté: CodeErreurDeBase_28 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_5
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_6
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_7
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_8
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_9
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_10
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_11
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_20
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_20
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_21
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_21
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_22
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_22
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_23
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_23
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_008_fr.json
+  Index 0:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_24
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_24
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_25
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_25
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_30
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_30
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_31
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_31
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_40
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_40
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_41
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_41
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_42
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_42
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_43
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_43
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_44
+    APRÈS: Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_44
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_1
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_2
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_3
+    APRÈS: Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_1
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_1
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_2
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_2
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_3
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_3
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_4
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_4
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_5
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_5
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_6
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_6
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_7
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_7
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_8
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_8
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_9
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_9
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_10
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_10
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_11
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_11
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_12
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_12
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_13
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_13
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_14
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_14
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_15
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_15
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_16
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_16
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_17
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_17
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_18
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_18
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_19
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_19
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_20
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_20
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_001_009_fr.json
+  Index 0:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_21
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_21
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_22
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_22
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_23
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_23
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_24
+    APRÈS: Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_24
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_1
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_2
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_3
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_4
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_5
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_6
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_7
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_8
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_9
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_10
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_11
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_12
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_13
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_14
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_15
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_16
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_17
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_18
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_19
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_20
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_21
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_22
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_23
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_24
+    APRÈS: initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_1
+    APRÈS: configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_2
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_3
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_4
+    APRÈS: configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_001_010_fr.json
+  Index 0:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_5
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_6
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_7
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_8
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_9
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_10
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_11
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_12
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_13
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_14
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_15
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_16
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_17
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_18
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_19
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_20
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_21
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_22
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_23
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 19:
+    AVANT: Configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_24
+    APRÈS: Configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 20:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_1
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 21:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_2
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 22:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_3
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 23:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_4
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_4
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 24:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_5
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_5
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 25:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_6
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_6
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 26:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_7
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_7
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 27:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_8
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_8
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 28:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_9
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_9
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 29:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_10
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_10
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 30:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_11
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_11
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 31:
+    AVANT: paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_12
+    APRÈS: paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_12
+    DÉTAILS: Pattern '\s+:' appliqué
+
+### faults_000_007_001_011_fr.json
+  Index 0:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_14
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_14
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 1:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_15
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_15
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 2:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_16
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_16
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 3:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_17
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_17
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 4:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_18
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_18
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 5:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_19
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_19
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 6:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_20
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_20
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 7:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_21
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_21
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 8:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_22
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_22
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 9:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_23
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_23
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 10:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_24
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_24
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 11:
+    AVANT: Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_13
+    APRÈS: Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_13
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 12:
+    AVANT: Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_1
+    APRÈS: Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 13:
+    AVANT: Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_2
+    APRÈS: Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 14:
+    AVANT: Température du contrôleur supérieure à 100 degrés : CodeErreurDeBase_36
+    APRÈS: Température du contrôleur supérieure à 100 degrés: CodeErreurDeBase_36
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 15:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_1
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_1
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 16:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_2
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_2
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 17:
+    AVANT: Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_3
+    APRÈS: Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_3
+    DÉTAILS: Pattern '\s+:' appliqué
+  Index 18:
+    AVANT: Défaillance du système : CodeErreurDeBase_40
+    APRÈS: Défaillancé du système: CodeErreurDeBase_40
+    DÉTAILS: 'lance' → 'lancé', Pattern '\s+:' appliqué
+
+### faults_000_007_002_255_fr.json
+  Index 6:
+    AVANT: Défaillance MOSFET
+    APRÈS: Défaillancé MOSFET
+    DÉTAILS: 'lance' → 'lancé'
+
+### faults_000_007_003_255_fr.json
+  Index 6:
+    AVANT: Défaillance MOSFET
+    APRÈS: Défaillancé MOSFET
+    DÉTAILS: 'lance' → 'lancé'

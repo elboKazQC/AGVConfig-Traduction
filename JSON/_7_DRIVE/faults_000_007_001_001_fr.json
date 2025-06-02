@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 1,
-        "IdLevel3": 1,
-        "Language": "fr",
-        "Filename": "faults_000_007_001_001_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 1,
+    "Language": "fr",
+    "Filename": "faults_000_007_001_001_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_001_Drive_Right_PAC425T100C_Fault01",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_1",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_001_001_Drive_Right_PAC425T100C_Fault01",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient faible : CodeErreurDeBase_2 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "La tension devient élevée : CodeErreurDeBase_4 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Température du moteur élevée : CodeErreurDeBase_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Température du contrôleur élevée : CodeErreurDeBase_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_14",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_18",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_19",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_20",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Ajustement hors plage : CodeErreurDeBase_7 CodeErreurSecondaire_21",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient faible: CodeErreurDeBase_2 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Inhibition Drive/CoupureBDI/BLC via CAN: CodeErreurBase_3 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La tension devient élevée: CodeErreurDeBase_4 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Température du moteur élevée: CodeErreurDeBase_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Température du contrôleur élevée: CodeErreurDeBase_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ajustement hors plage: CodeErreurDeBase_7 CodeErreurSecondaire_21",
+      "IsExpandable": false
+    }
+  ]
 }

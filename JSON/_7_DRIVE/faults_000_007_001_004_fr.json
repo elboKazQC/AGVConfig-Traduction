@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 1,
-        "IdLevel3": 4,
-        "Language": "fr",
-        "Filename": "faults_000_007_001_004_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 4,
+    "Language": "fr",
+    "Filename": "faults_000_007_001_004_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_004_Drive_Right_PAC425T100C_Fault04",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Les entrées avant et arrière sont activés: CodeErreurDeBase_10",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_001_004_Drive_Right_PAC425T100C_Fault04",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Les entrées avant et arrière sont actives : CodeErreurDeBase_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_0",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conduite non autorisée : CodeErreurDeBase_11 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_12",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillanc mise sous tension : CodeErreurDeBase_12 CodeErreurSecondaire_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Accélérateur à plus de 50 % : CodeErreurDeBase_13 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillances micro-déplacement : CodeErreurDeBase_14 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance d'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conduite non autorisée: CodeErreurDeBase_11 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillanc mise sous tension: CodeErreurDeBase_12 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Accélérateur à plus de 50 %: CodeErreurDeBase_13 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancés micro-déplacement: CodeErreurDeBase_14 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé d'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    }
+  ]
 }

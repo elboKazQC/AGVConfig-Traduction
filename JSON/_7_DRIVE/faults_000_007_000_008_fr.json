@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 8,
-        "Language": "fr",
-        "Filename": "faults_000_007_000_008_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 8,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_008_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_24",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_24",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_25",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_30",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_31",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_40",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_41",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_42",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_43",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_44",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Survitesse du moteur : CodeErreurDeBase_30 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_12",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_13",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_14",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_18",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_19",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_20",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_25",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_30",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_31",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_40",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_41",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_42",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_43",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du nœud CAN: CodeErreurDeBase_29 CodeErreurSecondaire_44",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Survitesse du moteur: CodeErreurDeBase_30 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_20",
+      "IsExpandable": false
+    }
+  ]
 }

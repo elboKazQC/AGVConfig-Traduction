@@ -23,15 +23,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence balayeur laser",
+      "Description": "Arrêt d'urgence balayeur laser",
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence bouton a distance",
+      "Description": "Arrêt d'urgence bouton à distance",
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : désynchronisation de vitesse",
+      "Description": "Encodeur: désynchronisation de vitesse",
       "IsExpandable": false
     },
     {
@@ -39,7 +39,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement AMR non reconnue",
+      "Description": "Mouvement AMR non reconnu",
       "IsExpandable": false
     },
     {
@@ -63,7 +63,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Arret d'urgence PLC standard",
+      "Description": "Arrêt d'urgence PLC standard",
       "IsExpandable": false
     },
     {
@@ -75,7 +75,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Encodeur : commande de synchronisation de vitesse",
+      "Description": "Encodeur: commande de synchronisation de vitesse",
       "IsExpandable": false
     },
     {

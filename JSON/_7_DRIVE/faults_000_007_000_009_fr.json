@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 9,
-        "Language": "fr",
-        "Filename": "faults_000_007_000_009_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 9,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_009_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_009_Drive_Left_PAC425T100C_Fault09",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_21",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_009_Drive_Left_PAC425T100C_Fault09",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_21",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_22",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_23",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du moteur : CodeErreurDeBase_31 CodeErreurSecondaire_24",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_12",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_13",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_14",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_18",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_19",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_20",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_21",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_22",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_23",
-            "IsExpandable": false
-        },
-        {
-            "Description": "initialisation du module moteur : CodeErreurDeBase_32 CodeErreurSecondaire_24",
-            "IsExpandable": false
-        },
-        {
-            "Description": "configuration du module moteur : CodeErreurDeBase_33 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "configuration du module moteur :CodeErreurDeBase_33 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du moteur: CodeErreurDeBase_31 CodeErreurSecondaire_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "initialisation du module moteur: CodeErreurDeBase_32 CodeErreurSecondaire_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuration du module moteur: CodeErreurDeBase_33 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuration du module moteur:CodeErreurDeBase_33 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    }
+  ]
 }

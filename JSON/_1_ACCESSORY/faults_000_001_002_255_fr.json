@@ -15,7 +15,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Mode AGV : Arrêt",
+      "Description": "Mode AGV: Arrêt",
       "IsExpandable": false
     },
     {
@@ -27,15 +27,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Déplacement vers le haut : Détection laser avant non disponible",
+      "Description": "Déplacement vers le haut: Détection laser avant non disponible",
       "IsExpandable": false
     },
     {
-      "Description": "Déplacement vers le haut : Détection arrière par laser non disponible",
+      "Description": "Déplacement vers le haut: Détection arrière par laser non disponible",
       "IsExpandable": false
     },
     {
-      "Description": "Détection de tunnel : Alerte d'arrêt",
+      "Description": "Détection de tunnel: Alerte d'arrêt",
       "IsExpandable": false
     },
     {

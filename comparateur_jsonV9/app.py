@@ -163,6 +163,9 @@ class FaultEditor:
         btn_check = ttk.Button(self.tools_frame, text="Vérifier la cohérence", command=self.run_check_coherence)
         btn_check.pack(side="left", padx=5)
 
+        btn_spell_check = ttk.Button(self.tools_frame, text="🔍 Vérifier l'orthographe", command=self.run_spell_check)
+        btn_spell_check.pack(side="left", padx=5)
+
         self.selected_file_label = tk.Label(self.tools_frame, text="Fichier sélectionné :", bg="#2a2a2a", fg="white", font=FONT_DEFAULT)
         self.selected_file_label.pack(side="left", padx=10)
 
@@ -357,6 +360,19 @@ class FaultEditor:
         print(f"🔍 Vérification de cohérence dans : {dossier_base}")
         cmd = ["python", "check_coherence.py", dossier_base]
         self.run_command(cmd, desc="Vérifier la cohérence")
+
+    def run_spell_check(self):
+        if not hasattr(self, 'file_map') or not self.file_map:
+            self.status.config(text="❌ Aucun dossier ouvert")
+            return
+        
+        # Obtenir le dossier parent du premier fichier trouvé
+        premier_fichier = next(iter(self.file_map.values()))
+        dossier_base = os.path.dirname(premier_fichier)
+
+        print(f"🔍 Vérification orthographique dans : {dossier_base}")
+        cmd = ["python", "verifier_orthographe.py", dossier_base]
+        self.run_command(cmd, desc="Vérifier l'orthographe")
 
     def run_command(self, cmd, desc=""):
         logger.info(f"Exécution de la commande: {' '.join(cmd)}")

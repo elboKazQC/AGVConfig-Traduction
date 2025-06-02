@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 11,
-        "Language": "fr",
-        "Filename": "faults_000_007_000_011_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 11,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_011_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_011_Drive_Left_PAC425T100C_Fault11",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_14",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_011_Drive_Left_PAC425T100C_Fault11",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_14",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_18",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_19",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_20",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_21",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_22",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_23",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_24",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Paramètres du module moteur : CodeErreurDeBase_34 CodeErreurSecondaire_13",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Calibration du capteur actuel : CodeErreurDeBase_35 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Température du contrôleur supérieure à 100 degrés : CodeErreurDeBase_36",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Délai d'attente générique : CodeErreurDeBase_39 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Défaillance du système : CodeErreurDeBase_40",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Paramètres du module moteur: CodeErreurDeBase_34 CodeErreurSecondaire_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Calibration du capteur actuel: CodeErreurDeBase_35 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Température du contrôleur supérieure à 100 degrés: CodeErreurDeBase_36",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Délai d'attente générique: CodeErreurDeBase_39 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Défaillancé du système: CodeErreurDeBase_40",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
 }

@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 1,
-        "IdLevel3": 5,
-        "Language": "fr",
-        "Filename": "faults_000_007_001_005_fr.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 5,
+    "Language": "fr",
+    "Filename": "faults_000_007_001_005_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Tension de l'alimentation: CodeErreurDeBase_15 CodeErreurSecondaire_4 ",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Tension de l'alimentation : CodeErreurDeBase_15 CodeErreurSecondaire_4 ",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_0",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Erreur logicielle du moteur double : CodeErreurDeBase_16 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Tension de la batterie trop basse : CodeErreurDeBase_17 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit MOSFET côté haut.M1 : CodeErreurDeBase_18 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit MOSFET côté haut.M2 : CodeErreurDeBase_18 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit MOSFET côté haut.M3 : CodeErreurDeBase_18 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Moteur en calage : CodeErreurDeBase_19 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Surintensité détectée : CodeErreurDeBase_20 CodeErreurSecondaire_>4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_12",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Court-circuit contacteur numérique 1 : CodeErreurBase_21 CodeErreurSecondaire_13",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Tension de la batterie trop élevée : CodeErreurDeBase_22 CodeErreurSecondaire_1",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur logicielle du moteur double: CodeErreurDeBase_16 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tension de la batterie trop basse: CodeErreurDeBase_17 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit MOSFET côté haut.M1: CodeErreurDeBase_18 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit MOSFET côté haut.M2: CodeErreurDeBase_18 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit MOSFET côté haut.M3: CodeErreurDeBase_18 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Moteur en calage: CodeErreurDeBase_19 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Surintensité détectée: CodeErreurDeBase_20 CodeErreurSecondaire_>4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Court-circuit contacteur numérique 1: CodeErreurBase_21 CodeErreurSecondaire_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Tension de la batterie trop élevée: CodeErreurDeBase_22 CodeErreurSecondaire_1",
+      "IsExpandable": false
+    }
+  ]
 }
