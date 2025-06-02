@@ -159,77 +159,6 @@ def detecter_langue(texte: str) -> Optional[str]:
         logger.debug(f"Erreur détection langue pour '{texte[:20]}...': {e}")
         return None
 
-def special_translations(text: str, target_lang: str) -> Optional[str]:
-    """
-    Gère les cas spéciaux de traduction qui nécessitent des règles particulières.
-    Utilise la configuration pour les traductions spéciales.
-
-    Args:
-        text: Texte source à traduire
-        target_lang: Langue cible (fr, en, es)
-
-    Returns:
-        Traduction spéciale ou None si aucune règle ne s'applique
-    """
-    # Charger les traductions spéciales depuis la configuration
-    translations = {}
-    if CONFIG.has_section('special_translations'):
-        for key, value in CONFIG['special_translations'].items():
-            # Format: term_lang = translation
-            if '_' in key:
-                term, lang = key.rsplit('_', 1)
-                if term not in translations:
-                    translations[term] = {}
-                translations[term][lang] = value
-      # Fallback vers les traductions par défaut si la config est vide
-    if not translations:
-        translations = {
-            "balayeur": {"en": "laser scanner", "es": "escáner láser"},
-            "gauche": {"en": "left", "es": "izquierdo"},
-            "droit": {"en": "right", "es": "derecho"},
-            "avant": {"en": "front", "es": "delantero"},
-            "arrière": {"en": "rear", "es": "trasero"},
-            "capteur": {"en": "sensor", "es": "sensor"},
-            "moteur": {"en": "motor", "es": "motor"},
-            "batterie": {"en": "battery", "es": "batería"}
-        }
-
-    text_lower = text.lower()
-
-    # Si le texte contient "balayeur"
-    if "balayeur" in text_lower:
-        result = translations["balayeur"][target_lang]
-
-        # Ajouter la position si elle est présente
-        for position in ["gauche", "droit", "avant", "arrière"]:
-            if position in text_lower:
-                if target_lang == "en":
-                    # En anglais, la position va avant "laser scanner"
-                    result = f"{translations[position][target_lang]} {result}"
-                else:
-                    # En espagnol, la position va après "escáner láser"
-                    result = f"{result} {translations[position][target_lang]}"
-                break
-
-        # Gérer la majuscule initiale si le texte source commence par une majuscule
-        if text[0].isupper():
-            result = result[0].upper() + result[1:]
-
-        return result
-
-    # Autres traductions spéciales directes
-    for french_term, target_translations in translations.items():
-        if french_term in text_lower and target_lang in target_translations:
-            # Pour des traductions simples, on remplace directement
-            if text_lower == french_term:
-                result = target_translations[target_lang]
-                if text[0].isupper():
-                    result = result[0].upper() + result[1:]
-                return result
-
-    # Si aucun cas spécial n'est trouvé, on retourne None pour utiliser la traduction normale
-    return None
-
 def validate_json_structure(data: Dict[str, Any]) -> bool:
     """
     Valide la structure JSON pour s'assurer qu'elle contient les champs attendus.
@@ -424,9 +353,7 @@ def process_translations(
 
         # Si pas de description source, passer
         if not source_desc:
-            continue
-
-        # 1. Vérifier si c'est un code technique
+            continue        # 1. Vérifier si c'est un code technique
         if est_code_technique(source_desc):
             if target_desc != source_desc:
                 print(f"{JAUNE}🔧 Correction code technique [{target_lang.upper()}][index {i}] : {target_desc} → {source_desc}{RESET}")
@@ -435,20 +362,7 @@ def process_translations(
                 modifications += 1
             continue
 
-        # 2. Vérifier si c'est une traduction spéciale
-        special_translation = special_translations(source_desc, target_lang)
-        if special_translation:
-            if target_desc != special_translation:
-                print(f"{BLEU}🔧 Traduction spéciale [{target_lang.upper()}][index {i}]{RESET}")
-                print(f"    Source ({source_lang}) : {source_desc}")
-                print(f"    Ancien : {target_desc}")
-                print(f"    Nouveau : {special_translation}")
-                log_changement(target_lang, i, target_desc, special_translation, basename)
-                target_list[i]["Description"] = special_translation
-                modifications += 1
-            continue
-
-        # 3. Traduction normale si nécessaire
+        # 2. Traduction si nécessaire
         should_translate = force_retranslate or not target_desc
 
         # Vérifier la langue de la traduction existante

@@ -14,7 +14,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Stop zone 1 triggered.",
+      "Description": "Stop zone 1 triggered",
       "IsExpandable": false
     },
     {
@@ -22,7 +22,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 1 wire 1 alarm zone",
+      "Description": "OSSD 1 wire alarm zone 1",
       "IsExpandable": false
     },
     {
@@ -34,7 +34,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Slow down zone 2 triggered",
+      "Description": "Slowdown zone 2 triggered",
       "IsExpandable": false
     },
     {
@@ -42,15 +42,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Alarm zone 2 triggered.",
+      "Description": "Alarm zone 2 triggered",
       "IsExpandable": false
     },
     {
-      "Description": "Alarm zone OSSD 2-wire 1",
+      "Description": "OSSD alarm zone 2 wire 1",
       "IsExpandable": false
     },
     {
-      "Description": "Alarm zone OSSD 2-wire 2",
+      "Description": "OSSD alarm zone 2 wire 2",
       "IsExpandable": false
     },
     {
@@ -58,7 +58,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Slow down zone 3 activated",
+      "Description": "Slowdown zone 3 triggered",
       "IsExpandable": false
     },
     {
@@ -70,11 +70,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 3-wire 1 zone alarm circuit",
+      "Description": "OSSD alarm zone 3 wire 1",
       "IsExpandable": false
     },
     {
-      "Description": "Alarm zone OSSD 3 wire 2",
+      "Description": "OSSD alarm zone 3 wire 2",
       "IsExpandable": false
     },
     {
@@ -94,19 +94,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 4-wire 1 alarm zone",
+      "Description": "4-wire OSSD alarm zone 1",
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 4-wire 2-zone alarm area",
+      "Description": "4-wire OSSD alarm zone 2",
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 4 alarm zone",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
+      "Description": "OSSD alarm zone 4",
       "IsExpandable": false
     },
     {
@@ -134,8 +130,13 @@
       "IsExpandable": false
     },
     {
-      "Description": "Reset Laser scanner",
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Reset laser scanners",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

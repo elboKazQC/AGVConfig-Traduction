@@ -365,7 +365,7 @@ class FaultEditor:
         if not hasattr(self, 'file_map') or not self.file_map:
             self.status.config(text="❌ Aucun dossier ouvert")
             return
-        
+
         # Obtenir le dossier parent du premier fichier trouvé
         premier_fichier = next(iter(self.file_map.values()))
         dossier_base = os.path.dirname(premier_fichier)

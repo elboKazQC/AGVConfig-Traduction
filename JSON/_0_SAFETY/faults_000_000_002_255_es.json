@@ -10,23 +10,23 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Zona de desaceleración 1 activada.",
+      "Description": "Zona de desaceleración 1 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de parada 1 activada.",
+      "Description": "Zona de parada 1 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Alarma de zona 1 activada.",
+      "Description": "Zona de alarma 1 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD 1 hilo 1.",
+      "Description": "Zona de alarma OSSD 1 hilo 1",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 1 hilo 2.",
+      "Description": "Zona de alarma OSSD 1 hilo 2",
       "IsExpandable": false
     },
     {
@@ -34,47 +34,47 @@
       "IsExpandable": false
     },
     {
-      "Description": "Zona de ralentización 2 activada.",
+      "Description": "Zona de desaceleración 2 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de parada 2 activada.",
+      "Description": "Zona de parada 2 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma 2 activada.",
+      "Description": "Zona de alarma 2 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 2 hilos 1.",
+      "Description": "Zona de alarma OSSD 2 hilos 1",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 2 hilos 2.",
+      "Description": "Zona de alarma OSSD 2 hilos 2",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD 2.",
+      "Description": "Zona de alarma OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de reducción de velocidad 3 activada.",
+      "Description": "Zona de desaceleración 3 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de parada 3 activada.",
+      "Description": "Zona de parada 3 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Alarma de zona 3 activada.",
+      "Description": "Zona de alarma 3 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 3 hilos 1.",
+      "Description": "Zona de alarma OSSD 3 hilos 1",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 3 hilos 2.",
+      "Description": "Zona de alarma OSSD 3 hilos 2",
       "IsExpandable": false
     },
     {
@@ -82,23 +82,23 @@
       "IsExpandable": false
     },
     {
-      "Description": "Zona de desaceleración 4 activada.",
+      "Description": "Zona de desaceleración 4 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de parada 4 activada.",
+      "Description": "Zona de parada 4 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma 4 activada.",
+      "Description": "Zona de alarma 4 activada",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 4 hilos 1.",
+      "Description": "Zona de alarma OSSD 4 hilos 1",
       "IsExpandable": false
     },
     {
-      "Description": "Zona de alarma OSSD de 4 hilos 2.",
+      "Description": "Zona de alarma OSSD 4 hilos 2",
       "IsExpandable": false
     },
     {
@@ -134,8 +134,9 @@
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser",
+      "Description": "Reinicio de escáneres láser",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }
