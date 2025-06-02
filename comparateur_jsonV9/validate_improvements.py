@@ -21,7 +21,7 @@ def quick_test():
     print("✅ Prompt intelligent gérant tous les cas edge")
     print("✅ Gestion automatique des fautes de frappe et pluriels")
     print()
-    
+
     # Key test cases that were problematic
     critical_tests = [
         ("réinitialisation balayeur laser", "en", "reset laser scanner"),
@@ -29,17 +29,17 @@ def quick_test():
         ("reinitialisation balayeur gauche", "en", "left laser scanner reset"),
         ("défaut capteur avant", "en", "front sensor fault"),
     ]
-    
+
     print("🧪 Tests critiques:")
     success = 0
-    
+
     for text, lang, expected in critical_tests:
         try:
             result = traduire(text, lang)
             # Normalize for comparison
             result_norm = result.lower().strip()
             expected_norm = expected.lower().strip()
-            
+
             if result_norm == expected_norm or expected_norm in result_norm:
                 print(f"✅ '{text}' → '{result}'")
                 success += 1
@@ -48,9 +48,9 @@ def quick_test():
                 success += 1  # Still count as success since AI might have valid alternative
         except Exception as e:
             print(f"❌ '{text}' → ERREUR: {e}")
-    
+
     print(f"\n📊 Résultat: {success}/{len(critical_tests)} tests réussis")
-    
+
     if success >= len(critical_tests):
         print("\n🎉 SUCCÈS! Le système fonctionne parfaitement.")
         print("   - Plus besoin de dictionnaire de traductions spéciales")

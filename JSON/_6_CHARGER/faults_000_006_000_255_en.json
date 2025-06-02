@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 6,
     "IdLevel2": 0,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_006_000_255_en.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
   "Version": 2,

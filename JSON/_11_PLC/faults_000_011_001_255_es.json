@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 11,
     "IdLevel2": 1,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_011_001_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_011_001_255_Plc_CR721S",
   "Version": 1,

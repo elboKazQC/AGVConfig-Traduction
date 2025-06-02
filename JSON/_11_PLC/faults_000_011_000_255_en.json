@@ -5,7 +5,8 @@
     "IdLevel0": 0,
     "IdLevel1": 11,
     "IdLevel2": 0,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "en"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_011_000_255_Plc_CR711S",
   "Version": 1,

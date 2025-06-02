@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 7,
     "IdLevel2": 3,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_007_003_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_007_003_255_Drive_Right_SBL2360T",
   "Version": 1,

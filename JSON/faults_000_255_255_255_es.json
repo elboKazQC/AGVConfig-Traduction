@@ -5,7 +5,7 @@
     "IdLevel2": 255,
     "IdLevel3": 255,
     "Language": "es",
-    "Filename": "faults_000_255_255_255_fr.json"
+    "Filename": "faults_000_255_255_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_255_255_255_Vehicle_All",
   "Version": 1,

@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 9,
     "IdLevel2": 1,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_009_001_255_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_009_001_255_Light_Led_Pwm",
   "Version": 1,

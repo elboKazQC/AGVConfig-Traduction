@@ -62,7 +62,7 @@ INTELLIGENCE ADAPTATIVE : Analyse chaque texte et applique automatiquement les m
 
 3. TERMINOLOGIE TECHNIQUE PRÉCISE :
    - "balayeur" → "laser scanner" (jamais juste "scanner")
-   - "réinitialisation" → "reset" 
+   - "réinitialisation" → "reset"
    - "défaut" → "fault"
    - "erreur" → "error"
    - "capteur" → "sensor"

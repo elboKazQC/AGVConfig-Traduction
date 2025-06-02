@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 3,
     "IdLevel2": 2,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_003_002_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_003_002_255_Battery_02_48V60TRX",
   "Version": 1,

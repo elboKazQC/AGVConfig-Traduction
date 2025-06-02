@@ -5,7 +5,8 @@
     "IdLevel2": 0,
     "IdLevel3": 30,
     "language": "en",
-    "Filename": "faults_000_001_000_030_en.json"
+    "Filename": "faults_000_001_000_030_en.json",
+    "Language": "en"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_001_000_030_Accessory_CSTE2010E_Faute30",
   "Version": 1,

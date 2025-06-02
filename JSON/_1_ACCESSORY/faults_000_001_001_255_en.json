@@ -5,7 +5,8 @@
     "IdLevel2": 1,
     "IdLevel3": 255,
     "language": "en",
-    "Filename": "faults_000_001_001_255_en.json"
+    "Filename": "faults_000_001_001_255_en.json",
+    "Language": "en"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
   "Version": 2,

@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 6,
     "IdLevel2": 1,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_006_001_255_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_006_001_255_Charger_Ic650",
   "Version": 1,

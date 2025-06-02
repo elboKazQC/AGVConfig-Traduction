@@ -154,18 +154,18 @@ class FaultEditor:
         ttk.Entry(self.tools_frame, textvariable=self.genfichier_src_var, width=5).pack(side="left")
         tk.Label(self.tools_frame, text="tgt:", bg="#2a2a2a", fg="white").pack(side="left", padx=(10,1))
         ttk.Entry(self.tools_frame, textvariable=self.genfichier_tgt_var, width=5).pack(side="left")
-
         btn_genfichier = ttk.Button(self.tools_frame, text="Générer fichier", command=self.run_generer_fichier)
         btn_genfichier.pack(side="left", padx=5)
 
         btn_gen_manquant = ttk.Button(self.tools_frame, text="Générer les fichiers manquants", command=self.run_generer_manquant)
-        btn_gen_manquant.pack(side="left", padx=5)
-
-        btn_check = ttk.Button(self.tools_frame, text="Vérifier la cohérence", command=self.run_check_coherence)
+        btn_gen_manquant.pack(side="left", padx=5)        btn_check = ttk.Button(self.tools_frame, text="Vérifier la cohérence", command=self.run_check_coherence)
         btn_check.pack(side="left", padx=5)
-
+        
         btn_spell_check = ttk.Button(self.tools_frame, text="🔍 Vérifier l'orthographe", command=self.run_spell_check)
         btn_spell_check.pack(side="left", padx=5)
+
+        btn_fix_headers = ttk.Button(self.tools_frame, text="🔧 Corriger les headers", command=self.run_fix_headers)
+        btn_fix_headers.pack(side="left", padx=5)
 
         self.selected_file_label = tk.Label(self.tools_frame, text="Fichier sélectionné :", bg="#2a2a2a", fg="white", font=FONT_DEFAULT)
         self.selected_file_label.pack(side="left", padx=10)
@@ -341,9 +341,7 @@ class FaultEditor:
             return
 
         cmd = ["python", "generer_fichier.py", self.base_dir, f_arg, src, tgt]
-        self.run_command(cmd, desc=f"Générer fichier {f_arg} {src}->{tgt}")
-
-    def run_generer_manquant(self):
+        self.run_command(cmd, desc=f"Générer fichier {f_arg} {src}->{tgt}")    def run_generer_manquant(self):
         if not self.base_dir:
             self.status.config(text="❌ Aucun dossier ouvert")
             return
@@ -358,8 +356,7 @@ class FaultEditor:
 
         # Obtenir le dossier parent du premier fichier trouvé
         premier_fichier = next(iter(self.file_map.values()))
-        dossier_base = os.path.dirname(premier_fichier)
-        print(f"🚀 Lancement du diagnostic complet dans : {dossier_base}")
+        dossier_base = os.path.dirname(premier_fichier)        print(f"🚀 Lancement du diagnostic complet dans : {dossier_base}")
         # Afficher le dialogue de choix des actions
         self.show_comprehensive_check_dialog(dossier_base)
 
@@ -370,84 +367,84 @@ class FaultEditor:
         dialog.geometry("600x500")
         dialog.transient(self.root)
         dialog.grab_set()
-
+        
         # Centrer la fenêtre
         dialog.geometry("+%d+%d" % (self.root.winfo_rootx() + 50, self.root.winfo_rooty() + 50))
-
+        
         # Frame principal
         main_frame = tk.Frame(dialog, padx=20, pady=20)
         main_frame.pack(fill=tk.BOTH, expand=True)
-
+        
         # Titre
-        title_label = tk.Label(main_frame, text="🚀 Diagnostic et Correction Automatique",
+        title_label = tk.Label(main_frame, text="🚀 Diagnostic et Correction Automatique", 
                               font=("Arial", 14, "bold"))
         title_label.pack(pady=(0, 20))
-
+        
         # Informations sur le dossier
         info_frame = tk.Frame(main_frame)
         info_frame.pack(fill=tk.X, pady=(0, 20))
-
+        
         tk.Label(info_frame, text="📁 Dossier :", font=("Arial", 10, "bold")).pack(anchor=tk.W)
-        tk.Label(info_frame, text=dossier_base, font=("Arial", 9),
+        tk.Label(info_frame, text=dossier_base, font=("Arial", 9), 
                 wraplength=550, justify=tk.LEFT).pack(anchor=tk.W, padx=(20, 0))
-
+        
         # Variables pour les checkboxes
         self.check_coherence_var = tk.BooleanVar(value=True)
         self.fix_coherence_var = tk.BooleanVar(value=True)
         self.check_spelling_var = tk.BooleanVar(value=True)
         self.fix_headers_var = tk.BooleanVar(value=True)
-
+        
         # Section Vérifications
-        verif_frame = tk.LabelFrame(main_frame, text="🔍 Vérifications à effectuer",
+        verif_frame = tk.LabelFrame(main_frame, text="🔍 Vérifications à effectuer", 
                                    font=("Arial", 11, "bold"), padx=10, pady=10)
         verif_frame.pack(fill=tk.X, pady=(0, 15))
-
-        tk.Checkbutton(verif_frame, text="✅ Vérifier la cohérence des fichiers de traduction",
+        
+        tk.Checkbutton(verif_frame, text="✅ Vérifier la cohérence des fichiers de traduction", 
                       variable=self.check_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        tk.Checkbutton(verif_frame, text="📝 Vérifier l'orthographe des traductions",
+        
+        tk.Checkbutton(verif_frame, text="📝 Vérifier l'orthographe des traductions", 
                       variable=self.check_spelling_var, font=("Arial", 10)).pack(anchor=tk.W)
-
+        
         # Section Corrections automatiques
-        correct_frame = tk.LabelFrame(main_frame, text="🔧 Corrections automatiques",
+        correct_frame = tk.LabelFrame(main_frame, text="🔧 Corrections automatiques", 
                                      font=("Arial", 11, "bold"), padx=10, pady=10)
         correct_frame.pack(fill=tk.X, pady=(0, 20))
-
-        tk.Checkbutton(correct_frame, text="🔧 Corriger automatiquement les erreurs de métadonnées",
+        
+        tk.Checkbutton(correct_frame, text="🔧 Corriger automatiquement les erreurs de métadonnées", 
                       variable=self.fix_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        tk.Checkbutton(correct_frame, text="📋 Corriger et normaliser les headers JSON",
+        
+        tk.Checkbutton(correct_frame, text="📋 Corriger et normaliser les headers JSON", 
                       variable=self.fix_headers_var, font=("Arial", 10)).pack(anchor=tk.W)
-
+        
         # Zone d'information
         info_text = tk.Text(correct_frame, height=4, wrap=tk.WORD, font=("Arial", 9))
         info_text.pack(fill=tk.X, pady=(10, 0))
-        info_text.insert(tk.END,
+        info_text.insert(tk.END, 
             "ℹ️  Les corrections automatiques incluent :\n"
             "• Correction des langues dans les headers (Language: fr/en/es)\n"
             "• Correction des noms de fichiers dans les headers\n"
             "• Correction des IDs de niveaux (IdLevel0-3)\n"
             "• Normalisation de la structure des headers JSON")
         info_text.config(state=tk.DISABLED)
-
+        
         # Boutons
         button_frame = tk.Frame(main_frame)
         button_frame.pack(fill=tk.X, pady=(10, 0))
-
+        
         # Bouton Tout vérifier et corriger
-        tk.Button(button_frame, text="🚀 Lancer le diagnostic complet",
+        tk.Button(button_frame, text="🚀 Lancer le diagnostic complet", 
                  command=lambda: self.run_comprehensive_check(dialog, dossier_base, True),
                  bg="#4CAF50", fg="white", font=("Arial", 11, "bold"),
                  padx=20, pady=10).pack(side=tk.LEFT, padx=(0, 10))
-
+        
         # Bouton Vérifier seulement
-        tk.Button(button_frame, text="🔍 Vérifier seulement (pas de corrections)",
+        tk.Button(button_frame, text="🔍 Vérifier seulement (pas de corrections)", 
                  command=lambda: self.run_comprehensive_check(dialog, dossier_base, False),
                  bg="#2196F3", fg="white", font=("Arial", 10),
                  padx=20, pady=8).pack(side=tk.LEFT, padx=(0, 10))
-
+        
         # Bouton Annuler
-        tk.Button(button_frame, text="❌ Annuler",
+        tk.Button(button_frame, text="❌ Annuler", 
                  command=dialog.destroy,
                  bg="#f44336", fg="white", font=("Arial", 10),
                  padx=20, pady=8).pack(side=tk.RIGHT)
@@ -455,11 +452,11 @@ class FaultEditor:
     def run_comprehensive_check(self, dialog, dossier_base, apply_corrections):
         """Lance le diagnostic complet selon les options sélectionnées"""
         dialog.destroy()
-
+        
         print(f"\n🚀 ===== DIAGNOSTIC COMPLET DÉMARRÉ =====")
         print(f"📁 Dossier : {dossier_base}")
         print(f"🔧 Corrections automatiques : {'✅ Activées' if apply_corrections else '❌ Désactivées'}")
-
+        
         results = {
             'coherence': None,
             'spelling': None,
@@ -467,23 +464,23 @@ class FaultEditor:
             'total_errors': 0,
             'total_corrections': 0
         }
-
+        
         # 1. Vérification de cohérence
         if self.check_coherence_var.get():
             print(f"\n📋 1/3 - Vérification de la cohérence...")
-            results['coherence'] = self.run_coherence_check_step(dossier_base,
+            results['coherence'] = self.run_coherence_check_step(dossier_base, 
                                                                 apply_corrections and self.fix_coherence_var.get())
-
+        
         # 2. Vérification orthographique
         if self.check_spelling_var.get():
             print(f"\n📝 2/3 - Vérification orthographique...")
             results['spelling'] = self.run_spelling_check_step(dossier_base)
-
+        
         # 3. Correction des headers
         if apply_corrections and self.fix_headers_var.get():
             print(f"\n📋 3/3 - Correction des headers...")
             results['headers'] = self.run_headers_fix_step(dossier_base)
-
+        
         # Afficher le résumé final
         self.show_comprehensive_results(results, dossier_base)
 
@@ -491,32 +488,32 @@ class FaultEditor:
         """Étape de vérification de cohérence"""
         try:
             script_dir = os.path.dirname(os.path.abspath(__file__))
-
+            
             # Commande de base
             cmd = ["python", os.path.join(script_dir, "check_coherence.py"), dossier_base]
-
+            
             # Ajouter --fix si demandé
             if apply_fix:
                 cmd.append("--fix")
                 print("🔧 Mode correction automatique activé pour la cohérence")
-
+            
             env = os.environ.copy()
             env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
                                   encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
+            
             if result.stdout:
                 print("📋 Résultats cohérence :")
                 print(result.stdout)
-
+            
             return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
                 'fixed': apply_fix and "corrections appliquées" in result.stdout
             }
-
+            
         except Exception as e:
             print(f"❌ Erreur lors de la vérification de cohérence : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
@@ -526,23 +523,23 @@ class FaultEditor:
         try:
             script_dir = os.path.dirname(os.path.abspath(__file__))
             cmd = ["python", os.path.join(script_dir, "verifier_orthographe.py"), dossier_base]
-
+            
             env = os.environ.copy()
             env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
                                   encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
+            
             if result.stdout:
                 print("📝 Résultats orthographe :")
                 print(result.stdout)
-
+            
             return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr
             }
-
+            
         except Exception as e:
             print(f"❌ Erreur lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
@@ -552,24 +549,24 @@ class FaultEditor:
         try:
             script_dir = os.path.dirname(os.path.abspath(__file__))
             cmd = ["python", os.path.join(script_dir, "fix_headers.py"), dossier_base]
-
+            
             env = os.environ.copy()
             env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
                                   encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
+            
             if result.stdout:
                 print("📋 Résultats correction headers :")
                 print(result.stdout)
-
+            
             return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
                 'fixed': "fichiers traités" in result.stdout or "corrections appliquées" in result.stdout
             }
-
+            
         except Exception as e:
             print(f"❌ Erreur lors de la correction des headers : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
@@ -577,45 +574,45 @@ class FaultEditor:
     def show_comprehensive_results(self, results, dossier_base):
         """Affiche les résultats complets du diagnostic"""
         print(f"\n🎯 ===== DIAGNOSTIC COMPLET TERMINÉ =====")
-
+        
         # Compter les succès et erreurs
         total_success = 0
         total_steps = 0
         corrections_applied = 0
-
+        
         # Créer la fenêtre de résultats
         result_window = tk.Toplevel(self.root)
         result_window.title("🎯 Résultats du Diagnostic Complet")
         result_window.geometry("800x600")
         result_window.transient(self.root)
-
+        
         # Frame principal avec scrollbar
         main_frame = tk.Frame(result_window)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
-
+        
         # Titre
         title_text = "🎯 Résultats du Diagnostic Complet"
         tk.Label(main_frame, text=title_text, font=("Arial", 16, "bold")).pack(pady=(0, 20))
-
+        
         # Dossier analysé
-        tk.Label(main_frame, text=f"📁 Dossier analysé : {dossier_base}",
+        tk.Label(main_frame, text=f"📁 Dossier analysé : {dossier_base}", 
                 font=("Arial", 10)).pack(anchor=tk.W, pady=(0, 20))
-
+        
         # Zone de texte avec scrollbar
         text_frame = tk.Frame(main_frame)
         text_frame.pack(fill=tk.BOTH, expand=True)
-
+        
         text_widget = tk.Text(text_frame, wrap=tk.WORD, font=("Consolas", 10))
         scrollbar = tk.Scrollbar(text_frame, orient=tk.VERTICAL, command=text_widget.yview)
         text_widget.configure(yscrollcommand=scrollbar.set)
-
+        
         text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
+        
         # Remplir les résultats
         result_text = f"📊 RAPPORT DE DIAGNOSTIC COMPLET\n"
         result_text += f"{'=' * 60}\n\n"
-
+        
         # Résultats de cohérence
         if results['coherence']:
             total_steps += 1
@@ -626,15 +623,15 @@ class FaultEditor:
                 result_text += "✅ Statut : Succès\n"
             else:
                 result_text += "❌ Statut : Erreurs détectées\n"
-
+            
             if results['coherence']['fixed']:
                 corrections_applied += 1
                 result_text += "🔧 Corrections automatiques appliquées\n"
-
+            
             if results['coherence']['output']:
                 result_text += f"\n📋 Détails :\n{results['coherence']['output']}\n"
             result_text += "\n"
-
+        
         # Résultats orthographiques
         if results['spelling']:
             total_steps += 1
@@ -645,11 +642,11 @@ class FaultEditor:
                 result_text += "✅ Statut : Succès\n"
             else:
                 result_text += "❌ Statut : Erreurs détectées\n"
-
+            
             if results['spelling']['output']:
                 result_text += f"\n📋 Détails :\n{results['spelling']['output']}\n"
             result_text += "\n"
-
+        
         # Résultats headers
         if results['headers']:
             total_steps += 1
@@ -660,15 +657,15 @@ class FaultEditor:
                 result_text += "✅ Statut : Succès\n"
             else:
                 result_text += "❌ Statut : Erreurs\n"
-
+            
             if results['headers']['fixed']:
                 corrections_applied += 1
                 result_text += "🔧 Headers corrigés et normalisés\n"
-
+            
             if results['headers']['output']:
                 result_text += f"\n📋 Détails :\n{results['headers']['output']}\n"
             result_text += "\n"
-
+        
         # Résumé final
         result_text += "🎯 RÉSUMÉ FINAL\n"
         result_text += "=" * 60 + "\n"
@@ -676,7 +673,7 @@ class FaultEditor:
         result_text += f"✅ Étapes réussies : {total_success}\n"
         result_text += f"❌ Étapes avec erreurs : {total_steps - total_success}\n"
         result_text += f"🔧 Corrections appliquées : {corrections_applied}\n\n"
-
+        
         if total_success == total_steps:
             result_text += "🎉 DIAGNOSTIC COMPLET : TOUS LES TESTS SONT PASSÉS !\n"
             status_msg = "🎉 Diagnostic complet réussi"
@@ -685,19 +682,19 @@ class FaultEditor:
             if corrections_applied > 0:
                 result_text += "✅ Des corrections automatiques ont été appliquées.\n"
             status_msg = f"⚠️ Diagnostic terminé ({total_success}/{total_steps} réussis)"
-
+        
         # Insérer le texte
         text_widget.insert(tk.END, result_text)
         text_widget.config(state=tk.DISABLED)
-
+        
         # Bouton fermer
         tk.Button(main_frame, text="✅ Fermer", command=result_window.destroy,
                  bg="#4CAF50", fg="white", font=("Arial", 11, "bold"),
                  padx=30, pady=10).pack(pady=(20, 0))
-
+        
         # Mettre à jour le statut principal
         self.status.config(text=status_msg)
-
+        
         print(f"📊 Diagnostic terminé : {total_success}/{total_steps} étapes réussies")
         if corrections_applied > 0:
             print(f"🔧 {corrections_applied} types de corrections appliquées")
@@ -707,7 +704,7 @@ class FaultEditor:
         logger.info(f"Exécution de la commande: {' '.join(cmd)}")
         self.set_tools_enabled("disabled")
         popup = self.afficher_popup_chargement(f"{desc} en cours...")
-
+        
         try:
             # Obtenir le chemin du dossier contenant app.py
             script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -741,22 +738,22 @@ class FaultEditor:
             if result.returncode == 0:
                 logger.info(f"Commande terminée avec succès: {desc}")
                 self.status.config(text=f"✅ {desc} - Aucune erreur détectée")
-
+                
                 # Afficher les résultats dans une fenêtre de dialogue
                 if result.stdout:
                     self.show_script_results(f"✅ {desc} - Terminé", result.stdout, True)
             else:
                 logger.warning(f"Erreurs détectées lors de {desc}")
-
+                
                 # Analyser la sortie pour voir si des erreurs de métadonnées ont été trouvées
                 has_metadata_errors = "🟠 Erreurs métadonnées" in result.stdout and "Erreurs métadonnées : 0" not in result.stdout
-
+                
                 if has_metadata_errors:
                     # Proposer de corriger automatiquement
                     popup.destroy()  # Fermer le popup de chargement
-
+                    
                     response = messagebox.askyesnocancel(
-                        "Erreurs détectées",
+                        "Erreurs détectées", 
                         f"Des erreurs de cohérence ont été détectées.\n\n"
                         f"Voulez-vous :\n"
                         f"• OUI : Corriger automatiquement les erreurs de métadonnées\n"
@@ -764,7 +761,7 @@ class FaultEditor:
                         f"• ANNULER : Fermer",
                         icon='question'
                     )
-
+                    
                     if response is True:  # OUI - Corriger automatiquement
                         self.run_fix_coherence_errors(dossier_base)
                         return
@@ -773,7 +770,7 @@ class FaultEditor:
                     else:  # ANNULER
                         self.status.config(text="❌ Vérification annulée")
                         return
-
+                
                 # Préparer le message d'erreur complet
                 error_message = f"Code de retour: {result.returncode}\n\n"
                 if result.stderr:
@@ -786,7 +783,7 @@ class FaultEditor:
                 # Afficher l'erreur dans une fenêtre de dialogue
                 self.show_script_results(f"⚠️ Erreurs détectées - {desc}", error_message, False)
                 self.status.config(text=f"⚠️ Erreurs détectées : {desc}")
-
+                
         except Exception as e:
             logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
             print(f"\n❌ Exception lors de {desc}: {str(e)}")
@@ -799,7 +796,7 @@ class FaultEditor:
     def run_fix_coherence_errors(self, dossier_base):
         """Lance la correction automatique des erreurs de cohérence"""
         print(f"🔧 Lancement de la correction automatique dans : {dossier_base}")
-
+        
         # Lancer check_coherence.py avec l'option --fix
         cmd = ["python", "check_coherence.py", dossier_base, "--fix"]
         self.run_command(cmd, desc="Corriger les erreurs de cohérence")
@@ -1961,21 +1958,349 @@ class FaultEditor:
         button_frame.pack(fill="x", padx=10, pady=5)
 
         close_btn = ttk.Button(button_frame, text="Fermer", command=popup.destroy)
-        close_btn.pack(side="right")        # Centrer la fenêtre
+        close_btn.pack(side="right")
+
+        # Centrer la fenêtre
         popup.update_idletasks()
         x = (popup.winfo_screenwidth() // 2) - (popup.winfo_width() // 2)
         y = (popup.winfo_screenheight() // 2) - (popup.winfo_height() // 2)
         popup.geometry(f"+{x}+{y}")
 
+    def show_comprehensive_check_dialog(self, dossier_base):
+        """Affiche un dialogue pour choisir les vérifications et corrections à effectuer"""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("🚀 Diagnostic Complet - AGV Config Traduction")
+        dialog.geometry("600x500")
+        dialog.transient(self.root)
+        dialog.grab_set()
+        
+        # Centrer la fenêtre
+        dialog.geometry("+%d+%d" % (self.root.winfo_rootx() + 50, self.root.winfo_rooty() + 50))
+        
+        # Frame principal
+        main_frame = tk.Frame(dialog, padx=20, pady=20)
+        main_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Titre
+        title_label = tk.Label(main_frame, text="🚀 Diagnostic et Correction Automatique", 
+                              font=("Arial", 14, "bold"))
+        title_label.pack(pady=(0, 20))
+        
+        # Informations sur le dossier
+        info_frame = tk.Frame(main_frame)
+        info_frame.pack(fill=tk.X, pady=(0, 20))
+        
+        tk.Label(info_frame, text="📁 Dossier :", font=("Arial", 10, "bold")).pack(anchor=tk.W)
+        tk.Label(info_frame, text=dossier_base, font=("Arial", 9), 
+                wraplength=550, justify=tk.LEFT).pack(anchor=tk.W, padx=(20, 0))
+        
+        # Variables pour les checkboxes
+        self.check_coherence_var = tk.BooleanVar(value=True)
+        self.fix_coherence_var = tk.BooleanVar(value=True)
+        self.check_spelling_var = tk.BooleanVar(value=True)
+        self.fix_headers_var = tk.BooleanVar(value=True)
+        
+        # Section Vérifications
+        verif_frame = tk.LabelFrame(main_frame, text="🔍 Vérifications à effectuer", 
+                                   font=("Arial", 11, "bold"), padx=10, pady=10)
+        verif_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        tk.Checkbutton(verif_frame, text="✅ Vérifier la cohérence des fichiers de traduction", 
+                      variable=self.check_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
+        
+        tk.Checkbutton(verif_frame, text="📝 Vérifier l'orthographe des traductions", 
+                      variable=self.check_spelling_var, font=("Arial", 10)).pack(anchor=tk.W)
+        
+        # Section Corrections automatiques
+        correct_frame = tk.LabelFrame(main_frame, text="🔧 Corrections automatiques", 
+                                     font=("Arial", 11, "bold"), padx=10, pady=10)
+        correct_frame.pack(fill=tk.X, pady=(0, 20))
+        
+        tk.Checkbutton(correct_frame, text="🔧 Corriger automatiquement les erreurs de métadonnées", 
+                      variable=self.fix_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
+        
+        tk.Checkbutton(correct_frame, text="📋 Corriger et normaliser les headers JSON", 
+                      variable=self.fix_headers_var, font=("Arial", 10)).pack(anchor=tk.W)
+        
+        # Zone d'information
+        info_text = tk.Text(correct_frame, height=4, wrap=tk.WORD, font=("Arial", 9))
+        info_text.pack(fill=tk.X, pady=(10, 0))
+        info_text.insert(tk.END, 
+            "ℹ️  Les corrections automatiques incluent :\n"
+            "• Correction des langues dans les headers (Language: fr/en/es)\n"
+            "• Correction des noms de fichiers dans les headers\n"
+            "• Correction des IDs de niveaux (IdLevel0-3)\n"
+            "• Normalisation de la structure des headers JSON")
+        info_text.config(state=tk.DISABLED)
+        
+        # Boutons
+        button_frame = tk.Frame(main_frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
+        
+        # Bouton Tout vérifier et corriger
+        tk.Button(button_frame, text="🚀 Lancer le diagnostic complet", 
+                 command=lambda: self.run_comprehensive_check(dialog, dossier_base, True),
+                 bg="#4CAF50", fg="white", font=("Arial", 11, "bold"),
+                 padx=20, pady=10).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Bouton Vérifier seulement
+        tk.Button(button_frame, text="🔍 Vérifier seulement (pas de corrections)", 
+                 command=lambda: self.run_comprehensive_check(dialog, dossier_base, False),
+                 bg="#2196F3", fg="white", font=("Arial", 10),
+                 padx=20, pady=8).pack(side=tk.LEFT, padx=(0, 10))
+        
+        # Bouton Annuler
+        tk.Button(button_frame, text="❌ Annuler", 
+                 command=dialog.destroy,
+                 bg="#f44336", fg="white", font=("Arial", 10),
+                 padx=20, pady=8).pack(side=tk.RIGHT)
 
-if __name__ == "__main__":
-    try:
-        print("🚀 Démarrage de l'application Fault Editor...")
-        root = tk.Tk()
-        app = FaultEditor(root)
-        print("✅ Interface utilisateur initialisée")
-        root.mainloop()
-    except Exception as e:
-        print(f"❌ Erreur fatale au démarrage : {e}")
-        import traceback
-        traceback.print_exc()
+    def run_comprehensive_check(self, dialog, dossier_base, apply_corrections):
+        """Lance le diagnostic complet selon les options sélectionnées"""
+        dialog.destroy()
+        
+        print(f"\n🚀 ===== DIAGNOSTIC COMPLET DÉMARRÉ =====")
+        print(f"📁 Dossier : {dossier_base}")
+        print(f"🔧 Corrections automatiques : {'✅ Activées' if apply_corrections else '❌ Désactivées'}")
+        
+        results = {
+            'coherence': None,
+            'spelling': None,
+            'headers': None,
+            'total_errors': 0,
+            'total_corrections': 0
+        }
+        
+        # 1. Vérification de cohérence
+        if self.check_coherence_var.get():
+            print(f"\n📋 1/3 - Vérification de la cohérence...")
+            results['coherence'] = self.run_coherence_check_step(dossier_base, 
+                                                                apply_corrections and self.fix_coherence_var.get())
+        
+        # 2. Vérification orthographique
+        if self.check_spelling_var.get():
+            print(f"\n📝 2/3 - Vérification orthographique...")
+            results['spelling'] = self.run_spelling_check_step(dossier_base)
+        
+        # 3. Correction des headers
+        if apply_corrections and self.fix_headers_var.get():
+            print(f"\n📋 3/3 - Correction des headers...")
+            results['headers'] = self.run_headers_fix_step(dossier_base)
+        
+        # Afficher le résumé final
+        self.show_comprehensive_results(results, dossier_base)
+
+    def run_coherence_check_step(self, dossier_base, apply_fix):
+        """Étape de vérification de cohérence"""
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            
+            # Commande de base
+            cmd = ["python", os.path.join(script_dir, "check_coherence.py"), dossier_base]
+            
+            # Ajouter --fix si demandé
+            if apply_fix:
+                cmd.append("--fix")
+                print("🔧 Mode correction automatique activé pour la cohérence")
+            
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
+                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
+            
+            if result.stdout:
+                print("📋 Résultats cohérence :")
+                print(result.stdout)
+            
+            return {
+                'success': result.returncode == 0,
+                'output': result.stdout,
+                'errors': result.stderr,
+                'fixed': apply_fix and "corrections appliquées" in result.stdout
+            }
+            
+        except Exception as e:
+            print(f"❌ Erreur lors de la vérification de cohérence : {e}")
+            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
+
+    def run_spelling_check_step(self, dossier_base):
+        """Étape de vérification orthographique"""
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            cmd = ["python", os.path.join(script_dir, "verifier_orthographe.py"), dossier_base]
+            
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
+                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
+            
+            if result.stdout:
+                print("📝 Résultats orthographe :")
+                print(result.stdout)
+            
+            return {
+                'success': result.returncode == 0,
+                'output': result.stdout,
+                'errors': result.stderr
+            }
+            
+        except Exception as e:
+            print(f"❌ Erreur lors de la vérification orthographique : {e}")
+            return {'success': False, 'output': '', 'errors': str(e)}
+
+    def run_headers_fix_step(self, dossier_base):
+        """Étape de correction des headers"""
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            cmd = ["python", os.path.join(script_dir, "fix_headers.py"), dossier_base]
+            
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, 
+                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
+            
+            if result.stdout:
+                print("📋 Résultats correction headers :")
+                print(result.stdout)
+            
+            return {
+                'success': result.returncode == 0,
+                'output': result.stdout,
+                'errors': result.stderr,
+                'fixed': "fichiers traités" in result.stdout or "corrections appliquées" in result.stdout
+            }
+            
+        except Exception as e:
+            print(f"❌ Erreur lors de la correction des headers : {e}")
+            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
+
+    def show_comprehensive_results(self, results, dossier_base):
+        """Affiche les résultats complets du diagnostic"""
+        print(f"\n🎯 ===== DIAGNOSTIC COMPLET TERMINÉ =====")
+        
+        # Compter les succès et erreurs
+        total_success = 0
+        total_steps = 0
+        corrections_applied = 0
+        
+        # Créer la fenêtre de résultats
+        result_window = tk.Toplevel(self.root)
+        result_window.title("🎯 Résultats du Diagnostic Complet")
+        result_window.geometry("800x600")
+        result_window.transient(self.root)
+        
+        # Frame principal avec scrollbar
+        main_frame = tk.Frame(result_window)
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+        
+        # Titre
+        title_text = "🎯 Résultats du Diagnostic Complet"
+        tk.Label(main_frame, text=title_text, font=("Arial", 16, "bold")).pack(pady=(0, 20))
+        
+        # Dossier analysé
+        tk.Label(main_frame, text=f"📁 Dossier analysé : {dossier_base}", 
+                font=("Arial", 10)).pack(anchor=tk.W, pady=(0, 20))
+        
+        # Zone de texte avec scrollbar
+        text_frame = tk.Frame(main_frame)
+        text_frame.pack(fill=tk.BOTH, expand=True)
+        
+        text_widget = tk.Text(text_frame, wrap=tk.WORD, font=("Consolas", 10))
+        scrollbar = tk.Scrollbar(text_frame, orient=tk.VERTICAL, command=text_widget.yview)
+        text_widget.configure(yscrollcommand=scrollbar.set)
+        
+        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Remplir les résultats
+        result_text = f"📊 RAPPORT DE DIAGNOSTIC COMPLET\n"
+        result_text += f"{'=' * 60}\n\n"
+        
+        # Résultats de cohérence
+        if results['coherence']:
+            total_steps += 1
+            result_text += "🔍 1. VÉRIFICATION DE COHÉRENCE\n"
+            result_text += "-" * 40 + "\n"
+            if results['coherence']['success']:
+                total_success += 1
+                result_text += "✅ Statut : Succès\n"
+            else:
+                result_text += "❌ Statut : Erreurs détectées\n"
+            
+            if results['coherence']['fixed']:
+                corrections_applied += 1
+                result_text += "🔧 Corrections automatiques appliquées\n"
+            
+            if results['coherence']['output']:
+                result_text += f"\n📋 Détails :\n{results['coherence']['output']}\n"
+            result_text += "\n"
+        
+        # Résultats orthographiques
+        if results['spelling']:
+            total_steps += 1
+            result_text += "📝 2. VÉRIFICATION ORTHOGRAPHIQUE\n"
+            result_text += "-" * 40 + "\n"
+            if results['spelling']['success']:
+                total_success += 1
+                result_text += "✅ Statut : Succès\n"
+            else:
+                result_text += "❌ Statut : Erreurs détectées\n"
+            
+            if results['spelling']['output']:
+                result_text += f"\n📋 Détails :\n{results['spelling']['output']}\n"
+            result_text += "\n"
+        
+        # Résultats headers
+        if results['headers']:
+            total_steps += 1
+            result_text += "📋 3. CORRECTION DES HEADERS\n"
+            result_text += "-" * 40 + "\n"
+            if results['headers']['success']:
+                total_success += 1
+                result_text += "✅ Statut : Succès\n"
+            else:
+                result_text += "❌ Statut : Erreurs\n"
+            
+            if results['headers']['fixed']:
+                corrections_applied += 1
+                result_text += "🔧 Headers corrigés et normalisés\n"
+            
+            if results['headers']['output']:
+                result_text += f"\n📋 Détails :\n{results['headers']['output']}\n"
+            result_text += "\n"
+        
+        # Résumé final
+        result_text += "🎯 RÉSUMÉ FINAL\n"
+        result_text += "=" * 60 + "\n"
+        result_text += f"📊 Étapes exécutées : {total_steps}\n"
+        result_text += f"✅ Étapes réussies : {total_success}\n"
+        result_text += f"❌ Étapes avec erreurs : {total_steps - total_success}\n"
+        result_text += f"🔧 Corrections appliquées : {corrections_applied}\n\n"
+        
+        if total_success == total_steps:
+            result_text += "🎉 DIAGNOSTIC COMPLET : TOUS LES TESTS SONT PASSÉS !\n"
+            status_msg = "🎉 Diagnostic complet réussi"
+        else:
+            result_text += "⚠️ DIAGNOSTIC COMPLET : DES PROBLÈMES ONT ÉTÉ DÉTECTÉS\n"
+            if corrections_applied > 0:
+                result_text += "✅ Des corrections automatiques ont été appliquées.\n"
+            status_msg = f"⚠️ Diagnostic terminé ({total_success}/{total_steps} réussis)"
+        
+        # Insérer le texte
+        text_widget.insert(tk.END, result_text)
+        text_widget.config(state=tk.DISABLED)
+        
+        # Bouton fermer
+        tk.Button(main_frame, text="✅ Fermer", command=result_window.destroy,
+                 bg="#4CAF50", fg="white", font=("Arial", 11, "bold"),
+                 padx=30, pady=10).pack(pady=(20, 0))
+        
+        # Mettre à jour le statut principal
+        self.status.config(text=status_msg)
+        
+        print(f"📊 Diagnostic terminé : {total_success}/{total_steps} étapes réussies")
+        if corrections_applied > 0:
+            print(f"🔧 {corrections_applied} types de corrections appliquées")

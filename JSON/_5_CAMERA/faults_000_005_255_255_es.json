@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 5,
     "IdLevel2": 255,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_005_255_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_005_255_255_Camera_All",
   "Version": 1,

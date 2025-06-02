@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 0,
     "IdLevel2": 1,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_000_001_255_en.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_WARNING",
   "Version": 1,

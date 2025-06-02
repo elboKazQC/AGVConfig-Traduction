@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 3,
     "IdLevel2": 0,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_003_000_255_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_003_000_255_Battery_Pack",
   "Version": 1,

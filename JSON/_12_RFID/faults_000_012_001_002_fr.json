@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 12,
     "IdLevel2": 1,
-    "IdLevel3": 2
+    "IdLevel3": 2,
+    "Language": "fr",
+    "Filename": "faults_000_012_001_002_fr.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_012_001_002_Rfid_DTC510_Front_Fault_02",
   "Version": 1,

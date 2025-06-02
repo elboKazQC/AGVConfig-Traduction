@@ -5,7 +5,8 @@
     "IdLevel0": 0,
     "IdLevel1": 11,
     "IdLevel2": 255,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_011_255_255_Plc_All",
   "Version": 1,

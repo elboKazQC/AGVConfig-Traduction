@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 4,
     "IdLevel2": 255,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_004_255_255_en.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_004_255_255_Button_All",
   "Version": 2,

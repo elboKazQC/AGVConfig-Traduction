@@ -4,7 +4,9 @@
     "IdLevel0": 0,
     "IdLevel1": 10,
     "IdLevel2": 3,
-    "IdLevel3": 255
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_010_003_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_010_003_255_MagSensor_Front_MLSE_0300A2NP0",
   "Version": 1,
