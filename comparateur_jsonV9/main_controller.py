@@ -417,174 +417,94 @@ class FaultEditorController:
             logger.error(f"Erreur lors de la suppression des colonnes: {e}")
 
     def rebuild_columns_for_path(self):
-        """Rebuild columns for the current path"""
+        """Rebuild columns for the current path (placeholder)."""
+        # This would implement the logic to rebuild the column structure
+        # based on the current path
+        pass
+
+    def unmake_editable(self):
+        """Exit edit mode and restore row to readonly mode."""
+        if not self.editing_info:
+            return
+
+        row = self.editing_info["row"]
+        fault = self.editing_info["fault"]
+        idx = self.editing_info["idx"]
+        filename = self.editing_info["filename"]
+        path = self.editing_info["path"]
+        level = self.editing_info["level"]
+
         try:
-            if not self.base_dir or not self.file_map:
-                return
-
-            # Clear all columns
-            self.clear_columns_from(0)
-
-            # Rebuild each level of the current path
-            for level in range(len(self.current_path)):
-                if self.current_path[level] != 255:  # 255 indicates end of path
-                    path_to_load = self.current_path[:level+1] + [255] * (4 - level - 1)
-                    self.load_level(path_to_load, level)
-                else:
-                    break
-
-            logger.info(f"Colonnes reconstruites pour le chemin: {self.current_path}")
+            # Check if the widget still exists before trying to render it
+            row.winfo_exists()
+            self.render_row(row, fault, idx, path, level, filename)
+            logger.info(f"🔙 Mode édition quitté pour l'item {idx} dans {filename}")
+        except tk.TclError:
+            # Widget has been destroyed (e.g., during language change), just clear the editing info
+            logger.debug("Widget détruit pendant l'édition, nettoyage des infos d'édition")
+            pass
         except Exception as e:
-            logger.error(f"Erreur lors de la reconstruction des colonnes: {e}")
+            logger.error(f"Erreur lors de l'édition: {e}")
 
-    def update_selected_file(self, fn):
-        """Update the selected file display"""
-        self.selected_file_label.config(text=f"Fichier sélectionné : {fn}")
-        self.sync_one_var.set(fn)
-        self.genfichier_file_var.set(fn)
-
-    def display_column(self, fault_list, path, filename, level):
-        """Display a column of faults in the UI"""
-        try:
-            col_index = len(self.columns)
-            frame = tk.Frame(self.columns_frame, bg=Colors.BG_COLUMN)
-            frame.grid(row=0, column=col_index, padx=5, pady=10, sticky="nsew")
-            self.columns_frame.grid_columnconfigure(col_index, minsize=Dimensions.MIN_COL_WIDTH)
-            self.columns.append(frame)
-
-            for idx, fault in enumerate(fault_list):
-                row = tk.Frame(frame, bg=Colors.BG_ROW, highlightthickness=0, highlightbackground=Colors.HIGHLIGHT)
-                row.pack(fill="x", padx=4, pady=3)
-                row.bind("<Enter>", lambda e, r=row: r.configure(highlightthickness=1))
-                row.bind("<Leave>", lambda e, r=row: r.configure(highlightthickness=0))
-
-                color = Colors.GREEN if fault.get("IsExpandable") else Colors.RED
-                dot = tk.Canvas(row, width=14, height=14, bg=Colors.BG_ROW, highlightthickness=0)
-                dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
-                dot.pack(side="left", padx=(6, 8))
-
-                label_text = f"{idx}: {fault.get('Description', '(vide)')}"
-                label = tk.Label(row, text=label_text, fg=Colors.FG_TEXT, bg=Colors.BG_ROW,
-                                anchor="w", font=Fonts.DEFAULT)
-                label.pack(side="left", fill="x", expand=True)
-
-                # Bind click events
-                label.bind("<Button-1>", partial(self.handle_single_click, fault, idx, path, level, filename))
-                label.bind("<Double-1>", partial(self.handle_double_click, fault, idx, path, level, filename, row))
-
-            self.root.update_idletasks()
-            self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
-            self.main_canvas.yview_moveto(0.0)
-
-        except Exception as e:
-            logger.error(f"Erreur lors de l'affichage de la colonne: {e}")
+        self.editing_info = None
 
     def load_flat_mode(self, file_path):
-        """Load a file in flat mode for editing"""
+        """Load and display a flat JSON file."""
         try:
-            logger.info(f"Chargement du fichier en mode plat: {file_path}")
-            # This would implement flat file editing mode
-            # For now, just show a placeholder
-            messagebox.showinfo("Mode Plat", f"Mode plat pour le fichier:\n{file_path}\n\nFonctionnalité en cours d'implémentation.")
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = json.load(f)
+            logger.info(f"Fichier JSON plat chargé avec succès")
         except Exception as e:
-            logger.error(f"Erreur lors du chargement en mode plat: {e}")
-            messagebox.showerror("Erreur", f"Impossible de charger le fichier en mode plat:\n{e}")
+            logger.error(f"Erreur lors de la lecture du fichier JSON plat: {str(e)}")
+            self.status.config(text=f"❌ Erreur lecture {file_path}")
+            return
 
-    def load_data_for_current_language(self):
-        """Load data for the current language"""
-        try:
-            if self.base_dir and self.file_map:
-                # Reload the file map with current language
-                self.initialize_file_map(self.base_dir)
-                # Reload the current level
-                if hasattr(self, 'current_path'):
-                    self.rebuild_columns_for_path()
-                logger.info(f"Données rechargées pour la langue: {self.lang}")
-        except Exception as e:
-            logger.error(f"Erreur lors du rechargement des données: {e}")
+        self.data_map[file_path] = content
+        self.path_map[file_path] = file_path
+        self.clear_columns_from(0)
 
-    def handle_single_click(self, fault, idx, path, level, filename, event):
-        """Handle single click on a fault item"""
-        try:
-            widget = event.widget
-            # Cancel any pending double-click handler
-            if hasattr(widget, '_click_job'):
-                widget.after_cancel(widget._click_job)
+        # Affichage des données dans un tableau
+        fault_list = content.get("FaultDetailList", [])
+        logger.info(f"Nombre d'items dans FaultDetailList (mode plat) : {len(fault_list)}")
+        self.display_flat_table(fault_list, file_path)
 
-            # Schedule single click action (will be canceled if double-click occurs)
-            widget._click_job = widget.after(300, lambda: self.single_click_action(fault, idx, path, level, filename))
-        except Exception as e:
-            logger.error(f"Erreur lors du clic simple: {e}")
-
-    def handle_double_click(self, fault, idx, path, level, filename, row, event):
-        """Handle double click on a fault item"""
-        try:
-            widget = event.widget
-            # Cancel single click action
-            if hasattr(widget, '_click_job'):
-                widget.after_cancel(widget._click_job)
-
-            # Perform double click action
-            self.double_click_action(fault, idx, path, level, filename, row)
-        except Exception as e:
-            logger.error(f"Erreur lors de l'action de double clic: {e}")
-
-    def single_click_action(self, fault, idx, path, level, filename):
-        """Action performed on single click"""
-        try:
-            # Update selected file
-            self.update_selected_file(filename)
-
-            # If fault is expandable, expand to next level
-            if fault.get("IsExpandable", False):
-                new_path = path.copy()
-                new_path[level + 1] = idx
-                self.current_path = new_path
-                self.clear_columns_from(level + 1)
-                self.load_level(new_path, level + 1)
-
-            logger.info(f"Sélection: {filename}, index: {idx}")
-        except Exception as e:
-            logger.error(f"Erreur lors de l'action de clic simple: {e}")
-
-    def double_click_action(self, fault, idx, path, level, filename, row):
-        """Action performed on double click (edit mode)"""
-        try:
-            logger.info(f"Mode édition pour: {filename}, index: {idx}")
-            # This would implement edit mode
-            # For now, just show a message
-            messagebox.showinfo("Édition", f"Mode édition pour:\nFichier: {filename}\nIndex: {idx}\nDescription: {fault.get('Description', '')}")
-        except Exception as e:
-            logger.error(f"Erreur lors de l'action de double clic: {e}")
-
-    # === LANGUAGE MANAGEMENT ===
+        self.root.after(100, lambda: self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all")))
+        self.main_canvas.yview_moveto(0.0)
 
     def reload_lang(self):
         """Reload the interface when language changes."""
-        try:
-            new_lang = self.lang_var.get()
-            if new_lang != self.lang:
-                self.lang = new_lang
-                self.app_state.current_language = new_lang
-                self.load_data_for_current_language()
-                self.refresh_columns()
-                self.status.config(text=f"✅ Langue changée: {new_lang.upper()}")
-                logger.info(f"Langue changée: {new_lang}")
-        except Exception as e:
-            error_msg = f"❌ Erreur lors du changement de langue: {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
+        new_lang = self.lang_var.get()
+        if new_lang == self.lang:
+            return
 
-    def refresh_columns(self):
-        """Refresh all columns with new language data."""
-        try:
-            # This would refresh the existing columns with new language data
-            # For now, just reload the root
+        logger.info(f"🔄 Changement de langue: {self.lang} -> {new_lang}")
+        self.lang = new_lang
+
+        # Mettre à jour les textes des boutons et labels
+        for widget in self.root.winfo_children():
+            if isinstance(widget, tk.Button) or isinstance(widget, tk.Label):
+                text = widget.cget("text")
+                translated = self.translate_text(text, new_lang)
+                widget.config(text=translated)
+
+        # Recharger les données si un dossier est déjà ouvert
+        if self.base_dir:
+            self.initialize_file_map(self.base_dir)
             self.load_root()
-        except Exception as e:
-            logger.error(f"Erreur lors du rafraîchissement des colonnes: {e}")
 
-    # === SEARCH FUNCTIONALITY ===
+        self.status.config(text=f"🌐 Langue changée en {new_lang.upper()}")
+        logger.info(f"Langue changée en {new_lang.upper()}")
+
+    def translate_text(self, text, target_lang):
+        """Translate text to the target language using the traduire function."""
+        if traduire:
+            try:
+                translated = traduire(text, target_lang=target_lang)
+                logger.info(f"Texte traduit ({target_lang}): {translated}")
+                return translated
+            except Exception as e:
+                logger.error(f"Erreur lors de la traduction: {e}")
+        return text  # Return original text if translation fails
 
     def show_search(self):
         """Show the search interface."""
@@ -650,41 +570,89 @@ class FaultEditorController:
             self.status.config(text=error_msg)
             logger.error(error_msg)
 
+    def close_search_frame(self):
+        """Safely close the search frame if it exists."""
+        if self.search_frame and self.search_frame.winfo_exists():
+            self.search_frame.destroy()
+            self.search_frame = None
+
+    def open_alarm_detail(self, fault, path):
+        """Stub for open_alarm_detail method."""
+        logger.warning("open_alarm_detail is not implemented yet.")
+
+    def display_flat_table(self, fault_list, file_path):
+        """Stub for display_flat_table method."""
+        logger.warning("display_flat_table is not implemented yet.")
+
     def perform_search(self):
-        """Perform a search operation."""
+        """Perform the search based on the search mode (hierarchical or flat)."""
+        query = self.search_var.get().strip()
+        if not query:
+            return
+
+        logger.info(f"🔍 Recherche lancée: '{query}' (mode: {self.search_mode})")
+        results = []
+        if self.search_mode == "hierarchical":
+            # Recherche hiérarchique dans les données
+            for path, content in self.data_map.items():
+                fault_list = content.get("FaultDetailList", [])
+                for fault in fault_list:
+                    if self.matches_query(fault, query):
+                        results.append((path, fault))
+
+        else:
+            # Recherche dans les fichiers JSON à plat
+            for filename, filepath in self.file_map.items():
+                if re.search(query, filename, re.IGNORECASE):
+                    results.append((filepath, None))
+
+        self.show_search_results(results)
+
+    def matches_query(self, fault, query):
+        """Check if the fault matches the query (case-insensitive)."""
+        query = query.lower()
+        for key, value in fault.items():
+            if isinstance(value, str) and query in value.lower():
+                return True
+        return False
+
+    def show_search_results(self, results):
+        """Display the search results in the search results box."""
+        self.results_listbox.delete(0, tk.END)
+        self.search_results = results
+
+        for path, fault in results:
+            if fault:
+                # Résultat détaillé avec chemin
+                self.results_listbox.insert(tk.END, f"{path} - {fault.get('FaultName', '')}")
+            else:
+                # Résultat de fichier
+                self.results_listbox.insert(tk.END, f"{path}")
+
+    def open_selected_result(self):
+        """Open the selected search result."""
         try:
-            query = self.search_var.get().strip()
-            if not query:
+            selection = self.results_listbox.curselection()
+            if not selection:
                 return
 
-            self.search_results.clear()
-            self.current_search_index = -1
+            index = selection[0]
+            path, fault = self.search_results[index]
 
-            # Clear results listbox
-            self.results_listbox.delete(0, tk.END)
+            if fault:
+                # Ouvrir le détail de l'alarme
+                self.open_alarm_detail(fault, path)
+            else:
+                # Ouvrir le fichier JSON
+                self.current_file_path = path
+                self.load_flat_mode(path)
 
-            # Search in current data
-            if self.data_map.get(self.lang):
-                for key, value in self.data_map[self.lang].items():
-                    if (query.lower() in key.lower() or
-                        query.lower() in str(value).lower()):
-                        result = f"{key}: {str(value)[:100]}..."
-                        self.search_results.append((key, value))
-                        self.results_listbox.insert(tk.END, result)
-
-            # Update status
-            count = len(self.search_results)
-            self.status.config(text=f"🔍 {count} résultat(s) trouvé(s) pour '{query}'")
-
-            logger.info(f"Recherche effectuée: '{query}' - {count} résultats")
-
+            self.close_search_frame()
         except Exception as e:
-            error_msg = f"❌ Erreur lors de la recherche: {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
+            logger.error(f"Erreur lors de l'ouverture du résultat: {e}")
 
     def search_next(self):
-        """Navigate to next search result."""
+        """Navigate to the next search result."""
         if self.search_results:
             self.current_search_index = (self.current_search_index + 1) % len(self.search_results)
             self.results_listbox.selection_clear(0, tk.END)
@@ -692,488 +660,116 @@ class FaultEditorController:
             self.results_listbox.see(self.current_search_index)
 
     def search_previous(self):
-        """Navigate to previous search result."""
+        """Navigate to the previous search result."""
         if self.search_results:
             self.current_search_index = (self.current_search_index - 1) % len(self.search_results)
             self.results_listbox.selection_clear(0, tk.END)
             self.results_listbox.selection_set(self.current_search_index)
             self.results_listbox.see(self.current_search_index)
 
-    # === SCRIPT OPERATIONS ===
-
     def run_sync_all(self):
         """Run the sync_all script."""
+        logger.info("🔄 Synchronisation de tous les fichiers")
+        if not self.base_dir:
+            messagebox.showerror("Erreur", "Aucun dossier ouvert")
+            return
+
+        # Appel du script sync_all.py
         try:
-            self.status.config(text="⏳ Synchronisation de tous les fichiers...")
-
-            # Create a popup to show progress
-            popup = self.afficher_popup_chargement("Synchronisation en cours...")
-
-            # Run the sync_all script
-            if self.base_dir:
-                result = subprocess.run([sys.executable, "sync_all.py", self.base_dir],
-                                      capture_output=True, text=True, cwd=".")
-                if result.returncode == 0:
-                    self.status.config(text="✅ Synchronisation terminée avec succès")
-                else:
-                    self.status.config(text="❌ Erreur lors de la synchronisation")
-                    messagebox.showerror("Erreur", f"Erreur de synchronisation:\n{result.stderr}")
-            else:
-                messagebox.showwarning("Attention", "Veuillez d'abord ouvrir un dossier")
-
-            popup.destroy()
-            logger.info("Synchronisation de tous les fichiers terminée")
-
-        except Exception as e:
-            if 'popup' in locals():
-                popup.destroy()
-            error_msg = f"❌ Erreur lors de la synchronisation: {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
-            messagebox.showerror("Erreur", error_msg)
+            result = subprocess.run([sys.executable, "scripts/sync_all.py", self.base_dir],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Résultat de la synchronisation: {output}")
+            messagebox.showinfo("Synchronisation terminée", output)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la synchronisation: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la synchronisation: {e}")
 
     def run_sync_one(self):
         """Run the sync_one script for a specific file."""
+        logger.info("🔄 Synchronisation d'un fichier spécifique")
+        file_to_sync = self.sync_one_var.get().strip()
+        if not file_to_sync or file_to_sync not in self.file_map:
+            messagebox.showerror("Erreur", "Fichier invalide ou non trouvé")
+            return
+
+        file_path = self.file_map[file_to_sync]
+
+        # Appel du script sync_one.py
         try:
-            filename = self.sync_one_var.get().strip()
-            if not filename:
-                messagebox.showwarning("Attention", "Veuillez spécifier un nom de fichier")
-                return
-
-            self.status.config(text=f"⏳ Synchronisation de {filename}...")
-
-            popup = self.afficher_popup_chargement(f"Synchronisation de {filename}...")
-
-            result = subprocess.run([sys.executable, "sync_one.py", filename],
-                                  capture_output=True, text=True, cwd=".")
-            if result.returncode == 0:
-                self.status.config(text=f"✅ Synchronisation de {filename} terminée")
-            else:
-                self.status.config(text=f"❌ Erreur lors de la synchronisation de {filename}")
-                messagebox.showerror("Erreur", f"Erreur de synchronisation:\n{result.stderr}")
-
-            popup.destroy()
-            logger.info(f"Synchronisation de {filename} terminée")
-
-        except Exception as e:
-            if 'popup' in locals():
-                popup.destroy()
-            error_msg = f"❌ Erreur lors de la synchronisation: {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
+            result = subprocess.run([sys.executable, "scripts/sync_one.py", file_path],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Résultat de la synchronisation: {output}")
+            messagebox.showinfo("Synchronisation terminée", output)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la synchronisation: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la synchronisation: {e}")
 
     def run_generer_fichier(self):
-        """Génère un fichier de traduction en utilisant le script generer_fichier.py"""
-        if not self.base_dir:
-            self.status.config(text="❌ Aucun dossier ouvert")
+        """Run the generer_fichier script."""
+        logger.info("📂 Génération d'un fichier")
+        file_to_generate = self.genfichier_file_var.get().strip()
+        src_lang = self.genfichier_src_var.get().strip()
+        tgt_lang = self.genfichier_tgt_var.get().strip()
+
+        if not file_to_generate or not src_lang or not tgt_lang:
+            messagebox.showerror("Erreur", "Veuillez remplir tous les champs")
             return
 
-        f_arg = self.genfichier_file_var.get().strip()
-        src = self.genfichier_src_var.get().strip()
-        tgt = self.genfichier_tgt_var.get().strip()
-
-        if not (f_arg and src and tgt):
-            self.status.config(text="❌ Arguments generer_fichier manquants")
-            return
-
-        cmd = ["python", "generer_fichier.py", self.base_dir, f_arg, src, tgt]
-        self.run_command(cmd, desc=f"Générer fichier {f_arg} {src}->{tgt}")
+        # Appel du script generer_fichier.py
+        try:
+            result = subprocess.run([sys.executable, "scripts/generer_fichier.py",
+                                   file_to_generate, src_lang, tgt_lang],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Fichier généré avec succès: {output}")
+            messagebox.showinfo("Génération terminée", f"Fichier généré: {output}")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la génération du fichier: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la génération du fichier: {e}")
 
     def run_generer_manquant(self):
-        """Génère les fichiers manquants en utilisant le script generer_manquant.py"""
-        if not self.base_dir:
-            self.status.config(text="❌ Aucun dossier ouvert")
-            return
-        cmd = ["python", "generer_manquant.py", self.base_dir]
-        self.run_command(cmd, desc="Générer les fichiers manquants")
+        """Run the generer_manquant script."""
+        logger.info("📂 Génération des fichiers manquants")
+        # Appel du script generer_manquant.py
+        try:
+            result = subprocess.run([sys.executable, "scripts/generer_manquant.py"],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Fichiers manquants générés avec succès")
+            messagebox.showinfo("Génération terminée", "Fichiers manquants générés")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la génération des fichiers manquants: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la génération des fichiers manquants: {e}")
 
     def run_check_coherence(self):
-        """Mashup complet : Cohérence + Orthographe + Headers - Version optimisée"""
-        if not hasattr(self, 'file_map') or not self.file_map:
-            self.status.config(text="❌ Aucun dossier ouvert")
-            return
-
-        # Obtenir le dossier parent du premier fichier trouvé
-        premier_fichier = next(iter(self.file_map.values()))
-        dossier_base = os.path.dirname(premier_fichier)
-        logger.info(f"🚀 Lancement du diagnostic complet dans : {dossier_base}")
-        # Afficher le dialogue de choix des actions
-        self.show_comprehensive_check_dialog(dossier_base)
+        """Run the check_coherence script."""
+        logger.info("✅ Vérification de la cohérence des fichiers")
+        # Appel du script check_coherence.py
+        try:
+            result = subprocess.run([sys.executable, "scripts/check_coherence.py"],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Vérification de la cohérence terminée: {output}")
+            messagebox.showinfo("Vérification terminée", output)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la vérification de la cohérence: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la vérification de la cohérence: {e}")
 
     def run_spell_check(self):
-        """Lance la vérification orthographique"""
-        if not self.base_dir:
-            self.status.config(text="❌ Aucun dossier ouvert")
-            return
-        cmd = ["python", "verifier_orthographe.py", self.base_dir]
-        self.run_command(cmd, desc="Vérification orthographique")
-
-    def run_command(self, cmd, desc="Commande"):
-        """Exécute une commande système avec feedback visuel"""
+        """Run the spell check script."""
+        logger.info("🔍 Vérification de l'orthographe")
+        # Appel du script spell_check.py
         try:
-            logger.info(f"🔄 Exécution: {desc}")
-            self.status.config(text=f"🔄 {desc}...")
-
-            # Afficher un popup de chargement
-            popup = self.afficher_popup_chargement(f"{desc} en cours...")
-            self.root.update_idletasks()
-
-            # Exécuter la commande
-            result = subprocess.run(cmd, cwd=os.getcwd(), capture_output=True, text=True)
-
-            # Fermer le popup
-            popup.destroy()
-
-            if result.returncode == 0:
-                self.status.config(text=f"✅ {desc} terminé avec succès")
-                logger.info(f"✅ {desc} terminé avec succès")
-                if result.stdout:
-                    logger.info(f"Sortie: {result.stdout}")
-            else:
-                error_msg = f"❌ Erreur {desc}: {result.stderr}"
-                self.status.config(text=error_msg)
-                logger.error(error_msg)
-                messagebox.showerror("Erreur", f"{desc} a échoué:\n{result.stderr}")
-
-        except Exception as e:
-            error_msg = f"❌ Erreur lors de l'exécution de {desc}: {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
-            messagebox.showerror("Erreur", error_msg)
-            if 'popup' in locals():
-                popup.destroy()
-
-    def afficher_popup_chargement(self, message="Traitement en cours..."):
-        """Affiche un popup de chargement"""
-        popup = tk.Toplevel(self.root)
-        popup.title("Veuillez patienter")
-        popup.geometry("300x100")
-        popup.transient(self.root)
-        popup.grab_set()  # Bloque les interactions avec la fenêtre principale
-        popup.resizable(False, False)
-        tk.Label(popup, text=message, font=Fonts.DEFAULT).pack(pady=20)
-        self.root.update_idletasks()
-        return popup
-
-    def show_comprehensive_check_dialog(self, dossier_base):
-        """Affiche un dialogue pour choisir les vérifications et corrections à effectuer"""
-        dialog = tk.Toplevel(self.root)
-        dialog.title("🚀 Diagnostic Complet - AGV Config Traduction")
-        dialog.geometry("600x500")
-        dialog.transient(self.root)
-        dialog.grab_set()
-
-        # Centrer la fenêtre
-        dialog.geometry("+%d+%d" % (self.root.winfo_rootx() + 50, self.root.winfo_rooty() + 50))
-
-        # Frame principal
-        main_frame = tk.Frame(dialog, padx=20, pady=20)
-        main_frame.pack(fill=tk.BOTH, expand=True)
-
-        # Titre
-        title_label = tk.Label(main_frame, text="🚀 Diagnostic et Correction Automatique",
-                              font=("Arial", 14, "bold"))
-        title_label.pack(pady=(0, 20))
-
-        # Informations sur le dossier
-        info_frame = tk.Frame(main_frame)
-        info_frame.pack(fill=tk.X, pady=(0, 20))
-
-        tk.Label(info_frame, text="📁 Dossier :", font=("Arial", 10, "bold")).pack(anchor=tk.W)
-        tk.Label(info_frame, text=dossier_base, font=("Arial", 9),
-                wraplength=550, justify=tk.LEFT).pack(anchor=tk.W, padx=(20, 0))
-
-        # Variables pour les checkboxes
-        self.check_coherence_var = tk.BooleanVar(value=True)
-        self.fix_coherence_var = tk.BooleanVar(value=True)
-        self.check_spelling_var = tk.BooleanVar(value=True)
-        self.fix_headers_var = tk.BooleanVar(value=True)
-
-        # Section Vérifications
-        verif_frame = tk.LabelFrame(main_frame, text="🔍 Vérifications à effectuer",
-                                   font=("Arial", 11, "bold"), padx=10, pady=10)
-        verif_frame.pack(fill=tk.X, pady=(0, 15))
-
-        tk.Checkbutton(verif_frame, text="✅ Vérifier la cohérence des fichiers de traduction",
-                      variable=self.check_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        tk.Checkbutton(verif_frame, text="📝 Vérifier l'orthographe des traductions",
-                      variable=self.check_spelling_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        # Section Corrections automatiques
-        correct_frame = tk.LabelFrame(main_frame, text="🔧 Corrections automatiques",
-                                     font=("Arial", 11, "bold"), padx=10, pady=10)
-        correct_frame.pack(fill=tk.X, pady=(0, 20))
-
-        tk.Checkbutton(correct_frame, text="🔧 Corriger automatiquement les erreurs de métadonnées",
-                      variable=self.fix_coherence_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        tk.Checkbutton(correct_frame, text="📋 Corriger et normaliser les headers JSON",
-                      variable=self.fix_headers_var, font=("Arial", 10)).pack(anchor=tk.W)
-
-        # Zone d'information
-        info_text = tk.Text(correct_frame, height=4, wrap=tk.WORD, font=("Arial", 9))
-        info_text.pack(fill=tk.X, pady=(10, 0))
-        info_text.insert(tk.END,
-            "ℹ️  Les corrections automatiques incluent :\n"
-            "• Correction des langues dans les headers (Language: fr/en/es)\n"
-            "• Correction des noms de fichiers dans les headers\n"
-            "• Correction des IDs de niveaux (IdLevel0-3)\n"
-            "• Normalisation de la structure des headers JSON")
-        info_text.config(state=tk.DISABLED)
-
-        # Boutons
-        button_frame = tk.Frame(main_frame)
-        button_frame.pack(fill=tk.X, pady=(10, 0))
-
-        # Bouton Tout vérifier et corriger
-        tk.Button(button_frame, text="🚀 Lancer le diagnostic complet",
-                 command=lambda: self.run_comprehensive_check(dialog, dossier_base, True),
-                 bg="#4CAF50", fg="white", font=("Arial", 11, "bold"),
-                 padx=20, pady=10).pack(side=tk.LEFT, padx=(0, 10))
-
-        # Bouton Vérifier seulement
-        tk.Button(button_frame, text="🔍 Vérifier seulement (pas de corrections)",
-                 command=lambda: self.run_comprehensive_check(dialog, dossier_base, False),
-                 bg="#2196F3", fg="white", font=("Arial", 10),
-                 padx=20, pady=8).pack(side=tk.LEFT, padx=(0, 10))
-
-        # Bouton Annuler
-        tk.Button(button_frame, text="❌ Annuler",
-                 command=dialog.destroy,
-                 bg="#f44336", fg="white", font=("Arial", 10),
-                 padx=20, pady=8).pack(side=tk.RIGHT)
-
-    def run_comprehensive_check(self, dialog, dossier_base, apply_corrections):
-        """Lance le diagnostic complet selon les options sélectionnées"""
-        dialog.destroy()
-
-        logger.info(f"\n🚀 ===== DIAGNOSTIC COMPLET DÉMARRÉ =====")
-        logger.info(f"📁 Dossier : {dossier_base}")
-        logger.info(f"🔧 Corrections automatiques : {'✅ Activées' if apply_corrections else '❌ Désactivées'}")
-
-        results = {
-            'coherence': None,
-            'spelling': None,
-            'headers': None,
-            'total_errors': 0,
-            'total_corrections': 0
-        }
-
-        # 1. Vérification de cohérence
-        if self.check_coherence_var.get():
-            logger.info(f"\n📋 1/3 - Vérification de la cohérence...")
-            results['coherence'] = self.run_coherence_check_step(dossier_base,
-                                                                apply_corrections and self.fix_coherence_var.get())
-
-        # 2. Vérification orthographique
-        if self.check_spelling_var.get():
-            logger.info(f"\n📝 2/3 - Vérification orthographique...")
-            results['spelling'] = self.run_spelling_check_step(dossier_base)
-
-        # 3. Correction des headers
-        if apply_corrections and self.fix_headers_var.get():
-            logger.info(f"\n📋 3/3 - Correction des headers...")
-            results['headers'] = self.run_headers_fix_step(dossier_base)
-
-        # Afficher le résumé final
-        self.show_comprehensive_results(results, dossier_base)
-
-    def run_coherence_check_step(self, dossier_base, apply_fix):
-        """Étape de vérification de cohérence"""
-        try:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-
-            # Commande de base
-            cmd = ["python", os.path.join(script_dir, "check_coherence.py"), dossier_base]
-
-            # Ajouter --fix si demandé
-            if apply_fix:
-                cmd.append("--fix")
-                logger.info("🔧 Mode correction automatique activé pour la cohérence")
-
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
-                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
-            if result.stdout:
-                logger.info("📋 Résultats cohérence :")
-                logger.info(result.stdout)
-
-            return {
-                'success': result.returncode == 0,
-                'output': result.stdout,
-                'errors': result.stderr,
-                'fixed': apply_fix and "corrections appliquées" in result.stdout
-            }
-
-        except Exception as e:
-            logger.error(f"❌ Erreur lors de la vérification de cohérence : {e}")
-            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
-
-    def run_spelling_check_step(self, dossier_base):
-        """Étape de vérification orthographique"""
-        try:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            cmd = ["python", os.path.join(script_dir, "verifier_orthographe.py"), dossier_base]
-
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
-                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
-            if result.stdout:
-                logger.info("📝 Résultats orthographe :")
-                logger.info(result.stdout)
-
-            return {
-                'success': result.returncode == 0,
-                'output': result.stdout,
-                'errors': result.stderr
-            }
-
-        except Exception as e:
-            logger.error(f"❌ Erreur lors de la vérification orthographique : {e}")
-            return {'success': False, 'output': '', 'errors': str(e)}
-
-    def run_headers_fix_step(self, dossier_base):
-        """Étape de correction des headers"""
-        try:
-            script_dir = os.path.dirname(os.path.abspath(__file__))
-            cmd = ["python", os.path.join(script_dir, "fix_headers.py"), dossier_base]
-
-            env = os.environ.copy()
-            env["PYTHONIOENCODING"] = "utf-8"
-
-            result = subprocess.run(cmd, capture_output=True, text=True,
-                                  encoding="utf-8", errors="replace", env=env, cwd=script_dir)
-
-            if result.stdout:
-                logger.info("📋 Résultats correction headers :")
-                logger.info(result.stdout)
-
-            return {
-                'success': result.returncode == 0,
-                'output': result.stdout,
-                'errors': result.stderr,
-                'fixed': "corrections appliquées" in result.stdout
-            }
-
-        except Exception as e:
-            logger.error(f"❌ Erreur lors de la correction des headers : {e}")
-            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
-
-    def show_comprehensive_results(self, results, dossier_base):
-        """Affiche les résultats du diagnostic complet"""
-        # Créer une fenêtre de résultats
-        results_window = tk.Toplevel(self.root)
-        results_window.title("📊 Résultats du Diagnostic Complet")
-        results_window.geometry("700x600")
-        results_window.transient(self.root)
-
-        # Frame principal avec scrollbar
-        main_frame = tk.Frame(results_window, padx=20, pady=20)
-        main_frame.pack(fill=tk.BOTH, expand=True)
-
-        # Titre
-        title_label = tk.Label(main_frame, text="📊 Résultats du Diagnostic Complet",
-                              font=("Arial", 14, "bold"))
-        title_label.pack(pady=(0, 20))
-
-        # Zone de texte avec scrollbar pour les résultats
-        text_frame = tk.Frame(main_frame)
-        text_frame.pack(fill=tk.BOTH, expand=True)
-
-        text_widget = tk.Text(text_frame, wrap=tk.WORD, font=("Consolas", 10))
-        scrollbar = ttk.Scrollbar(text_frame, orient=tk.VERTICAL, command=text_widget.yview)
-        text_widget.configure(yscrollcommand=scrollbar.set)
-
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-        # Compiler les résultats
-        report = f"📁 Dossier analysé : {dossier_base}\n"
-        report += f"⏰ Date : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
-
-        if results['coherence']:
-            report += "=" * 60 + "\n"
-            report += "📋 VÉRIFICATION DE COHÉRENCE\n"
-            report += "=" * 60 + "\n"
-            report += results['coherence']['output'] or "Aucune sortie"
-            if results['coherence']['errors']:
-                report += f"\n❌ Erreurs : {results['coherence']['errors']}\n"
-            report += "\n\n"
-
-        if results['spelling']:
-            report += "=" * 60 + "\n"
-            report += "📝 VÉRIFICATION ORTHOGRAPHIQUE\n"
-            report += "=" * 60 + "\n"
-            report += results['spelling']['output'] or "Aucune sortie"
-            if results['spelling']['errors']:
-                report += f"\n❌ Erreurs : {results['spelling']['errors']}\n"
-            report += "\n\n"
-
-        if results['headers']:
-            report += "=" * 60 + "\n"
-            report += "📋 CORRECTION DES HEADERS\n"
-            report += "=" * 60 + "\n"
-            report += results['headers']['output'] or "Aucune sortie"
-            if results['headers']['errors']:
-                report += f"\n❌ Erreurs : {results['headers']['errors']}\n"
-            report += "\n\n"
-
-        report += "=" * 60 + "\n"
-        report += "✅ DIAGNOSTIC TERMINÉ\n"
-        report += "=" * 60 + "\n"
-
-        text_widget.insert(tk.END, report)
-        text_widget.config(state=tk.DISABLED)
-
-        # Bouton Fermer
-        tk.Button(main_frame, text="✅ Fermer",
-                 command=results_window.destroy,
-                 bg="#4CAF50", fg="white", font=("Arial", 11),
-                 padx=20, pady=10).pack(pady=(20, 0))
-
-        # Mettre à jour le status
-        self.status.config(text="✅ Diagnostic complet terminé")
-
-    def reload_root(self, event=None):
-        """Reload the complete interface from the root."""
-        try:
-            # Save current state
-            old_lang = self.lang
-            old_path = self.current_path[:]
-
-            # Reload from root
-            self.load_root()
-
-            # Try to restore previous path
-            try:
-                self.rebuild_columns_for_path()
-                self.status.config(text="✅ Interface rechargée")
-            except Exception as e:
-                logger.warning(f"Erreur lors de la restauration du chemin : {e}")
-                # Stay at root on error
-                self.status.config(text="✅ Interface rechargée (racine)")
-        except Exception as e:
-            error_msg = f"❌ Erreur lors du rechargement : {e}"
-            self.status.config(text=error_msg)
-            logger.error(error_msg)
-
-    def rebuild_columns_for_path(self):
-        """Rebuild columns for the current path (placeholder)."""
-        # This would implement the logic to rebuild the column structure
-        # based on the current path
-        pass
-
-    def unmake_editable(self):
-        """Exit edit mode (placeholder)."""
-        # This would implement logic to exit edit mode
-        pass
+            result = subprocess.run([sys.executable, "scripts/spell_check.py"],
+                                   check=True, text=True, capture_output=True)
+            output = result.stdout.strip()
+            logger.info(f"Vérification de l'orthographe terminée: {output}")
+            messagebox.showinfo("Vérification terminée", output)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de la vérification de l'orthographe: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de la vérification de l'orthographe: {e}")
 
     def cleanup(self):
         """Cleanup method called when application closes."""

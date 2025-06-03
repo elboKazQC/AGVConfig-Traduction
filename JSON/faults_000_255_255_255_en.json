@@ -71,7 +71,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "house",
+      "Description": "",
       "IsExpandable": false
     },
     {
@@ -138,6 +138,5 @@
       "Description": "",
       "IsExpandable": false
     }
-  ],
-  "Language": "en"
+  ]
 }

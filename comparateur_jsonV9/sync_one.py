@@ -335,12 +335,41 @@ def process_translations(
     if "FaultDetailList" not in target_data:
         target_data["FaultDetailList"] = []
 
+    # Copier Header et autres champs non-FaultDetailList
+    for key in source_data:
+        if key != "FaultDetailList" and key != "Language":
+            if key not in target_data:
+                target_data[key] = source_data[key]
+            elif key == "Header":
+                for header_key in source_data[key]:
+                    if header_key not in target_data[key]:
+                        target_data[key][header_key] = source_data[key][header_key]
+
+    # S'assurer que Header.Language est correct
+    if "Header" not in target_data:
+        target_data["Header"] = {}
+    if target_data["Header"].get("Language") != target_lang:
+        print(f"{JAUNE}🔧 Correction en-tête langue : {target_data['Header'].get('Language')} → {target_lang}{RESET}")
+        logger.info(f"Correction langue header: {target_data['Header'].get('Language')} → {target_lang}")
+        target_data["Header"]["Language"] = target_lang
+        modifications += 1
+
+    # Supprimer Language à la racine s'il existe
+    if "Language" in target_data:
+        del target_data["Language"]
+        print(f"{JAUNE}🔧 Suppression champ Language redondant à la racine{RESET}")
+        logger.info("Suppression champ Language redondant à la racine")
+        modifications += 1
+
     source_list = source_data.get("FaultDetailList", [])
     target_list = target_data["FaultDetailList"]
 
     # Étendre la liste cible si nécessaire
     while len(target_list) < len(source_list):
         target_list.append({})
+
+    # Garder une trace des descriptions déjà traduites pour éviter les doublons
+    seen_descriptions = {}
 
     # Traiter chaque élément
     for i, source_item in enumerate(source_list):
@@ -357,7 +386,10 @@ def process_translations(
 
         # Si pas de description source, passer
         if not source_desc:
-            continue        # 1. Vérifier si c'est un code technique
+            target_list[i]["Description"] = ""
+            continue
+
+        # 1. Vérifier si c'est un code technique
         if est_code_technique(source_desc):
             if target_desc != source_desc:
                 print(f"{JAUNE}🔧 Correction code technique [{target_lang.upper()}][index {i}] : {target_desc} → {source_desc}{RESET}")
@@ -366,7 +398,17 @@ def process_translations(
                 modifications += 1
             continue
 
-        # 2. Traduction si nécessaire
+        # 2. Vérifier si on a déjà traduit cette description
+        if source_desc in seen_descriptions:
+            existing_translation = seen_descriptions[source_desc]
+            if target_desc != existing_translation:
+                print(f"{JAUNE}🔄 Réutilisation traduction existante [{target_lang.upper()}][index {i}] : {target_desc} → {existing_translation}{RESET}")
+                log_changement(target_lang, i, target_desc, existing_translation, basename)
+                target_list[i]["Description"] = existing_translation
+                modifications += 1
+            continue
+
+        # 3. Traduction si nécessaire
         should_translate = force_retranslate or not target_desc
 
         # Vérifier la langue de la traduction existante
@@ -387,9 +429,13 @@ def process_translations(
                     log_changement(target_lang, i, target_desc, new_translation, basename)
                     target_list[i]["Description"] = new_translation
                     modifications += 1
+                    seen_descriptions[source_desc] = new_translation
             except Exception as e:
                 logger.error(f"Erreur traduction index {i}: {e}")
                 print(f"{ROUGE}❌ Erreur traduction index {i}: {e}{RESET}")
+        else:
+            # Si pas de traduction nécessaire, mémoriser quand même la traduction existante
+            seen_descriptions[source_desc] = target_desc
 
     return modifications
 
