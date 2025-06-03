@@ -75,9 +75,11 @@ python sync_one.py path/to/file_fr.json [--force-retranslate]
 
 #### 2. Synchronize All Files
 ```bash
-python sync_all.py path/to/directory [--force-retranslate]
+python sync_all.py [path/to/directory] [--force-retranslate]
 ```
 - Synchronizes all JSON files in a directory
+- `path/to/directory` is optional and defaults to `../JSON`
+- `--force-retranslate`: Force re-translation of existing entries
 
 #### 3. Generate Missing Files
 ```bash
