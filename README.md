@@ -250,7 +250,8 @@ This project is licensed under the terms of the [MIT License](LICENSE).
 - **v1.0**: Initial release with basic translation capabilities
 - **v1.1**: Added GUI application with enhanced error handling
 - **v1.2**: Improved synchronization and coherence checking
-- **v1.3**: Enhanced logging and configuration management (current)
+- **v1.3**: Enhanced logging and configuration management
+- **v1.3.1**: Removed legacy `config.py` and `config_temp.py`; configuration constants are now in `config/constants.py`
 
 ---
 
