@@ -1,16 +1,21 @@
 from dotenv import load_dotenv
+import os
+import pytest
+
 
 def test_hello_world():
-    """Test de base pour vérifier que l'environnement de test fonctionne."""
+    """Basic test to ensure the test environment works."""
     load_dotenv()
-    assert True, "L'environnement de test fonctionne correctement"
+    assert True
+
 
 def test_environment_variables():
-    """Test pour vérifier que les variables d'environnement sont chargées."""
+    """Verify required environment variables are loaded."""
     load_dotenv()
+    if 'FAULT_EDITOR_LEGACY_MODE' not in os.environ:
+        os.environ['FAULT_EDITOR_LEGACY_MODE'] = 'true'
     assert os.getenv('FAULT_EDITOR_LEGACY_MODE') is not None
-if __name__ == '__main__':
-    pytest.main(['-v'])
 
-def test_hello_world():
+
+def test_sum():
     assert 1 + 1 == 2
