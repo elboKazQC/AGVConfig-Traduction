@@ -2,20 +2,27 @@
 
 try:
     import pytest
-except ImportError:
-    # Create a minimal pytest-like interface for basic testing
+except ImportError:  # pragma: no cover - used only when pytest is unavailable
     class MockPytest:
+        """Minimal pytest-like helper supporting the raises context manager."""
+
+        class RaisesContext:
+            def __init__(self, exc_type):
+                self.exc_type = exc_type
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc_val, exc_tb):
+                if exc_type is None:
+                    raise AssertionError(
+                        f"Expected {self.exc_type.__name__} but none was raised"
+                    )
+                return issubclass(exc_type, self.exc_type)
+
         @staticmethod
         def raises(exception_type):
-            def decorator(func):
-                def wrapper(*args, **kwargs):
-                    try:
-                        func(*args, **kwargs)
-                        raise AssertionError(f"Expected {exception_type.__name__} but none was raised")
-                    except exception_type:
-                        pass  # Expected exception was raised
-                return wrapper
-            return decorator
+            return MockPytest.RaisesContext(exception_type)
 
     pytest = MockPytest()
 

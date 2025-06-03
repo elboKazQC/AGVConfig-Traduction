@@ -140,7 +140,7 @@ def configure_styles():
 class ProgressDialog(tk.Toplevel):
     """A progress dialog window."""
 
-    def __init__(self, parent: Union[tk.Widget, tk.Tk, tk.Toplevel], title: str = "Progress"):
+    def __init__(self, parent: Union[tk.Tk, tk.Toplevel], title: str = "Progress"):
         """Initialize progress dialog."""
         super().__init__(parent)
         self.title(title)
@@ -229,7 +229,7 @@ class ToolbarBuilder:
     """Constructeur pour les barres d'outils"""
 
     @staticmethod
-    def create_main_toolbar(parent, callbacks: Dict[str, Callable]) -> tk.Frame:
+    def create_main_toolbar(parent, callbacks: Dict[str, Callable]) -> ttk.Frame:
         """Crée la barre d'outils principale"""
         toolbar = StyledFrame(parent, style_type="toolbar")
 
@@ -252,7 +252,7 @@ class ToolbarBuilder:
         return toolbar.as_tk_frame()
 
     @staticmethod
-    def create_flat_editor_toolbar(parent, callbacks: Dict[str, Callable]) -> tk.Frame:
+    def create_flat_editor_toolbar(parent, callbacks: Dict[str, Callable]) -> ttk.Frame:
         """Crée la barre d'outils pour l'éditeur plat"""
         toolbar = StyledFrame(parent, style_type="toolbar")
 
