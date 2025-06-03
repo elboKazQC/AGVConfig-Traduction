@@ -143,8 +143,10 @@ class StatisticsPlugin(Plugin):
         }
 
         try:
-            if not hasattr(self.app, 'main_controller') or not hasattr(self.app.main_controller, 'fault_files'):
-                # Mock data for testing
+            if (not self.app or
+                not getattr(self.app, 'main_controller', None) or
+                not getattr(self.app.main_controller, 'fault_files', None)):
+                # Mock data for testing when application is unavailable
                 stats["total_entries"] = 532
                 stats["languages"]["fr"] = {"count": 532, "empty": 0, "avg_length": 45}
                 stats["languages"]["en"] = {"count": 530, "empty": 2, "avg_length": 42}

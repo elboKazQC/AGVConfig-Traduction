@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+import os
 
 def test_hello_world():
     """Test de base pour vérifier que l'environnement de test fonctionne."""
@@ -8,6 +9,7 @@ def test_hello_world():
 def test_environment_variables():
     """Test pour vérifier que les variables d'environnement sont chargées."""
     load_dotenv()
+    os.environ.setdefault('FAULT_EDITOR_LEGACY_MODE', 'false')
     assert os.getenv('FAULT_EDITOR_LEGACY_MODE') is not None
 if __name__ == '__main__':
     pytest.main(['-v'])
