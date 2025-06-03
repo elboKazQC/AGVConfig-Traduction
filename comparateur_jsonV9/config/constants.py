@@ -28,8 +28,8 @@ class Colors:
     RED = "#f44336"               # Rouge pour les alertes
     YELLOW = "#ffc107"             # Ambre pour les avertissements
     HIGHLIGHT = "#505050"         # Contour de survol plus visible
-    SEARCH_HIGHLIGHT = "#ffab00"  # Couleur de surbrillance pour la recherche
-    SEARCH_BG = "#3a3a3a"         # Fond pour la barre de recherche
+    SEARCH_HIGHLIGHT = "#ffab00"  # Couleur de surbrillance pour la recherche    SEARCH_BG = "#3a3a3a"         # Fond pour la barre de recherche
+    BG_ROW_HOVER = "#606060"       # Couleur de survol des lignes
 
 # Polices
 class Fonts:

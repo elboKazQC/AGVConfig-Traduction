@@ -82,8 +82,52 @@ class FaultEditorController:
 
         # Setup the complete UI
         self.setup_ui()
+        
+        # Try to auto-detect and load JSON folder
+        self._auto_load_json_folder()
 
         logger.info("✅ Complete Fault Editor interface initialized")
+
+    def _auto_load_json_folder(self):
+        """Try to automatically detect and load the JSON folder."""
+        try:
+            # Essayer différents emplacements possibles pour le dossier JSON
+            possible_locations = [
+                # 1. Même dossier que le script
+                os.path.join(os.path.dirname(os.path.abspath(__file__)), "JSON"),
+                
+                # 2. Dossier parent
+                os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "JSON"),
+                
+                # 3. Dossier spécifique
+                r"C:\Users\vcasaubon.NOOVELIA\OneDrive - Noovelia\Documents\GitHub\AGVConfig-Traduction\JSON"
+            ]
+            
+            for json_dir in possible_locations:
+                logger.debug(f"Recherche du dossier JSON dans: {json_dir}")
+                
+                if os.path.exists(json_dir) and os.path.isdir(json_dir):
+                    # Vérifier la présence de fichiers JSON
+                    fault_files = glob.glob(os.path.join(json_dir, "faults_*.json"))
+                    if fault_files:
+                        logger.info(f"🎯 Dossier JSON trouvé avec {len(fault_files)} fichiers: {json_dir}")
+                        
+                        self.base_dir = json_dir
+                        self.app_state.base_directory = json_dir
+                        self.initialize_file_map(json_dir)
+                        self.load_root()
+                        
+                        if hasattr(self, 'status'):
+                            self.status.config(text=f"✅ Dossier JSON chargé: {json_dir}")
+                            
+                        return True
+
+            logger.warning("❌ Aucun dossier JSON valide trouvé dans les emplacements standard")
+            return False
+            
+        except Exception as e:
+            logger.error(f"❌ Erreur lors du chargement automatique du dossier JSON: {e}")
+            return False
 
     def setup_ui(self):
         """Setup the complete user interface exactly like the original."""
@@ -404,7 +448,7 @@ class FaultEditorController:
             logger.debug(f"Chemin de fichier calculé: {file_path}")
 
             if not os.path.isfile(file_path):
-                self.data_map[self.lang] = {}
+                self.data_map[self.lang] = None
                 logger.warning(f"Fichier non trouvé: {file_path}")
                 messagebox.showerror("Erreur", f"Fichier introuvable: {file_path}")
                 return
@@ -412,34 +456,46 @@ class FaultEditorController:
             with open(file_path, "r", encoding="utf-8") as f:
                 try:
                     data = json.load(f)
+                    
+                    # Valider la structure du fichier
+                    if not isinstance(data, dict):
+                        raise ValueError("Le fichier JSON doit contenir un objet racine")
+                        
+                    # Vérifier les champs requis
+                    required_fields = ["Header", "FaultDetailList"]
+                    for field in required_fields:
+                        if field not in data:
+                            raise ValueError(f"Champ requis manquant: {field}")
+                    
+                    # Stocker les données complètes
+                    self.data_map[self.lang] = data
+                    
+                    logger.info(f"Données chargées pour {self.lang}: {filename}")
+                    logger.debug(f"Nombre d'éléments dans FaultDetailList: {len(data.get('FaultDetailList', []))}")
+                    
                 except json.JSONDecodeError as e:
                     logger.error(f"Erreur de décodage JSON pour {file_path}: {e}")
                     messagebox.showerror(
                         "Erreur", f"Impossible de lire {file_path}: {e}"
                     )
-                    self.data_map[self.lang] = {}
+                    self.data_map[self.lang] = None
                     return
-
-            self.data_map[self.lang] = data
-
-            if not data:
-                logger.error(f"Aucune donnée chargée depuis {file_path}")
-                messagebox.showerror(
-                    "Erreur", f"Aucune donnée chargée depuis {file_path}"
-                )
-                return
-
-            logger.info(f"Données chargées pour {self.lang}: {file_path}")
+                except ValueError as e:
+                    logger.error(f"Structure JSON invalide pour {file_path}: {e}")
+                    messagebox.showerror(
+                        "Erreur", f"Format invalide dans {file_path}: {e}"
+                    )
+                    self.data_map[self.lang] = None
+                    return
 
         except Exception as e:
             logger.error(f"Erreur lors du chargement des données: {e}")
-            self.data_map[self.lang] = {}
+            self.data_map[self.lang] = None
 
     def create_first_column(self):
         """Create the first column with initial data."""
         try:
-            # This is a placeholder for the actual column creation logic
-            # You would implement the full hierarchical navigation here
+            # Create the main column frame
             col_frame = tk.Frame(self.columns_frame, bg=Colors.BG_COLUMN,
                                width=Dimensions.MIN_COL_WIDTH, relief="raised", bd=1)
             col_frame.pack(side="left", fill="y", padx=1)
@@ -451,20 +507,61 @@ class FaultEditorController:
                             font=Fonts.TITLE, pady=10)
             header.pack(fill="x")
 
-            # Add content area
-            content_frame = tk.Frame(col_frame, bg=Colors.BG_COLUMN)
-            content_frame.pack(fill="both", expand=True, padx=5, pady=5)
+            # Add scrollable content area
+            canvas = tk.Canvas(col_frame, bg=Colors.BG_COLUMN)
+            scrollbar = ttk.Scrollbar(col_frame, orient="vertical", command=canvas.yview)
+            content_frame = tk.Frame(canvas, bg=Colors.BG_COLUMN)
 
-            # Add some sample content
-            if self.data_map.get(self.lang):
-                for key, value in list(self.data_map[self.lang].items())[:10]:  # Limit to first 10 items
-                    item_frame = tk.Frame(content_frame, bg=Colors.BG_ROW, pady=2)
-                    item_frame.pack(fill="x", pady=1)
+            # Configure scrolling
+            content_frame.bind("<Configure>", 
+                lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+            canvas.create_window((0, 0), window=content_frame, anchor="nw")
+            canvas.configure(yscrollcommand=scrollbar.set)
 
-                    label = tk.Label(item_frame, text=f"{key}: {str(value)[:50]}...",
+            # Pack the scrollable components
+            canvas.pack(side="left", fill="both", expand=True)
+            scrollbar.pack(side="right", fill="y")
+
+            # Add content
+            if self.data_map.get(self.lang) and 'FaultDetailList' in self.data_map[self.lang]:
+                fault_list = self.data_map[self.lang]['FaultDetailList']
+                
+                for index, fault in enumerate(fault_list):
+                    # Skip empty descriptions
+                    if not fault['Description']:
+                        continue
+                        
+                    # Create frame for each item
+                    item_frame = tk.Frame(content_frame, bg=Colors.BG_ROW)
+                    item_frame.pack(fill="x", padx=5, pady=1)
+                    
+                    # Add expand button if item is expandable
+                    if fault['IsExpandable']:
+                        expand_btn = tk.Button(item_frame, text="▶",
+                                             bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                             bd=0, font=Fonts.DEFAULT,
+                                             command=lambda i=index: self.expand_fault(i))
+                        expand_btn.pack(side="left", padx=(5,0))
+                    
+                    # Add description label
+                    label = tk.Label(item_frame, text=fault['Description'],
                                    bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
                                    font=Fonts.DEFAULT, anchor="w")
-                    label.pack(fill="x", padx=5)
+                    label.pack(side="left", fill="x", expand=True, padx=5)
+
+                    # Add hover effects
+                    for widget in [item_frame, label]:
+                        widget.bind("<Enter>", 
+                            lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW_HOVER))
+                        widget.bind("<Leave>", 
+                            lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW))
+                        
+                    # Add click handler for editing if not expandable
+                    if not fault['IsExpandable']:
+                        for widget in [item_frame, label]:
+                            widget.bind("<Button-1>", 
+                                lambda e, i=index: self.edit_fault(i))
+
             else:
                 no_data_label = tk.Label(content_frame, text="Aucune donnée disponible",
                                        bg=Colors.BG_COLUMN, fg=Colors.FG_TEXT,
@@ -473,9 +570,11 @@ class FaultEditorController:
 
             self.columns.append(col_frame)
             logger.info("Première colonne créée")
+            logger.debug(f"Nombre d'éléments affichés: {len(self.columns[-1].winfo_children()) - 3}")  # -3 pour header et scrollbar
 
         except Exception as e:
             logger.error(f"Erreur lors de la création de la première colonne: {e}")
+            raise
 
     def load_flat_mode(self, file_path):
         """Load and display a flat JSON file."""
@@ -927,8 +1026,324 @@ class FaultEditorController:
         except Exception as e:
             logger.error(f"Erreur lors du nettoyage: {e}")
 
+    def expand_item(self, key):
+        """Expand an item to show its sub-items in a new column."""
+        try:
+            # Supprimer toutes les colonnes après la colonne actuelle
+            current_index = len(self.columns) - 1
+            for i in range(len(self.columns) - 1, -1, -1):
+                if i > current_index:
+                    self.columns[i].destroy()
+                    self.columns.pop(i)
 
-# Legacy compatibility function
-def create_fault_editor(root):
-    """Create a FaultEditorController instance for legacy compatibility."""
-    return FaultEditorController(root)
+            # Récupérer les données pour la sous-section
+            data = self.data_map[self.lang].get(key, {})
+            if not data:
+                logger.warning(f"Pas de données pour la clé: {key}")
+                return
+
+            # Créer la nouvelle colonne
+            col_frame = tk.Frame(self.columns_frame, bg=Colors.BG_COLUMN,
+                               width=Dimensions.MIN_COL_WIDTH, relief="raised", bd=1)
+            col_frame.pack(side="left", fill="y", padx=1)
+            col_frame.pack_propagate(False)
+
+            # Ajouter l'en-tête
+            header = tk.Label(col_frame, text=key,
+                            bg=Colors.BG_COLUMN, fg=Colors.FG_TEXT,
+                            font=Fonts.TITLE, pady=10)
+            header.pack(fill="x")
+
+            # Ajouter la zone de contenu scrollable
+            canvas = tk.Canvas(col_frame, bg=Colors.BG_COLUMN)
+            scrollbar = ttk.Scrollbar(col_frame, orient="vertical", command=canvas.yview)
+            content_frame = tk.Frame(canvas, bg=Colors.BG_COLUMN)
+
+            content_frame.bind("<Configure>",
+                lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+            canvas.create_window((0, 0), window=content_frame, anchor="nw")
+            canvas.configure(yscrollcommand=scrollbar.set)
+
+            canvas.pack(side="left", fill="both", expand=True)
+            scrollbar.pack(side="right", fill="y")
+
+            # Ajouter le contenu
+            for sub_key, value in data.items():
+                item_frame = tk.Frame(content_frame, bg=Colors.BG_ROW)
+                item_frame.pack(fill="x", padx=5, pady=1)
+
+                if isinstance(value, dict):
+                    expand_btn = tk.Button(item_frame, text="▶",
+                                         bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                         bd=0, font=Fonts.DEFAULT,
+                                         command=lambda k=f"{key}.{sub_key}": self.expand_item(k))
+                    expand_btn.pack(side="left", padx=(5,0))
+                    
+                    label = tk.Label(item_frame, text=sub_key,
+                                   bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                   font=Fonts.DEFAULT, anchor="w")
+                    label.pack(side="left", fill="x", padx=5)
+                else:
+                    text = f"{sub_key}: {str(value)}"
+                    label = tk.Label(item_frame, text=text,
+                                   bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                   font=Fonts.DEFAULT, anchor="w",
+                                   wraplength=Dimensions.MIN_COL_WIDTH-20)
+                    label.pack(fill="x", padx=10)
+
+                # Ajouter les événements
+                for widget in [item_frame, label]:
+                    widget.bind("<Enter>",
+                        lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW_HOVER))
+                    widget.bind("<Leave>",
+                        lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW))
+                    widget.bind("<Button-1>",
+                        lambda e, k=f"{key}.{sub_key}": self.edit_item(k))
+
+            self.columns.append(col_frame)
+            logger.info(f"Colonne créée pour: {key}")
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'expansion de l'élément {key}: {e}")
+
+    def edit_item(self, key):
+        """Edit an item's value."""
+        try:
+            # Parse the key path
+            key_parts = key.split('.')
+            data = self.data_map[self.lang]
+            for part in key_parts[:-1]:
+                data = data.get(part, {})
+            
+            current_value = data.get(key_parts[-1])
+            
+            if isinstance(current_value, dict):
+                # Si c'est un dictionnaire, on l'expand au lieu de l'éditer
+                self.expand_item(key)
+                return
+
+            # Créer une fenêtre d'édition
+            edit_window = tk.Toplevel(self.root)
+            edit_window.title(f"Éditer {key}")
+            edit_window.geometry("600x400")
+            edit_window.transient(self.root)
+            edit_window.configure(bg=Colors.BG_MAIN)
+
+            # Ajouter les champs d'édition
+            tk.Label(edit_window, text=f"Édition de : {key}",
+                    bg=Colors.BG_MAIN, fg=Colors.FG_TEXT,
+                    font=Fonts.TITLE).pack(padx=10, pady=10)
+
+            # Zone de texte pour l'édition
+            text_widget = tk.Text(edit_window, height=10,
+                                bg=Colors.EDIT_BG, fg=Colors.EDIT_FG,
+                                font=Fonts.DEFAULT)
+            text_widget.pack(fill="both", expand=True, padx=10, pady=5)
+            text_widget.insert("1.0", str(current_value))
+
+            # Boutons de contrôle
+            buttons_frame = tk.Frame(edit_window, bg=Colors.BG_MAIN)
+            buttons_frame.pack(fill="x", padx=10, pady=10)
+
+            def save_changes():
+                try:
+                    new_value = text_widget.get("1.0", "end-1c")
+                    # Update the value
+                    data = self.data_map[self.lang]
+                    for part in key_parts[:-1]:
+                        data = data.get(part, {})
+                    data[key_parts[-1]] = new_value
+                    
+                    # Save to file if needed
+                    self.save_changes()
+                    
+                    edit_window.destroy()
+                    self.status.config(text=f"✅ Valeur mise à jour pour {key}")
+                    logger.info(f"Valeur mise à jour pour {key}")
+                    
+                    # Refresh the display
+                    self.refresh_columns()
+                    
+                except Exception as e:
+                    logger.error(f"Erreur lors de la sauvegarde: {e}")
+                    messagebox.showerror("Erreur", f"Erreur lors de la sauvegarde: {e}")
+
+            def cancel_edit():
+                edit_window.destroy()
+
+            ttk.Button(buttons_frame, text="Enregistrer",
+                      command=save_changes).pack(side="right", padx=5)
+            ttk.Button(buttons_frame, text="Annuler",
+                      command=cancel_edit).pack(side="right", padx=5)
+
+            # Focus sur la zone de texte
+            text_widget.focus_set()
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'édition de l'élément {key}: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de l'édition: {e}")
+
+    def save_changes(self):
+        """Save changes to the current file."""
+        try:
+            if not self.base_dir or not self.lang:
+                logger.warning("Impossible de sauvegarder: pas de dossier ou langue sélectionné")
+                return
+
+            filename = f"faults_{self.current_path[0]:03d}_{self.current_path[1]:03d}_" \
+                      f"{self.current_path[2]:03d}_{self.current_path[3]:03d}_{self.lang}.json"
+            file_path = os.path.join(self.base_dir, filename)
+
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(self.data_map[self.lang], f, indent=4, ensure_ascii=False)
+
+            logger.info(f"Changements sauvegardés dans {file_path}")
+            self.status.config(text=f"✅ Changements sauvegardés dans {filename}")
+
+        except Exception as e:
+            error_msg = f"Erreur lors de la sauvegarde: {e}"
+            logger.error(error_msg)
+            messagebox.showerror("Erreur", error_msg)
+
+    def expand_fault(self, index):
+        """Expand a fault to show its details."""
+        try:
+            fault = self.data_map[self.lang]['FaultDetailList'][index]
+            logger.info(f"Expansion de la faute: {fault['Description']}")
+            
+            # Supprimer toutes les colonnes après la colonne actuelle
+            current_index = len(self.columns) - 1
+            for i in range(len(self.columns) - 1, -1, -1):
+                if i > current_index:
+                    self.columns[i].destroy()
+                    self.columns.pop(i)
+
+            # Créer une nouvelle colonne pour les détails
+            col_frame = tk.Frame(self.columns_frame, bg=Colors.BG_COLUMN,
+                               width=Dimensions.MIN_COL_WIDTH, relief="raised", bd=1)
+            col_frame.pack(side="left", fill="y", padx=1)
+            col_frame.pack_propagate(False)
+
+            # Ajouter l'en-tête
+            header = tk.Label(col_frame, text=fault['Description'],
+                            bg=Colors.BG_COLUMN, fg=Colors.FG_TEXT,
+                            font=Fonts.TITLE, pady=10)
+            header.pack(fill="x")
+
+            # Ajouter la zone de contenu scrollable
+            canvas = tk.Canvas(col_frame, bg=Colors.BG_COLUMN)
+            scrollbar = ttk.Scrollbar(col_frame, orient="vertical", command=canvas.yview)
+            content_frame = tk.Frame(canvas, bg=Colors.BG_COLUMN)
+
+            content_frame.bind("<Configure>",
+                lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+            canvas.create_window((0, 0), window=content_frame, anchor="nw")
+            canvas.configure(yscrollcommand=scrollbar.set)
+
+            canvas.pack(side="left", fill="both", expand=True)
+            scrollbar.pack(side="right", fill="y")
+
+            # Ajouter les détails si disponibles
+            if 'Details' in fault:
+                for detail in fault['Details']:
+                    item_frame = tk.Frame(content_frame, bg=Colors.BG_ROW)
+                    item_frame.pack(fill="x", padx=5, pady=1)
+                    
+                    if isinstance(detail, dict) and detail.get('IsExpandable'):
+                        btn = tk.Button(item_frame, text="▶",
+                                      bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                      bd=0, font=Fonts.DEFAULT)
+                        btn.pack(side="left", padx=(5,0))
+                    
+                    label = tk.Label(item_frame, text=str(detail),
+                                   bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
+                                   font=Fonts.DEFAULT, anchor="w")
+                    label.pack(side="left", fill="x", padx=5)
+
+                    # Hover effect
+                    for widget in [item_frame, label]:
+                        widget.bind("<Enter>",
+                            lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW_HOVER))
+                        widget.bind("<Leave>",
+                            lambda e, f=item_frame: f.configure(bg=Colors.BG_ROW))
+            else:
+                no_details = tk.Label(content_frame, text="Aucun détail disponible",
+                                    bg=Colors.BG_COLUMN, fg=Colors.FG_TEXT,
+                                    font=Fonts.DEFAULT)
+                no_details.pack(pady=20)
+
+            self.columns.append(col_frame)
+            logger.info(f"Colonne de détails créée pour: {fault['Description']}")
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'expansion de la faute {index}: {e}")
+
+    def edit_fault(self, index):
+        """Edit a fault's details."""
+        try:
+            fault = self.data_map[self.lang]['FaultDetailList'][index]
+            
+            # Créer une fenêtre d'édition
+            edit_window = tk.Toplevel(self.root)
+            edit_window.title(f"Éditer - {fault['Description']}")
+            edit_window.geometry("600x400")
+            edit_window.transient(self.root)
+            edit_window.configure(bg=Colors.BG_MAIN)
+
+            # Ajouter les champs d'édition
+            tk.Label(edit_window, text=f"Édition de la faute",
+                    bg=Colors.BG_MAIN, fg=Colors.FG_TEXT,
+                    font=Fonts.TITLE).pack(padx=10, pady=10)
+
+            # Frame pour les champs
+            fields_frame = tk.Frame(edit_window, bg=Colors.BG_MAIN)
+            fields_frame.pack(fill="both", expand=True, padx=10, pady=5)
+
+            # Description
+            tk.Label(fields_frame, text="Description:",
+                    bg=Colors.BG_MAIN, fg=Colors.FG_TEXT,
+                    font=Fonts.DEFAULT).pack(anchor="w")
+
+            desc_var = tk.StringVar(value=fault['Description'])
+            desc_entry = tk.Entry(fields_frame, textvariable=desc_var,
+                                bg=Colors.EDIT_BG, fg=Colors.EDIT_FG,
+                                font=Fonts.DEFAULT)
+            desc_entry.pack(fill="x", pady=(0, 10))
+
+            # Boutons de contrôle
+            buttons_frame = tk.Frame(edit_window, bg=Colors.BG_MAIN)
+            buttons_frame.pack(fill="x", padx=10, pady=10)
+
+            def save_changes():
+                try:
+                    # Mettre à jour les données
+                    fault['Description'] = desc_var.get()
+                    
+                    # Sauvegarder dans le fichier
+                    self.save_changes()
+                    
+                    edit_window.destroy()
+                    self.status.config(text=f"✅ Faute mise à jour: {fault['Description']}")
+                    logger.info(f"Faute mise à jour: {fault['Description']}")
+                    
+                    # Rafraîchir l'affichage
+                    self.refresh_columns()
+                    
+                except Exception as e:
+                    logger.error(f"Erreur lors de la sauvegarde: {e}")
+                    messagebox.showerror("Erreur", f"Erreur lors de la sauvegarde: {e}")
+
+            def cancel_edit():
+                edit_window.destroy()
+
+            ttk.Button(buttons_frame, text="Enregistrer",
+                      command=save_changes).pack(side="right", padx=5)
+            ttk.Button(buttons_frame, text="Annuler",
+                      command=cancel_edit).pack(side="right", padx=5)
+
+            # Focus sur le champ description
+            desc_entry.focus_set()
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'édition de la faute {index}: {e}")
+            messagebox.showerror("Erreur", f"Erreur lors de l'édition: {e}")
