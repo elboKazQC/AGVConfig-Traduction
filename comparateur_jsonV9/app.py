@@ -18,7 +18,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 
 # Import our complete modular controller
-from main_controller import FaultEditorController
+from main_controller_complete import FaultEditorController
 
 # Create logs directory
 os.makedirs('logs', exist_ok=True)
