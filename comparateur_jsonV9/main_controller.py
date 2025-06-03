@@ -114,6 +114,8 @@ class FaultEditorController:
         self.translation_manager = TranslationManager()
           # Script operations will be initialized after we have a base directory
         self.script_operations = None        # Initialize UI components
+        # Fault file paths grouped by language, populated after opening a folder
+        self.fault_files: Dict[str, List[str]] = {}
         self.hierarchical_editor = HierarchicalEditor(cast(tk.Widget, self.root), self.app_state)
         self.flat_editor = FlatEditor(root, self.translation_manager)
 
@@ -468,6 +470,8 @@ class FaultEditorController:
             try:
                 self.app_state.base_directory = folder_path
                 self.file_manager.initialize_directory(folder_path)
+                # Expose fault file paths for plugins
+                self.fault_files = self.file_manager.fault_files
                 self._initialize_script_operations(folder_path)
                 self._update_status(f"Dossier ouvert: {folder_path}")
                 self._load_hierarchical_view()

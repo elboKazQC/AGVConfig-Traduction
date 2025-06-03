@@ -6,6 +6,7 @@ Utilisez ces fonctions pour charger, sauvegarder et manipuler les fichiers.
 
 import json
 import os
+import re
 import logging
 from typing import Dict, Any, List, Optional, Tuple
 from models.data_models import FaultData, FileMetadata
@@ -18,6 +19,8 @@ class FileManager:
     def __init__(self):
         self.base_directory: Optional[str] = None
         self.file_map: Dict[str, str] = {}
+        # Store lists of fault files grouped by language for easy access
+        self.fault_files: Dict[str, List[str]] = {"fr": [], "en": [], "es": []}
 
     def initialize_directory(self, directory: str) -> bool:
         """Initialise le gestionnaire avec un répertoire de base"""
@@ -33,11 +36,20 @@ class FileManager:
 
     def _scan_directory(self, directory: str):
         """Scanne le répertoire pour trouver les fichiers JSON"""
+        # Reset fault file lists
+        self.fault_files = {"fr": [], "en": [], "es": []}
+
         for root, dirs, files in os.walk(directory):
             for file in files:
                 if file.endswith('.json'):
                     full_path = os.path.join(root, file)
                     self.file_map[file] = full_path
+
+                    # Detect language from filename pattern faults_*_<lang>.json
+                    match = re.match(r".*_(fr|en|es)\.json$", file)
+                    if match:
+                        lang = match.group(1)
+                        self.fault_files.setdefault(lang, []).append(full_path)
 
     def load_json_file(self, filename: str) -> Optional[Dict[str, Any]]:
         """Charge un fichier JSON"""

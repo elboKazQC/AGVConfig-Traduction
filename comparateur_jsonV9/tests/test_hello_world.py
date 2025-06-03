@@ -2,7 +2,10 @@ import os
 import pytest
 from dotenv import load_dotenv
 import os
+
+
 import pytest
+
 
 
 
@@ -20,8 +23,12 @@ def test_environment_variables():
 
     """Verify required environment variables are loaded."""
     load_dotenv()
+
+    os.environ.setdefault('FAULT_EDITOR_LEGACY_MODE', 'false')
+
     if 'FAULT_EDITOR_LEGACY_MODE' not in os.environ:
         os.environ['FAULT_EDITOR_LEGACY_MODE'] = 'true'
+
     assert os.getenv('FAULT_EDITOR_LEGACY_MODE') is not None
 
 
