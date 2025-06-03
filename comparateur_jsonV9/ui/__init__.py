@@ -10,8 +10,16 @@ from .components import (
     ResultsDialog,
     ConfirmationDialog
 )
-from .hierarchical_editor import HierarchicalEditor
-from .flat_editor import FlatEditor
+# Avoid importing heavy modules at package import time
+try:
+    from .hierarchical_editor import HierarchicalEditor
+except Exception:  # pragma: no cover - may fail in minimal environments
+    HierarchicalEditor = None
+
+try:
+    from .flat_editor import FlatEditor
+except Exception:  # pragma: no cover
+    FlatEditor = None
 
 __all__ = [
     'StyledFrame',

@@ -30,6 +30,8 @@ A comprehensive Python-based tool for translating and managing AGV (Automated Gu
    ```bash
    cd comparateur_jsonV9
    pip install -r requirements.txt
+   # Optional: install development dependencies
+   pip install -r requirements-dev.txt
    ```
 
 3. **Configure environment variables**:
@@ -192,7 +194,7 @@ python test_translation.py
 ### Running Tests
 ```bash
 # Install development dependencies
-pip install pytest pytest-cov
+pip install -r requirements-dev.txt
 
 # Run tests
 pytest tests/
@@ -203,8 +205,6 @@ pytest --cov=. tests/
 
 ### Code Quality
 ```bash
-# Install development tools
-pip install black flake8 mypy
 
 # Format code
 black .
