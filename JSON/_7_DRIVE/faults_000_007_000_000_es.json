@@ -51,11 +51,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Límite de par debido al modo avanzado SPD1",
+      "Description": "Límite de par de debido al modo avanzado SPD1",
       "IsExpandable": false
     },
     {
-      "Description": "Límite de par debido al modo avanzado SPD2",
+      "Description": "Límite de par de debido al modo avanzado SPD2",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

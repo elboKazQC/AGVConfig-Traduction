@@ -12,31 +12,31 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Power drive 1",
+      "Description": "Drive 1 power",
       "IsExpandable": false
     },
     {
-      "Description": "Power drive 2",
+      "Description": "Drive 2 power",
       "IsExpandable": false
     },
     {
-      "Description": "Power drive 3",
+      "Description": "Drive power 3",
       "IsExpandable": false
     },
     {
-      "Description": "Power drive 4",
+      "Description": "Drive power 4",
       "IsExpandable": false
     },
     {
-      "Description": "Drive preloading",
+      "Description": "Preloading drive",
       "IsExpandable": false
     },
     {
-      "Description": "Right brake",
+      "Description": "right brake",
       "IsExpandable": false
     },
     {
-      "Description": "Left brake",
+      "Description": "left brake",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

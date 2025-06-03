@@ -11,11 +11,11 @@
   "Version": 5,
   "FaultDetailList": [
     {
-      "Description": "Security code version not compatible",
+      "Description": "Incompatible security code version",
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop button pressed.",
+      "Description": "Emergency stop button pressed",
       "IsExpandable": false
     },
     {
@@ -23,23 +23,23 @@
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner",
+      "Description": "Emergency stop laser scanner",
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop remote button",
+      "Description": "Remote emergency stop button",
       "IsExpandable": false
     },
     {
-      "Description": "Encoder: speed desynchronization",
+      "Description": "Encoder: speed desynchronization fault",
       "IsExpandable": false
     },
     {
-      "Description": "SoFtPLC version not compatible",
+      "Description": "Incompatible SoFtPLC version code",
       "IsExpandable": false
     },
     {
-      "Description": "AMR movement not recognized",
+      "Description": "Unrecognized AMR movement",
       "IsExpandable": false
     },
     {
@@ -47,7 +47,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Contact us. Contact form.",
+      "Description": "Auxiliary contact contactor",
       "IsExpandable": false
     },
     {
@@ -71,7 +71,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Restart deadline expired",
+      "Description": "restart delay expired",
       "IsExpandable": false
     },
     {
@@ -79,7 +79,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop: Lever button",
+      "Description": "Emergency stop: joystick button",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

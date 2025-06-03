@@ -139,5 +139,6 @@
       "Description": "Descarga de batería: Fallo en la comunicación interna",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

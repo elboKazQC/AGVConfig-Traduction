@@ -79,47 +79,47 @@
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_1",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_1",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_2",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_2",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_3",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_3",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_4",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_4",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_5",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_5",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_6",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_6",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_7",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_7",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_8",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_8",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_9",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_9",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_10",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_10",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_11",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_11",
       "IsExpandable": false
     },
     {
@@ -127,16 +127,17 @@
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_21",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_21",
       "IsExpandable": false
     },
     {
-      "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_22",
+      "Description": "CAN node fault: BaseErrorCode_29 SecondaryErrorCode_22",
       "IsExpandable": false
     },
     {
       "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_23",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

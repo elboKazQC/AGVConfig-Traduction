@@ -43,7 +43,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo de seguridad de hardware: CodeErreurDeBase_24 CodeErreurSecondaire_3",
+      "Description": "Fallo de seguridad de hardware: CódigoErrorBase_24 CódigoErrorSecundario_3",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_3",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

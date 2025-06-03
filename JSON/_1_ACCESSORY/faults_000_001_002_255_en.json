@@ -16,7 +16,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "AGV Mode: Stop",
+      "Description": "AGV mode: Stop",
       "IsExpandable": false
     },
     {
@@ -24,7 +24,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Retro-induction detection unavailable",
+      "Description": "Back EMF detection unavailable",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

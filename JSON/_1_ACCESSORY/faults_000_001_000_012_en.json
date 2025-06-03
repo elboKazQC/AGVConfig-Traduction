@@ -11,7 +11,7 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Left actuator: Parameter error",
+      "Description": "Left actuator parameter error",
       "IsExpandable": false
     },
     {
@@ -19,11 +19,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Left actuator: Voltage error",
+      "Description": "Left actuator voltage error",
       "IsExpandable": false
     },
     {
-      "Description": "Left actuator: Temperature error",
+      "Description": "Left actuator temperature error",
       "IsExpandable": false
     },
     {
@@ -35,7 +35,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Left actuator: Fatal Error",
+      "Description": "Left actuator: Fatal error",
       "IsExpandable": false
     },
     {
@@ -55,7 +55,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Right actuator: Temperature error",
+      "Description": "Right actuator temperature error",
       "IsExpandable": false
     },
     {
@@ -87,7 +87,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Front actuator: Temperature error",
+      "Description": "Front actuator: temperature error",
       "IsExpandable": false
     },
     {
@@ -99,7 +99,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Front Actuator: Fatal Error",
+      "Description": "Front actuator: Fatal error",
       "IsExpandable": false
     },
     {
@@ -131,12 +131,13 @@
       "IsExpandable": false
     },
     {
-      "Description": "Rear Actuator: Fatal Error",
+      "Description": "Rear actuator: Fatal error",
       "IsExpandable": false
     },
     {
       "Description": "Rear actuator: Memory error",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

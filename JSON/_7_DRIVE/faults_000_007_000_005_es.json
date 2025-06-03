@@ -15,15 +15,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Error de software del motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_0",
+      "Description": "Error de software del motor doble: CódigoErrorBase_16 CódigoErrorSecundario_0",
       "IsExpandable": false
     },
     {
-      "Description": "Error de software del motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_1",
+      "Description": "Error de software del motor doble: CódigoErrorBase_16 CódigoErrorSecundario_1",
       "IsExpandable": false
     },
     {
-      "Description": "Error de software en el motor doble: CodeErreurDeBase_16 CodeErreurSecondaire_2",
+      "Description": "Error de software del motor doble: CódigoDeErrorBase_16 CódigoDeErrorSecundario_2",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Tensión de la batería demasiado alta: CodeErreurDeBase_22 CodeErreurSecondaire_1",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

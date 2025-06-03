@@ -83,43 +83,43 @@
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_1",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_1",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_2",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_2",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_3",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_3",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_4",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_4",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_5",
+      "Description": "Short circuit digital contactor 1: ErrorCodeBase_21 ErrorCodeSecondary_5",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_6",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_6",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_7",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_7",
       "IsExpandable": false
     },
     {
-      "Description": "Digital contactor short-circuit 1: BaseErrorCode_21 SecondaryErrorCode_8",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_8",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_9",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_9",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_10",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_10",
       "IsExpandable": false
     },
     {
@@ -127,16 +127,17 @@
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_12",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_12",
       "IsExpandable": false
     },
     {
-      "Description": "Short-circuit digital contactor 1: BaseErrorCode_21 SecondaryErrorCode_13",
+      "Description": "Digital contactor short circuit 1: ErrorCodeBase_21 ErrorCodeSecondary_13",
       "IsExpandable": false
     },
     {
       "Description": "Battery voltage too high: BaseErrorCode_22 SecondaryErrorCode_1",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

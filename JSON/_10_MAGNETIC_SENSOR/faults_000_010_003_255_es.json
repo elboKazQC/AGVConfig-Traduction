@@ -12,7 +12,7 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "No hay datos de salida del sensor magnético",
+      "Description": "Ningún dato de salida del sensor magnético",
       "IsExpandable": false
     },
     {
@@ -24,7 +24,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Sensor invertido",
+      "Description": "sensor invertido",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

@@ -32,7 +32,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Writing error: ISO command error - RX error",
+      "Description": "ISO command error - RX error",
       "IsExpandable": false
     },
     {
@@ -60,7 +60,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "ISO Tag Error: Block not updatable",
+      "Description": "ISO tag error: Block not updatable",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

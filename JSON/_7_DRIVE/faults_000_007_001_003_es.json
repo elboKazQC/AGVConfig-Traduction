@@ -135,8 +135,9 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo del chip de memoria: CodeErreurDeBase_9 CodeErreurSecondaire_>0",
+      "Description": "Fallo de la memoria: Código de error base_9 Código de error secundario_>0",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

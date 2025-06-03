@@ -32,11 +32,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo del sensor del motor",
+      "Description": "Fallo de sensor de motor",
       "IsExpandable": false
     },
     {
-      "Description": "Fallo MOSFET",
+      "Description": "Fallo de MOSFET",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

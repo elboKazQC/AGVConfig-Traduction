@@ -138,5 +138,6 @@
       "Description": "Fallo del chip de memoria: CódigoErrorBase_9 CódigoErrorSecundario_>0",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

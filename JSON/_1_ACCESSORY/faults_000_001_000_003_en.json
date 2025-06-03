@@ -35,7 +35,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Front laser scanner: safety stop zone",
+      "Description": "Front laser scanner: safety stop area",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

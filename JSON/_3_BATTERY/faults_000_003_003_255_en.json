@@ -40,7 +40,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Battery charge: Severe under-voltage",
+      "Description": "Battery charge: Severe undervoltage",
       "IsExpandable": false
     },
     {
@@ -88,7 +88,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Battery discharge: Under-voltage",
+      "Description": "Battery discharge: Undervoltage",
       "IsExpandable": false
     },
     {
@@ -96,7 +96,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Battery discharge: Another discharge fault",
+      "Description": "Battery discharge: Other discharge fault",
       "IsExpandable": false
     },
     {
@@ -104,7 +104,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Battery discharge: Severe under-voltage",
+      "Description": "Battery discharge: Severe undervoltage",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "Battery discharge: Internal communication failure",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

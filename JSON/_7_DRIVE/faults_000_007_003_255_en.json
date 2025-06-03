@@ -20,7 +20,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Under-voltage",
+      "Description": "Undervoltage",
       "IsExpandable": false
     },
     {
@@ -32,11 +32,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Motor sensor fault",
+      "Description": "motor sensor fault",
       "IsExpandable": false
     },
     {
-      "Description": "MOSFET Failure",
+      "Description": "MOSFET fault",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

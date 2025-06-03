@@ -39,7 +39,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Invalid control combination",
+      "Description": "Invalid command combination",
       "IsExpandable": false
     },
     {
@@ -47,7 +47,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Invalid AMR speed",
+      "Description": "AMR speed invalidated",
       "IsExpandable": false
     },
     {
@@ -79,7 +79,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "PLC Temperature",
+      "Description": "PLC temperature",
       "IsExpandable": false
     },
     {
@@ -87,11 +87,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Invalid AMR speed",
+      "Description": "Speed invalidated AMR",
       "IsExpandable": false
     },
     {
-      "Description": "Invalid speed limit AMR",
+      "Description": "Speed limit invalidated AMR",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

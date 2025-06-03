@@ -138,5 +138,6 @@
       "Description": "Memory chip failure: BaseErrorCode_9 SecondaryErrorCode_>0",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

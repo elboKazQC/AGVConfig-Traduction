@@ -91,7 +91,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Límite de par CAN",
+      "Description": "Límite de par motor CAN",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

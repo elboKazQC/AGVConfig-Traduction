@@ -23,7 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner",
+      "Description": "Escáner láser",
       "IsExpandable": true
     },
     {
@@ -67,7 +67,7 @@
       "IsExpandable": true
     },
     {
-      "Description": "Contactor K1 o K2",
+      "Description": "Contactador K1 o K2",
       "IsExpandable": false
     },
     {
@@ -75,7 +75,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Rele R3",
+      "Description": "Relé R3",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

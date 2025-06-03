@@ -95,35 +95,35 @@
       "IsExpandable": false
     },
     {
-      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_1",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_1",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_2",
+      "Description": "Micro-movement fault: BaseErrorCode_14 SecondaryErrorCode_2",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_3",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_3",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_4",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_4",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_5",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_5",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-movement failures: BaseErrorCode_14 SecondaryErrorCode_6",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_6",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_7",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_7",
       "IsExpandable": false
     },
     {
-      "Description": "Micro-displacement failures: BaseErrorCode_14 SecondaryErrorCode_8",
+      "Description": "Micro-movement failure: BaseErrorCode_14 SecondaryErrorCode_8",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Power supply failure: BaseErrorCode_15 SecondaryErrorCode_3",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

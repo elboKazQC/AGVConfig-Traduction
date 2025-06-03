@@ -28,7 +28,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "OSSD 1 wire 2 alarm zone",
+      "Description": "OSSD alarm zone 1 wire 2",
       "IsExpandable": false
     },
     {
@@ -96,11 +96,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "4-wire OSSD alarm zone 1",
+      "Description": "OSSD alarm zone 4 wire 1",
       "IsExpandable": false
     },
     {
-      "Description": "4-wire OSSD alarm zone 2",
+      "Description": "OSSD alarm zone 4 wire 2",
       "IsExpandable": false
     },
     {

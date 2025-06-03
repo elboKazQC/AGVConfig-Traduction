@@ -83,7 +83,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo del sistema: CodeErrorDeBase_40",
+      "Description": "Fallo del sistema: CódigoErrorBase_40",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

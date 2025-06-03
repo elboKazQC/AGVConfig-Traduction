@@ -12,7 +12,7 @@
   "Version": 2,
   "FaultDetailList": [
     {
-      "Description": "Green push button status",
+      "Description": "Status of the green push button",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

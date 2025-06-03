@@ -35,7 +35,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo de seguridad de hardware: CodeErreurDeBase_24 CodeErreurSecondaire_1",
+      "Description": "Fallo de seguridad de hardware: CódigoErrorBase_24 CódigoErrorSecundario_1",
       "IsExpandable": false
     },
     {
@@ -99,11 +99,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo de seguridad de hardware: CodeErreurDeBase_24 CodeErreurSecondaire_17",
+      "Description": "Fallo de seguridad de hardware: CódigoErrorBase_24 CódigoErrorSecundario_17",
       "IsExpandable": false
     },
     {
-      "Description": "Fallo de seguridad de hardware: CodeErreurDeBase_24 CodeErreurSecondaire_18",
+      "Description": "Fallo de seguridad de hardware: CódigoErrorBase_24 CódigoErrorSecundario_18",
       "IsExpandable": false
     },
     {
@@ -131,12 +131,13 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_2",
+      "Description": "Fallo de parada térmica: CódigoErrorBase_26 CódigoErrorSecundario_2",
       "IsExpandable": false
     },
     {
       "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_3",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

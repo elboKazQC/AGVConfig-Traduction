@@ -12,19 +12,19 @@
   "Version": 2,
   "FaultDetailList": [
     {
-      "Description": "Critical security alert",
+      "Description": "Critical safety alert",
       "IsExpandable": true
     },
     {
-      "Description": "Security warning",
+      "Description": "Safety warning",
       "IsExpandable": true
     },
     {
-      "Description": "Laser scanner",
+      "Description": "Laser scanner warning",
       "IsExpandable": true
     },
     {
-      "Description": "Warning Contact Switch",
+      "Description": "Contact warning",
       "IsExpandable": true
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

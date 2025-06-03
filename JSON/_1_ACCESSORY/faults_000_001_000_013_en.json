@@ -11,7 +11,7 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Pallet sensors on AMR",
+      "Description": "Palette sensors on AMR",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

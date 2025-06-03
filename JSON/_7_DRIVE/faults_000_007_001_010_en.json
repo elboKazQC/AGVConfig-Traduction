@@ -11,11 +11,11 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_5",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_5",
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_6",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_6",
       "IsExpandable": false
     },
     {
@@ -23,7 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_8",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_8",
       "IsExpandable": false
     },
     {
@@ -43,15 +43,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_13",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_13",
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_14",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_14",
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_15",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_15",
       "IsExpandable": false
     },
     {
@@ -59,11 +59,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_17",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_17",
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_18",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_18",
       "IsExpandable": false
     },
     {
@@ -75,7 +75,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine module configuration: BaseErrorCode_33 SecondaryErrorCode_21",
+      "Description": "Motor module configuration: BaseErrorCode_33 SecondaryErrorCode_21",
       "IsExpandable": false
     },
     {
@@ -91,52 +91,53 @@
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BasicErrorCode_34 SecondaryErrorCode_1",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_1",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_2",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_2",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_3",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_3",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_4",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_4",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_5",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_5",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_6",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_6",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_7",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_7",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_8",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_8",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_9",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_9",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_10",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_10",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_11",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_11",
       "IsExpandable": false
     },
     {
-      "Description": "engine module parameters: BaseErrorCode_34 SecondaryErrorCode_12",
+      "Description": "motor module parameters: BaseErrorCode_34 SecondaryErrorCode_12",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

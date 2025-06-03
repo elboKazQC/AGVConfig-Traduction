@@ -111,19 +111,19 @@
       "IsExpandable": false
     },
     {
-      "Description": "Line contactor failure: BaseErrorCode_25 SecondaryErrorCode_1",
+      "Description": "Line contactor fault: BaseErrorCode_25 SecondaryErrorCode_1",
       "IsExpandable": false
     },
     {
-      "Description": "Line contactor failure: BaseErrorCode_25 SecondaryErrorCode_2",
+      "Description": "Line contactor fault: BaseErrorCode_25 SecondaryErrorCode_2",
       "IsExpandable": false
     },
     {
-      "Description": "Line contactor failure: BaseErrorCode_25 SecondaryErrorCode_3",
+      "Description": "Line contactor fault: BaseErrorCode_25 SecondaryErrorCode_3",
       "IsExpandable": false
     },
     {
-      "Description": "Line contactor failure: BaseErrorCode_25 SecondaryErrorCode_4",
+      "Description": "Line contactor fault: BaseErrorCode_25 SecondaryErrorCode_4",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Thermal stop failure: BaseErrorCode_26 SecondaryErrorCode_3",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

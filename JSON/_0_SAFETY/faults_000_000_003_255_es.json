@@ -28,11 +28,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Descarga previa de Drive",
+      "Description": "Carga de conducción",
       "IsExpandable": false
     },
     {
-      "Description": "Freno derecho",
+      "Description": "freno derecho",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

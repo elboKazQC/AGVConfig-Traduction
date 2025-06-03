@@ -266,13 +266,17 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
             modifications = process_translations(
                 source_data, target_data, source_lang, target_lang,
                 basename, force_retranslate
-            )
-
-            # Mettre à jour l'en-tête de langue
-            if target_data.get("Language") != target_lang:
-                print(f"{JAUNE}🔧 Correction en-tête langue : {target_data.get('Language')} → {target_lang}{RESET}")
-                logger.info(f"Correction langue header: {target_data.get('Language')} → {target_lang}")
-                target_data["Language"] = target_lang
+            )            # Mettre à jour l'en-tête de langue dans le Header
+            if "Header" not in target_data:
+                target_data["Header"] = {}
+            if target_data["Header"].get("Language") != target_lang:
+                print(f"{JAUNE}🔧 Correction en-tête langue : {target_data['Header'].get('Language')} → {target_lang}{RESET}")
+                logger.info(f"Correction langue header: {target_data['Header'].get('Language')} → {target_lang}")
+                target_data["Header"]["Language"] = target_lang
+                modifications += 1
+            # Supprimer le champ Language redondant s'il existe à la racine
+            if "Language" in target_data:
+                del target_data["Language"]
                 modifications += 1
 
             # Sauvegarder le fichier cible

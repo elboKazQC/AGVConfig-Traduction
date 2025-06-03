@@ -67,7 +67,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "La tensión se vuelve alta: CodeErreurDeBase_4 CodeErreurSecondaire_4",
+      "Description": "La tensión se vuelve alta: CódigoErrorBase_4 CódigoErrorSecundario_4",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_21",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

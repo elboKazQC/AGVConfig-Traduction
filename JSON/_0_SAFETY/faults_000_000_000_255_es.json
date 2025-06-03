@@ -11,7 +11,7 @@
   "Version": 5,
   "FaultDetailList": [
     {
-      "Description": "Versión de código de seguridad no compatible.",
+      "Description": "Código de versión de seguridad no compatible",
       "IsExpandable": false
     },
     {
@@ -23,23 +23,23 @@
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser",
+      "Description": "Parada de emergencia escáner láser",
       "IsExpandable": false
     },
     {
-      "Description": "Botón de parada de emergencia remoto",
+      "Description": "Botón de parada de emergencia a distancia",
       "IsExpandable": false
     },
     {
-      "Description": "Codificador: desincronización de velocidad",
+      "Description": "Encoder: desincronización de velocidad",
       "IsExpandable": false
     },
     {
-      "Description": "Versión de SoFtPLC no compatible.",
+      "Description": "Versión de código SoFtPLC no compatible",
       "IsExpandable": false
     },
     {
-      "Description": "Movimiento AMR no reconocido.",
+      "Description": "Movimiento AMR no reconocido",
       "IsExpandable": false
     },
     {
@@ -47,11 +47,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Contactar. Contacto.",
+      "Description": "Contacto auxiliar del contactor",
       "IsExpandable": false
     },
     {
-      "Description": "Modo de selección de error",
+      "Description": "error del modo selector",
       "IsExpandable": false
     },
     {
@@ -63,11 +63,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Parada de emergencia estándar de PLC.",
+      "Description": "Parada de emergencia estándar PLC",
       "IsExpandable": false
     },
     {
-      "Description": "Pérdida de comunicación con PLC estándar.",
+      "Description": "Pérdida de comunicación con PLC estándar",
       "IsExpandable": false
     },
     {
@@ -75,11 +75,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Codificador: orden de sincronización de velocidad",
+      "Description": "Encoder: comando de sincronización de velocidad",
       "IsExpandable": false
     },
     {
-      "Description": "Parada de emergencia: Botón de control",
+      "Description": "Parada de emergencia: botón de control",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

@@ -24,7 +24,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Reversed sensor",
+      "Description": "Inverted sensor",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

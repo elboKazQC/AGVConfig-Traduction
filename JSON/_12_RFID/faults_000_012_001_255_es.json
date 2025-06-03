@@ -56,7 +56,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Error de etiqueta ISO: Bloque ya bloqueado",
+      "Description": "Error de etiqueta ISO: Bloqueo ya realizado",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

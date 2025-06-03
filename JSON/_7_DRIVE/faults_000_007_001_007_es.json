@@ -23,7 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo del paro térmico: CodeErreurDeBase_26 CodeErreurSecondaire_7",
+      "Description": "Fallo de parada térmica: CódigoErrorBase_26 CódigoErrorSecundario_7",
       "IsExpandable": false
     },
     {
@@ -63,7 +63,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_7",
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_7",
       "IsExpandable": false
     },
     {
@@ -71,7 +71,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Hilo desconectado detectado: CodeErreurDeBase_28 CodeErreurSecondaire_9",
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_9",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_23",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

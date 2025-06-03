@@ -23,15 +23,15 @@
       "IsExpandable": false
     },
     {
-      "Description": "Torque limit due to the temporal current limit",
+      "Description": "Torque limit due to the time current limit",
       "IsExpandable": false
     },
     {
-      "Description": "Torque limit due to the I2T current limit step 1",
+      "Description": "Torque limit due to I2T current limit step 1",
       "IsExpandable": false
     },
     {
-      "Description": "Torque limit due to the I2T current limit step 2",
+      "Description": "Torque limit due to I2T current limit step 2",
       "IsExpandable": false
     },
     {
@@ -51,11 +51,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Torque limit due to advanced SPD1 mode",
+      "Description": "Torque limit due to advanced mode SPD1",
       "IsExpandable": false
     },
     {
-      "Description": "Torque limit due to advanced SPD2 mode",
+      "Description": "Torque limit due to advanced mode SPD2",
       "IsExpandable": false
     },
     {
@@ -91,7 +91,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "CAN Torque Limit",
+      "Description": "Torque limit CAN",
       "IsExpandable": false
     },
     {
@@ -103,7 +103,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine unable to maintain torque",
+      "Description": "Motor unable to maintain torque",
       "IsExpandable": false
     },
     {
@@ -115,11 +115,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Engine unable to maintain Flux current",
+      "Description": "Motor unable to maintain flux current",
       "IsExpandable": false
     },
     {
-      "Description": "Engine unable to maintain circle limitation",
+      "Description": "Motor unable to maintain circle limitation",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

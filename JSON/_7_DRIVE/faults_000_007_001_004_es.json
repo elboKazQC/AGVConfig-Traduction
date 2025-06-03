@@ -31,11 +31,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_2",
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_2",
       "IsExpandable": false
     },
     {
-      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_3",
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_3",
       "IsExpandable": false
     },
     {
@@ -63,7 +63,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_10",
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_10",
       "IsExpandable": false
     },
     {
@@ -71,7 +71,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Fallo al encender: CodeErreurDeBase_12 CodeErreurSecondaire_12",
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_12",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "Fallo de alimentación: CodeErrorBase_15 CodeErrorSecundario_3",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }
