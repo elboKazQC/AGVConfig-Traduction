@@ -56,10 +56,10 @@ The application has been refactored into a modular architecture with the followi
 
 ### Running the Application
 ```
-python app_latest.py
+python app.py
 ```
 
-Use `app_latest.py` for the fully modular version with all advanced features.
+Use `app.py` for the fully modular version with all advanced features.
 
 ### Keyboard Shortcuts
 
