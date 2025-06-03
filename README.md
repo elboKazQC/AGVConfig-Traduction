@@ -34,7 +34,18 @@ A comprehensive Python-based tool for translating and managing AGV (Automated Gu
    pip install -r requirements-dev.txt
    ```
 
-3. **Configure environment variables**:
+3. **(Optional) Install the Azure Tk theme**:
+   The GUI can use a custom theme provided by the `azure.tcl` file. You can
+   download it from the [Azure-ttk-theme repository](https://github.com/rdbende/Azure-ttk-theme)
+   or clone the project and copy the theme file:
+   ```bash
+   git clone https://github.com/rdbende/Azure-ttk-theme.git
+   cp Azure-ttk-theme/azure.tcl comparateur_jsonV9/
+   ```
+   Place `azure.tcl` in the `comparateur_jsonV9` directory so the theme loads
+   without a warning when launching the application.
+
+4. **Configure environment variables**:
    ```bash
    # Copy the example environment file
    cp .env.example .env
@@ -43,7 +54,7 @@ A comprehensive Python-based tool for translating and managing AGV (Automated Gu
    # Get your API key from: https://platform.openai.com/api-keys
    ```
 
-4. **Set up your OpenAI API key** in the `.env` file:
+5. **Set up your OpenAI API key** in the `.env` file:
    ```
    OPENAI_API_KEY=your_actual_api_key_here
    ```
