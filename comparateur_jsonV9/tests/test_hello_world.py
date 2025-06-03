@@ -12,6 +12,7 @@ def test_hello_world():
 def test_environment_variables():
     """Ensure FAULT_EDITOR_LEGACY_MODE is available."""
     load_dotenv()
+
     os.environ.setdefault("FAULT_EDITOR_LEGACY_MODE", "false")
     assert os.getenv("FAULT_EDITOR_LEGACY_MODE") is not None
 
@@ -23,3 +24,14 @@ def test_addition():
 
 if __name__ == "__main__":
     pytest.main(["-v"])
+
+    value = os.getenv('FAULT_EDITOR_LEGACY_MODE')
+    if value is None:
+        pytest.skip('FAULT_EDITOR_LEGACY_MODE not set')
+    assert value is not None
+
+
+if __name__ == "__main__":
+    pytest.main(["-v"])
+
+
