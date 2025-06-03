@@ -250,8 +250,11 @@ class FaultEditorController:
         """Create the main toolbar with script operation buttons."""
         # Create toolbar frame with fixed height
         self.tools_frame = StyledFrame(self.root, style_type="toolbar", height=50).as_tk_frame()
-        self.tools_frame.pack(side="top", fill="x", pady=(0, 5))  # Make sure it's packed at the top
+        self.tools_frame.pack(side="bottom", fill="x")
         self.tools_frame.pack_propagate(False)  # Maintain fixed height
+
+        actions_frame = tk.Frame(self.tools_frame, bg=Colors.BG_COLUMN)
+        actions_frame.pack(side="right")
 
         # Script operation buttons
         buttons = [
@@ -263,7 +266,7 @@ class FaultEditorController:
 
         for text, command in buttons:
             btn = StyledButton(
-                self.tools_frame,
+                actions_frame,
                 text=text,
                 command=command,
                 style_type="action"
