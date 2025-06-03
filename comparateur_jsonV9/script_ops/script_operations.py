@@ -517,7 +517,7 @@ class ScriptOperations:
                 self.runner.status_callback("❌ Aucun dossier ouvert")
             return False
 
-        cmd = ["python", "checker_coherence.py", self.base_dir]
+        cmd = ["python", "check_coherence.py", self.base_dir]
         return self.runner.run_command_with_fix_option(cmd, self.base_dir, desc="Vérifier la cohérence")
 
     def check_spelling(self) -> bool:
