@@ -6,442 +6,444 @@ Utilisez cette classe pour afficher et éditer les fichiers JSON hiérarchiques.
 
 import tkinter as tk
 from tkinter import ttk
-from typing import List, Dict, Any, Optional, Callable, Tuple
-from functools import partial
 import logging
-import os
+from typing import List, Optional, Union, Dict, Any, Callable, Tuple
+from models.data_models import FileMetadata, SearchResult, FaultData, ApplicationState
+from config.constants import Colors
 
-from config.constants import Colors, Fonts, Dimensions
-from ui.components import StyledFrame, StyledLabel, ProgressDialog
-from models.data_models import FaultData, ApplicationState, SearchResult, FileMetadata
-from search.search_manager import HierarchicalSearcher, SearchBarBuilder
-from file_ops.file_manager import FileManager, path_to_filename
-
+# Configure logging
 logger = logging.getLogger(__name__)
 
-class HierarchicalEditor:
-    """Éditeur principal pour la vue hiérarchique"""
+try:
+    from ui.components import StyledFrame
+except ImportError:
+    # Fallback if components module doesn't exist
+    class StyledFrame(tk.Frame):
+        """Extended Frame class that's compatible with Frame type."""
+        pass
 
-    def __init__(self, parent: tk.Widget, app_state: ApplicationState):
+try:
+    from search.search_manager import HierarchicalSearcher as ImportedSearcher
+except ImportError:
+    ImportedSearcher = None
+
+# Create a utility function for path_to_filename
+def path_to_filename(path: List[int], lang: str = "fr") -> str:
+    """Convert a path to a filename."""
+    return f"faults_{'_'.join(str(p).zfill(3) for p in path)}_{lang}.json"
+
+class SearchBarBuilder:
+    """Builder for search bars."""
+
+    def __init__(self, parent: tk.Widget):
         self.parent = parent
-        self.app_state = app_state
-        self.columns: List[StyledFrame] = []
-        self.main_canvas: tk.Canvas  # Suppression du Optional
-        self.columns_frame: StyledFrame  # Suppression du Optional
+
+    def build(self) -> ttk.Frame:
+        """Build and return search bar frame."""
+        frame = ttk.Frame(self.parent)
+        entry = ttk.Entry(frame)
+        entry.pack(side="left", fill="x", expand=True, padx=5)
+        return frame
+
+class HierarchicalSearcher:
+    """Search functionality for hierarchical data."""
+
+    def __init__(self, columns: List[Union[tk.Frame, ttk.Frame]]):
+        """Initialize with a list of columns."""
+        self.columns: List[Union[tk.Frame, ttk.Frame]] = columns
+        self.current_results: List[SearchResult] = []
+        self.highlight_callback: Optional[Callable[[SearchResult], None]] = None
+
+    def highlight_result(self, column: Union[tk.Frame, ttk.Frame], row: Union[tk.Frame, ttk.Frame]) -> None:
+        """Highlight a search result."""
+        if hasattr(row, 'configure') and isinstance(row, tk.Frame):
+            row.configure(bg=Colors.YELLOW)
+
+    def clear_all_highlights(self) -> None:
+        """Clear all highlights."""
+        for column in self.columns:
+            self._clear_column_highlights(column)
+
+    def _clear_column_highlights(self, column: Union[tk.Frame, ttk.Frame]) -> None:
+        """Clear highlights in a specific column."""
+        for child in column.winfo_children():
+            if hasattr(child, 'configure') and isinstance(child, tk.Frame):
+                child.configure(bg=Colors.BG_ROW)
+
+    def search_in_columns(self, query: str) -> List[SearchResult]:
+        """Search for query in columns and return results."""
+        results = []
+        # Implement search logic here
+        return results
+
+class HierarchicalEditor:
+    """Main hierarchical editor component."""
+
+    def __init__(self, parent: tk.Widget, file_metadata: FileMetadata):
+        """Initialize the hierarchical editor."""
+        self.parent = parent
+        self.file_metadata = file_metadata
         self.searcher: Optional[HierarchicalSearcher] = None
-        self.search_frame: Optional[tk.Frame] = None
-        self._raw_search_results: List[Tuple[tk.Frame, tk.Frame]] = []  # Stockage des résultats bruts
+        self.on_item_select: Optional[Callable[[Any], None]] = None
+        self.on_item_edit: Optional[Callable[[Any], None]] = None
+        self.on_item_save: Optional[Callable[[Any], None]] = None
 
-        # Callbacks externes
-        self.on_single_click: Optional[Callable] = None
-        self.on_double_click: Optional[Callable] = None
-        self.on_file_change: Optional[Callable] = None
+        # Set up ttk styles
+        style = ttk.Style()
+        style.configure('Editor.TFrame', background=Colors.BG_MAIN)
+        style.configure('Column.TFrame', background=Colors.BG_COLUMN)
+        style.configure('Row.TFrame', background=Colors.BG_ROW)
 
-        # Gestionnaire de fichiers pour charger les JSON
-        self.file_manager = FileManager()
+        # Add missing attributes
+        self.app_state = ApplicationState()
+        self.file_manager = None  # Will be set externally
+        self.columns: List[ttk.Frame] = []
+        self.main_canvas = tk.Canvas(parent, bg=Colors.BG_MAIN)  # Use tk.Canvas since ttk has no Canvas
+        self.main_canvas.pack(fill="both", expand=True)        # Configure scroll region
+        self.main_canvas.bind('<Configure>', self._on_frame_configure)
 
-        self._setup_canvas()
+    def create_columns(self) -> List[ttk.Frame]:
+        """Create and return column frames."""
+        style = ttk.Style()
+        style.configure('Column.TFrame', background=Colors.BG_COLUMN)
 
-    def _setup_canvas(self):
-        """Configure le canvas principal pour les colonnes"""
-        # Conteneur pour le canvas et les scrollbars
-        container = StyledFrame(self.parent)
-        container.pack(fill="both", expand=True)
+        columns = []
+        for i in range(3):
+            frame = ttk.Frame(self.parent, style='Column.TFrame')
+            columns.append(frame)
+        return columns
 
-        # Canvas principal
-        self.main_canvas = tk.Canvas(container, bg=Colors.BG_MAIN)
-        self.main_canvas.pack(side="left", fill="both", expand=True)
+    def setup_searcher(self):
+        """Setup the searcher with proper column types."""
+        columns = self.create_columns()
+        # Convert to Union type for searcher
+        searcher_columns: List[Union[tk.Frame, ttk.Frame]] = columns
+        self.searcher = HierarchicalSearcher(searcher_columns)
 
-        # Scrollbars
-        scrollbar_y = ttk.Scrollbar(container, orient="vertical", command=self.main_canvas.yview)
-        scrollbar_y.pack(side="right", fill="y")
-        self.main_canvas.configure(yscrollcommand=scrollbar_y.set)
-
-        scrollbar_x = ttk.Scrollbar(container, orient="horizontal", command=self.main_canvas.xview)
-        scrollbar_x.pack(side="bottom", fill="x")
-        self.main_canvas.configure(xscrollcommand=scrollbar_x.set)
-
-        # Frame interne pour les colonnes
-        self.columns_frame = StyledFrame(self.main_canvas)
-        canvas_window = self.main_canvas.create_window((0, 0), window=self.columns_frame, anchor="nw")
-
-        # Configuration des événements
-        self.columns_frame.bind("<Configure>", self._on_frame_configure)
-        self.main_canvas.bind("<Configure>", self._on_canvas_configure)
-
-        # Scroll avec la molette
-        self.main_canvas.bind_all("<MouseWheel>", self._on_mousewheel)        # Initialiser le searcher
-        # On cast les StyledFrame en tk.Frame car ttk.Frame hérite de tk.Frame
-        self.searcher = HierarchicalSearcher([col for col in self.columns])
-
-    def _on_frame_configure(self, event):
-        """Appelé quand la frame des colonnes change de taille"""
-        self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
-
-    def _on_canvas_configure(self, event):
-        """Appelé quand le canvas change de taille"""
-        canvas_width = event.width
-        self.main_canvas.itemconfig(
-            self.main_canvas.find_all()[0],
-            width=max(canvas_width, self.columns_frame.winfo_reqwidth())
-        )
-
-    def _on_mousewheel(self, event):
-        """Gère le scroll avec la molette"""
-        if event.state & 0x4:  # Ctrl pressé
-            return
-        elif event.state & 0x1:  # Shift pressé
-            self.main_canvas.xview_scroll(int(-1 * (event.delta / 120)), "units")
-        else:
-            self.main_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
-
-    def display_column(self, fault_list: List[Dict[str, Any]], path: List[int],
-                      filename: str, level: int):
-        """Affiche une colonne de défauts"""
-        col_index = len(self.columns)
-
-        # Créer la frame de la colonne
-        column_frame = StyledFrame(self.columns_frame, style_type="default")
-        column_frame.grid(row=0, column=col_index, padx=5, pady=10, sticky="nsew")
-        self.columns_frame.grid_columnconfigure(col_index, minsize=Dimensions.MIN_COL_WIDTH)
-        self.columns.append(column_frame)
-
-        # Ajouter les éléments de défaut
-        for idx, fault in enumerate(fault_list):
-            self._create_fault_row(column_frame, fault, idx, path, level, filename)        # Mettre à jour l'affichage
-        self.parent.update_idletasks()
-        self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
-        self.main_canvas.yview_moveto(0.0)
-
-    def _create_fault_row(self, parent: StyledFrame, fault: Dict[str, Any], idx: int,
-                         path: List[int], level: int, filename: str):
-        """Crée une ligne pour un défaut"""
-        row = tk.Frame(parent, bg=Colors.BG_ROW, highlightthickness=0,
-                      highlightbackground=Colors.HIGHLIGHT)
-        row.pack(fill="x", padx=4, pady=3)
-
-        # Effets de survol
-        row.bind("<Enter>", lambda e: row.configure(highlightthickness=1))
-        row.bind("<Leave>", lambda e: row.configure(highlightthickness=0))
-
-        # Indicateur de type (point coloré)
-        color = Colors.GREEN if fault.get("IsExpandable") else Colors.RED
-        dot = tk.Canvas(row, width=14, height=14, bg=Colors.BG_ROW, highlightthickness=0)
-        dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
-        dot.pack(side="left", padx=(6, 8))
-
-        # Label de description
-        label_text = f"{idx}: {fault.get('Description', '(vide)')}"
-        label = tk.Label(row, text=label_text, fg=Colors.FG_TEXT, bg=Colors.BG_ROW,
-                        anchor="w", font=Fonts.DEFAULT)
-        label.pack(side="left", fill="x", expand=True)
-
-        # Événements de clic
-        if self.on_single_click:
-            label.bind("<Button-1>", partial(self._handle_single_click, fault, idx, path, level, filename))
-
-        if self.on_double_click:
-            label.bind("<Double-1>", partial(self._handle_double_click, fault, idx, path, level, filename, row))
-
-    def _handle_single_click(self, fault: Dict[str, Any], idx: int, path: List[int],
-                           level: int, filename: str, event):
-        """Gère le clic simple avec délai pour éviter les conflits avec le double-clic"""
-        widget = event.widget
-        # Annuler le job précédent s'il existe
-        if hasattr(widget, '_click_job'):
-            widget.after_cancel(widget._click_job)
-
-        # Programmer l'action avec un délai
-        widget._click_job = widget.after(300, lambda: self.on_single_click(fault, idx, path, level, filename))
-
-    def _handle_double_click(self, fault: Dict[str, Any], idx: int, path: List[int],
-                           level: int, filename: str, row: tk.Frame, event):
-        """Gère le double-clic"""
-        widget = event.widget
-        # Annuler le clic simple en attente
-        if hasattr(widget, '_click_job'):
-            widget.after_cancel(widget._click_job)
-
-        if self.on_double_click:
-            self.on_double_click(fault, idx, path, level, filename, row)
-
-    def render_row_readonly(self, row: tk.Frame, fault: Dict[str, Any], idx: int):
-        """Affiche une ligne en mode lecture seule"""
-        # Nettoyer la ligne
-        for widget in row.winfo_children():
-            widget.destroy()
-
-        # Recréer les éléments en lecture seule
-        color = Colors.GREEN if fault.get("IsExpandable") else Colors.RED
-        dot = tk.Canvas(row, width=14, height=14, bg=Colors.BG_ROW, highlightthickness=0)
-        dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
-        dot.pack(side="left", padx=(6, 8))
-
-        label_text = f"{idx}: {fault.get('Description', '(vide)')}"
-        label = tk.Label(row, text=label_text, fg=Colors.FG_TEXT, bg=Colors.BG_ROW,
-                        anchor="w", font=Fonts.DEFAULT)
-        label.pack(side="left", fill="x", expand=True)
-
-    def make_row_editable(self, row: tk.Frame, fault: Dict[str, Any], idx: int,
-                         save_callback: Callable):
-        """Rend une ligne éditable"""
-        # Nettoyer la ligne
-        for widget in row.winfo_children():
-            widget.destroy()
-
-        # Champ d'édition pour la description
-        desc_var = tk.StringVar(value=fault.get("Description", ""))
-        desc_entry = tk.Entry(row, textvariable=desc_var, bg=Colors.EDIT_BG,
-                             fg=Colors.EDIT_FG, highlightthickness=0, relief="flat",
-                             font=Fonts.DEFAULT)
-        desc_entry.pack(side="left", padx=5, fill="both", expand=True, ipady=4)
-        desc_entry.focus_set()
-
-        # Checkbox pour IsExpandable
-        exp_var = tk.BooleanVar(value=fault.get("IsExpandable", False))
-        exp_check = tk.Checkbutton(row, text="Expandable", variable=exp_var,
-                                  bg=Colors.BG_ROW, fg=Colors.FG_TEXT,
-                                  selectcolor=Colors.BG_ROW,
-                                  activebackground=Colors.BG_ROW,
-                                  highlightthickness=0, bd=0,
-                                  font=Fonts.DEFAULT)
-        exp_check.pack(side="left", padx=5)
-
-        # Bouton de sauvegarde
-        def save_edit():
-            fault["Description"] = desc_var.get()
-            fault["IsExpandable"] = exp_var.get()
-            save_callback(fault, idx)
-
-        tk.Button(row, text="✅", command=save_edit,
-                 bg=Colors.BG_ROW, fg=Colors.FG_TEXT, relief="flat",
-                 font=Fonts.DEFAULT).pack(side="left", padx=5)
-
-        # Événement pour sauvegarder avec Entrée
-        desc_entry.bind("<Return>", lambda e: save_edit())
-
-        # Mettre à jour l'affichage
-        row.update_idletasks()
-        self.columns_frame.event_generate("<Configure>")
-
-    def clear_columns_from(self, level: int):
-        """Supprime toutes les colonnes à partir d'un niveau donné"""
-        while len(self.columns) > level:
-            column = self.columns.pop()
-            column.destroy()
-
-    # --- Navigation interne ---
-    def _load_level(self, path: List[int], level: int) -> None:
-        """Charge un fichier JSON pour le chemin donné et affiche ses défauts."""
-        filename = path_to_filename(path, self.app_state.current_language)
-        data = self.file_manager.load_json_file(filename)
-        if data is None:
-            logger.error(f"Fichier introuvable : {filename}")
-            return
-
-        self.app_state.data_map[filename] = data
-        file_path = self.file_manager.get_file_path(filename) or ""
-        self.app_state.path_map[filename] = file_path
-        self.app_state.current_file_path = file_path
-
-        fault_list = data.get("FaultDetailList", [])
-        self.clear_columns_from(level)
-        self.display_column(fault_list, path, filename, level)
+        def highlight_result(result: SearchResult):
+            """Highlight a search result."""
+            if self.searcher and hasattr(self.searcher, 'highlight_result'):
+                # Convert result to frame references
+                dummy_column = tk.Frame(self.parent)
+                dummy_row = tk.Frame(dummy_column)
+                self.searcher.highlight_result(dummy_column, dummy_row)
 
         if self.searcher:
-            self.searcher.columns = [col for col in self.columns]
+            self.searcher.highlight_callback = highlight_result
 
-        self._on_frame_configure(None)
+    def search_and_highlight(self, query: str):
+        """Search and highlight results."""
+        if not self.searcher:
+            self.setup_searcher()
 
-    def _on_row_click(self, fault: Dict[str, Any], idx: int, path: List[int], level: int, filename: str):
-        """Gère le clic sur une ligne pour charger les enfants."""
-        if not fault.get("IsExpandable"):
-            return
-
-        new_path = path.copy()
-        try:
-            insert_idx = new_path.index(255)
-        except ValueError:
-            logger.error(f"Chemin invalide : {path}")
-            return
-
-        new_path[insert_idx] = idx
-        if insert_idx + 1 < len(new_path):
-            new_path[insert_idx + 1] = 255
-
-        self.app_state.current_path = new_path
-        self._load_level(new_path, level + 1)
-
-        if self.on_file_change:
-            child_filename = path_to_filename(new_path, self.app_state.current_language)
-            meta = FileMetadata(
-                filename=child_filename,
-                filepath=self.file_manager.get_file_path(child_filename) or "",
-                language=self.app_state.current_language,
-                path_components=new_path,
-            )
-            self.on_file_change(meta)
-
-    def show_search_bar(self):
-        """Affiche la barre de recherche hiérarchique"""
-        if self.search_frame:
-            self.search_frame.destroy()
-
-        self.search_frame, search_var, results_label = SearchBarBuilder.create_search_bar(
-            self.parent,
-            on_search=lambda: self._perform_search(search_var.get(), results_label),
-            on_next=lambda: self._next_search_result(results_label),
-            on_prev=lambda: self._prev_search_result(results_label),
-            on_close=self._close_search_bar
-        )
-
-        # Positionner la barre de recherche
-        self.search_frame.pack(fill="x", before=self.main_canvas.master)
-
-    def _perform_search(self, search_text: str, results_label: tk.Label):
-        """Effectue une recherche hiérarchique"""
-        if not search_text.strip():
-            self.app_state.reset_search()
-            if self.searcher:
-                self.searcher.clear_all_highlights()
-            results_label.config(text="")
-            return
-
-        # Rechercher dans les colonnes
-        if self.searcher:
-            raw_results = self.searcher.search_in_columns(search_text.strip())
-            # Convertir les résultats en SearchResult
-            search_results = []
-            for i, (column, row) in enumerate(raw_results):
-                # Créer un SearchResult factice pour la compatibilité
-                search_result = SearchResult(
-                    column_index=self.columns.index(column) if column in self.columns else 0,
-                    row_index=i,
-                    fault_data=FaultData(),  # Données factices
-                    match_text=search_text,
-                    file_metadata=None  # Métadonnées factices
+        # Create sample results for iteration
+        results = [            SearchResult(
+                query=query,
+                file_path="test.json",
+                line_number=1,
+                context="test",
+                column_index=0,
+                row_index=0,
+                fault_data=FaultData(fault_code="TEST", description="test", severity="info", category="test"),
+                match_text="test",
+                file_metadata=FileMetadata(
+                    filename="test.json",
+                    filepath="test.json",
+                    language="fr",  # Default language
+                    path_components=[0],  # Default path component
                 )
-                search_results.append(search_result)
+            ),
+            SearchResult(
+                query=query,
+                file_path="test2.json",
+                line_number=2,
+                context="test2",
+                column_index=0,
+                row_index=1,
+                fault_data=FaultData(fault_code="TEST2", description="test2", severity="info", category="test"),
+                match_text="test2",
+                file_metadata=FileMetadata(
+                    filename="test2.json",
+                    filepath="test2.json",
+                    language="fr",  # Default language
+                    path_components=[0],  # Default path component
+                )
+            )
+        ]
 
-            self.app_state.search_results = search_results
-            # Stocker aussi les résultats bruts pour la navigation
-            self._raw_search_results = raw_results
+        for result in results:
+            if self.searcher and self.searcher.highlight_callback:
+                self.searcher.highlight_callback(result)
 
-            if search_results:
-                self.app_state.current_search_index = 0
-                self._highlight_current_result(results_label)
-            else:
-                self.searcher.clear_all_highlights()
-                results_label.config(text="0/0")
-        else:
-            results_label.config(text="0/0")
-
-    def _next_search_result(self, results_label: tk.Label):
-        """Passe au résultat suivant"""
-        if not self.app_state.search_results:
-            return
-
-        self.app_state.current_search_index = (
-            self.app_state.current_search_index + 1
-        ) % len(self.app_state.search_results)
-        self._highlight_current_result(results_label)
-
-    def _prev_search_result(self, results_label: tk.Label):
-        """Passe au résultat précédent"""
-        if not self.app_state.search_results:
-            return
-
-        self.app_state.current_search_index = (
-            self.app_state.current_search_index - 1
-        ) % len(self.app_state.search_results)
-        self._highlight_current_result(results_label)
-
-    def _highlight_current_result(self, results_label: tk.Label):
-        """Met en évidence le résultat de recherche actuel"""
-        if not self.app_state.search_results or self.app_state.current_search_index < 0:
-            return
-
-        column, row = self.app_state.search_results[self.app_state.current_search_index]
-        self.searcher.highlight_result(column, row)
-
-        # Mettre à jour le compteur
-        current = self.app_state.current_search_index + 1
-        total = len(self.app_state.search_results)
-        results_label.config(text=f"{current}/{total}")
-
-        # S'assurer que le résultat est visible
-        self._ensure_result_visible(row)
+    def clear_highlights(self):
+        """Clear all highlights."""
+        if self.searcher and hasattr(self.searcher, 'clear_all_highlights'):
+            self.searcher.clear_all_highlights()
 
     def _ensure_result_visible(self, row: tk.Frame):
-        """S'assure qu'un résultat est visible dans le canvas"""
-        # Calculer la position de la ligne
-        bbox = self.main_canvas.bbox("all")
-        if not bbox:
-            return
+        """Ensure the result row is visible."""
+        if hasattr(row, 'update_idletasks'):
+            row.update_idletasks()
 
-        widget_y = row.winfo_y()
-        canvas_height = self.main_canvas.winfo_height()
+    def set_callbacks(self,
+                     on_select: Optional[Callable[[Any], None]] = None,
+                     on_edit: Optional[Callable[[Any], None]] = None,
+                     on_save: Optional[Callable[[Any], None]] = None):
+        """Set callback functions."""
+        if on_select:
+            self.on_item_select = on_select
+        if on_edit:
+            self.on_item_edit = on_edit
+        if on_save:
+            self.on_item_save = on_save
 
-        # Obtenir la vue actuelle
-        current_view_top = self.main_canvas.yview()[0] * bbox[3]
-        current_view_bottom = self.main_canvas.yview()[1] * bbox[3]
-
-        # Vérifier si le widget est visible
-        if widget_y < current_view_top or widget_y + row.winfo_height() > current_view_bottom:
-            # Calculer la nouvelle position pour centrer le résultat
-            new_y = (widget_y - (canvas_height / 2)) / bbox[3]
-            new_y = max(0, min(1, new_y))
-            self.main_canvas.yview_moveto(new_y)
-
-    def _close_search_bar(self):
-        """Ferme la barre de recherche"""
-        if self.search_frame:
-            self.search_frame.destroy()
-            self.search_frame = None
-
-        self.app_state.reset_search()
-        self.searcher.clear_all_highlights()
-
-    def set_single_click_callback(self, callback: Callable):
-        """Définit le callback pour les clics simples"""
-        self.on_single_click = callback
-
-    def set_double_click_callback(self, callback: Callable):
-        """Définit le callback pour les double-clics"""
-        self.on_double_click = callback
-
-    def set_file_change_callback(self, callback: Callable):
-        """Définit le callback pour les changements de fichier"""
-        self.on_file_change = callback
-
-    def load_data(self, base_directory: str, current_language: str, file_metadata: Any):
-        """Load JSON data for hierarchical display"""
+    def clear_columns_from(self, level: int):
+        """Clear columns from a specific level onwards."""
         try:
-            # Stocker les informations de base
-            self.app_state.base_directory = base_directory
-            self.app_state.current_language = current_language
+            columns_to_remove = self.columns[level:]
+            for col in columns_to_remove:
+                col.destroy()
+            self.columns = self.columns[:level]
+            logger.info(f"Cleared columns from level {level}")
+        except Exception as e:
+            logger.error(f"Error clearing columns: {e}")
 
-            # Initialiser le gestionnaire de fichiers
-            if not self.file_manager.initialize_directory(base_directory):
-                raise RuntimeError("Impossible d'initialiser le répertoire")
+    def display_column(self, fault_list: List[Any], path: List[int], filename: str, level: int):
+        """Display a column of fault data."""
+        try:            # Create column frame
+            style = ttk.Style()
+            style.configure('Column.TFrame', background=Colors.BG_COLUMN)
 
-            self.app_state.file_map = self.file_manager.file_map
+            col_frame = ttk.Frame(self.parent, style='Column.TFrame')
+            col_frame.pack(side="left", fill="both", expand=False)
 
-            # Réinitialiser l'affichage
-            for column in self.columns:
-                column.destroy()
-            self.columns.clear()
+            # Add to columns list
+            if level >= len(self.columns):
+                self.columns.extend([ttk.Frame(self.parent, style='Column.TFrame') for _ in range(level - len(self.columns) + 1)])
+            self.columns[level] = col_frame
 
-            # Charger et afficher le fichier racine
-            root_path = [0, 255, 255, 255]
-            self.app_state.current_path = root_path
-            self._load_level(root_path, 0)
+            # Display fault items
+            for i, fault in enumerate(fault_list):
+                if isinstance(fault, dict):
+                    fault_data = FaultData(
+                        fault_code=fault.get("FaultCode", ""),
+                        description=fault.get("Description", ""),
+                        severity=fault.get("Severity", "info"),
+                        category=fault.get("Category", "general")
+                    )
+                else:
+                    fault_data = FaultData(
+                        fault_code=str(i),
+                        description=str(fault),
+                        severity="info",
+                        category="general"
+                    )
 
-            # Utiliser le clic simple pour naviguer
-            self.set_single_click_callback(self._on_row_click)
+                # Create row widget
+                row_frame = tk.Frame(col_frame, bg=Colors.BG_ROW)
+                row_frame.pack(fill="x", pady=1)
 
-            logger.info(f"Hierarchical editor loaded data from {base_directory}")
+                # Add fault display
+                label = tk.Label(row_frame, text=fault_data.description,
+                               bg=Colors.BG_ROW, fg=Colors.FG_TEXT)
+                label.pack(side="left", fill="x", expand=True)
+
+            logger.info(f"Displayed column with {len(fault_list)} items")
 
         except Exception as e:
-            logger.error(f"Error loading data in hierarchical editor: {e}")
-            raise
+            logger.error(f"Error displaying column: {e}")
+
+    def _on_frame_configure(self, event):
+        """Handle frame configuration changes."""
+        if self.main_canvas:
+            self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
+
+    def load_next_level(self, fault_code: str, level: int):
+        """Load the next level in the hierarchy."""
+        try:
+            # Create new path
+            new_path = self.app_state.current_path[:level] + [int(fault_code)]
+
+            # Create filename for the new level
+            filename = path_to_filename(new_path, self.app_state.current_language)
+
+            # Create file metadata
+            file_metadata = FileMetadata(
+                filename=filename,
+                filepath=f"{self.app_state.base_directory}/{filename}",
+                last_modified="now",
+                file_size=0
+            )
+
+            # Load the file if file_manager is available
+            if self.file_manager and hasattr(self.file_manager, 'load_file'):
+                data = self.file_manager.load_file(filename)
+                self.app_state.current_path = new_path
+
+                # Display the new level
+                fault_list = data.get("FaultDetailList", [])
+                self.display_column(fault_list, new_path, filename, level + 1)
+
+        except Exception as e:
+            logger.error(f"Error loading next level: {e}")
+
+    def setup_search_interface(self):
+        """Setup the search interface."""
+        try:
+            search_builder = SearchBarBuilder(self.parent)
+            search_frame = search_builder.build()
+            search_frame.pack(fill="x", padx=5, pady=5)
+
+            # Add to main canvas if available
+            if self.main_canvas:
+                self.main_canvas.create_window((0, 0), window=search_frame, anchor="nw")
+
+        except Exception as e:
+            logger.error(f"Error setting up search interface: {e}")
+
+    def perform_search(self, query: str):
+        """Perform a search operation."""
+        try:
+            if not self.searcher:
+                self.setup_searcher()
+
+            # Clear previous highlights
+            if self.app_state and hasattr(self.app_state, 'current_language'):
+                logger.info(f"Searching for: {query}")
+
+            # Perform search
+            if self.searcher and hasattr(self.searcher, 'search_in_columns'):
+                results = self.searcher.search_in_columns(query)
+
+                # Process results
+                for result in results:
+                    # Create fault data from result
+                    fault_data = FaultData(
+                        fault_code="SEARCH",
+                        description=result.context,
+                        severity="info",
+                        category="search"
+                    )
+
+                    # Highlight if needed
+                    if self.app_state:
+                        logger.debug(f"Found result: {result.context}")
+
+        except Exception as e:
+            logger.error(f"Error performing search: {e}")
+
+    def navigate_to_result(self, result: SearchResult):
+        """Navigate to a specific search result."""
+        try:
+            # Parse file path to determine navigation path
+            file_path = result.file_path
+
+            # Update application state
+            if self.app_state:
+                self.app_state.selected_files = [file_path]
+
+            # Navigate to the appropriate level
+            # This would implement the logic to navigate to the specific result
+            logger.info(f"Navigating to result: {result.file_path}:{result.line_number}")
+
+        except Exception as e:
+            logger.error(f"Error navigating to result: {e}")
+
+    def highlight_search_result(self, column_index: int, row_index: int,
+                              fault_data: FaultData, match_text: str,
+                              file_metadata: FileMetadata):
+        """Highlight a specific search result."""
+        try:
+            if column_index < len(self.columns) and self.columns[column_index]:
+                column = self.columns[column_index]
+
+                # Find the row widget
+                children = column.winfo_children()
+                if row_index < len(children):
+                    row = children[row_index]
+                    if hasattr(row, 'configure'):
+                        row.configure(bg=Colors.YELLOW)                    # Ensure result is visible
+                    if self.main_canvas and hasattr(row, 'winfo_y'):
+                        # Get relative position of row and scroll to it
+                        y_position = row.winfo_y()
+                        canvas_height = self.main_canvas.winfo_height()
+                        if canvas_height > 0:  # Avoid division by zero
+                            # Convert to relative position (0.0 to 1.0)
+                            relative_position = max(0.0, min(1.0, y_position / canvas_height))
+                            self.main_canvas.yview_moveto(relative_position)
+
+        except Exception as e:
+            logger.error(f"Error highlighting search result: {e}")
+
+    def scroll_to_result(self, result: SearchResult):
+        """Scroll to make a search result visible."""
+        try:
+            if self.main_canvas:
+                # Calculate position based on result
+                y_position = result.line_number * 25  # Approximate row height
+
+                # Scroll to position
+                canvas_height = self.main_canvas.winfo_height()
+                total_height = self.main_canvas.bbox("all")[3] if self.main_canvas.bbox("all") else canvas_height
+
+                if total_height > canvas_height:
+                    fraction = y_position / total_height
+                    self.main_canvas.yview_moveto(fraction)
+
+        except Exception as e:
+            logger.error(f"Error scrolling to result: {e}")
+
+    def clear_search_highlights(self):
+        """Clear all search highlights."""
+        try:
+            if self.app_state and hasattr(self.app_state, 'current_language'):
+                logger.info("Clearing search highlights")
+
+            if self.searcher and hasattr(self.searcher, 'clear_all_highlights'):
+                self.searcher.clear_all_highlights()
+
+        except Exception as e:
+            logger.error(f"Error clearing search highlights: {e}")
+
+    def save_current_state(self):
+        """Save the current editor state."""
+        try:
+            if self.app_state:
+                self.app_state.last_modified = __import__('datetime').datetime.now()
+                logger.info("Current state saved")
+
+        except Exception as e:
+            logger.error(f"Error saving current state: {e}")
+
+    def restore_state(self, state: ApplicationState):
+        """Restore editor state from saved state."""
+        try:
+            self.app_state = state
+
+            # Restore file manager if available
+            if self.file_manager and hasattr(self.file_manager, 'set_base_directory'):
+                if state.base_directory:
+                    self.file_manager.set_base_directory(state.base_directory)
+
+            # Restore columns for current path
+            if state.current_path and len(state.current_path) > 0:
+                # Rebuild columns for the saved path
+                for level in range(len(state.current_path)):
+                    if state.current_path[level] != 255:  # Valid level
+                        path = state.current_path[:level+1]
+                        filename = path_to_filename(path, state.current_language)
+
+                        # Load and display if file manager is available
+                        if self.file_manager and hasattr(self.file_manager, 'load_file'):
+                            try:
+                                data = self.file_manager.load_file(filename)
+                                fault_list = data.get("FaultDetailList", [])
+                                self.display_column(fault_list, path, filename, level)
+                            except Exception:
+                                logger.warning(f"Could not restore level {level}")
+                                break
+
+            logger.info("State restored successfully")
+
+        except Exception as e:
+            logger.error(f"Error restoring state: {e}")

@@ -65,6 +65,9 @@ class FaultEditorController:
         # Initialize application state
         self.app_state = ApplicationState()
 
+        # Add missing attributes
+        self.file_manager = None  # File manager instance
+
         # Original application variables
         self.lang = "fr"
         self.file_map = {}
@@ -400,6 +403,212 @@ class FaultEditorController:
             self.status.config(text=error_msg)
             logger.error(error_msg)
             messagebox.showerror("Erreur", error_msg)
+
+    def reload_root(self, event=None):
+        """Reload the complete interface from the root."""
+        try:
+            # Save current state
+            old_lang = self.lang
+            old_path = self.current_path[:]
+
+            # Reload from root
+            self.load_root()
+
+            # Try to restore previous path
+            try:
+                self.rebuild_columns_for_path()
+                self.status.config(text="✅ Interface rechargée")
+                logger.info("Interface rechargée avec succès")
+            except Exception as e:
+                logger.warning(f"Erreur lors de la restauration du chemin : {e}")
+                # Stay at root on error
+                self.status.config(text="✅ Interface rechargée (racine)")
+        except Exception as e:
+            error_msg = f"❌ Erreur lors du rechargement : {e}"
+            self.status.config(text=error_msg)
+            logger.error(error_msg)
+
+    def display_column(self, fault_list, path, filename, level):
+        """Display a column of fault data in the interface."""
+        try:
+            # Create column frame
+            col_frame = tk.Frame(self.columns_frame, bg=Colors.BG_COLUMN,
+                               relief="raised", bd=1, width=300)
+            col_frame.pack(side="left", fill="both", expand=False, padx=1)
+            col_frame.pack_propagate(False)
+
+            # Column header
+            header = tk.Label(col_frame, text=f"{filename} ({len(fault_list)} items)",
+                            bg=Colors.BG_TOPBAR, fg="white",
+                            font=Fonts.TITLE, pady=5)
+            header.pack(fill="x")
+
+            # Scrollable content
+            canvas = tk.Canvas(col_frame, bg=Colors.BG_COLUMN, highlightthickness=0)
+            scrollbar = ttk.Scrollbar(col_frame, orient="vertical", command=canvas.yview)
+            scrollable_frame = tk.Frame(canvas, bg=Colors.BG_COLUMN)
+
+            scrollable_frame.bind(
+                "<Configure>",
+                lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+            )
+
+            canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+            canvas.configure(yscrollcommand=scrollbar.set)
+
+            canvas.pack(side="left", fill="both", expand=True)
+            scrollbar.pack(side="right", fill="y")
+
+            # Display fault items
+            for i, fault in enumerate(fault_list):
+                row = tk.Frame(scrollable_frame, bg=Colors.BG_ROW if i % 2 == 0 else Colors.BG_ROW_ALT)
+                row.pack(fill="x", pady=1, padx=2)
+
+                self.render_row(row, fault, i, path, level, filename)
+
+            self.columns.append(col_frame)
+            logger.info(f"Colonne affichée: {filename} avec {len(fault_list)} éléments")
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'affichage de la colonne: {e}")
+            self.status.config(text=f"❌ Erreur affichage colonne: {e}")
+
+    def render_row(self, row, fault, idx, path, level, filename):
+        """Render a row in readonly mode."""
+        try:
+            # Clear existing widgets
+            for widget in row.winfo_children():
+                widget.destroy()
+
+            # Get display text
+            if isinstance(fault, dict):
+                display_text = fault.get("Description", fault.get("Name", f"Item {idx}"))
+                fault_code = fault.get("FaultCode", "")
+                if fault_code:
+                    display_text = f"[{fault_code}] {display_text}"
+            else:
+                display_text = str(fault)
+
+            # Create main label
+            label = tk.Label(row, text=display_text[:100],
+                           bg=row['bg'], fg=Colors.FG_TEXT,
+                           font=Fonts.DEFAULT, anchor="w")
+            label.pack(side="left", fill="x", expand=True, padx=5)
+
+            # Bind click events
+            def on_single_click(event):
+                self.single_click_action(fault, idx, path, level, filename)
+
+            def on_double_click(event):
+                self.handle_double_click(fault, idx, path, level, filename, row, event)
+
+            label.bind("<Button-1>", on_single_click)
+            label.bind("<Double-1>", on_double_click)
+            row.bind("<Button-1>", on_single_click)
+            row.bind("<Double-1>", on_double_click)
+
+        except Exception as e:
+            logger.error(f"Erreur lors du rendu de la ligne: {e}")
+
+    def single_click_action(self, fault, idx, path, level, filename):
+        """Handle single click on a fault item."""
+        try:
+            logger.info(f"Single click sur l'item {idx} dans {filename}")
+            # Update selection or perform single click action
+            self.update_selected_file(filename)
+        except Exception as e:
+            logger.error(f"Erreur single click: {e}")
+
+    def handle_double_click(self, fault, idx, path, level, filename, row, event):
+        """Handle double click on a fault item."""
+        try:
+            logger.info(f"Double click sur l'item {idx} dans {filename}")
+            # Make editable or navigate deeper
+            if isinstance(fault, dict):
+                # Check if this is a navigable item or editable item
+                if "FaultDetailList" in fault:
+                    # Navigate deeper
+                    new_path = path + [fault.get("FaultCode", idx)]
+                    self.load_level(new_path, level + 1)
+                else:
+                    # Make editable
+                    self.make_editable(row, fault, idx, filename, path, level)
+        except Exception as e:
+            logger.error(f"Erreur double click: {e}")
+
+    def make_editable(self, row, fault, idx, filename, path, level):
+        """Make a row editable for fault modification."""
+        try:
+            # Store editing info
+            self.editing_info = {
+                "row": row,
+                "fault": fault,
+                "idx": idx,
+                "filename": filename,
+                "path": path,
+                "level": level
+            }
+
+            # Clear existing widgets
+            for widget in row.winfo_children():
+                widget.destroy()
+
+            # Create editable fields
+            if isinstance(fault, dict):
+                # Create entry for description
+                desc_var = tk.StringVar(value=fault.get("Description", ""))
+                desc_entry = tk.Entry(row, textvariable=desc_var,
+                                    bg=Colors.EDIT_BG, fg=Colors.EDIT_FG,
+                                    font=Fonts.DEFAULT)
+                desc_entry.pack(side="left", fill="x", expand=True, padx=2)
+                desc_entry.focus()                # Save button
+                def save_changes():
+                    fault["Description"] = desc_var.get()
+                    self.save_file(filename)
+                    self.unmake_editable()
+
+                save_btn = tk.Button(row, text="💾", command=save_changes,
+                                   bg=Colors.GREEN, fg=Colors.FG_TEXT,
+                                   font=Fonts.DEFAULT)
+                save_btn.pack(side="right", padx=2)
+
+                # Cancel button
+                cancel_btn = tk.Button(row, text="❌", command=self.unmake_editable,
+                                     bg=Colors.RED, fg=Colors.FG_TEXT,
+                                     font=Fonts.DEFAULT)
+                cancel_btn.pack(side="right", padx=2)
+
+                logger.info(f"Row {idx} made editable")
+
+        except Exception as e:
+            logger.error(f"Erreur make_editable: {e}")
+
+    def save_file(self, filename):
+        """Save changes to a JSON file."""
+        try:
+            if filename in self.data_map and filename in self.path_map:
+                filepath = self.path_map[filename]
+                content = self.data_map[filename]
+
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    json.dump(content, f, ensure_ascii=False, indent=2)
+
+                logger.info(f"Fichier sauvegardé: {filename}")
+                self.status.config(text=f"✅ Sauvegardé: {filename}")
+            else:
+                logger.error(f"Fichier non trouvé dans les maps: {filename}")
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ Erreur sauvegarde: {e}")
+
+    def update_selected_file(self, filename):
+        """Update the selected file display."""
+        try:
+            if hasattr(self, 'selected_file_label') and self.selected_file_label:
+                self.selected_file_label.config(text=f"Fichier sélectionné: {filename}")
+                logger.debug(f"Fichier sélectionné mis à jour: {filename}")
+        except Exception as e:
+            logger.error(f"Erreur update_selected_file: {e}")
 
     def clear_columns_from(self, level):
         """Clear columns from a specific level onwards"""
@@ -786,6 +995,19 @@ class FaultEditorController:
             logger.info("✅ Cleanup completed")
         except Exception as e:
             logger.error(f"Erreur lors du nettoyage: {e}")
+
+    # Add missing methods
+    def _open_folder(self):
+        """Internal method to open folder (alias for open_folder)."""
+        return self.open_folder()
+
+    def _load_flat_json(self):
+        """Internal method to load flat JSON (alias for load_flat_json)."""
+        return self.load_flat_json()
+
+    def _show_search(self):
+        """Internal method to show search (alias for show_search)."""
+        return self.show_search()
 
 
 # Legacy compatibility function

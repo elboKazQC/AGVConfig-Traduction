@@ -7,23 +7,29 @@ Modifiez ces valeurs pour personnaliser l'apparence et le comportement.
 # Couleurs de l'interface
 class Colors:
     """Constantes de couleurs pour l'interface utilisateur"""
-    BG_MAIN = "#2a2a2a"           # Fond principal plus foncé
-    BG_TOPBAR = "#1c1c1c"         # Barre supérieure plus foncée
-    BG_COLUMN = "#2a2a2a"         # Colonnes plus foncées
-    BG_ROW = "#333333"            # Lignes plus foncées
-    BG_ROW_ALT = "#3a3a3a"        # Lignes alternées plus foncées
-    BG_ROW_HOVER = "#404040"      # Survol plus foncé
+    # Couleurs de fond
+    BG_MAIN = "#2b2b2b"           # Fond principal
+    BG_TOPBAR = "#1e1e1e"         # Barre supérieure
+    BG_COLUMN = "#3c3c3c"         # Colonnes
+    BG_ROW = "#4a4a4a"            # Lignes
+    BG_ROW_ALT = "#555555"        # Lignes alternées
+    BG_STATUSBAR = "#1e1e1e"      # Fond de la barre d'état
+
+    # Couleurs du texte
     FG_TEXT = "#ffffff"           # Texte blanc
-    EDIT_BG = "#404040"           # Fond d'édition plus foncé
-    EDIT_FG = "#ffffff"           # Texte d'édition blanc
-    EDIT_BG_FOCUS = "#505050"     # Fond d'édition avec focus
+
+    # Couleurs d'édition
+    EDIT_BG = "#ffffff"           # Fond d'édition
+    EDIT_BG_FOCUS = "#ffffcc"     # Fond d'édition avec focus
+    EDIT_FG = "#000000"           # Texte d'édition noir
+
+    # Couleurs des boutons
     GREEN = "#4caf50"             # Vert pour les éléments extensibles
     RED = "#f44336"               # Rouge pour les alertes
-    AMBER = "#ffc107"             # Ambre pour les avertissements
+    YELLOW = "#ffc107"             # Ambre pour les avertissements
     HIGHLIGHT = "#505050"         # Contour de survol plus visible
     SEARCH_HIGHLIGHT = "#ffab00"  # Couleur de surbrillance pour la recherche
     SEARCH_BG = "#3a3a3a"         # Fond pour la barre de recherche
-    BG_STATUSBAR = "#1c1c1c"      # Fond de la barre d'état
 
 # Polices
 class Fonts:

@@ -1,42 +1,40 @@
-# Composants d'interface utilisateur pour l'application Fault Editor
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Ce module contient les composants réutilisables de l'interface utilisateur.
-Utilisez ces classes pour créer des widgets cohérents et modulaires.
+UI Components Module
+
+This module contains reusable UI components for the application.
 """
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from typing import List, Callable, Optional, Dict, Any
-from config.constants import Colors, Fonts, Dimensions
+from tkinter import ttk
+from typing import Optional, Dict, Any, Union
+from config.constants import Colors, Fonts
 
 class StyledFrame(ttk.Frame):
-    """A styled frame component with consistent padding and styling."""
-    def __init__(self, parent, style_type='default', **kwargs):
-        padding = kwargs.pop('padding', 10)
-        bg_color = kwargs.pop('bg', None)
+    """Extended Frame class with styling capabilities."""
+
+    def __init__(self, parent: Union[tk.Widget, tk.Tk, tk.Toplevel], style_type: str = "default", **kwargs):
+        """Initialize styled frame."""
+        # Create style name based on type
         style_name = f"{style_type}.TFrame"
+        style = ttk.Style()
 
-        if bg_color:
-            style = ttk.Style()
-            style.configure(style_name, background=bg_color)
+        # Set default styling based on type
+        if style_type == "column":
+            style.configure(style_name, background=Colors.BG_COLUMN, relief='raised')
+            kwargs.setdefault('padding', 1)
+        elif style_type == "row":
+            style.configure(style_name, background=Colors.BG_ROW)
+        else:
+            style.configure(style_name, background=Colors.BG_MAIN)
 
-        super().__init__(parent, style=style_name, padding=padding, **kwargs)
+        kwargs['style'] = style_name
+        super().__init__(parent, **kwargs)
 
-    def pack(self, **kwargs):
-        """Ensure compatibility with tk.Frame."""
-        return super().pack(**kwargs)
-
-    def grid(self, **kwargs):
-        """Ensure compatibility with tk.Frame."""
-        return super().grid(**kwargs)
-
-    def place(self, **kwargs):
-        """Ensure compatibility with tk.Frame."""
-        return super().place(**kwargs)
-
-    def as_tk_frame(self) -> tk.Frame:
-        """Return self explicitly cast as a tk.Frame."""
-        return tk.Frame(self.master)
+    def as_tk_frame(self) -> ttk.Frame:
+        """Return self for compatibility."""
+        return self
 
 class StyledButton(ttk.Button):
     """A styled button with consistent appearance."""
@@ -139,51 +137,36 @@ def configure_styles():
         background="#ffffff"
     )
 
-class ProgressDialog:
-    """Dialogue de progression pour les opérations longues"""
+class ProgressDialog(tk.Toplevel):
+    """A progress dialog window."""
 
-    def __init__(self, parent, title="Traitement en cours", message="Veuillez patienter..."):
-        self.popup = tk.Toplevel(parent)
-        self.popup.title(title)
-        self.popup.geometry("350x120")
-        self.popup.transient(parent)
-        self.popup.grab_set()
-        self.popup.resizable(False, False)
+    def __init__(self, parent: Union[tk.Widget, tk.Tk, tk.Toplevel], title: str = "Progress"):
+        """Initialize progress dialog."""
+        super().__init__(parent)
+        self.title(title)
+        self.geometry("400x150")
+        self.transient(parent)
+        self.grab_set()
 
-        # Message principal
-        self.message_label = StyledLabel(self.popup, text=message, style_type="default")
-        self.message_label.pack(pady=(15, 5))
-
-        # Barre de progression
+        # Progress bar
         self.progress_var = tk.DoubleVar()
-        self.progress_bar = ttk.Progressbar(self.popup, variable=self.progress_var,
-                                           maximum=100, mode='determinate')
-        self.progress_bar.pack(fill="x", padx=20, pady=(0, 10))
+        self.progress_bar = ttk.Progressbar(self, variable=self.progress_var, maximum=100)
+        self.progress_bar.pack(padx=20, pady=20, fill="x")
 
-        # Label de statut
-        self.status_label = StyledLabel(self.popup, text="", style_type="default")
-        self.status_label.pack(pady=(0, 15))
+        # Status label
+        self.status_label = tk.Label(self, text="Initializing...")
+        self.status_label.pack(pady=10)
 
-        # Centrer la fenêtre
-        self._center_window(parent)
-
-    def _center_window(self, parent):
-        """Centre la fenêtre par rapport au parent"""
-        self.popup.update_idletasks()
-        x = parent.winfo_x() + (parent.winfo_width() // 2) - (self.popup.winfo_width() // 2)
-        y = parent.winfo_y() + (parent.winfo_height() // 2) - (self.popup.winfo_height() // 2)
-        self.popup.geometry(f"+{x}+{y}")
+        # Cancel button
+        self.cancel_button = ttk.Button(self, text="Cancel", command=self.destroy)
+        self.cancel_button.pack(pady=10)
 
     def update_progress(self, value: float, status: str = ""):
-        """Met à jour la progression"""
+        """Update progress bar and status."""
         self.progress_var.set(value)
         if status:
             self.status_label.config(text=status)
-        self.popup.update_idletasks()
-
-    def close(self):
-        """Ferme le dialogue"""
-        self.popup.destroy()
+        self.update()
 
 class LanguageSelector:
     """Sélecteur de langue avec boutons radio"""
@@ -419,3 +402,50 @@ class ConfirmationDialog:
 
     def get_result(self) -> bool:
         return self.result
+
+class SearchableListbox(tk.Frame):
+    """A listbox with built-in search functionality."""
+
+    def __init__(self, parent: Union[tk.Widget, tk.Tk, tk.Toplevel], **kwargs):
+        """Initialize searchable listbox."""
+        super().__init__(parent)
+
+        # Search entry
+        self.search_var = tk.StringVar()
+        self.search_entry = tk.Entry(self, textvariable=self.search_var)
+        self.search_entry.pack(fill="x", padx=5, pady=5)
+
+        # Listbox with scrollbar
+        list_frame = tk.Frame(self)
+        list_frame.pack(fill="both", expand=True, padx=5, pady=5)
+
+        self.listbox = tk.Listbox(list_frame, **kwargs)
+        scrollbar = ttk.Scrollbar(list_frame, orient="vertical", command=self.listbox.yview)
+
+        self.listbox.configure(yscrollcommand=scrollbar.set)
+        self.listbox.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+        # Bind search
+        self.search_var.trace('w', self._on_search)
+        self._original_items = []
+
+    def insert_items(self, items):
+        """Insert items into the listbox."""
+        self._original_items = items[:]
+        self.listbox.delete(0, tk.END)
+        for item in items:
+            self.listbox.insert(tk.END, item)
+
+    def _on_search(self, *args):
+        """Filter items based on search query."""
+        query = self.search_var.get().lower()
+        self.listbox.delete(0, tk.END)
+
+        for item in self._original_items:
+            if query in str(item).lower():
+                self.listbox.insert(tk.END, item)
+
+    def as_tk_frame(self) -> tk.Frame:
+        """Return self as a tk.Frame for compatibility."""
+        return self

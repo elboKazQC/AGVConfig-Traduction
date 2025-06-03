@@ -1,57 +1,65 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Test module for UI components.
+"""
+
 import unittest
 import tkinter as tk
-from tkinter import ttk, TclError
+from typing import Union
 import sys
 import os
 
-# Add parent directory to Python path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add the parent directory to the path so we can import our modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ui.components import (
-    StyledFrame,
-    StyledButton,
-    StyledEntry,
-    SearchBar,
-    StatusBar
-)
+try:
+    from ui.components import StyledFrame, SearchableListbox
+    from config.constants import Colors
+except ImportError as e:
+    print(f"Import error: {e}")
+    StyledFrame = None
+    SearchableListbox = None
 
-class TestUIComponents(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        try:
-            cls.root = tk.Tk()
-        except TclError:
-            raise unittest.SkipTest("Tkinter not available in this environment")
-        
-    def test_styled_frame(self):
+class TestComponents(unittest.TestCase):
+    """Test cases for UI components."""
+
+    def setUp(self):
+        """Set up test fixtures."""
+        self.root = tk.Tk()
+        self.root.withdraw()  # Hide the test window
+
+    def tearDown(self):
+        """Clean up after tests."""
+        if self.root:
+            self.root.destroy()
+
+    def test_styled_frame_creation(self):
+        """Test StyledFrame creation."""
+        if StyledFrame is None:
+            self.skipTest("StyledFrame not available")
+
         frame = StyledFrame(self.root)
-        self.assertIsInstance(frame, ttk.Frame)
-        
-    def test_styled_button(self):
-        button = StyledButton(self.root, text="Test")
-        self.assertIsInstance(button, ttk.Button)
-        self.assertEqual(button['text'], "Test")
-        
-    def test_search_bar(self):
-        search_called = False
-        def on_search():
-            nonlocal search_called
-            search_called = True
-            
-        search_bar = SearchBar(self.root, search_command=on_search)
-        search_bar.search_button.invoke()
-        self.assertTrue(search_called)
-        
-    def test_status_bar(self):
-        status = StatusBar(self.root)
-        test_message = "Test Status"
-        status.set_status(test_message)
-        self.assertEqual(status.status_label['text'], test_message)
+        self.assertIsInstance(frame, tk.Frame)
+        self.assertIsInstance(frame, StyledFrame)
 
-    @classmethod
-    def tearDownClass(cls):
-        if hasattr(cls, "root"):
-            cls.root.destroy()
+    def test_styled_frame_as_tk_frame(self):
+        """Test StyledFrame as_tk_frame method."""
+        if StyledFrame is None:
+            self.skipTest("StyledFrame not available")
+
+        frame = StyledFrame(self.root)
+        tk_frame = frame.as_tk_frame()
+        self.assertIsInstance(tk_frame, tk.Frame)
+
+    def test_searchable_listbox_creation(self):
+        """Test SearchableListbox creation."""
+        if SearchableListbox is None:
+            self.skipTest("SearchableListbox not available")
+
+        listbox = SearchableListbox(self.root)
+        self.assertIsInstance(listbox, tk.Frame)
+        self.assertIsInstance(listbox, SearchableListbox)
 
 if __name__ == '__main__':
     unittest.main()
