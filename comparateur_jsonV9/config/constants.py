@@ -23,6 +23,7 @@ class Colors:
     HIGHLIGHT = "#505050"         # Contour de survol plus visible
     SEARCH_HIGHLIGHT = "#ffab00"  # Couleur de surbrillance pour la recherche
     SEARCH_BG = "#3a3a3a"         # Fond pour la barre de recherche
+    BG_STATUSBAR = "#1c1c1c"      # Fond de la barre d'état
 
 # Polices
 class Fonts:

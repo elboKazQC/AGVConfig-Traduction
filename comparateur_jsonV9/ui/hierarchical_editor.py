@@ -6,25 +6,27 @@ Utilisez cette classe pour afficher et éditer les fichiers JSON hiérarchiques.
 
 import tkinter as tk
 from tkinter import ttk
-from typing import List, Dict, Any, Optional, Callable
+from typing import List, Dict, Any, Optional, Callable, Tuple
 from functools import partial
+import logging
 
 from config.constants import Colors, Fonts, Dimensions
 from ui.components import StyledFrame, StyledLabel, ProgressDialog
-from models.data_models import FaultData, ApplicationState
+from models.data_models import FaultData, ApplicationState, SearchResult
 from search.search_manager import HierarchicalSearcher, SearchBarBuilder
+
+logger = logging.getLogger(__name__)
 
 class HierarchicalEditor:
     """Éditeur principal pour la vue hiérarchique"""
-
-    def __init__(self, parent: tk.Widget, app_state: ApplicationState):
+      def __init__(self, parent: tk.Widget, app_state: ApplicationState):
         self.parent = parent
         self.app_state = app_state
-        self.columns: List[tk.Frame] = []
-        self.main_canvas: Optional[tk.Canvas] = None
-        self.columns_frame: Optional[tk.Frame] = None
+        self.columns: List[StyledFrame] = []
+        self.main_canvas: tk.Canvas  # Suppression du Optional        self.columns_frame: StyledFrame  # Suppression du Optional
         self.searcher: Optional[HierarchicalSearcher] = None
         self.search_frame: Optional[tk.Frame] = None
+        self._raw_search_results: List[Tuple[tk.Frame, tk.Frame]] = []  # Stockage des résultats bruts
 
         # Callbacks externes
         self.on_single_click: Optional[Callable] = None
@@ -61,10 +63,9 @@ class HierarchicalEditor:
         self.main_canvas.bind("<Configure>", self._on_canvas_configure)
 
         # Scroll avec la molette
-        self.main_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
-
-        # Initialiser le searcher
-        self.searcher = HierarchicalSearcher(self.columns)
+        self.main_canvas.bind_all("<MouseWheel>", self._on_mousewheel)        # Initialiser le searcher
+        # On cast les StyledFrame en tk.Frame car ttk.Frame hérite de tk.Frame
+        self.searcher = HierarchicalSearcher([col for col in self.columns])
 
     def _on_frame_configure(self, event):
         """Appelé quand la frame des colonnes change de taille"""
@@ -100,14 +101,12 @@ class HierarchicalEditor:
 
         # Ajouter les éléments de défaut
         for idx, fault in enumerate(fault_list):
-            self._create_fault_row(column_frame, fault, idx, path, level, filename)
-
-        # Mettre à jour l'affichage
+            self._create_fault_row(column_frame, fault, idx, path, level, filename)        # Mettre à jour l'affichage
         self.parent.update_idletasks()
         self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
         self.main_canvas.yview_moveto(0.0)
 
-    def _create_fault_row(self, parent: tk.Frame, fault: Dict[str, Any], idx: int,
+    def _create_fault_row(self, parent: StyledFrame, fault: Dict[str, Any], idx: int,
                          path: List[int], level: int, filename: str):
         """Crée une ligne pour un défaut"""
         row = tk.Frame(parent, bg=Colors.BG_ROW, highlightthickness=0,
@@ -238,25 +237,42 @@ class HierarchicalEditor:
         )
 
         # Positionner la barre de recherche
-        self.search_frame.pack(fill="x", before=self.main_canvas.master)
-
-    def _perform_search(self, search_text: str, results_label: tk.Label):
+        self.search_frame.pack(fill="x", before=self.main_canvas.master)    def _perform_search(self, search_text: str, results_label: tk.Label):
         """Effectue une recherche hiérarchique"""
         if not search_text.strip():
             self.app_state.reset_search()
-            self.searcher.clear_all_highlights()
+            if self.searcher:
+                self.searcher.clear_all_highlights()
             results_label.config(text="")
             return
 
         # Rechercher dans les colonnes
-        results = self.searcher.search_in_columns(search_text.strip())
-        self.app_state.search_results = results
+        if self.searcher:
+            raw_results = self.searcher.search_in_columns(search_text.strip())
+            # Convertir les résultats en SearchResult
+            search_results = []
+            for i, (column, row) in enumerate(raw_results):
+                # Créer un SearchResult factice pour la compatibilité
+                search_result = SearchResult(
+                    column_index=self.columns.index(column) if column in self.columns else 0,
+                    row_index=i,
+                    fault_data=FaultData(),  # Données factices
+                    match_text=search_text,
+                    file_metadata=None  # Métadonnées factices
+                )
+                search_results.append(search_result)
 
-        if results:
-            self.app_state.current_search_index = 0
-            self._highlight_current_result(results_label)
+            self.app_state.search_results = search_results
+            # Stocker aussi les résultats bruts pour la navigation
+            self._raw_search_results = raw_results
+
+            if search_results:
+                self.app_state.current_search_index = 0
+                self._highlight_current_result(results_label)
+            else:
+                self.searcher.clear_all_highlights()
+                results_label.config(text="0/0")
         else:
-            self.searcher.clear_all_highlights()
             results_label.config(text="0/0")
 
     def _next_search_result(self, results_label: tk.Label):

@@ -9,67 +9,135 @@ from tkinter import ttk, messagebox
 from typing import List, Callable, Optional, Dict, Any
 from config.constants import Colors, Fonts, Dimensions
 
-class StyledFrame(tk.Frame):
-    """Frame avec style standardisé"""
+class StyledFrame(ttk.Frame):
+    """A styled frame component with consistent padding and styling."""
+    def __init__(self, parent, style_type='default', **kwargs):
+        padding = kwargs.pop('padding', 10)
+        bg_color = kwargs.pop('bg', None)
+        style_name = f"{style_type}.TFrame"
 
-    def __init__(self, parent, style_type="default", **kwargs):
-        if style_type == "topbar":
-            kwargs.setdefault("bg", Colors.BG_TOPBAR)
-            kwargs.setdefault("height", Dimensions.TOPBAR_HEIGHT)
-        elif style_type == "toolbar":
-            kwargs.setdefault("bg", Colors.BG_TOPBAR)
-            kwargs.setdefault("height", Dimensions.TOOLBAR_HEIGHT)
-        else:
-            kwargs.setdefault("bg", Colors.BG_MAIN)
+        if bg_color:
+            style = ttk.Style()
+            style.configure(style_name, background=bg_color)
 
-        super().__init__(parent, **kwargs)
+        super().__init__(parent, style=style_name, padding=padding, **kwargs)
 
-class StyledButton(tk.Button):
-    """Bouton avec style standardisé"""
+    def pack(self, **kwargs):
+        """Ensure compatibility with tk.Frame."""
+        return super().pack(**kwargs)
 
-    def __init__(self, parent, style_type="default", **kwargs):
-        if style_type == "topbar":
-            kwargs.setdefault("bg", Colors.BG_TOPBAR)
-            kwargs.setdefault("fg", "white")
-            kwargs.setdefault("font", Fonts.DEFAULT)
-            kwargs.setdefault("relief", "flat")
-            kwargs.setdefault("padx", 10)
-            kwargs.setdefault("pady", 5)
-        elif style_type == "action":
-            kwargs.setdefault("bg", Colors.GREEN)
-            kwargs.setdefault("fg", "white")
-            kwargs.setdefault("font", Fonts.DEFAULT)
-            kwargs.setdefault("relief", "flat")
-            kwargs.setdefault("padx", 15)
-            kwargs.setdefault("pady", 8)
-        elif style_type == "danger":
-            kwargs.setdefault("bg", Colors.RED)
-            kwargs.setdefault("fg", "white")
-            kwargs.setdefault("font", Fonts.DEFAULT)
-            kwargs.setdefault("relief", "flat")
-            kwargs.setdefault("padx", 15)
-            kwargs.setdefault("pady", 8)
+    def grid(self, **kwargs):
+        """Ensure compatibility with tk.Frame."""
+        return super().grid(**kwargs)
 
-        super().__init__(parent, **kwargs)
+    def place(self, **kwargs):
+        """Ensure compatibility with tk.Frame."""
+        return super().place(**kwargs)
 
-class StyledLabel(tk.Label):
-    """Label avec style standardisé"""
+    def as_tk_frame(self) -> tk.Frame:
+        """Return self explicitly cast as a tk.Frame."""
+        return tk.Frame(self.master)
 
-    def __init__(self, parent, style_type="default", **kwargs):
-        if style_type == "title":
-            kwargs.setdefault("font", Fonts.TITLE)
-            kwargs.setdefault("bg", Colors.BG_TOPBAR)
-            kwargs.setdefault("fg", "white")
-        elif style_type == "topbar":
-            kwargs.setdefault("font", Fonts.TOPBAR)
-            kwargs.setdefault("bg", Colors.BG_TOPBAR)
-            kwargs.setdefault("fg", "white")
-        else:
-            kwargs.setdefault("font", Fonts.DEFAULT)
-            kwargs.setdefault("bg", Colors.BG_MAIN)
-            kwargs.setdefault("fg", Colors.FG_TEXT)
+class StyledButton(ttk.Button):
+    """A styled button with consistent appearance."""
+    def __init__(self, parent, text, command=None, style_type='default', **kwargs):
+        if command is None:
+            command = lambda: None  # No-op function as default
 
-        super().__init__(parent, **kwargs)
+        style_name = f"{style_type}.TButton"
+        style = ttk.Style()
+        style.configure(style_name, padding=6, relief="flat")
+
+        super().__init__(
+            parent,
+            text=text,
+            command=command,
+            style=style_name,
+            **kwargs
+        )
+
+class StyledEntry(ttk.Entry):
+    """A styled entry field with consistent appearance."""
+    def __init__(self, parent, **kwargs):
+        super().__init__(
+            parent,
+            style='Fault.TEntry',
+            **kwargs
+        )
+
+class StyledLabel(ttk.Label):
+    """A styled label with consistent appearance."""
+    def __init__(self, parent, text='', style_type='default', **kwargs):
+        super().__init__(parent, text=text, **kwargs)
+        self.style_type = style_type
+        self.configure_style()
+
+    def configure_style(self):
+        """Configure the style of the label based on the style type."""
+        style = ttk.Style()
+        if self.style_type == 'default':
+            style.configure('Default.TLabel', font=('Arial', 12), background='white', foreground='black')
+            self.config(style='Default.TLabel')
+        elif self.style_type == 'highlight':
+            style.configure('Highlight.TLabel', font=('Arial', 12, 'bold'), background='yellow', foreground='black')
+            self.config(style='Highlight.TLabel')
+
+class SearchBar(ttk.Frame):
+    """A search bar component with entry field and search button."""
+    def __init__(self, parent, search_command=None):
+        super().__init__(parent, padding=5)
+
+        self.entry = StyledEntry(self)
+        self.entry.pack(side=tk.LEFT, fill=tk.X, expand=True)
+
+        self.search_button = StyledButton(
+            self,
+            text="🔍 Rechercher",
+            command=search_command
+        )
+        self.search_button.pack(side=tk.LEFT, padx=(5, 0))
+
+class StatusBar(ttk.Frame):
+    """A status bar component for displaying application status."""
+    def __init__(self, parent):
+        super().__init__(parent)
+
+        self.status_label = ttk.Label(
+            self,
+            text="Prêt",
+            padding=(5, 2)
+        )
+        self.status_label.pack(side=tk.LEFT, fill=tk.X)
+
+    def set_status(self, message):
+        """Update the status message."""
+        self.status_label['text'] = message
+
+def configure_styles():
+    """Configure ttk styles for the application."""
+    style = ttk.Style()
+
+    # Button styles
+    style.configure(
+        'Fault.TButton',
+        padding=6,
+        relief="flat",
+        background="#007acc",
+        foreground="white"
+    )
+
+    # Entry styles
+    style.configure(
+        'Fault.TEntry',
+        padding=5,
+        relief="solid"
+    )
+
+    # Frame styles
+    style.configure(
+        'Fault.TFrame',
+        background="#ffffff"
+    )
 
 class ProgressDialog:
     """Dialogue de progression pour les opérations longues"""
@@ -198,7 +266,7 @@ class ToolbarBuilder:
                     style_type="topbar"
                 ).pack(side="left", padx=5)
 
-        return toolbar
+        return toolbar.as_tk_frame()
 
     @staticmethod
     def create_flat_editor_toolbar(parent, callbacks: Dict[str, Callable]) -> tk.Frame:
@@ -220,7 +288,7 @@ class ToolbarBuilder:
                     style_type=style
                 ).pack(side="left", padx=15, pady=5)
 
-        return toolbar
+        return toolbar.as_tk_frame()
 
 class ResultsDialog:
     """Dialogue pour afficher les résultats d'opérations"""

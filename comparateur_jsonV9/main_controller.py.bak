@@ -143,37 +143,36 @@ class FaultEditorController:
         self.root.geometry("1400x800")
         self.root.configure(bg=Colors.BG_MAIN)
 
-        # Setup styles
-        self._setup_styles()
-
-        # Create UI components in strict order:
-        # 1. Top navigation bar (always at the top)
-        self._create_topbar()
-
-        # 2. Toolbar (with buttons, below topbar)
-        self._create_toolbar()
-
-        # 3. Status bar (information banner below toolbar)
-        self._create_status_bar()
-
-        # 4. Main content area (expands to fill space)
-        self._create_main_area()
-
-        # Finally bind keyboard shortcuts
-        self._bind_shortcuts()
-
-        logger.info("✅ Main UI setup complete")
-
-    def _setup_styles(self):
-        """Configure TTK styles."""
+        # Setup styles 
         style = ttk.Style()
         style.configure('TRadiobutton', font=Fonts.DEFAULT)
         style.configure('TButton', font=Fonts.DEFAULT)
-
-        # Custom scrollbar styles
-        style.configure("Custom.Vertical.TScrollbar",                       background=Colors.BG_MAIN,
+        style.configure("Custom.Vertical.TScrollbar",
+                       background=Colors.BG_MAIN,
                        troughcolor=Colors.BG_MAIN,
                        arrowcolor="white")
+        style.configure("Custom.Horizontal.TScrollbar",
+                       background=Colors.BG_MAIN, 
+                       troughcolor=Colors.BG_MAIN,
+                       arrowcolor="white")
+
+        # Create UI components in order:
+        # 1. Top navigation bar
+        self._create_topbar()
+        
+        # 2. Toolbar below top bar
+        self._create_toolbar()
+        
+        # 3. Main content area
+        self._create_main_area()
+        
+        # 4. Status bar at bottom
+        self._create_status_bar()
+
+        # Bind keyboard shortcuts
+        self._bind_shortcuts()
+
+        logger.info("✅ Main UI setup complete")
 
     def _create_topbar(self):
         """Create the top navigation bar."""
@@ -232,12 +231,11 @@ class FaultEditorController:
 
     def _create_toolbar(self):
         """Create the main toolbar with script operation buttons."""
-        # Create toolbar frame with fixed height
-        self.tools_frame = StyledFrame(self.root, style_type="toolbar", height=50).as_tk_frame()
-        self.tools_frame.pack(side="top", fill="x", pady=(0, 5))  # Make sure it's packed at the top
-        self.tools_frame.pack_propagate(False)  # Maintain fixed height
+        # Create toolbar frame that stays below the topbar
+        self.tools_frame = StyledFrame(self.root, style_type="toolbar")
+        self.tools_frame.pack(fill="x", pady=5)
 
-        # Script operation buttons
+        # Add toolbar buttons
         buttons = [
             ("Synchroniser tous les fichiers", self._run_sync_all),
             ("Générer les fichiers manquants", self._run_generer_manquant),
@@ -245,19 +243,19 @@ class FaultEditorController:
             ("🔍 Vérifier l'orthographe", self._run_spell_check)
         ]
 
+        # Create buttons with consistent styling
         for text, command in buttons:
             btn = StyledButton(
                 self.tools_frame,
                 text=text,
                 command=command,
                 style_type="action"
-            )
-            btn.pack(side="left", padx=5)
+            ).pack(side="left", padx=5)
 
-        # File-specific operations
+        # Add file specific operations
         self._create_file_operations()
 
-        # Selected file label (always on the far right)
+        # Selected file label
         self.selected_file_label = tk.Label(
             self.tools_frame,
             text="Fichier sélectionné :",
@@ -265,14 +263,16 @@ class FaultEditorController:
             fg="white",
             font=Fonts.DEFAULT
         )
-        self.selected_file_label.pack(side="right", padx=10)
+        self.selected_file_label.pack(side="left", padx=10)
 
     def _create_file_operations(self):
         """Create file-specific operation controls."""
         # Sync one file
-        ttk.Label(
+        tk.Label(
             self.tools_frame,
-            text="Fichier à synchroniser:"
+            text="Fichier à synchroniser:",
+            bg=Colors.BG_COLUMN,
+            fg="white"
         ).pack(side="left", padx=(10, 1))
 
         ttk.Entry(
@@ -281,16 +281,19 @@ class FaultEditorController:
             width=25
         ).pack(side="left")
 
-        ttk.Button(
+        StyledButton(
             self.tools_frame,
             text="Synchroniser ce fichier",
-            command=self._run_sync_one
+            command=self._run_sync_one,
+            style_type="action"
         ).pack(side="left", padx=5)
 
         # Generate file controls
-        ttk.Label(
+        tk.Label(
             self.tools_frame,
-            text="gen_fichier:"
+            text="gen_fichier:",
+            bg=Colors.BG_COLUMN,
+            fg="white"
         ).pack(side="left", padx=(10, 1))
 
         ttk.Entry(
@@ -299,9 +302,11 @@ class FaultEditorController:
             width=20
         ).pack(side="left")
 
-        ttk.Label(
+        tk.Label(
             self.tools_frame,
-            text="src:"
+            text="src:",
+            bg=Colors.BG_COLUMN,
+            fg="white"
         ).pack(side="left", padx=(10, 1))
 
         ttk.Entry(
@@ -310,9 +315,11 @@ class FaultEditorController:
             width=5
         ).pack(side="left")
 
-        ttk.Label(
+        tk.Label(
             self.tools_frame,
-            text="tgt:"
+            text="tgt:",
+            bg=Colors.BG_COLUMN,
+            fg="white"
         ).pack(side="left", padx=(10, 1))
 
         ttk.Entry(
@@ -321,23 +328,24 @@ class FaultEditorController:
             width=5
         ).pack(side="left")
 
-        ttk.Button(
+        StyledButton(
             self.tools_frame,
             text="Générer fichier",
-            command=self._run_generer_fichier
+            command=self._run_generer_fichier,
+            style="secondary"
         ).pack(side="left", padx=5)
 
     def _create_main_area(self):
-        """Create the main content area."""
+        """Create the main content area with canvas and scrollbars."""
         # Container for canvas and scrollbars
-        container = StyledFrame(self.root, style_type="main")
+        container = tk.Frame(self.root, bg=Colors.BG_MAIN)
         container.pack(fill="both", expand=True)
 
         # Main canvas for hierarchical view
         self.main_canvas = tk.Canvas(container, bg=Colors.BG_MAIN)
         self.main_canvas.pack(side="left", fill="both", expand=True)
 
-        # Scrollbars with explicit packing order
+        # Vertical scrollbar
         scrollbar_y = ttk.Scrollbar(
             container,
             orient="vertical",
@@ -345,7 +353,9 @@ class FaultEditorController:
             style="Custom.Vertical.TScrollbar"
         )
         scrollbar_y.pack(side="right", fill="y")
+        self.main_canvas.configure(yscrollcommand=scrollbar_y.set)
 
+        # Horizontal scrollbar
         scrollbar_x = ttk.Scrollbar(
             container,
             orient="horizontal",
@@ -353,65 +363,28 @@ class FaultEditorController:
             style="Custom.Horizontal.TScrollbar"
         )
         scrollbar_x.pack(side="bottom", fill="x")
+        self.main_canvas.configure(xscrollcommand=scrollbar_x.set)
 
-        if isinstance(self.main_canvas, tk.Canvas):
-            self.main_canvas.configure(xscrollcommand=scrollbar_x.set)
-            self.main_canvas.configure(yscrollcommand=scrollbar_y.set)
+        # Frame for columns
+        self.columns_frame = tk.Frame(self.main_canvas, bg=Colors.BG_MAIN)
+        self.canvas_window = self.main_canvas.create_window((0, 0), window=self.columns_frame, anchor="nw")
 
-        self.scrollbar_x = scrollbar_x
-
-        # Frame for columns with explicit size and position
-        self.columns_frame = StyledFrame(self.main_canvas, style_type="columns")
-
-        if isinstance(self.main_canvas, tk.Canvas):
-            self.canvas_window = self.main_canvas.create_window(
-                (0, 0),
-                window=self.columns_frame,
-                anchor="nw"
-            )
-
-            # Configure dynamic resizing
-            def _on_canvas_configure(event):
-                if isinstance(self.main_canvas, tk.Canvas):
-                    canvas_width = max(self.columns_frame.winfo_reqwidth(), event.width)
-                    self.main_canvas.itemconfig(self.canvas_window, width=canvas_width)
-                self._update_scrollbar_visibility()
-
-            def _on_frame_configure(event):
-                if isinstance(self.main_canvas, tk.Canvas):
-                    self.main_canvas.configure(scrollregion=self.main_canvas.bbox("all"))
-                self._update_scrollbar_visibility()
-
-            # Bind configuration events
-            self.main_canvas.bind("<Configure>", _on_canvas_configure)
-            self.columns_frame.bind("<Configure>", _on_frame_configure)
-
-            # Configure scrolling
-            self.main_canvas.bind("<MouseWheel>", self._on_mousewheel)
-
-    def _update_scrollbar_visibility(self):
-        """Update scrollbar visibility based on content size."""
-        if hasattr(self, "scrollbar_x") and isinstance(self.main_canvas, tk.Canvas):
-            canvas_width = self.main_canvas.winfo_width()
-            content_width = self.columns_frame.winfo_reqwidth()
-            if content_width > canvas_width:
-                self.scrollbar_x.pack(side="bottom", fill="x")
-            else:
-                self.scrollbar_x.pack_forget()
+        # Configure scrolling
+        self.main_canvas.bind("<MouseWheel>", self._on_mousewheel)
 
     def _create_status_bar(self):
-        """Create the status bar at the bottom of the window."""
+        """Create the status bar."""
         self.status_label = tk.Label(
             self.root,
             text="Prêt - Interface modulaire chargée",
             bd=1,
             relief=tk.SUNKEN,
             anchor=tk.W,
-            bg=Colors.BG_STATUSBAR,
+            bg=Colors.BG_TOPBAR,
             fg="white",
             font=Fonts.DEFAULT
         )
-        self.status_label.pack(side="bottom", fill="x")
+        self.status_label.pack(side=tk.BOTTOM, fill=tk.X)
 
     def _bind_shortcuts(self):
         """Bind keyboard shortcuts."""

@@ -1,23 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Fault Editor Application - Modular Version
+Main entry point for the Fault Editor application.
 
-This is the updated main entry point that uses the new modular architecture.
-It maintains compatibility with the original app.py while leveraging the
-modular components for better maintainability and AI agent accessibility.
+This module initializes the user interface and launches the application.
+It sets up the main tkinter window and starts the application using
+the MainController class.
 
-For the legacy monolithic version, see app_legacy.py
+Author: AI Assistant
+Created: 2024
 """
 
-import tkinter as tk
-import sys
 import os
+import sys
 import logging
+import tkinter as tk
+from tkinter import ttk, messagebox
 
-# Add the current directory to the Python path to enable modular imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-# Import the new modular controller
+# Import our modular components
 from main_controller import FaultEditorController
+from plugins.plugin_system import plugin_manager
 
 # Legacy compatibility imports
 from config.constants import *
@@ -59,7 +61,15 @@ class FaultEditor:
         logger.info("🔄 Starting Fault Editor with modular architecture (legacy compatibility mode)")
 
         self.root = root
+        # Configure ttk styles
+        self.style = ttk.Style()
+        self.style.configure('Fault.TButton', padding=6, relief="flat")
+
         self.controller = FaultEditorController(root)
+
+        # Configure window properties
+        self.root.title("Fault Editor")
+        self.root.geometry("1200x800")
 
         # Expose commonly used attributes for backward compatibility
         self.lang = self.controller.app_state.current_language
@@ -81,6 +91,7 @@ class FaultEditor:
     # Legacy method compatibility
     def initialize_file_map(self, folder):
         """Legacy method compatibility."""
+        return self.controller.file_manager.initialize_directory(folder)
 
     def setup_ui(self):
         """Legacy method compatibility - UI is already set up by controller."""
@@ -109,8 +120,13 @@ def main():
     try:
         logger.info("🚀 Starting Fault Editor Application")
 
-        # Create the main tkinter window
         root = tk.Tk()
+        try:
+            root.tk.call('source', 'azure.tcl')  # Load Azure theme if available
+            root.tk.call('set_theme', 'light')   # Set theme
+        except tk.TclError as e:
+            logger.warning(f"Azure theme not loaded: {e}")
+            print("⚠️  Azure theme not found. Using default theme.")
 
         # Check if we should use legacy mode or new modular mode
         # Default to modular mode for better architecture
