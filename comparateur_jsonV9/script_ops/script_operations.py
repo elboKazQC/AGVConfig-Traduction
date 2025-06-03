@@ -18,7 +18,7 @@ import logging
 from typing import Dict, List, Optional, Tuple, Any, Callable
 
 # Import modules
-from config.constants import *
+from config.constants import Colors, Fonts
 from models.data_models import ApplicationState
 from ui.components import ProgressDialog
 
@@ -360,8 +360,8 @@ class ScriptRunner:
         popup.resizable(True, True)
 
         # Configure background color based on success
-        bg_color = COL_BG_MAIN
-        text_color = COL_FG_TEXT if is_success else COL_RED
+        bg_color = Colors.BG_MAIN
+        text_color = Colors.FG_TEXT if is_success else Colors.RED
         popup.configure(bg=bg_color)
 
         # Title frame
@@ -371,7 +371,7 @@ class ScriptRunner:
         title_label = tk.Label(
             title_frame,
             text=title,
-            font=FONT_TITLE,
+            font=Fonts.TITLE,
             bg=bg_color,
             fg=text_color
         )
@@ -383,9 +383,9 @@ class ScriptRunner:
 
         text_widget = tk.Text(
             text_frame,
-            bg=COL_EDIT_BG,
-            fg=COL_FG_TEXT,
-            font=FONT_DEFAULT,
+            bg=Colors.EDIT_BG,
+            fg=Colors.FG_TEXT,
+            font=Fonts.DEFAULT,
             wrap=tk.WORD
         )
 
