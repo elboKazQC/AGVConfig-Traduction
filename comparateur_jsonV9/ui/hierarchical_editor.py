@@ -19,11 +19,13 @@ logger = logging.getLogger(__name__)
 
 class HierarchicalEditor:
     """Éditeur principal pour la vue hiérarchique"""
-      def __init__(self, parent: tk.Widget, app_state: ApplicationState):
+
+    def __init__(self, parent: tk.Widget, app_state: ApplicationState):
         self.parent = parent
         self.app_state = app_state
         self.columns: List[StyledFrame] = []
-        self.main_canvas: tk.Canvas  # Suppression du Optional        self.columns_frame: StyledFrame  # Suppression du Optional
+        self.main_canvas: tk.Canvas  # Suppression du Optional
+        self.columns_frame: StyledFrame  # Suppression du Optional
         self.searcher: Optional[HierarchicalSearcher] = None
         self.search_frame: Optional[tk.Frame] = None
         self._raw_search_results: List[Tuple[tk.Frame, tk.Frame]] = []  # Stockage des résultats bruts
@@ -237,7 +239,9 @@ class HierarchicalEditor:
         )
 
         # Positionner la barre de recherche
-        self.search_frame.pack(fill="x", before=self.main_canvas.master)    def _perform_search(self, search_text: str, results_label: tk.Label):
+        self.search_frame.pack(fill="x", before=self.main_canvas.master)
+
+    def _perform_search(self, search_text: str, results_label: tk.Label):
         """Effectue une recherche hiérarchique"""
         if not search_text.strip():
             self.app_state.reset_search()
