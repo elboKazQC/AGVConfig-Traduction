@@ -1,6 +1,6 @@
 import unittest
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, TclError
 import sys
 import os
 
@@ -18,7 +18,10 @@ from ui.components import (
 class TestUIComponents(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.root = tk.Tk()
+        try:
+            cls.root = tk.Tk()
+        except TclError:
+            raise unittest.SkipTest("Tkinter not available in this environment")
         
     def test_styled_frame(self):
         frame = StyledFrame(self.root)
@@ -47,7 +50,8 @@ class TestUIComponents(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        cls.root.destroy()
+        if hasattr(cls, "root"):
+            cls.root.destroy()
 
 if __name__ == '__main__':
     unittest.main()
