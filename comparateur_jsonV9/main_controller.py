@@ -125,6 +125,11 @@ class FaultEditorController:
         self.main_canvas: Optional[tk.Canvas] = None
         self.selected_file_label: Optional[tk.Label] = None
 
+        # Plugin system
+        self.main_controller = self  # For plugin compatibility
+        self.plugin_manager = plugin_manager
+        self.plugin_manager.app = self
+
         # Variables for UI controls
         self.sync_one_var = tk.StringVar()
         self.genfichier_file_var = tk.StringVar()
@@ -133,6 +138,14 @@ class FaultEditorController:
 
         # Setup the UI
         self._setup_ui()
+
+        # Discover and activate plugins after UI is ready
+        try:
+            self.plugin_manager.discover_plugins()
+            if "statistics_plugin.StatisticsPlugin" in self.plugin_manager.plugins:
+                self.plugin_manager.activate_plugin("statistics_plugin.StatisticsPlugin")
+        except Exception as e:
+            logger.error(f"Plugin initialization failed: {e}")
 
         logger.info("✅ Fault Editor Controller initialized successfully")
 
@@ -182,6 +195,7 @@ class FaultEditorController:
         topbar = StyledFrame(self.root, bg=Colors.BG_TOPBAR, height=60)
         topbar.pack(fill="x")
         topbar.pack_propagate(False)
+        self.topbar = topbar  # Expose for plugins
 
         # Logo
         logo_frame = tk.Frame(topbar, bg=Colors.BG_TOPBAR)
