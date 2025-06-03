@@ -75,9 +75,11 @@ python sync_one.py path/to/file_fr.json [--force-retranslate]
 
 #### 2. Synchronize All Files
 ```bash
-python sync_all.py path/to/directory [--force-retranslate]
+python sync_all.py [path/to/directory] [--force-retranslate]
 ```
 - Synchronizes all JSON files in a directory
+- `path/to/directory` is optional and defaults to `../JSON`
+- `--force-retranslate`: Force re-translation of existing entries
 
 #### 3. Generate Missing Files
 ```bash
@@ -248,7 +250,8 @@ This project is licensed under the terms of the [MIT License](LICENSE).
 - **v1.0**: Initial release with basic translation capabilities
 - **v1.1**: Added GUI application with enhanced error handling
 - **v1.2**: Improved synchronization and coherence checking
-- **v1.3**: Enhanced logging and configuration management (current)
+- **v1.3**: Enhanced logging and configuration management
+- **v1.3.1**: Removed legacy `config.py` and `config_temp.py`; configuration constants are now in `config/constants.py`
 
 ---
 

@@ -2,12 +2,25 @@
 # -*- coding: utf-8 -*-
 
 """
-Script pour synchroniser tous les fichiers JSON français avec leurs équivalents anglais et espagnols.
+Synchronise en lot tous les fichiers JSON français d'un répertoire avec leurs
+équivalents anglais et espagnols.
+
+Usage
+-----
+```
+python sync_all.py [chemin_du_repertoire] [--force-retranslate]
+```
+
+- *chemin_du_repertoire* : Répertoire racine contenant les fichiers JSON
+  (par défaut ``../JSON``).
+- ``--force-retranslate`` : Force la retraduction même si une traduction est
+  déjà présente.
 """
 
 import os
 import sys
 import json
+import argparse
 from sync_one import sync_file
 
 def find_json_files(directory):
@@ -22,9 +35,25 @@ def find_json_files(directory):
     return json_files
 
 def main():
-    # Répertoire de base - répertoire parent du script
+    """Point d'entrée principal du script."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    base_dir = os.path.join(script_dir, '..', 'JSON')
+    default_dir = os.path.join(script_dir, '..', 'JSON')
+
+    parser = argparse.ArgumentParser(
+        description='Synchronise tous les fichiers JSON d\'un répertoire',
+        epilog='Exemple: python sync_all.py ./JSON --force-retranslate'
+    )
+    parser.add_argument(
+        'directory', nargs='?', default=default_dir,
+        help='Répertoire contenant les fichiers JSON (par défaut ../JSON)'
+    )
+    parser.add_argument(
+        '--force', '--force-retranslate', dest='force', action='store_true',
+        help='Force la retraduction même si une traduction existe'
+    )
+
+    args = parser.parse_args()
+    base_dir = args.directory
 
     if not os.path.exists(base_dir):
         print(f"❌ Répertoire JSON introuvable : {base_dir}")
@@ -44,12 +73,15 @@ def main():
     success_count = 0
     error_count = 0
 
+    if args.force:
+        print("⚡ Mode retraduction forcée activé")
+
     # Synchroniser chaque fichier
     for i, french_file in enumerate(french_files, 1):
         print(f"\n🔄 [{i}/{len(french_files)}] Traitement de {os.path.basename(french_file)}")
 
         try:
-            if sync_file(french_file):
+            if sync_file(french_file, force_retranslate=args.force):
                 success_count += 1
             else:
                 error_count += 1
