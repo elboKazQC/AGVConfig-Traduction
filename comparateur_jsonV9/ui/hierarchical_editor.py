@@ -409,10 +409,15 @@ class HierarchicalEditor:
                 children = column.winfo_children()
                 if row_index < len(children):
                     row = children[row_index]
-                    if hasattr(row, "configure"):
-                        row.configure(
-                            background=Colors.YELLOW
-                        )  # Ensure result is visible
+                    if isinstance(row, tk.Frame):
+                        row.configure(background=Colors.YELLOW)
+                    elif isinstance(row, ttk.Frame):
+                        style = ttk.Style()
+                        style_name = "SearchHighlight.TFrame"
+                        style.configure(style_name, background=Colors.YELLOW)
+                        row.configure(style=style_name)
+                    elif hasattr(row, "configure"):
+                        row.configure(background=Colors.YELLOW)
                     if self.main_canvas and hasattr(row, "winfo_y"):
                         # Get relative position of row and scroll to it
                         y_position = row.winfo_y()
