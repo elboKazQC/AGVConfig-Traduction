@@ -66,7 +66,8 @@ class FaultEditorController:
         self.app_state = ApplicationState()
 
         # Add missing attributes
-        self.file_manager = None  # File manager instance
+        # Allow any file manager implementation to be assigned
+        self.file_manager: Optional[Any] = None  # File manager instance
 
         # Original application variables
         self.lang = "fr"

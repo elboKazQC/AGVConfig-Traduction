@@ -23,10 +23,10 @@ def test_hello_world():
     """Test basic functionality."""
     assert True
 
-@pytest.raises(ValueError)
 def test_error_handling():
     """Test error handling."""
-    raise ValueError("Test error")
+    with pytest.raises(ValueError):
+        raise ValueError("Test error")
 
 
 

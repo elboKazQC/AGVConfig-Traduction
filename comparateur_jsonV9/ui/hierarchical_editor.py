@@ -96,7 +96,8 @@ class HierarchicalEditor:
 
         # Add missing attributes
         self.app_state = ApplicationState()
-        self.file_manager = None  # Will be set externally
+        # File manager can be injected from the controller
+        self.file_manager: Optional[Any] = None  # Will be set externally
         self.columns: List[ttk.Frame] = []
         self.main_canvas = tk.Canvas(parent, bg=Colors.BG_MAIN)  # Use tk.Canvas since ttk has no Canvas
         self.main_canvas.pack(fill="both", expand=True)        # Configure scroll region

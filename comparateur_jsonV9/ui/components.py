@@ -8,7 +8,7 @@ This module contains reusable UI components for the application.
 
 import tkinter as tk
 from tkinter import ttk
-from typing import Optional, Dict, Any, Union
+from typing import Optional, Dict, Any, Union, Callable
 from config.constants import Colors, Fonts
 
 class StyledFrame(ttk.Frame):
