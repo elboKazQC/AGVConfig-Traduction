@@ -319,12 +319,27 @@ class FaultEditorController:
         try:
             folder = filedialog.askdirectory(title="Sélectionner le dossier contenant les fichiers JSON")
             if folder:
-                self.base_dir = folder
-                self.app_state.base_directory = folder
-                self.initialize_file_map(folder)
+                candidate = folder
+                # If no faults_*.json files are found, try the common "JSON" subfolder
+                if not glob.glob(os.path.join(candidate, "faults_*.json")):
+                    possible = os.path.join(folder, "JSON")
+                    if os.path.isdir(possible) and glob.glob(os.path.join(possible, "faults_*.json")):
+                        candidate = possible
+
+                if not glob.glob(os.path.join(candidate, "faults_*.json")):
+                    messagebox.showerror(
+                        "Erreur",
+                        "Aucun fichier faults_*.json trouvé dans le dossier sélectionné"
+                    )
+                    logger.error("Dossier invalide: aucun fichier faults_*.json")
+                    return
+
+                self.base_dir = candidate
+                self.app_state.base_directory = candidate
+                self.initialize_file_map(candidate)
                 self.load_root()
-                self.status.config(text=f"✅ Dossier chargé: {folder}")
-                logger.info(f"Dossier ouvert: {folder}")
+                self.status.config(text=f"✅ Dossier chargé: {candidate}")
+                logger.info(f"Dossier ouvert: {candidate}")
         except Exception as e:
             error_msg = f"❌ Erreur lors de l'ouverture du dossier: {e}"
             self.status.config(text=error_msg)
@@ -378,16 +393,43 @@ class FaultEditorController:
                 return
 
             # Construct filename for current language
-            filename = f"faults_{self.current_path[0]:03d}_{self.current_path[1]:03d}_{self.current_path[2]:03d}_{self.current_path[3]:03d}_{self.lang}.json"
+            filename = (
+                f"faults_{self.current_path[0]:03d}_"
+                f"{self.current_path[1]:03d}_"
+                f"{self.current_path[2]:03d}_"
+                f"{self.current_path[3]:03d}_{self.lang}.json"
+            )
             file_path = os.path.join(self.base_dir, filename)
 
-            if os.path.exists(file_path):
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    self.data_map[self.lang] = json.load(f)
-                logger.info(f"Données chargées pour {self.lang}: {filename}")
-            else:
+            logger.debug(f"Chemin de fichier calculé: {file_path}")
+
+            if not os.path.isfile(file_path):
                 self.data_map[self.lang] = {}
-                logger.warning(f"Fichier non trouvé: {filename}")
+                logger.warning(f"Fichier non trouvé: {file_path}")
+                messagebox.showerror("Erreur", f"Fichier introuvable: {file_path}")
+                return
+
+            with open(file_path, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError as e:
+                    logger.error(f"Erreur de décodage JSON pour {file_path}: {e}")
+                    messagebox.showerror(
+                        "Erreur", f"Impossible de lire {file_path}: {e}"
+                    )
+                    self.data_map[self.lang] = {}
+                    return
+
+            self.data_map[self.lang] = data
+
+            if not data:
+                logger.error(f"Aucune donnée chargée depuis {file_path}")
+                messagebox.showerror(
+                    "Erreur", f"Aucune donnée chargée depuis {file_path}"
+                )
+                return
+
+            logger.info(f"Données chargées pour {self.lang}: {file_path}")
 
         except Exception as e:
             logger.error(f"Erreur lors du chargement des données: {e}")
