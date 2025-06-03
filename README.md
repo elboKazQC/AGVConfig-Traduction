@@ -11,6 +11,7 @@ A comprehensive Python-based tool for translating and managing AGV (Automated Gu
 - **Coherence Checking**: Validate consistency across different language versions
 - **OpenAI Integration**: High-quality translations using GPT models
 - **Language Detection**: Optional automatic language detection for improved accuracy
+- **Plugin Architecture**: Extend the editor with optional plugins
 
 ## 📋 Prerequisites
 
@@ -74,6 +75,13 @@ python app.py
 - **Navigation**: Browse through fault code hierarchies
 - **Edit**: Modify fault descriptions directly in the interface
 - **Auto-generation**: Create missing translation files automatically
+- **Plugins**: Optional features (e.g., statistics) can be enabled via the plugin system
+
+### Plugins
+
+The editor automatically discovers plugins from `comparateur_jsonV9/plugins/`.
+Plugins can add custom UI elements or commands. The included `StatisticsPlugin`
+adds a statistics window accessible from the toolbar when activated.
 
 ### Command-Line Tools
 
