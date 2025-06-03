@@ -1,29 +1,20 @@
-#!/usr/bin/env python3
-"""
-Test script to verify OpenAI API key configuration
-"""
-import sys
-import os
+import unittest
+from translate import traduire, OPENAI_API_KEY
 
-# Add the current directory to the path
-sys.path.insert(0, os.path.dirname(__file__))
+class TestTranslation(unittest.TestCase):
+    def test_api_key_configuration(self):
+        """Test if the API key is configured correctly."""
+        self.assertTrue(OPENAI_API_KEY and OPENAI_API_KEY != 'sk-test-key-for-development', "API Key is not configured properly.")
 
-try:
-    from translate import traduire, OPENAI_API_KEY
+    def test_translation_functionality(self):
+        """Test the translation functionality."""
+        test_text = "Bonjour"
+        try:
+            result = traduire(test_text, "en")
+            self.assertIsNotNone(result, "Translation result is None.")
+            self.assertNotEqual(result, test_text, "Translation did not change the text.")
+        except Exception as e:
+            self.fail(f"Translation test failed with exception: {e}")
 
-    print("✅ Translation module loaded successfully")
-    print(f"📡 API Key configured: {'Yes' if OPENAI_API_KEY and OPENAI_API_KEY != 'sk-test-key-for-development' else 'No (using test key)'}")
-
-    # Test a simple translation
-    print("\n🔍 Testing translation functionality...")
-    test_text = "Bonjour"
-    try:
-        result = traduire(test_text, "en")
-        print(f"✅ Translation test successful: '{test_text}' -> '{result}'")
-    except Exception as e:
-        print(f"❌ Translation test failed: {e}")
-
-except ImportError as e:
-    print(f"❌ Failed to import translation module: {e}")
-except Exception as e:
-    print(f"❌ Error: {e}")
+if __name__ == '__main__':
+    unittest.main()

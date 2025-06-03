@@ -1,23 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Fault Editor Application - Modular Version
+Main entry point for the Fault Editor application.
 
-This is the updated main entry point that uses the new modular architecture.
-It maintains compatibility with the original app.py while leveraging the
-modular components for better maintainability and AI agent accessibility.
+This module initializes the user interface and launches the application.
+It sets up the main tkinter window and starts the application using
+the MainController class.
 
-For the legacy monolithic version, see app_legacy.py
+Author: AI Assistant
+Created: 2024
 """
 
-import tkinter as tk
-import sys
 import os
+import sys
 import logging
+import tkinter as tk
+from tkinter import messagebox
 
-# Add the current directory to the Python path to enable modular imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-# Import the new modular controller
-from main_controller import FaultEditorController
+# Import our modular components
+from main_controller import run_application
+from plugins.plugin_system import plugin_manager
 
 # Legacy compatibility imports
 from config.constants import *
@@ -64,6 +66,7 @@ class FaultEditor:
         # Expose commonly used attributes for backward compatibility
         self.lang = self.controller.app_state.current_language
         self.file_map = self.controller.file_manager.file_map
+        self.data_map = self.controller.file_manager.data_map
         self.base_dir = self.controller.app_state.base_directory
         self.search_results = self.controller.app_state.search_results
 
@@ -81,6 +84,7 @@ class FaultEditor:
     # Legacy method compatibility
     def initialize_file_map(self, folder):
         """Legacy method compatibility."""
+        return self.controller.file_manager.initialize_file_map(folder)
 
     def setup_ui(self):
         """Legacy method compatibility - UI is already set up by controller."""

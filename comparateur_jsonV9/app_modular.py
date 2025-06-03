@@ -64,6 +64,7 @@ class FaultEditor:
         # Expose commonly used attributes for backward compatibility
         self.lang = self.controller.app_state.current_language
         self.file_map = self.controller.file_manager.file_map
+        self.data_map = self.controller.file_manager.data_map
         self.base_dir = self.controller.app_state.base_directory
         self.search_results = self.controller.app_state.search_results
 
@@ -81,6 +82,7 @@ class FaultEditor:
     # Legacy method compatibility
     def initialize_file_map(self, folder):
         """Legacy method compatibility."""
+        return self.controller.file_manager.initialize_file_map(folder)
 
     def setup_ui(self):
         """Legacy method compatibility - UI is already set up by controller."""
