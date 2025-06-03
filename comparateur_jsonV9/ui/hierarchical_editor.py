@@ -9,11 +9,13 @@ from tkinter import ttk
 from typing import List, Dict, Any, Optional, Callable, Tuple
 from functools import partial
 import logging
+import os
 
 from config.constants import Colors, Fonts, Dimensions
 from ui.components import StyledFrame, StyledLabel, ProgressDialog
-from models.data_models import FaultData, ApplicationState, SearchResult
+from models.data_models import FaultData, ApplicationState, SearchResult, FileMetadata
 from search.search_manager import HierarchicalSearcher, SearchBarBuilder
+from file_ops.file_manager import FileManager, path_to_filename
 
 logger = logging.getLogger(__name__)
 
@@ -34,6 +36,9 @@ class HierarchicalEditor:
         self.on_single_click: Optional[Callable] = None
         self.on_double_click: Optional[Callable] = None
         self.on_file_change: Optional[Callable] = None
+
+        # Gestionnaire de fichiers pour charger les JSON
+        self.file_manager = FileManager()
 
         self._setup_canvas()
 
@@ -225,6 +230,58 @@ class HierarchicalEditor:
             column = self.columns.pop()
             column.destroy()
 
+    # --- Navigation interne ---
+    def _load_level(self, path: List[int], level: int) -> None:
+        """Charge un fichier JSON pour le chemin donné et affiche ses défauts."""
+        filename = path_to_filename(path, self.app_state.current_language)
+        data = self.file_manager.load_json_file(filename)
+        if data is None:
+            logger.error(f"Fichier introuvable : {filename}")
+            return
+
+        self.app_state.data_map[filename] = data
+        file_path = self.file_manager.get_file_path(filename) or ""
+        self.app_state.path_map[filename] = file_path
+        self.app_state.current_file_path = file_path
+
+        fault_list = data.get("FaultDetailList", [])
+        self.clear_columns_from(level)
+        self.display_column(fault_list, path, filename, level)
+
+        if self.searcher:
+            self.searcher.columns = [col for col in self.columns]
+
+        self._on_frame_configure(None)
+
+    def _on_row_click(self, fault: Dict[str, Any], idx: int, path: List[int], level: int, filename: str):
+        """Gère le clic sur une ligne pour charger les enfants."""
+        if not fault.get("IsExpandable"):
+            return
+
+        new_path = path.copy()
+        try:
+            insert_idx = new_path.index(255)
+        except ValueError:
+            logger.error(f"Chemin invalide : {path}")
+            return
+
+        new_path[insert_idx] = idx
+        if insert_idx + 1 < len(new_path):
+            new_path[insert_idx + 1] = 255
+
+        self.app_state.current_path = new_path
+        self._load_level(new_path, level + 1)
+
+        if self.on_file_change:
+            child_filename = path_to_filename(new_path, self.app_state.current_language)
+            meta = FileMetadata(
+                filename=child_filename,
+                filepath=self.file_manager.get_file_path(child_filename) or "",
+                language=self.app_state.current_language,
+                path_components=new_path,
+            )
+            self.on_file_change(meta)
+
     def show_search_bar(self):
         """Affiche la barre de recherche hiérarchique"""
         if self.search_frame:
@@ -360,17 +417,29 @@ class HierarchicalEditor:
     def load_data(self, base_directory: str, current_language: str, file_metadata: Any):
         """Load JSON data for hierarchical display"""
         try:
-            # Store the data in app state for reference
+            # Stocker les informations de base
             self.app_state.base_directory = base_directory
             self.app_state.current_language = current_language
 
-            # Clear existing columns
+            # Initialiser le gestionnaire de fichiers
+            if not self.file_manager.initialize_directory(base_directory):
+                raise RuntimeError("Impossible d'initialiser le répertoire")
+
+            self.app_state.file_map = self.file_manager.file_map
+
+            # Réinitialiser l'affichage
             for column in self.columns:
                 column.destroy()
             self.columns.clear()
 
-            # This would typically load and display the root level of the hierarchy
-            # For now, just update the status
+            # Charger et afficher le fichier racine
+            root_path = [0, 255, 255, 255]
+            self.app_state.current_path = root_path
+            self._load_level(root_path, 0)
+
+            # Utiliser le clic simple pour naviguer
+            self.set_single_click_callback(self._on_row_click)
+
             logger.info(f"Hierarchical editor loaded data from {base_directory}")
 
         except Exception as e:
