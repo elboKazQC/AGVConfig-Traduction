@@ -226,7 +226,10 @@ class FaultEditorController:
     def _create_toolbar(self):
         """Create the main toolbar with script operation buttons."""
         self.tools_frame = StyledFrame(self.root, bg=Colors.BG_COLUMN, height=50)
-        self.tools_frame.pack(fill="x", pady=(0, 5))
+        # Ensure the toolbar is always positioned below the top bar
+        # Using explicit side="top" prevents geometry managers from placing it
+        # at the bottom when other widgets are updated dynamically.
+        self.tools_frame.pack(side="top", fill="x", pady=(0, 5))
         self.tools_frame.pack_propagate(False)
 
         # Script operation buttons
