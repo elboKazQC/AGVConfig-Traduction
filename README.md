@@ -120,9 +120,12 @@ AGVConfig-Traduction/
 
 ### Environment Variables
 
-Create a `.env` file based on `.env.example`:
+A `.env.example` template is provided. Copy it to `.env` and then adjust the
+values as needed:
 
 ```bash
+cp .env.example .env
+
 # Required
 OPENAI_API_KEY=your_openai_api_key_here
 
