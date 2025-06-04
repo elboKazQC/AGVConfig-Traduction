@@ -37,11 +37,11 @@ class TestFaultEditorBasic(unittest.TestCase):
         try:
             if hasattr(self, 'app') and self.app:
                 self.app.root.destroy()
-        except:
+        except tk.TclError:
             pass
         try:
             self.root.destroy()
-        except:
+        except tk.TclError:
             pass
 
     def test_app_can_be_created(self):
@@ -109,12 +109,12 @@ class TestFileOperations(unittest.TestCase):
             if os.path.exists(self.test_file):
                 os.remove(self.test_file)
             os.rmdir(self.temp_dir)
-        except:
+        except OSError:
             pass
         try:
             self.app.root.destroy()
             self.root.destroy()
-        except:
+        except tk.TclError:
             pass
 
     def test_load_valid_json(self):

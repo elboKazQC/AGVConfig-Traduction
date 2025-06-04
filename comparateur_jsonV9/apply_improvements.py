@@ -7,6 +7,7 @@ Ce script crée une version améliorée de l'application avec une meilleure gest
 
 import os
 import shutil
+import tkinter as tk
 from datetime import datetime
 
 def create_backup():
@@ -312,7 +313,7 @@ def create_improved_ui_methods():
             try:
                 if hasattr(self, 'root') and self.root:
                     self.root.quit()
-            except:
+            except tk.TclError:
                 pass
 
     def _save_user_preferences(self):

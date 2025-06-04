@@ -61,8 +61,8 @@ def fix_headers_and_retranslate(source_file_path, force_retranslate=False):
                     with open(target_file, 'r', encoding='utf-8') as f:
                         target_data = json.load(f)
                     print(f"  📂 Fichier existant chargé")
-                except:
-                    print(f"  ⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier")
+                except (json.JSONDecodeError, OSError) as e:
+                    print(f"  ⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier: {e}")
                     target_data = {}
             else:
                 print(f"  📄 Création d'un nouveau fichier")
