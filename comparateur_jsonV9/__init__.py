@@ -21,11 +21,16 @@ __author__ = "Noovelia"
 __license__ = "MIT"
 
 # Main imports for package-level access
+import logging
+import traceback
+
+logger = logging.getLogger(__name__)
+
 try:
     from .translate import traduire, OPENAI_API_KEY
-except ImportError:
-    # Handle cases where dependencies might not be installed
-    pass
+except ImportError as e:
+    logger.warning(f"Impossible d'importer translate: {e}")
+    traceback.print_exc()
 
 # Supported languages
 SUPPORTED_LANGUAGES = ['fr', 'en', 'es']

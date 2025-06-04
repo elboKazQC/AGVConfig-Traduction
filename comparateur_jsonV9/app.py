@@ -8,6 +8,7 @@ from functools import partial
 from translate import traduire
 import re
 import logging
+import traceback
 from datetime import datetime
 
 # Imports pour la gestion d'erreurs améliorée
@@ -324,7 +325,8 @@ class FaultEditor:
                 if hasattr(widget, 'config'):
                     widget.config(state=state)  # type: ignore
             except tk.TclError:
-                pass    # --- Fonctions pour lancer les scripts externes ---
+                logger.warning("TclError lors du changement d'état d'un widget")
+                traceback.print_exc()
     def run_sync_all(self):
         cmd = ["python", "sync_all.py"]
         self.run_command(cmd, desc="Synchroniser tous les fichiers")
@@ -535,12 +537,15 @@ class FaultEditor:
             }
         except subprocess.SubprocessError as e:
             logger.error(f"Erreur subprocess lors de la vérification de cohérence : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
         except (OSError, FileNotFoundError) as e:
             logger.error(f"Erreur fichier lors de la vérification de cohérence : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': f"Fichier non trouvé: {str(e)}", 'fixed': False}
         except Exception as e:
             logger.error(f"Erreur inattendue lors de la vérification de cohérence : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
     def run_spelling_check_step(self, dossier_base):
@@ -568,18 +573,22 @@ class FaultEditor:
 
         except subprocess.SubprocessError as e:
             logger.error(f"Erreur subprocess lors de la vérification orthographique : {e}")
+            traceback.print_exc()
             print(f"❌ Erreur subprocess lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
         except FileNotFoundError as e:
             logger.error(f"Script verifier_orthographe.py introuvable : {e}")
+            traceback.print_exc()
             print(f"❌ Script verifier_orthographe.py introuvable : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
         except PermissionError as e:
             logger.error(f"Erreur d'accès lors de la vérification orthographique : {e}")
+            traceback.print_exc()
             print(f"❌ Erreur d'accès lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
         except (OSError, UnicodeDecodeError) as e:
             logger.error(f"Erreur système lors de la vérification orthographique : {e}")
+            traceback.print_exc()
             print(f"❌ Erreur système lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
 
@@ -606,12 +615,15 @@ class FaultEditor:
             }
         except subprocess.SubprocessError as e:
             logger.error(f"Erreur subprocess lors de la correction des headers : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
         except (OSError, FileNotFoundError) as e:
             logger.error(f"Erreur fichier lors de la correction des headers : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': f"Fichier non trouvé: {str(e)}", 'fixed': False}
         except Exception as e:
             logger.error(f"Erreur inattendue lors de la correction des headers : {e}")
+            traceback.print_exc()
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
     def show_comprehensive_results(self, results, dossier_base):
@@ -1428,8 +1440,9 @@ class FaultEditor:
             row.winfo_exists()
             self.render_row(row, fault, idx, path, level, filename)
         except tk.TclError:
-            # Widget has been destroyed (e.g., during language change), just clear the editing info
-            pass
+            # Widget has been destroyed (e.g., during language change)
+            logger.debug("Widget détruit avant fin d'édition")
+            traceback.print_exc()
 
         self.editing_info = None
 

@@ -8,6 +8,7 @@ import sys
 import os
 import json
 import tempfile
+import traceback
 
 # Ajouter le répertoire au path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -100,7 +101,9 @@ class MockTkinter:
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
+        if exc_type:
+            traceback.print_exc()
+        return False
 
 def run_basic_validation():
     """Lance une validation de base de l'application"""
