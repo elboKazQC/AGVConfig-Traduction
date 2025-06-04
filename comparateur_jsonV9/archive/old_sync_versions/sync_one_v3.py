@@ -163,8 +163,8 @@ def sync_file(source_file_path, force_retranslate=False):
                 try:
                     with open(target_file, 'r', encoding='utf-8') as f:
                         target_data = json.load(f)
-                except:
-                    print(f"⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier")
+                except (json.JSONDecodeError, OSError) as e:
+                    print(f"⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier: {e}")
                     target_data = {}
 
             # Synchroniser les données avec la logique améliorée

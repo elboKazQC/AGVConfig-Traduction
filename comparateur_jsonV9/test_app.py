@@ -68,14 +68,14 @@ class TestFaultEditorBase(unittest.TestCase):
         """Nettoyage après chaque test"""
         try:
             self.root.destroy()
-        except:
+        except tk.TclError:
             pass
 
         # Nettoyer les fichiers temporaires
         import shutil
         try:
             shutil.rmtree(self.temp_dir)
-        except:
+        except OSError:
             pass
 
 class TestFaultEditorInitialization(TestFaultEditorBase):

@@ -19,6 +19,7 @@ from translate import traduire
 # Support pour la détection de langue (optionnel)
 try:
     from langdetect import detect
+    from langdetect.lang_detect_exception import LangDetectException
     LANGDETECT_AVAILABLE = True
 except ImportError:
     LANGDETECT_AVAILABLE = False
@@ -154,8 +155,8 @@ def sync_file(source_file_path, force_retranslate=False):
                 try:
                     with open(target_file, 'r', encoding='utf-8') as f:
                         target_data = json.load(f)
-                except:
-                    print(f"⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier")
+                except (json.JSONDecodeError, OSError) as e:
+                    print(f"⚠️ Erreur lors de la lecture de {target_file}, création d'un nouveau fichier: {e}")
                     target_data = {}
 
             # Synchroniser les données
@@ -217,7 +218,7 @@ def sync_file(source_file_path, force_retranslate=False):
                         detected_lang = detect(target_desc)
                         if detected_lang != target_lang:
                             should_translate = True
-                    except:
+                    except LangDetectException:
                         pass
 
                 if should_translate:
