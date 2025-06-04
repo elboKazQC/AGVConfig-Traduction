@@ -1,0 +1,83 @@
+Les blocs suivants doivent encore être remplacés par des exceptions spécifiques :
+
+1. Dans reload_data() :
+```python
+try:
+    with open(filepath, "r", encoding="utf-8") as f:
+        self.data_map[filename] = json.load(f)
+except Exception as e:
+    print(f"Erreur lors du rechargement de {filename}: {e}")
+```
+Doit être remplacé par :
+```python
+try:
+    with open(filepath, "r", encoding="utf-8") as f:
+        self.data_map[filename] = json.load(f)
+except (FileNotFoundError, json.JSONDecodeError, PermissionError) as e:
+    print(f"Erreur lors du rechargement de {filename}: {e}")
+```
+
+2. Dans sync_files() :
+```python
+try:
+    self.run_sync_script(self.current_file_path)
+except Exception as e:
+    self.status.config(text="❌ Erreur lors de la synchronisation")
+    print(f"Erreur : {e}")
+```
+Doit être remplacé par :
+```python
+try:
+    self.run_sync_script(self.current_file_path)
+except (FileNotFoundError, PermissionError, subprocess.CalledProcessError) as e:
+    self.status.config(text="❌ Erreur lors de la synchronisation")
+    print(f"Erreur : {e}")
+```
+
+3. Dans translate_row() :
+```python
+except Exception as e:
+    print(f"Erreur lors de la traduction de la ligne {row}: {e}")
+    # Effet visuel d'erreur
+    for widget in editor_window.grid_frame.grid_slaves(row=row):
+        widget.config(bg=COL_RED)
+        editor_window.after(500, lambda w=widget: w.config(
+            bg=COL_BG_ROW if row % 2 == 1 else COL_BG_ROW_ALT))
+
+    if hasattr(editor_window, 'status_bar'):
+        editor_window.status_bar.config(text=f"❌ Erreur de traduction ligne {row}")
+```
+Doit être remplacé par :
+```python
+except (json.JSONDecodeError, ValueError, KeyError) as e:
+    print(f"Erreur lors de la traduction de la ligne {row}: {e}")
+    # Effet visuel d'erreur
+    for widget in editor_window.grid_frame.grid_slaves(row=row):
+        widget.config(bg=COL_RED)
+        editor_window.after(500, lambda w=widget: w.config(
+            bg=COL_BG_ROW if row % 2 == 1 else COL_BG_ROW_ALT))
+
+    if hasattr(editor_window, 'status_bar'):
+        editor_window.status_bar.config(text=f"❌ Erreur de traduction ligne {row}")
+```
+
+4. Dans handle_double_click() :
+```python
+try:
+    # Vérifier que le widget existe encore
+    row.winfo_exists()
+    self.render_row(row, fault, idx, path, level, filename)
+except tk.TclError:
+    # Widget a été détruit (par exemple lors d'un changement de langue)
+    pass
+```
+Doit rester comme tel car il s'agit déjà d'une exception spécifique (tk.TclError).
+
+Les fichiers ouverts et les connexions réseau devraient utiliser des blocs try-with-resources ou des contextes with lorsque possible.
+
+Suggestion d'ajout d'importation au début du fichier :
+```python
+from json.decoder import JSONDecodeError
+```
+
+Ces modifications permettront une meilleure gestion des erreurs et une plus grande robustesse de l'application.

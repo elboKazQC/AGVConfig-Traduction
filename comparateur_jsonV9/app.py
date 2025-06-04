@@ -2,12 +2,20 @@ import tkinter as tk
 from tkinter import filedialog, ttk, messagebox
 import os
 import json
+from json.decoder import JSONDecodeError
 import subprocess
 from functools import partial
 from translate import traduire
 import re
 import logging
 from datetime import datetime
+
+# Imports pour la gestion d'erreurs améliorée
+from exceptions import (
+    FaultEditorError, FileOperationError, JSONValidationError,
+    TranslationError, UIError, ConfigurationError, ErrorCodes
+)
+from error_utils import safe_execute, safe_ui_operation, show_error_to_user, robust_widget_destroy
 
 # Créer le dossier logs s'il n'existe pas
 os.makedirs('logs', exist_ok=True)
@@ -268,12 +276,20 @@ class FaultEditor:
             try:
                 self.rebuild_columns_for_path()
                 self.status.config(text="✅ Interface rechargée")
-            except Exception as e:
-                print(f"❌ Erreur lors de la restauration du chemin : {e}")
-                # On reste à la racine en cas d'erreur
+            except (FileOperationError, JSONValidationError) as e:
+                logger.error(f"Erreur lors de la restauration du chemin : {e}")
                 self.status.config(text="✅ Interface rechargée (racine)")
+            except (tk.TclError, UIError) as e:
+                logger.error(f"Erreur UI lors de la restauration du chemin : {e}")
+                self.status.config(text="✅ Interface rechargée (racine)")
+        except (FileOperationError, JSONValidationError) as e:
+            logger.error(f"Erreur de données lors du rechargement : {e}")
+            self.status.config(text="❌ Erreur de rechargement - problème de données")
+        except (tk.TclError, UIError) as e:
+            logger.error(f"Erreur UI lors du rechargement : {e}")
+            self.status.config(text="❌ Erreur de rechargement - interface")
         except Exception as e:
-            print(f"❌ Erreur lors du rechargement : {e}")
+            logger.error(f"Erreur inattendue lors du rechargement : {e}")
             self.status.config(text="❌ Erreur de rechargement")
 
     def update_xscroll_visibility(self, event=None):
@@ -510,17 +526,20 @@ class FaultEditor:
 
             if result.stdout:
                 print("📋 Résultats cohérence :")
-                print(result.stdout)
-
-            return {
+                print(result.stdout)            return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
                 'fixed': apply_fix and "corrections appliquées" in result.stdout
             }
-
+        except subprocess.SubprocessError as e:
+            logger.error(f"Erreur subprocess lors de la vérification de cohérence : {e}")
+            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
+        except (OSError, FileNotFoundError) as e:
+            logger.error(f"Erreur fichier lors de la vérification de cohérence : {e}")
+            return {'success': False, 'output': '', 'errors': f"Fichier non trouvé: {str(e)}", 'fixed': False}
         except Exception as e:
-            print(f"❌ Erreur lors de la vérification de cohérence : {e}")
+            logger.error(f"Erreur inattendue lors de la vérification de cohérence : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
     def run_spelling_check_step(self, dossier_base):
@@ -536,6 +555,7 @@ class FaultEditor:
                                   encoding="utf-8", errors="replace", env=env, cwd=script_dir)
 
             if result.stdout:
+                logger.info("Résultats de la vérification orthographique reçus")
                 print("📝 Résultats orthographe :")
                 print(result.stdout)
 
@@ -545,8 +565,21 @@ class FaultEditor:
                 'errors': result.stderr
             }
 
-        except Exception as e:
-            print(f"❌ Erreur lors de la vérification orthographique : {e}")
+        except subprocess.SubprocessError as e:
+            logger.error(f"Erreur subprocess lors de la vérification orthographique : {e}")
+            print(f"❌ Erreur subprocess lors de la vérification orthographique : {e}")
+            return {'success': False, 'output': '', 'errors': str(e)}
+        except FileNotFoundError as e:
+            logger.error(f"Script verifier_orthographe.py introuvable : {e}")
+            print(f"❌ Script verifier_orthographe.py introuvable : {e}")
+            return {'success': False, 'output': '', 'errors': str(e)}
+        except PermissionError as e:
+            logger.error(f"Erreur d'accès lors de la vérification orthographique : {e}")
+            print(f"❌ Erreur d'accès lors de la vérification orthographique : {e}")
+            return {'success': False, 'output': '', 'errors': str(e)}
+        except (OSError, UnicodeDecodeError) as e:
+            logger.error(f"Erreur système lors de la vérification orthographique : {e}")
+            print(f"❌ Erreur système lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
 
     def run_headers_fix_step(self, dossier_base):
@@ -563,17 +596,20 @@ class FaultEditor:
 
             if result.stdout:
                 print("📋 Résultats correction headers :")
-                print(result.stdout)
-
-            return {
+                print(result.stdout)            return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
                 'fixed': "fichiers traités" in result.stdout or "corrections appliquées" in result.stdout
             }
-
+        except subprocess.SubprocessError as e:
+            logger.error(f"Erreur subprocess lors de la correction des headers : {e}")
+            return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
+        except (OSError, FileNotFoundError) as e:
+            logger.error(f"Erreur fichier lors de la correction des headers : {e}")
+            return {'success': False, 'output': '', 'errors': f"Fichier non trouvé: {str(e)}", 'fixed': False}
         except Exception as e:
-            print(f"❌ Erreur lors de la correction des headers : {e}")
+            logger.error(f"Erreur inattendue lors de la correction des headers : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
     def show_comprehensive_results(self, results, dossier_base):
@@ -788,11 +824,26 @@ class FaultEditor:
                 # Afficher l'erreur dans une fenêtre de dialogue
                 self.show_script_results(f"⚠️ Erreurs détectées - {desc}", error_message, False)
                 self.status.config(text=f"⚠️ Erreurs détectées : {desc}")
-
-        except Exception as e:
-            logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
-            print(f"\n❌ Exception lors de {desc}: {str(e)}")
-            self.status.config(text=f"❌ Exception : {desc}")
+        except FileNotFoundError as e:
+            logger.error(f"Fichier non trouvé lors de l'exécution de {desc}: {str(e)}")
+            print(f"\n❌ Fichier non trouvé lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Fichier non trouvé : {desc}")
+        except PermissionError as e:
+            logger.error(f"Erreur de permission lors de {desc}: {str(e)}")
+            print(f"\n❌ Erreur de permission lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Permission refusée : {desc}")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de l'exécution du processus {desc}: {str(e)}")
+            print(f"\n❌ Erreur de processus lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Erreur d'exécution : {desc}")
+        except ValueError as e:
+            logger.error(f"Erreur de valeur lors de {desc}: {str(e)}")
+            print(f"\n❌ Erreur de valeur lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Erreur de valeur : {desc}")
+        except OSError as e:
+            logger.error(f"Erreur système lors de {desc}: {str(e)}")
+            print(f"\n❌ Erreur système lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Erreur système : {desc}")
         finally:
             if 'popup' in locals():
                 popup.destroy()
@@ -800,24 +851,45 @@ class FaultEditor:
 
     def run_fix_coherence_errors(self, dossier_base):
         """Lance la correction automatique des erreurs de cohérence"""
-        print(f"🔧 Lancement de la correction automatique dans : {dossier_base}")
-
-        # Lancer check_coherence.py avec l'option --fix
+        print(f"🔧 Lancement de la correction automatique dans : {dossier_base}")        # Lancer check_coherence.py avec l'option --fix
         cmd = ["python", "check_coherence.py", dossier_base, "--fix"]
         self.run_command(cmd, desc="Corriger les erreurs de cohérence")
 
     def run_spell_check(self):
-        if not hasattr(self, 'file_map') or not self.file_map:
-            self.status.config(text="❌ Aucun dossier ouvert")
-            return
+        """Lance la vérification orthographique des fichiers"""
+        try:
+            if not hasattr(self, 'file_map') or not self.file_map:
+                logger.warning("Tentative de vérification orthographique sans dossier ouvert")
+                self.status.config(text="❌ Aucun dossier ouvert")
+                return
 
-        # Obtenir le dossier parent du premier fichier trouvé
-        premier_fichier = next(iter(self.file_map.values()))
-        dossier_base = os.path.dirname(premier_fichier)
+            # Obtenir le dossier parent du premier fichier trouvé
+            try:
+                premier_fichier = next(iter(self.file_map.values()))
+                dossier_base = os.path.dirname(premier_fichier)
+            except StopIteration:
+                logger.error("Aucun fichier trouvé dans file_map")
+                self.status.config(text="❌ Aucun fichier à vérifier")
+                return
+            except (AttributeError, TypeError) as e:
+                logger.error(f"Erreur lors de l'accès aux fichiers : {e}")
+                self.status.config(text="❌ Erreur d'accès aux fichiers")
+                return
 
-        print(f"🔍 Vérification orthographique dans : {dossier_base}")
-        cmd = ["python", "verifier_orthographe.py", dossier_base]
-        self.run_command(cmd, desc="Vérifier l'orthographe")
+            logger.info(f"Lancement vérification orthographique dans : {dossier_base}")
+            print(f"🔍 Vérification orthographique dans : {dossier_base}")            cmd = ["python", "verifier_orthographe.py", dossier_base]
+            self.run_command(cmd, desc="Vérifier l'orthographe")
+        except FileOperationError as e:
+            logger.error(f"Erreur de fichier lors de la vérification orthographique : {e}")
+            self.status.config(text="❌ Erreur d'accès aux fichiers")
+        except subprocess.SubprocessError as e:
+            logger.error(f"Erreur subprocess lors de la vérification orthographique : {e}")
+            self.status.config(text="❌ Erreur de vérification orthographique")
+        except Exception as e:
+            logger.error(f"Erreur inattendue lors du lancement de la vérification orthographique : {e}")
+            self.status.config(text="❌ Erreur inattendue")
+            self.status.config(text="❌ Erreur de vérification orthographique")
+            print(f"❌ Erreur lors de la vérification : {e}")
 
     def run_command(self, cmd, desc=""):
         logger.info(f"Exécution de la commande: {' '.join(cmd)}")
@@ -887,62 +959,123 @@ class FaultEditor:
                 print(f"\n❌ Erreur lors de {desc}:")
                 print("=" * 50)
                 print(error_message)
-                print("=" * 50)
-
-                # Afficher l'erreur dans une fenêtre de dialogue
+                print("=" * 50)                # Afficher l'erreur dans une fenêtre de dialogue
                 self.show_script_results(f"❌ Erreur - {desc}", error_message, False)
                 self.status.config(text=f"❌ Erreur : {desc}")
-        except Exception as e:
-            logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
-            print(f"\n❌ Exception lors de {desc}: {str(e)}")
-            self.status.config(text=f"❌ Exception : {desc}")
+        except FileNotFoundError as e:
+            logger.error(f"Fichier non trouvé lors de l'exécution de {desc}: {str(e)}")
+            print(f"\n❌ Fichier non trouvé lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Fichier non trouvé : {desc}")
+        except PermissionError as e:
+            logger.error(f"Erreur de permission lors de {desc}: {str(e)}")
+            print(f"\n❌ Erreur de permission lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Permission refusée : {desc}")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Erreur lors de l'exécution du processus {desc}: {str(e)}")
+            print(f"\n❌ Erreur de processus lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Erreur d'exécution : {desc}")
+        except OSError as e:
+            logger.error(f"Erreur système lors de {desc}: {str(e)}")
+            print(f"\n❌ Erreur système lors de {desc}: {str(e)}")
+            self.status.config(text=f"❌ Erreur système : {desc}")
         finally:
             popup.destroy()
             self.set_tools_enabled("normal")
 
     def run_sync_script(self, file_path):
+        """Exécute le script de synchronisation sur un fichier"""
         try:
+            # Validation des entrées
             if not file_path:
+                msg = "❌ Aucun fichier sélectionné pour la synchronisation"
+                logger.error(msg)
                 self.status.config(text="❌ Aucun fichier sélectionné")
-                print("❌ Aucun fichier sélectionné pour la synchronisation")
+                print(msg)
                 return
 
-            # Utiliser le chemin complet du fichier source
+            # Vérification du fichier source
             source_file = file_path
-
             if not os.path.exists(source_file):
-                error_msg = f"❌ Fichier introuvable : {source_file}"
+                msg = f"❌ Fichier introuvable pour la synchronisation : {source_file}"
+                logger.error(msg)
                 self.status.config(text="❌ Fichier introuvable")
-                print(error_msg)
+                print(msg)
                 return
 
             source_dir = os.path.dirname(source_file)
+            logger.info(f"Lancement de la synchronisation dans: {source_dir}")
             print(f"📂 Répertoire de travail pour la synchronisation : {source_dir}")
 
-            # Appeler sync_one.py avec le chemin complet du fichier source
+            # Vérification du script
             script_dir = os.path.dirname(os.path.abspath(__file__))
-            result = subprocess.run(
-                ["python", os.path.join(script_dir, "sync_one.py"), source_file],
-                check=True,
-                capture_output=True,
-                text=True,
-                encoding="utf-8",
-                errors="replace",
-                cwd=source_dir
-            )
+            script_path = os.path.join(script_dir, "sync_one.py")
+            if not os.path.exists(script_path):
+                msg = f"❌ Script de synchronisation introuvable: {script_path}"
+                logger.error(msg)
+                self.status.config(text="❌ Script introuvable")
+                print(msg)
+                return
 
-            if result.returncode == 0:
-                self.status.config(text="✅ Synchronisation réussie")
-                print("\nSortie du script :")
-                print(result.stdout)
-            else:
-                self.status.config(text="❌ Erreur lors de la synchronisation")
-                print("\nErreur lors de la synchronisation :")
-                print(result.stderr)
+            # Validation des droits d'accès
+            if not os.access(script_path, os.R_OK):
+                msg = f"❌ Droits insuffisants pour le script: {script_path}"
+                logger.error(msg)
+                self.status.config(text="❌ Droits insuffisants")
+                print(msg)
+                return
 
+            # Exécution du script avec capture détaillée des erreurs
+            try:
+                result = subprocess.run(
+                    ["python", script_path, source_file],
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    cwd=source_dir
+                )
+
+                if result.returncode == 0:
+                    logger.info(f"Synchronisation réussie pour: {source_file}")
+                    self.status.config(text="✅ Synchronisation réussie")
+                    print("\nSortie du script :")
+                    print(result.stdout)
+                else:
+                    logger.error(f"Échec de la synchronisation pour {source_file}: {result.stderr}")
+                    self.status.config(text=f"❌ Erreur ({result.returncode})")
+                    print("\nErreur lors de la synchronisation :")
+                    print(result.stderr)
+
+            except subprocess.SubprocessError as e:
+                logger.error(f"Erreur du processus de synchronisation: {e}")
+                self.status.config(text="❌ Erreur du processus")
+                print(f"❌ Erreur du processus: {e}")
+
+        except FileNotFoundError as e:
+            logger.error(f"Fichier ou répertoire introuvable: {e}")
+            self.status.config(text="❌ Ressource introuvable")
+            print(f"❌ Ressource introuvable : {e}")
+        except PermissionError as e:
+            logger.error(f"Erreur de permission: {e}")
+            self.status.config(text="❌ Erreur de permission")
+            print(f"❌ Permission refusée : {e}")
+        except UnicodeDecodeError as e:
+            logger.error(f"Erreur d'encodage: {e}")
+            self.status.config(text="❌ Erreur d'encodage")
+            print(f"❌ Erreur d'encodage : {e}")
+        except (OSError, IOError) as e:
+            logger.error(f"Erreur système lors de la synchronisation: {e}")
+            self.status.config(text="❌ Erreur système")
+            print(f"❌ Erreur système : {e}")
+        except ValueError as e:
+            logger.error(f"Erreur de valeur: {e}")
+            self.status.config(text="❌ Erreur de valeur")
+            print(f"❌ Erreur de valeur : {e}")
         except Exception as e:
-            self.status.config(text="❌ Erreur de synchronisation")
-            print(f"\n❌ Erreur lors de la synchronisation : {e}")
+            logger.error(f"Erreur inattendue: {e}")
+            self.status.config(text="❌ Erreur inattendue")
+            print(f"❌ Erreur inattendue : {e}")
 
     def reload_data(self):
         """Recharge les données des fichiers JSON en mémoire"""
@@ -950,19 +1083,98 @@ class FaultEditor:
             try:
                 with open(filepath, "r", encoding="utf-8") as f:
                     self.data_map[filename] = json.load(f)
+                logger.info(f"Fichier {filename} chargé avec succès")
+            except FileNotFoundError as e:
+                logger.error(f"Fichier introuvable lors du rechargement : {filename} - {e}")
+                print(f"Erreur : Fichier introuvable {filename}: {e}")
+                self.status.config(text=f"❌ Fichier introuvable: {filename}")
+            except JSONDecodeError as e:
+                logger.error(f"Erreur JSON lors du rechargement de {filename}: {e}")
+                print(f"Erreur : JSON invalide dans {filename}: {e}")
+                self.status.config(text=f"❌ JSON invalide: {filename}")
+            except PermissionError as e:
+                logger.error(f"Erreur de permission lors du rechargement de {filename}: {e}")
+                print(f"Erreur : Accès refusé pour {filename}: {e}")
+                self.status.config(text=f"❌ Accès refusé: {filename}")
+            except UnicodeDecodeError as e:
+                logger.error(f"Erreur d'encodage lors du rechargement de {filename}: {e}")
+                print(f"Erreur : Encodage invalide dans {filename}: {e}")
+                self.status.config(text=f"❌ Erreur d'encodage: {filename}")
             except Exception as e:
-                print(f"Erreur lors du rechargement de {filename}: {e}")
+                logger.error(f"Erreur inattendue lors du rechargement de {filename}: {e}")
+                print(f"Erreur : Erreur lors du rechargement de {filename}: {e}")
+                self.status.config(text=f"❌ Erreur de chargement: {filename}")
 
     def sync_files(self):
-        if not self.check_required_files():
-            self.status.config(text="❌ Fichiers requis manquants")
-            return
-
+        """Synchronise les fichiers de traduction"""
         try:
+            # Vérification des fichiers requis
+            if not self.check_required_files():
+                msg = "Fichiers requis manquants pour la synchronisation"
+                logger.error(msg)
+                self.status.config(text="❌ Fichiers requis manquants")
+                return
+
+            # Vérification du fichier sélectionné
+            if not self.current_file_path:
+                msg = "Aucun fichier sélectionné pour la synchronisation"
+                logger.error(msg)
+                self.status.config(text="❌ Aucun fichier sélectionné")
+                return
+
+            # Vérification du chemin du fichier
+            if not os.path.exists(self.current_file_path):
+                msg = f"Le fichier {self.current_file_path} n'existe pas"
+                logger.error(msg)
+                self.status.config(text="❌ Fichier introuvable")
+                return
+
+            # Vérification des droits d'accès au fichier
+            if not os.access(self.current_file_path, os.R_OK):
+                msg = f"Droits insuffisants pour {self.current_file_path}"
+                logger.error(msg)
+                self.status.config(text="❌ Droits insuffisants")
+                return
+
+            # Lancement de la synchronisation
+            logger.info(f"Début de la synchronisation pour {self.current_file_path}")
             self.run_sync_script(self.current_file_path)
-        except Exception as e:
-            self.status.config(text="❌ Erreur lors de la synchronisation")
-            print(f"Erreur : {e}")
+
+        except FileNotFoundError as e:
+            msg = f"Fichier ou répertoire manquant : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Ressource manquante")
+            print(msg)
+        except PermissionError as e:
+            msg = f"Erreur de permission : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Erreur de permission")
+            print(msg)
+        except subprocess.SubprocessError as e:
+            msg = f"Erreur du processus : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Erreur d'exécution")
+            print(msg)
+        except UnicodeError as e:
+            msg = f"Erreur d'encodage : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Erreur d'encodage")
+            print(msg)
+        except (OSError, IOError) as e:
+            msg = f"Erreur système : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Erreur système")
+            print(msg)
+        except ValueError as e:
+            msg = f"Erreur de paramètre : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Paramètre invalide")
+            print(msg)
+        except (subprocess.CalledProcessError, RuntimeError, ImportError) as e:
+            msg = f"Erreur lors de la synchronisation : {e}"
+            logger.error(msg)
+            self.status.config(text="❌ Erreur de synchronisation")
+            print(msg)
 
     def check_required_files(self):
         script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -1249,14 +1461,25 @@ class FaultEditor:
         self.columns_frame.event_generate("<Configure>")
 
     def save_file(self, rel_path):
-        logger.info(f"Sauvegarde du fichier: {rel_path}")
-        try:
+        logger.info(f"Sauvegarde du fichier: {rel_path}")        try:
             with open(self.file_map[rel_path], "w", encoding="utf-8") as f:
                 json.dump(self.data_map[os.path.basename(rel_path)], f, indent=2, ensure_ascii=False)
             logger.info(f"Fichier {rel_path} sauvegardé avec succès")
             self.status.config(text=f"✅ {rel_path} sauvegardé")
+        except (FileNotFoundError, OSError) as e:
+            logger.error(f"Erreur d'accès au fichier lors de la sauvegarde de {rel_path}: {str(e)}")
+            self.status.config(text=f"❌ Fichier inaccessible {rel_path}")
+        except PermissionError as e:
+            logger.error(f"Erreur de permission lors de la sauvegarde de {rel_path}: {str(e)}")
+            self.status.config(text=f"❌ Permission refusée {rel_path}")
+        except KeyError as e:
+            logger.error(f"Clé manquante lors de la sauvegarde de {rel_path}: {str(e)}")
+            self.status.config(text=f"❌ Données manquantes {rel_path}")
+        except (TypeError, ValueError) as e:
+            logger.error(f"Erreur de données lors de la sauvegarde de {rel_path}: {str(e)}")
+            self.status.config(text=f"❌ Données invalides {rel_path}")
         except Exception as e:
-            logger.error(f"Erreur lors de la sauvegarde de {rel_path}: {str(e)}")
+            logger.error(f"Erreur inattendue lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Échec de la sauvegarde {rel_path}")
 
     def clear_columns_from(self, level):
@@ -1303,8 +1526,7 @@ class FaultEditor:
                                 print(f"⚠️ Fichier {os.path.basename(path)} n'est pas un dictionnaire JSON valide")
                                 return {}
                             print(f"Fichier {os.path.basename(path)} chargé avec {len(data)} clés")
-                            return data
-                        except json.JSONDecodeError as e:
+                            return data                        except json.JSONDecodeError as e:
                             print(f"❌ Erreur de décodage JSON pour {path}: {e}")
                             print(f"Contenu problématique: {content[:100]}...")
                             if self.ask_yes_no(f"Le fichier {os.path.basename(path)} contient du JSON invalide. Voulez-vous le recréer vide?"):
@@ -1313,7 +1535,24 @@ class FaultEditor:
                                 return {}
                             else:
                                 return {}
+                except FileNotFoundError as e:
+                    logger.error(f"Fichier introuvable : {path} - {e}")
+                    print(f"❌ Fichier introuvable : {path}")
+                    return {}
+                except PermissionError as e:
+                    logger.error(f"Erreur de permission lors de la lecture de {path}: {e}")
+                    print(f"❌ Permission refusée pour {path}: {e}")
+                    return {}
+                except UnicodeDecodeError as e:
+                    logger.error(f"Erreur d'encodage lors de la lecture de {path}: {e}")
+                    print(f"❌ Erreur d'encodage pour {path}: {e}")
+                    return {}
+                except OSError as e:
+                    logger.error(f"Erreur système lors de la lecture de {path}: {e}")
+                    print(f"❌ Erreur système pour {path}: {e}")
+                    return {}
                 except Exception as e:
+                    logger.error(f"Erreur inattendue lors de la lecture de {path}: {e}")
                     print(f"❌ Erreur lors de la lecture de {path}: {e}")
                     return {}
             else:
@@ -1491,11 +1730,10 @@ class FaultEditor:
                     editor_window.after(500, lambda w=widget: w.config(
                         bg=COL_BG_ROW if row % 2 == 1 else COL_BG_ROW_ALT))
 
-                # Mettre à jour le statut
-                if hasattr(editor_window, 'status_bar'):
+                # Mettre à jour le statut                if hasattr(editor_window, 'status_bar'):
                     editor_window.status_bar.config(text=f"✅ Ligne {row} traduite avec succès")
 
-            except Exception as e:
+            except (JSONDecodeError, ValueError, KeyError) as e:
                 print(f"Erreur lors de la traduction de la ligne {row}: {e}")
                 # Effet visuel d'erreur
                 for widget in editor_window.grid_frame.grid_slaves(row=row):
@@ -1696,15 +1934,34 @@ class FaultEditor:
             return
 
         editor_window.current_search_index = (editor_window.current_search_index - 1) % len(editor_window.search_results)
-        self.highlight_flat_search_result(editor_window, editor_window.search_results[editor_window.current_search_index])
-
-    def translate_text(self, text, target_lang):
+        self.highlight_flat_search_result(editor_window, editor_window.search_results[editor_window.current_search_index])    def translate_text(self, text, target_lang):
         """Traduit un texte français vers la langue cible"""
         try:
             # Appeler la fonction de traduction importée
             translated = traduire(text, target_lang)
             return translated
+        except TranslationError as e:
+            logger.error(f"Erreur de traduction : {e}")
+            print(f"Erreur lors de la traduction: {e}")
+            return text
+        except ConnectionError as e:
+            logger.error(f"Erreur de connexion lors de la traduction : {e}")
+            print(f"Erreur de connexion lors de la traduction: {e}")
+            return text
+        except TimeoutError as e:
+            logger.error(f"Timeout lors de la traduction : {e}")
+            print(f"Timeout lors de la traduction: {e}")
+            return text
+        except json.JSONDecodeError as e:
+            logger.error(f"Erreur de décodage JSON lors de la traduction : {e}")
+            print(f"Erreur de format de réponse lors de la traduction: {e}")
+            return text
+        except (ValueError, KeyError) as e:
+            logger.error(f"Erreur de données lors de la traduction : {e}")
+            print(f"Erreur de données lors de la traduction: {e}")
+            return text
         except Exception as e:
+            logger.error(f"Erreur inattendue lors de la traduction : {e}")
             print(f"Erreur lors de la traduction: {e}")
             return text
 
@@ -1759,16 +2016,34 @@ class FaultEditor:
                         # Mettre à jour la barre de progression
                         progress = (translated / total) * 100
                         progress_var.set(progress)
-                        progress_label.config(text=f"Traduction en cours... ({translated}/{total})")
-                        popup.update()
+                        progress_label.config(text=f"Traduction en cours... ({translated}/{total})")                        popup.update()
 
+                    except TranslationError as e:
+                        logger.error(f"Erreur de traduction pour '{fr_text.get()}': {e}")
+                        print(f"Erreur de traduction de '{fr_text.get()}': {e}")
+                    except (ConnectionError, TimeoutError) as e:
+                        logger.error(f"Erreur de connexion lors de la traduction de '{fr_text.get()}': {e}")
+                        print(f"Erreur de connexion pour '{fr_text.get()}': {e}")
+                    except (json.JSONDecodeError, ValueError, KeyError) as e:
+                        logger.error(f"Erreur de données lors de la traduction de '{fr_text.get()}': {e}")
+                        print(f"Erreur de données pour '{fr_text.get()}': {e}")
                     except Exception as e:
+                        logger.error(f"Erreur inattendue lors de la traduction de '{fr_text.get()}': {e}")
                         print(f"Erreur lors de la traduction de '{fr_text.get()}': {e}")
 
             # Mettre à jour le statut final
             editor_window.status_bar.config(text=f"✅ {translated} sur {total} entrées traduites")
 
+        except TranslationError as e:
+            logger.error(f"Erreur de traduction globale: {e}")
+            editor_window.status_bar.config(text=f"❌ Erreur de traduction: {e}")
+            print(f"Erreur de traduction: {e}")
+        except UIError as e:
+            logger.error(f"Erreur d'interface lors de la traduction: {e}")
+            editor_window.status_bar.config(text=f"❌ Erreur d'interface: {e}")
+            print(f"Erreur d'interface: {e}")
         except Exception as e:
+            logger.error(f"Erreur inattendue lors de la traduction globale: {e}")
             editor_window.status_bar.config(text=f"❌ Erreur lors de la traduction: {e}")
             print(f"Erreur lors de la traduction: {e}")
         finally:
@@ -1963,14 +2238,25 @@ class FaultEditor:
                 (editor_window.fr_path, fr_data),
                 (editor_window.en_path, en_data),
                 (editor_window.es_path, es_data)
-            ]
-
-            for path, data in files_to_save:
+            ]            for path, data in files_to_save:
                 with open(path, "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
 
             self.status.config(text="✅ Fichiers plats sauvegardés")
+        except FileOperationError as e:
+            logger.error(f"Erreur d'opération fichier lors de la sauvegarde des fichiers plats: {e}")
+            self.status.config(text=f"❌ Erreur fichier: {str(e)}")
+        except (FileNotFoundError, PermissionError) as e:
+            logger.error(f"Erreur d'accès aux fichiers plats: {e}")
+            self.status.config(text=f"❌ Accès refusé: {str(e)}")
+        except (json.JSONEncodeError, TypeError, ValueError) as e:
+            logger.error(f"Erreur de données JSON lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ Données invalides: {str(e)}")
+        except OSError as e:
+            logger.error(f"Erreur système lors de la sauvegarde des fichiers plats: {e}")
+            self.status.config(text=f"❌ Erreur système: {str(e)}")
         except Exception as e:
+            logger.error(f"Erreur inattendue lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Erreur lors de la sauvegarde: {str(e)}")
             print(f"Erreur lors de la sauvegarde des fichiers plats: {e}")
 
@@ -2010,7 +2296,7 @@ class FaultEditor:
                              font=FONT_DEFAULT,
                              wrap=tk.WORD)
 
-        scrollbar = ttk.Scrollbar(text_frame, orient="vertical", command=text_widget.yview)
+        scrollbar = ttk.Scrollbar(text_frame, orient=tk.VERTICAL, command=text_widget.yview)
         text_widget.configure(yscrollcommand=scrollbar.set)
 
         text_widget.pack(side="left", fill="both", expand=True)
@@ -2025,7 +2311,9 @@ class FaultEditor:
         button_frame.pack(fill="x", padx=10, pady=5)
 
         close_btn = ttk.Button(button_frame, text="Fermer", command=popup.destroy)
-        close_btn.pack(side="right")        # Centrer la fenêtre
+        close_btn.pack(side="right")
+
+        # Centrer la fenêtre
         popup.update_idletasks()
         x = (popup.winfo_screenwidth() // 2) - (popup.winfo_width() // 2)
         y = (popup.winfo_screenheight() // 2) - (popup.winfo_height() // 2)
@@ -2039,6 +2327,28 @@ if __name__ == "__main__":
         app = FaultEditor(root)
         print("✅ Interface utilisateur initialisée")
         root.mainloop()
+    except tk.TclError as e:
+        print(f"❌ Erreur d'interface graphique Tkinter : {e}")
+        import traceback
+        traceback.print_exc()
+    except ImportError as e:
+        print(f"❌ Erreur d'importation de module : {e}")
+        print("Vérifiez que tous les modules requis sont installés")
+        import traceback
+        traceback.print_exc()
+    except FileNotFoundError as e:
+        print(f"❌ Fichier de configuration ou ressource manquant : {e}")
+        import traceback
+        traceback.print_exc()
+    except PermissionError as e:
+        print(f"❌ Erreur de permissions : {e}")
+        print("Vérifiez les permissions d'accès aux dossiers et fichiers")
+        import traceback
+        traceback.print_exc()
+    except OSError as e:
+        print(f"❌ Erreur système : {e}")
+        import traceback
+        traceback.print_exc()
     except Exception as e:
         print(f"❌ Erreur fatale au démarrage : {e}")
         import traceback
