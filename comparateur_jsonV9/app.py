@@ -9,6 +9,9 @@ import re
 import logging
 from datetime import datetime
 
+# Exceptions personnalisées
+from exceptions import TranslationError
+
 # Créer le dossier logs s'il n'existe pas
 os.makedirs('logs', exist_ok=True)
 
@@ -266,12 +269,15 @@ class FaultEditor:
             try:
                 self.rebuild_columns_for_path()
                 self.status.config(text="✅ Interface rechargée")
-            except Exception as e:
+            except (FileNotFoundError, json.JSONDecodeError, tk.TclError) as e:
                 print(f"❌ Erreur lors de la restauration du chemin : {e}")
                 # On reste à la racine en cas d'erreur
                 self.status.config(text="✅ Interface rechargée (racine)")
-        except Exception as e:
+        except (OSError, tk.TclError) as e:
             print(f"❌ Erreur lors du rechargement : {e}")
+            self.status.config(text="❌ Erreur de rechargement")
+        except Exception as e:
+            logger.error(f"Erreur inattendue lors du rechargement: {e}")
             self.status.config(text="❌ Erreur de rechargement")
 
     def update_xscroll_visibility(self, event=None):
@@ -517,7 +523,7 @@ class FaultEditor:
                 'fixed': apply_fix and "corrections appliquées" in result.stdout
             }
 
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             print(f"❌ Erreur lors de la vérification de cohérence : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
@@ -543,7 +549,7 @@ class FaultEditor:
                 'errors': result.stderr
             }
 
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             print(f"❌ Erreur lors de la vérification orthographique : {e}")
             return {'success': False, 'output': '', 'errors': str(e)}
 
@@ -570,7 +576,7 @@ class FaultEditor:
                 'fixed': "fichiers traités" in result.stdout or "corrections appliquées" in result.stdout
             }
 
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             print(f"❌ Erreur lors de la correction des headers : {e}")
             return {'success': False, 'output': '', 'errors': str(e), 'fixed': False}
 
@@ -787,7 +793,7 @@ class FaultEditor:
                 self.show_script_results(f"⚠️ Erreurs détectées - {desc}", error_message, False)
                 self.status.config(text=f"⚠️ Erreurs détectées : {desc}")
 
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
             print(f"\n❌ Exception lors de {desc}: {str(e)}")
             self.status.config(text=f"❌ Exception : {desc}")
@@ -890,7 +896,7 @@ class FaultEditor:
                 # Afficher l'erreur dans une fenêtre de dialogue
                 self.show_script_results(f"❌ Erreur - {desc}", error_message, False)
                 self.status.config(text=f"❌ Erreur : {desc}")
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             logger.error(f"Exception lors de l'exécution de {desc}: {str(e)}")
             print(f"\n❌ Exception lors de {desc}: {str(e)}")
             self.status.config(text=f"❌ Exception : {desc}")
@@ -938,7 +944,7 @@ class FaultEditor:
                 print("\nErreur lors de la synchronisation :")
                 print(result.stderr)
 
-        except Exception as e:
+        except subprocess.CalledProcessError as e:
             self.status.config(text="❌ Erreur de synchronisation")
             print(f"\n❌ Erreur lors de la synchronisation : {e}")
 
@@ -948,7 +954,7 @@ class FaultEditor:
             try:
                 with open(filepath, "r", encoding="utf-8") as f:
                     self.data_map[filename] = json.load(f)
-            except Exception as e:
+            except (FileNotFoundError, json.JSONDecodeError, PermissionError) as e:
                 print(f"Erreur lors du rechargement de {filename}: {e}")
 
     def sync_files(self):
@@ -958,7 +964,7 @@ class FaultEditor:
 
         try:
             self.run_sync_script(self.current_file_path)
-        except Exception as e:
+        except (subprocess.SubprocessError, FileNotFoundError) as e:
             self.status.config(text="❌ Erreur lors de la synchronisation")
             print(f"Erreur : {e}")
 
@@ -1034,7 +1040,7 @@ class FaultEditor:
             with open(filepath, "r", encoding="utf-8") as f:
                 content = json.load(f)
             logger.info(f"Fichier {filename} chargé avec succès")
-        except Exception as e:
+        except (FileNotFoundError, json.JSONDecodeError, PermissionError) as e:
             logger.error(f"Erreur lors de la lecture de {filename}: {str(e)}")
             self.status.config(text=f"❌ Erreur lecture {filename}")
             return
@@ -1191,7 +1197,7 @@ class FaultEditor:
                 json.dump(self.data_map[os.path.basename(rel_path)], f, indent=2, ensure_ascii=False)
             logger.info(f"Fichier {rel_path} sauvegardé avec succès")
             self.status.config(text=f"✅ {rel_path} sauvegardé")
-        except Exception as e:
+        except (OSError, PermissionError) as e:
             logger.error(f"Erreur lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Échec de la sauvegarde {rel_path}")
 
@@ -1249,7 +1255,7 @@ class FaultEditor:
                                 return {}
                             else:
                                 return {}
-                except Exception as e:
+                except (FileNotFoundError, PermissionError, OSError) as e:
                     print(f"❌ Erreur lors de la lecture de {path}: {e}")
                     return {}
             else:
@@ -1431,7 +1437,7 @@ class FaultEditor:
                 if hasattr(editor_window, 'status_bar'):
                     editor_window.status_bar.config(text=f"✅ Ligne {row} traduite avec succès")
 
-            except Exception as e:
+            except TranslationError as e:
                 print(f"Erreur lors de la traduction de la ligne {row}: {e}")
                 # Effet visuel d'erreur
                 for widget in editor_window.grid_frame.grid_slaves(row=row):
@@ -1642,7 +1648,7 @@ class FaultEditor:
             return translated
         except Exception as e:
             print(f"Erreur lors de la traduction: {e}")
-            return text
+            raise TranslationError(str(e), source_lang='fr', target_lang=target_lang)
 
     def ask_yes_no(self, question):
         """Affiche une boîte de dialogue oui/non et retourne True si l'utilisateur clique sur Oui"""
@@ -1698,13 +1704,13 @@ class FaultEditor:
                         progress_label.config(text=f"Traduction en cours... ({translated}/{total})")
                         popup.update()
 
-                    except Exception as e:
+                    except TranslationError as e:
                         print(f"Erreur lors de la traduction de '{fr_text.get()}': {e}")
 
             # Mettre à jour le statut final
             editor_window.status_bar.config(text=f"✅ {translated} sur {total} entrées traduites")
 
-        except Exception as e:
+        except TranslationError as e:
             editor_window.status_bar.config(text=f"❌ Erreur lors de la traduction: {e}")
             print(f"Erreur lors de la traduction: {e}")
         finally:
@@ -1906,7 +1912,7 @@ class FaultEditor:
                     json.dump(data, f, indent=2, ensure_ascii=False)
 
             self.status.config(text="✅ Fichiers plats sauvegardés")
-        except Exception as e:
+        except (OSError, PermissionError) as e:
             self.status.config(text=f"❌ Erreur lors de la sauvegarde: {str(e)}")
             print(f"Erreur lors de la sauvegarde des fichiers plats: {e}")
 
@@ -1975,6 +1981,10 @@ if __name__ == "__main__":
         app = FaultEditor(root)
         print("✅ Interface utilisateur initialisée")
         root.mainloop()
+    except tk.TclError as e:
+        print(f"❌ Erreur Tkinter au démarrage : {e}")
+        import traceback
+        traceback.print_exc()
     except Exception as e:
         print(f"❌ Erreur fatale au démarrage : {e}")
         import traceback
