@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import argparse
+import traceback
 from generer_fichier import generer_fichier
 
 def find_missing_translations(base_dir):
@@ -118,7 +119,8 @@ def main():
             else:
                 error_count += 1
         except Exception as e:
-            print(f"❌ Erreur : {e}")
+            print(f"❌ Erreur : {e}")  # handled for visibility
+            traceback.print_exc()
             error_count += 1
 
     print(f"\n📊 Résumé :")

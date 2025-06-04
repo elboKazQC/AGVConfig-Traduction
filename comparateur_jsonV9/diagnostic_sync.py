@@ -9,6 +9,7 @@ Détecte les incohérences où des entrées vides dans les masters génèrent de
 import os
 import json
 import glob
+import traceback
 from pathlib import Path
 
 def diagnostiquer_dossier(dossier_json):
@@ -115,8 +116,9 @@ def diagnostiquer_dossier(dossier_json):
                 else:
                     print(f"  ✅ Fichier {lang} correct")
 
-        except Exception as e:
-            print(f"  ❌ Erreur lors de l'analyse : {e}")
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"  ❌ Erreur lors de l'analyse : {e}")  # handled for visibility
+            traceback.print_exc()
             continue
 
     print("\n" + "=" * 80)

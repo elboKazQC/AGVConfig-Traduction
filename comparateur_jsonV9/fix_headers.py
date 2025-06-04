@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import argparse
+import traceback
 from pathlib import Path
 
 def fix_header_metadata(file_path):
@@ -59,8 +60,9 @@ def fix_header_metadata(file_path):
 
         return False
 
-    except Exception as e:
-        print(f"❌ Erreur lors de la correction de {file_path}: {e}")
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"❌ Erreur lors de la correction de {file_path}: {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def find_all_json_files(base_dir):
@@ -119,8 +121,9 @@ def main():
                 else:
                     print(f"  ✅ Header correct")
 
-            except Exception as e:
-                print(f"  ❌ Erreur : {e}")
+            except (OSError, json.JSONDecodeError) as e:
+                print(f"  ❌ Erreur : {e}")  # handled for visibility
+                traceback.print_exc()
                 error_count += 1
         else:
             # Mode correction réelle

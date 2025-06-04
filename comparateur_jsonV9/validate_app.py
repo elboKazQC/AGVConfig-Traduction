@@ -8,6 +8,7 @@ import sys
 import os
 import json
 import tempfile
+import traceback
 
 # Ajouter le répertoire au path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -19,7 +20,8 @@ def test_import():
         print("✅ Import de FaultEditor: SUCCÈS")
         return True
     except Exception as e:
-        print(f"❌ Import de FaultEditor: ÉCHEC - {e}")
+        print(f"❌ Import de FaultEditor: ÉCHEC - {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def test_json_operations():
@@ -63,7 +65,8 @@ def test_json_operations():
         return True
 
     except Exception as e:
-        print(f"❌ Opérations JSON: ÉCHEC - {e}")
+        print(f"❌ Opérations JSON: ÉCHEC - {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def test_app_instantiation():
@@ -89,7 +92,8 @@ def test_app_instantiation():
         return True
 
     except Exception as e:
-        print(f"❌ Création de l'app: ÉCHEC - {e}")
+        print(f"❌ Création de l'app: ÉCHEC - {e}")  # handled for visibility
+        traceback.print_exc()
         # Ce n'est pas forcément un problème critique
         print("  (Ceci peut être normal dans un environnement sans affichage)")
         return True  # On considère que c'est OK

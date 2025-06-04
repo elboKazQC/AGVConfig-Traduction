@@ -10,6 +10,7 @@ import os
 import sys
 import json
 import argparse
+import traceback
 from collections import defaultdict
 
 def load_json_safe(file_path):
@@ -17,8 +18,9 @@ def load_json_safe(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except Exception as e:
-        print(f"❌ Erreur lors du chargement de {file_path}: {e}")
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"❌ Erreur lors du chargement de {file_path}: {e}")  # handled for visibility
+        traceback.print_exc()
         return None
 
 def extract_ids_from_filename(filename):
@@ -280,8 +282,9 @@ def fix_metadata_errors(files_group, errors):
                 with open(file_path, 'w', encoding='utf-8') as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
                 print(f"  ✅ Fichier sauvegardé: {filename}")
-            except Exception as e:
-                print(f"  ❌ Erreur sauvegarde {filename}: {e}")
+            except OSError as e:
+                print(f"  ❌ Erreur sauvegarde {filename}: {e}")  # handled for visibility
+                traceback.print_exc()
 
     return fixes_applied
 

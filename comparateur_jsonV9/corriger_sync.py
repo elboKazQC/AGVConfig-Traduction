@@ -9,6 +9,7 @@ dans le fichier français master génèrent quand même des traductions.
 import os
 import json
 import argparse
+import traceback
 from datetime import datetime
 
 def corriger_synchronisation(fichier_fr_path):
@@ -91,8 +92,9 @@ def corriger_synchronisation(fichier_fr_path):
 
         return True
 
-    except Exception as e:
-        print(f"❌ Erreur lors de la correction : {e}")
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"❌ Erreur lors de la correction : {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def main():

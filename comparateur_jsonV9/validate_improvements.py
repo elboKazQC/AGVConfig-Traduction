@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import tempfile
+import traceback
 from datetime import datetime
 
 # Add current directory to path
@@ -50,7 +51,8 @@ def validate_app_import():
 
         return True
     except Exception as e:
-        print(f"❌ Erreur import app.py: {e}")
+        print(f"❌ Erreur import app.py: {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def test_error_handling():
@@ -86,7 +88,8 @@ def test_error_handling():
         return True
 
     except Exception as e:
-        print(f"❌ Erreur test gestion d'erreurs: {e}")
+        print(f"❌ Erreur test gestion d'erreurs: {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def main():
@@ -106,7 +109,8 @@ def main():
         try:
             results[test_name] = test_func()
         except Exception as e:
-            print(f"❌ Erreur inattendue dans {test_name}: {e}")
+            print(f"❌ Erreur inattendue dans {test_name}: {e}")  # handled for visibility
+            traceback.print_exc()
             results[test_name] = False
 
     print("\n" + "=" * 55)
