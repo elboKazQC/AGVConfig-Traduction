@@ -182,6 +182,44 @@ logging.basicConfig(
 )
 ```
 
+## 🧪 Tests et Validation
+
+### Environnement de Test
+- **Display requis** : Tkinter nécessite un affichage graphique
+- **CI/CD** : Configuration spéciale nécessaire pour tests automatisés
+- **Tests sans UI** : Utiliser `validate_improvements.py`
+
+### Tests Disponibles
+```bash
+# Validation sans interface graphique
+python validate_improvements.py  # ✅ Fonctionne toujours
+
+# Tests unitaires complets (nécessite affichage)
+pytest -q  # ❌ Échoue si pas d'affichage (TclError)
+```
+
+### Gestion des Erreurs Spécifiques
+- **TranslationError** : Erreurs de traduction
+- **TclError** : Erreurs liées à l'interface Tkinter
+- **FileError** : Problèmes d'accès aux fichiers
+- **SubprocessError** : Erreurs d'exécution de commandes
+
+### Bonnes Pratiques de Test
+1. **Configuration d'environnement**
+   - Configurer DISPLAY si nécessaire
+   - Installer toutes les dépendances
+   - Vérifier les permissions fichiers
+
+2. **Validation sans UI**
+   - Utiliser les scripts de validation
+   - Tester la logique métier séparément
+   - Vérifier les logs d'erreur
+
+3. **Tests avec UI**
+   - Exécuter sur machine avec affichage
+   - Tester toutes les interactions utilisateur
+   - Valider le comportement visuel
+
 ## 📝 Bonnes Pratiques
 
 ### Pour les Développeurs
