@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import argparse
+import traceback
 from translate import traduire
 
 def fix_headers_and_retranslate(source_file_path, force_retranslate=False):
@@ -91,8 +92,9 @@ def fix_headers_and_retranslate(source_file_path, force_retranslate=False):
         print(f"\n🎉 Correction et synchronisation terminées avec succès !")
         return True
 
-    except Exception as e:
-        print(f"❌ Erreur lors de la correction : {e}")
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"❌ Erreur lors de la correction : {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def sync_data_structure_with_force(source_data, target_data, source_lang, target_lang, force_retranslate=False):

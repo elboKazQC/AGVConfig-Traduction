@@ -7,6 +7,7 @@ Permet de vérifier que les modifications n'introduisent pas de régressions
 
 import unittest
 import tkinter as tk
+import traceback
 from unittest.mock import Mock, patch, MagicMock
 import json
 import tempfile
@@ -69,14 +70,14 @@ class TestFaultEditorBase(unittest.TestCase):
         try:
             self.root.destroy()
         except tk.TclError:
-            pass
+            traceback.print_exc()  # handled for visibility
 
         # Nettoyer les fichiers temporaires
         import shutil
         try:
             shutil.rmtree(self.temp_dir)
         except OSError:
-            pass
+            traceback.print_exc()  # handled for visibility
 
 class TestFaultEditorInitialization(TestFaultEditorBase):
     """Tests d'initialisation de l'application"""
@@ -215,7 +216,8 @@ class TestDataValidation(TestFaultEditorBase):
 
             return True
 
-        except Exception:
+        except (KeyError, TypeError):
+            traceback.print_exc()  # handled for visibility
             return False
 
 class TestUIOperations(TestFaultEditorBase):
