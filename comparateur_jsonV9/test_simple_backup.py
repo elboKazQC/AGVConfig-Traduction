@@ -26,7 +26,9 @@ except ImportError as e:
     sys.exit(1)
 
 class TestFaultEditorBasic(unittest.TestCase):
-    """Tests de base pour FaultEditor"""    def setUp(self):
+    """Tests de base pour FaultEditor"""
+
+    def setUp(self):
         """Préparation avant chaque test"""
         self.root = tk.Tk()
         self.root.withdraw()  # Cacher la fenêtre pendant les tests
@@ -97,9 +99,7 @@ class TestFileOperations(unittest.TestCase):
                     "Description": "Test Description"
                 }
             ]
-        }
-
-        # Créer le fichier de test
+        }        # Créer le fichier de test
         with open(self.test_file, 'w', encoding='utf-8') as f:
             json.dump(self.test_data, f, indent=2, ensure_ascii=False)
 
@@ -110,12 +110,17 @@ class TestFileOperations(unittest.TestCase):
                 os.remove(self.test_file)
             os.rmdir(self.temp_dir)
         except OSError:
-            traceback.print_exc()  # handled for visibility
+            pass  # Ignore cleanup errors for test stability
         try:
-            self.app.root.destroy()
-            self.root.destroy()
-        except tk.TclError:
-            traceback.print_exc()  # handled for visibility
+            if hasattr(self, 'app') and self.app and hasattr(self.app, 'root'):
+                self.app.root.destroy()
+        except (tk.TclError, AttributeError):
+            pass  # Ignore cleanup errors for test stability
+        try:
+            if hasattr(self, 'root') and self.root:
+                self.root.destroy()
+        except (tk.TclError, AttributeError):
+            pass  # Ignore cleanup errors for test stability
 
     def test_load_valid_json(self):
         """Test de chargement d'un fichier JSON valide"""
