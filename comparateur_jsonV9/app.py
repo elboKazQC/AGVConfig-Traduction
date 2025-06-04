@@ -526,7 +526,8 @@ class FaultEditor:
 
             if result.stdout:
                 print("📋 Résultats cohérence :")
-                print(result.stdout)            return {
+                print(result.stdout)
+            return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
@@ -596,7 +597,8 @@ class FaultEditor:
 
             if result.stdout:
                 print("📋 Résultats correction headers :")
-                print(result.stdout)            return {
+                print(result.stdout)
+            return {
                 'success': result.returncode == 0,
                 'output': result.stdout,
                 'errors': result.stderr,
@@ -877,7 +879,8 @@ class FaultEditor:
                 return
 
             logger.info(f"Lancement vérification orthographique dans : {dossier_base}")
-            print(f"🔍 Vérification orthographique dans : {dossier_base}")            cmd = ["python", "verifier_orthographe.py", dossier_base]
+            print(f"🔍 Vérification orthographique dans : {dossier_base}")
+            cmd = ["python", "verifier_orthographe.py", dossier_base]
             self.run_command(cmd, desc="Vérifier l'orthographe")
         except FileOperationError as e:
             logger.error(f"Erreur de fichier lors de la vérification orthographique : {e}")
@@ -1461,17 +1464,18 @@ class FaultEditor:
         self.columns_frame.event_generate("<Configure>")
 
     def save_file(self, rel_path):
-        logger.info(f"Sauvegarde du fichier: {rel_path}")        try:
+        logger.info(f"Sauvegarde du fichier: {rel_path}")
+        try:
             with open(self.file_map[rel_path], "w", encoding="utf-8") as f:
                 json.dump(self.data_map[os.path.basename(rel_path)], f, indent=2, ensure_ascii=False)
             logger.info(f"Fichier {rel_path} sauvegardé avec succès")
             self.status.config(text=f"✅ {rel_path} sauvegardé")
-        except (FileNotFoundError, OSError) as e:
-            logger.error(f"Erreur d'accès au fichier lors de la sauvegarde de {rel_path}: {str(e)}")
-            self.status.config(text=f"❌ Fichier inaccessible {rel_path}")
         except PermissionError as e:
             logger.error(f"Erreur de permission lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Permission refusée {rel_path}")
+        except (FileNotFoundError, OSError) as e:
+            logger.error(f"Erreur d'accès au fichier lors de la sauvegarde de {rel_path}: {str(e)}")
+            self.status.config(text=f"❌ Fichier inaccessible {rel_path}")
         except KeyError as e:
             logger.error(f"Clé manquante lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Données manquantes {rel_path}")
@@ -1526,7 +1530,8 @@ class FaultEditor:
                                 print(f"⚠️ Fichier {os.path.basename(path)} n'est pas un dictionnaire JSON valide")
                                 return {}
                             print(f"Fichier {os.path.basename(path)} chargé avec {len(data)} clés")
-                            return data                        except json.JSONDecodeError as e:
+                            return data
+                        except json.JSONDecodeError as e:
                             print(f"❌ Erreur de décodage JSON pour {path}: {e}")
                             print(f"Contenu problématique: {content[:100]}...")
                             if self.ask_yes_no(f"Le fichier {os.path.basename(path)} contient du JSON invalide. Voulez-vous le recréer vide?"):
@@ -1934,7 +1939,9 @@ class FaultEditor:
             return
 
         editor_window.current_search_index = (editor_window.current_search_index - 1) % len(editor_window.search_results)
-        self.highlight_flat_search_result(editor_window, editor_window.search_results[editor_window.current_search_index])    def translate_text(self, text, target_lang):
+        self.highlight_flat_search_result(editor_window, editor_window.search_results[editor_window.current_search_index])
+
+    def translate_text(self, text, target_lang):
         """Traduit un texte français vers la langue cible"""
         try:
             # Appeler la fonction de traduction importée
@@ -2016,7 +2023,8 @@ class FaultEditor:
                         # Mettre à jour la barre de progression
                         progress = (translated / total) * 100
                         progress_var.set(progress)
-                        progress_label.config(text=f"Traduction en cours... ({translated}/{total})")                        popup.update()
+                        progress_label.config(text=f"Traduction en cours... ({translated}/{total})")
+                        popup.update()
 
                     except TranslationError as e:
                         logger.error(f"Erreur de traduction pour '{fr_text.get()}': {e}")
@@ -2238,7 +2246,8 @@ class FaultEditor:
                 (editor_window.fr_path, fr_data),
                 (editor_window.en_path, en_data),
                 (editor_window.es_path, es_data)
-            ]            for path, data in files_to_save:
+            ]
+            for path, data in files_to_save:
                 with open(path, "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
 
@@ -2249,7 +2258,7 @@ class FaultEditor:
         except (FileNotFoundError, PermissionError) as e:
             logger.error(f"Erreur d'accès aux fichiers plats: {e}")
             self.status.config(text=f"❌ Accès refusé: {str(e)}")
-        except (json.JSONEncodeError, TypeError, ValueError) as e:
+        except (TypeError, ValueError, json.JSONDecodeError) as e:
             logger.error(f"Erreur de données JSON lors de la sauvegarde: {e}")
             self.status.config(text=f"❌ Données invalides: {str(e)}")
         except OSError as e:
