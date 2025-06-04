@@ -7,10 +7,14 @@ env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
 load_dotenv(env_path)
 
 # Récupération de la clé API
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     print("⚠️ OPENAI_API_KEY non trouvée, utilisation d'une clé de test")
     OPENAI_API_KEY = "sk-test-key-for-development"
+
+# Sélection du modèle et de la température
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+TRANSLATION_TEMPERATURE = float(os.getenv("TRANSLATION_TEMPERATURE", "0.1"))
 
 # Configuration du client OpenAI
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -40,7 +44,7 @@ def traduire(text, target_lang):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=OPENAI_MODEL,
             messages=[
                 {
                     "role": "system",
@@ -103,7 +107,7 @@ Langue cible : {target_language}"""
                 }
             ],
             max_tokens=500,
-            temperature=0.1
+            temperature=TRANSLATION_TEMPERATURE
         )
 
         content = response.choices[0].message.content

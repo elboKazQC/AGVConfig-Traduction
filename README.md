@@ -128,8 +128,11 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional
 OPENAI_ORG_ID=your_organization_id_here
-OPENAI_MODEL=gpt-3.5-turbo
-TRANSLATION_TEMPERATURE=0.3
+# Default model
+OPENAI_MODEL=gpt-4o-mini
+# Use GPT-4 for best results
+# OPENAI_MODEL=gpt-4
+TRANSLATION_TEMPERATURE=0.1
 ```
 
 ### Supported Languages
@@ -181,7 +184,7 @@ File naming convention: `faults_XXX_YYY_ZZZ_WWW_[lang].json`
 
 Run the test script to verify your configuration:
 ```bash
-python test_translation.py
+python comparateur_jsonV9/test_translation.py
 ```
 
 ## 🧪 Development
