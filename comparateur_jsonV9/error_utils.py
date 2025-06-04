@@ -92,6 +92,13 @@ def show_error_to_user(title: str, message: str, error_type: str = "error"):
         error_logger.critical(f"Impossible d'afficher l'erreur à l'utilisateur: {e}")
         error_logger.critical(f"Erreur originale - {title}: {message}")
 
+def show_file_error(title: str, filepath: str, cause: str):
+    """Affiche une erreur liée à un fichier avec la cause probable"""
+    message = f"Fichier : {filepath}"
+    if cause:
+        message += f"\n\nCause possible : {cause}"
+    show_error_to_user(title, message)
+
 def safe_file_operation(filepath: str, operation: str):
     """
     Context manager pour les opérations sur fichiers sécurisées

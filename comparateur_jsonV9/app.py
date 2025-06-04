@@ -16,7 +16,13 @@ from exceptions import (
     FaultEditorError, FileOperationError, JSONValidationError,
     TranslationError, UIError, ConfigurationError, ErrorCodes
 )
-from error_utils import safe_execute, safe_ui_operation, show_error_to_user, robust_widget_destroy
+from error_utils import (
+    safe_execute,
+    safe_ui_operation,
+    show_error_to_user,
+    robust_widget_destroy,
+    show_file_error,
+)
 
 # Créer le dossier logs s'il n'existe pas
 os.makedirs('logs', exist_ok=True)
@@ -1282,12 +1288,14 @@ class FaultEditor:
             error_msg = "Nom de fichier non spécifié"
             logger.error(error_msg)
             self.status.config(text=f"❌ {error_msg}")
+            show_file_error("Erreur fichier", "(non défini)", "Nom de fichier manquant")
             raise ValueError(error_msg)
 
         if not os.path.exists(filename):
             error_msg = f"Le fichier {filename} n'existe pas"
             logger.error(error_msg)
             self.status.config(text=f"❌ Fichier introuvable")
+            show_file_error("Fichier introuvable", filename, "Le fichier est manquant")
             raise FileNotFoundError(error_msg)
 
         try:
@@ -1321,21 +1329,25 @@ class FaultEditor:
             error_msg = f"Fichier JSON invalide: {str(e)}"
             logger.error(f"Erreur JSON dans {filename}: {e}")
             self.status.config(text=f"❌ JSON invalide")
+            show_file_error("JSON invalide", filename, "Structure manquante ou incorrecte")
             raise ValueError(error_msg)
         except UnicodeDecodeError as e:
             error_msg = f"Erreur d'encodage du fichier: {str(e)}"
             logger.error(f"Erreur d'encodage dans {filename}: {e}")
             self.status.config(text=f"❌ Erreur d'encodage")
+            show_file_error("Encodage invalide", filename, "Fichier mal encodé")
             raise ValueError(error_msg)
         except PermissionError as e:
             error_msg = f"Permissions insuffisantes: {str(e)}"
             logger.error(f"Erreur de permissions pour {filename}: {e}")
             self.status.config(text=f"❌ Accès refusé")
+            show_file_error("Accès refusé", filename, "Permissions insuffisantes")
             raise PermissionError(error_msg)
         except Exception as e:
             error_msg = f"Erreur inattendue lors du chargement: {str(e)}"
             logger.error(f"Erreur inattendue dans {filename}: {e}")
             self.status.config(text=f"❌ Erreur de chargement")
+            show_file_error("Erreur inattendue", filename, "Erreur inconnue")
             raise Exception(error_msg)
 
     def path_to_filename(self, path):
@@ -1486,18 +1498,22 @@ class FaultEditor:
         except PermissionError as e:
             logger.error(f"Erreur de permission lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Permission refusée {rel_path}")
+            show_file_error("Accès refusé", self.file_map.get(rel_path, rel_path), "Permissions insuffisantes")
         except (FileNotFoundError, OSError) as e:
             logger.error(f"Erreur d'accès au fichier lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Fichier inaccessible {rel_path}")
+            show_file_error("Fichier inaccessible", self.file_map.get(rel_path, rel_path), "Fichier introuvable ou verrouillé")
         except KeyError as e:
             logger.error(f"Clé manquante lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Données manquantes {rel_path}")
         except (TypeError, ValueError) as e:
             logger.error(f"Erreur de données lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Données invalides {rel_path}")
+            show_file_error("Données invalides", self.file_map.get(rel_path, rel_path), "Structure JSON incorrecte")
         except Exception as e:
             logger.error(f"Erreur inattendue lors de la sauvegarde de {rel_path}: {str(e)}")
             self.status.config(text=f"❌ Échec de la sauvegarde {rel_path}")
+            show_file_error("Erreur inattendue", self.file_map.get(rel_path, rel_path), "Erreur inconnue")
 
     def clear_columns_from(self, level):
         for frame in self.columns[level:]:
@@ -1556,22 +1572,27 @@ class FaultEditor:
                 except FileNotFoundError as e:
                     logger.error(f"Fichier introuvable : {path} - {e}")
                     print(f"❌ Fichier introuvable : {path}")
+                    show_file_error("Fichier introuvable", path, "Fichier manquant")
                     return {}
                 except PermissionError as e:
                     logger.error(f"Erreur de permission lors de la lecture de {path}: {e}")
                     print(f"❌ Permission refusée pour {path}: {e}")
+                    show_file_error("Accès refusé", path, "Permissions insuffisantes")
                     return {}
                 except UnicodeDecodeError as e:
                     logger.error(f"Erreur d'encodage lors de la lecture de {path}: {e}")
                     print(f"❌ Erreur d'encodage pour {path}: {e}")
+                    show_file_error("Encodage invalide", path, "Fichier mal encodé")
                     return {}
                 except OSError as e:
                     logger.error(f"Erreur système lors de la lecture de {path}: {e}")
                     print(f"❌ Erreur système pour {path}: {e}")
+                    show_file_error("Erreur système", path, "Lecture impossible")
                     return {}
                 except Exception as e:
                     logger.error(f"Erreur inattendue lors de la lecture de {path}: {e}")
                     print(f"❌ Erreur lors de la lecture de {path}: {e}")
+                    show_file_error("Erreur inattendue", path, "Erreur inconnue")
                     return {}
             else:
                 print(f"Fichier {os.path.basename(path)} n'existe pas, création...")
