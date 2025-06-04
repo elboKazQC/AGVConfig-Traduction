@@ -9,6 +9,8 @@ import os
 import sys
 import json
 import argparse
+import traceback
+import openai
 from translate import traduire
 
 def generer_fichier(base_dir, filename_pattern, source_lang, target_lang):
@@ -59,8 +61,9 @@ def generer_fichier(base_dir, filename_pattern, source_lang, target_lang):
         print(f"✅ Fichier généré : {target_file}")
         return True
 
-    except Exception as e:
-        print(f"❌ Erreur lors de la génération : {e}")
+    except (OSError, json.JSONDecodeError, openai.OpenAIError) as e:
+        print(f"❌ Erreur lors de la génération : {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def translate_data_structure(data, source_lang, target_lang):

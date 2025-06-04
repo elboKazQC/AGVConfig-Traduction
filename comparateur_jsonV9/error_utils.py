@@ -178,7 +178,7 @@ def robust_widget_destroy(widget):
             widget.destroy()
     except tk.TclError:
         # Widget déjà détruit ou invalide
-        pass
+        traceback.print_exc()  # handled for visibility
     except Exception as e:
         error_logger.warning(f"Erreur lors de la destruction du widget: {e}")
 

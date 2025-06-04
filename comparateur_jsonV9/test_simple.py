@@ -7,6 +7,7 @@ Permet de vérifier que les modifications n'introduisent pas de régressions
 
 import unittest
 import tkinter as tk
+import traceback
 from unittest.mock import Mock, patch, MagicMock
 import json
 import tempfile
@@ -38,11 +39,11 @@ class TestFaultEditorBasic(unittest.TestCase):
             if hasattr(self, 'app') and self.app:
                 self.app.root.destroy()
         except tk.TclError:
-            pass
+            traceback.print_exc()  # handled for visibility
         try:
             self.root.destroy()
         except tk.TclError:
-            pass
+            traceback.print_exc()  # handled for visibility
 
     def test_app_can_be_created(self):
         """Test que l'application peut être créée sans crash"""
@@ -110,12 +111,12 @@ class TestFileOperations(unittest.TestCase):
                 os.remove(self.test_file)
             os.rmdir(self.temp_dir)
         except OSError:
-            pass
+            traceback.print_exc()  # handled for visibility
         try:
             self.app.root.destroy()
             self.root.destroy()
         except tk.TclError:
-            pass
+            traceback.print_exc()  # handled for visibility
 
     def test_load_valid_json(self):
         """Test de chargement d'un fichier JSON valide"""

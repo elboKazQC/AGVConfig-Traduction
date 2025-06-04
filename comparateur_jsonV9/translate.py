@@ -1,6 +1,7 @@
 import os
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
+import traceback
 
 # Chargement direct du fichier .env
 env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
@@ -120,6 +121,7 @@ Langue cible : {target_language}"""
         translated_text = content.strip() if content else ""
         return translated_text
 
-    except Exception as e:
-        print(f"Erreur lors de la traduction: {e}")
+    except OpenAIError as e:
+        print(f"Erreur lors de la traduction: {e}")  # handled for visibility
+        traceback.print_exc()
         return text  # Retourner le texte original en cas d'erreur
