@@ -2250,7 +2250,7 @@ class FaultEditor:
                 with open(path, "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
             self.status.config(text="✅ Fichiers plats sauvegardés")
-        
+
         except FileOperationError as e:
             logger.error(f"Erreur d'opération fichier lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Erreur fichier: {str(e)}")
