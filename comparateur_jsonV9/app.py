@@ -2242,28 +2242,45 @@ class FaultEditor:
                         break
 
             # Sauvegarder les fichiers
-            files_to_save = [
-                (editor_window.fr_path, fr_data),
+            files_to_save = [                (editor_window.fr_path, fr_data),
                 (editor_window.en_path, en_data),
                 (editor_window.es_path, es_data)
             ]
             for path, data in files_to_save:
                 with open(path, "w", encoding="utf-8") as f:
                     json.dump(data, f, indent=2, ensure_ascii=False)
-
             self.status.config(text="✅ Fichiers plats sauvegardés")
+        
         except FileOperationError as e:
             logger.error(f"Erreur d'opération fichier lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Erreur fichier: {str(e)}")
-        except (FileNotFoundError, PermissionError) as e:
-            logger.error(f"Erreur d'accès aux fichiers plats: {e}")
+        except FileNotFoundError as e:
+            logger.error(f"Fichier non trouvé lors de la sauvegarde des fichiers plats: {e}")
+            self.status.config(text=f"❌ Fichier introuvable: {str(e)}")
+        except PermissionError as e:
+            logger.error(f"Erreur de permission lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Accès refusé: {str(e)}")
-        except (TypeError, ValueError, json.JSONDecodeError) as e:
-            logger.error(f"Erreur de données JSON lors de la sauvegarde: {e}")
+        except UnicodeEncodeError as e:
+            logger.error(f"Erreur d'encodage lors de la sauvegarde des fichiers plats: {e}")
+            self.status.config(text=f"❌ Erreur d'encodage: {str(e)}")
+        except json.JSONDecodeError as e:
+            logger.error(f"Erreur JSON lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ JSON invalide: {str(e)}")
+        except (TypeError, ValueError) as e:
+            logger.error(f"Erreur de données lors de la sauvegarde: {e}")
             self.status.config(text=f"❌ Données invalides: {str(e)}")
         except OSError as e:
             logger.error(f"Erreur système lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Erreur système: {str(e)}")
+        except tk.TclError as e:
+            logger.error(f"Erreur d'interface lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ Erreur d'interface: {str(e)}")
+        except KeyError as e:
+            logger.error(f"Clé manquante lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ Clé manquante: {str(e)}")
+        except AttributeError as e:
+            logger.error(f"Attribut manquant lors de la sauvegarde: {e}")
+            self.status.config(text=f"❌ Attribut manquant: {str(e)}")
         except Exception as e:
             logger.error(f"Erreur inattendue lors de la sauvegarde des fichiers plats: {e}")
             self.status.config(text=f"❌ Erreur lors de la sauvegarde: {str(e)}")
