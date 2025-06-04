@@ -23,7 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Baterías",
+      "Description": "baterías",
       "IsExpandable": true
     },
     {
@@ -35,11 +35,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "Cargador",
+      "Description": "cargador",
       "IsExpandable": true
     },
     {
-      "Description": "Motores de conducción.",
+      "Description": "Motores de accionamiento",
       "IsExpandable": true
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Lectores magnéticos",
+      "Description": "lectores magnéticos",
       "IsExpandable": true
     },
     {
@@ -71,7 +71,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "casa",
+      "Description": "perro",
       "IsExpandable": false
     },
     {

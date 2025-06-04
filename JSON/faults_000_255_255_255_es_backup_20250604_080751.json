@@ -4,26 +4,18 @@
     "IdLevel1": 255,
     "IdLevel2": 255,
     "IdLevel3": 255,
-    "Language": "en",
-    "Filename": "faults_000_255_255_255_en.json"
+    "Language": "es",
+    "Filename": "faults_000_255_255_255_es.json"
   },
   "LinkedVariable": "g_stFaultsVehicle_000_255_255_255_Vehicle_All",
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Vehicle",
+      "Description": "Vehículo",
       "IsExpandable": true
     },
     {
-      "Description": "Accessories",
-      "IsExpandable": true
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Batteries",
+      "Description": "Accesorios",
       "IsExpandable": true
     },
     {
@@ -31,15 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Charger",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Motor drives",
+      "Description": "Baterías",
       "IsExpandable": true
     },
     {
@@ -51,7 +35,23 @@
       "IsExpandable": false
     },
     {
-      "Description": "Magnetic readers",
+      "Description": "Cargador",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Motores de tracción",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "lectores magnéticos",
       "IsExpandable": true
     },
     {
@@ -67,11 +67,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "gato",
       "IsExpandable": false
     },
     {
-      "Description": "dog",
+      "Description": "",
       "IsExpandable": false
     },
     {
@@ -139,5 +139,5 @@
       "IsExpandable": false
     }
   ],
-  "Language": "en"
+  "Language": "es"
 }

@@ -140,6 +140,8 @@ def est_code_technique(texte: str) -> bool:
 
     return False
 
+
+
 def detecter_langue(texte: str) -> Optional[str]:
     """
     Détecte la langue d'un texte (si langdetect est disponible).
@@ -349,11 +351,14 @@ def process_translations(
         # Copier les champs non textuels
         for key in ["Id", "IsExpandable", "CategoryId", "SubCategoryId", "FaultId"]:
             if key in source_item:
-                target_list[i][key] = source_item[key]
-
-        # Si pas de description source, passer
+                target_list[i][key] = source_item[key]        # Si pas de description source, vider la traduction cible si elle existe
         if not source_desc:
-            continue        # 1. Vérifier si c'est un code technique
+            if target_desc:
+                print(f"{JAUNE}🧹 Vidage traduction [{target_lang.upper()}][index {i}] : '{target_desc}' → ''")
+                log_changement(target_lang, i, target_desc, "", basename)
+                target_list[i]["Description"] = ""
+                modifications += 1
+            continue# 1. Vérifier si c'est un code technique
         if est_code_technique(source_desc):
             if target_desc != source_desc:
                 print(f"{JAUNE}🔧 Correction code technique [{target_lang.upper()}][index {i}] : {target_desc} → {source_desc}{RESET}")
@@ -363,9 +368,7 @@ def process_translations(
             continue
 
         # 2. Traduction si nécessaire
-        should_translate = force_retranslate or not target_desc
-
-        # Vérifier la langue de la traduction existante
+        should_translate = force_retranslate or not target_desc        # Vérifier la langue de la traduction existante
         if not should_translate and LANGDETECT_AVAILABLE and target_desc:
             detected_lang = detecter_langue(target_desc)
             if detected_lang and detected_lang != target_lang:
@@ -374,9 +377,11 @@ def process_translations(
 
         if should_translate:
             try:
+                # Utiliser exclusivement l'IA pour toutes les traductions
                 new_translation = traduire(source_desc, target_lang).strip()
+
                 if new_translation and new_translation != target_desc:
-                    print(f"{CYAN}🔄 Traduction [{target_lang.upper()}][index {i}]{RESET}")
+                    print(f"{CYAN}🔄 Traduction IA [{target_lang.upper()}][index {i}]{RESET}")
                     print(f"    Source ({source_lang}) : {source_desc}")
                     print(f"    Ancien : {target_desc}")
                     print(f"    Nouveau : {new_translation}")
