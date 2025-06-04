@@ -20,28 +20,30 @@ Je travaille sur l'amélioration du système de gestion d'erreurs de mon applica
 3. **Validation** : Tous les tests passent (3/3 - 100%)
 
 ### 🔄 EN COURS
-**17 blocs `except Exception:` génériques restent à améliorer**
+**Erreurs restantes à corriger :**
 
-Localisation des exceptions restantes :
-```
-- Line 299: fonction reload_root (catch-all final)
-- Line 564: fonction run_coherence_check_step (catch-all final)
-- Line 607: fonction run_spelling_check_step (catch-all final)
-- Line 643: fonction fix_headers_step (catch-all final)
-- Line 861: fonction run_command_with_fix_option
-- Line 964: fonction run_command
-- Line 1012: fonction sync_files (catch-all final)
-- Line 1054: fonction reload_data
-- Line 1146: fonction load_level (catch-all final)
-- Line 1315: fonction save_file (catch-all final)
-- Line 1373: fonction dans display_column
-- Line 1555: fonction translate_row
-- Line 1765: fonction translate_text
-- Line 1823: fonction dans translate_all
-- Line 1829: fonction translate_all (catch-all final)
-- Line 2031: fonction dans save_flat_files
-- Line 2100: fonction main (catch-all final du programme)
-```
+1. **Méthodes manquantes dans FaultEditor** :
+- `show_search` : Navigation dans la recherche
+- `show_script_results` : Affichage des résultats
+- `setup_flat_editor_toolbar` : Configuration des outils
+- `show_flat_search` : Recherche dans l'éditeur plat
+- `translate_text` : Traduction de texte
+
+2. **Problèmes de variables** :
+- Variable `path` non définie dans plusieurs fonctions
+- Meilleure gestion des références de fichiers
+
+3. **Gestion d'exceptions améliorée** :
+- Suppression des clauses except redondantes
+- Meilleure hiérarchie des exceptions
+- Amélioration du logging
+
+4. **Problèmes de syntaxe** :
+- Blocks try sans except/finally
+- Parenthèses non fermées
+- Strings non terminées
+
+Total : 42 erreurs à corriger dans app.py
 
 ## TÂCHE À CONTINUER
 

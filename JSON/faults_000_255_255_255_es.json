@@ -11,7 +11,7 @@
   "Version": 1,
   "FaultDetailList": [
     {
-      "Description": "Vehículo",
+      "Description": "vehículo",
       "IsExpandable": true
     },
     {
@@ -23,7 +23,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "baterías",
+      "Description": "Baterías",
       "IsExpandable": true
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "lectores magnéticos",
+      "Description": "Lectores magnéticos",
       "IsExpandable": true
     },
     {
@@ -67,11 +67,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "paloma",
       "IsExpandable": false
     },
     {
-      "Description": "perro",
+      "Description": "",
       "IsExpandable": false
     },
     {
