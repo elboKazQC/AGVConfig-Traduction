@@ -11,6 +11,7 @@ import sys
 import json
 import argparse
 from collections import defaultdict
+import traceback
 
 def load_json_safe(file_path):
     """Charge un fichier JSON de manière sécurisée."""
@@ -19,6 +20,7 @@ def load_json_safe(file_path):
             return json.load(f)
     except Exception as e:
         print(f"❌ Erreur lors du chargement de {file_path}: {e}")
+        traceback.print_exc()
         return None
 
 def extract_ids_from_filename(filename):
@@ -282,6 +284,7 @@ def fix_metadata_errors(files_group, errors):
                 print(f"  ✅ Fichier sauvegardé: {filename}")
             except Exception as e:
                 print(f"  ❌ Erreur sauvegarde {filename}: {e}")
+                traceback.print_exc()
 
     return fixes_applied
 
