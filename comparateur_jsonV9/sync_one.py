@@ -19,6 +19,9 @@ import argparse
 import re
 import logging
 import configparser
+import traceback
+from langdetect.lang_detect_exception import LangDetectException
+from openai import OpenAIError
 from datetime import datetime
 from typing import Dict, List, Any, Optional, Union
 from translate import traduire
@@ -108,8 +111,9 @@ def log_changement(langue: str, index: int, ancien: str, nouveau: str, fichier: 
             log.write(f"  Nouveau : {nouveau}\n\n")
 
         logger.info(f"Changement enregistré: {fichier} - {langue}[{index}]")
-    except Exception as e:
-        logger.error(f"Erreur lors de l'enregistrement du changement: {e}")
+    except OSError as e:
+        logger.error(f"Erreur lors de l'enregistrement du changement: {e}")  # handled for visibility
+        traceback.print_exc()
 
 def est_code_technique(texte: str) -> bool:
     """
@@ -157,8 +161,9 @@ def detecter_langue(texte: str) -> Optional[str]:
 
     try:
         return detect(texte)
-    except Exception as e:
-        logger.debug(f"Erreur détection langue pour '{texte[:20]}...': {e}")
+    except LangDetectException as e:
+        logger.debug(f"Erreur détection langue pour '{texte[:20]}...': {e}")  # handled for visibility
+        traceback.print_exc()
         return None
 
 def validate_json_structure(data: Dict[str, Any]) -> bool:
@@ -185,8 +190,9 @@ def validate_json_structure(data: Dict[str, Any]) -> bool:
             return False
 
         return True
-    except Exception as e:
-        logger.error(f"Erreur validation structure JSON: {e}")
+    except (KeyError, TypeError) as e:
+        logger.error(f"Erreur validation structure JSON: {e}")  # handled for visibility
+        traceback.print_exc()
         return False
 
 def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
@@ -258,10 +264,11 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
                 try:
                     with open(target_file, 'r', encoding='utf-8') as f:
                         target_data = json.load(f)
-                except Exception as e:
+                except (OSError, json.JSONDecodeError) as e:
                     warning_msg = f"Erreur lors de la lecture de {target_file}, création d'un nouveau fichier"
                     print(f"⚠️ {warning_msg}")
-                    logger.warning(f"{warning_msg}: {e}")
+                    logger.warning(f"{warning_msg}: {e}")  # handled for visibility
+                    traceback.print_exc()
                     target_data = {}
 
             # Synchroniser les données
@@ -289,20 +296,22 @@ def sync_file(source_file_path: str, force_retranslate: bool = False) -> bool:
                 else:
                     print(f"✅ Fichier {os.path.basename(target_file)} déjà à jour")
                     logger.info(f"Fichier déjà à jour: {target_file}")
-            except Exception as e:
+            except (OSError, PermissionError) as e:
                 error_msg = f"Erreur sauvegarde {target_file}: {e}"
                 print(f"{ROUGE}❌ {error_msg}{RESET}")
-                logger.error(error_msg)
+                logger.error(error_msg)  # handled for visibility
+                traceback.print_exc()
                 return False
 
         print(f"\n🎉 Synchronisation terminée avec succès !")
         logger.info("Synchronisation terminée avec succès")
         return True
 
-    except Exception as e:
+    except (OSError, json.JSONDecodeError, LangDetectException) as e:
         error_msg = f"Erreur lors de la synchronisation : {e}"
         print(f"{ROUGE}❌ {error_msg}{RESET}")
-        logger.error(error_msg)
+        logger.error(error_msg)  # handled for visibility
+        traceback.print_exc()
         return False
 
 def process_translations(
@@ -388,9 +397,10 @@ def process_translations(
                     log_changement(target_lang, i, target_desc, new_translation, basename)
                     target_list[i]["Description"] = new_translation
                     modifications += 1
-            except Exception as e:
-                logger.error(f"Erreur traduction index {i}: {e}")
+            except OpenAIError as e:
+                logger.error(f"Erreur traduction index {i}: {e}")  # handled for visibility
                 print(f"{ROUGE}❌ Erreur traduction index {i}: {e}{RESET}")
+                traceback.print_exc()
 
     return modifications
 
@@ -410,8 +420,9 @@ def load_config() -> configparser.ConfigParser:
         try:
             config.read(config_path, encoding='utf-8')
             logger.info(f"Configuration chargée depuis: {config_path}")
-        except Exception as e:
-            logger.warning(f"Erreur chargement configuration: {e}")
+        except (configparser.Error, OSError) as e:
+            logger.warning(f"Erreur chargement configuration: {e}")  # handled for visibility
+            traceback.print_exc()
     else:
         logger.warning(f"Fichier de configuration non trouvé: {config_path}")
 

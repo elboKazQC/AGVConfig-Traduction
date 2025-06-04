@@ -6,6 +6,8 @@ Test ultra-simple pour diagnostiquer les problèmes
 
 import sys
 import os
+import traceback
+import json
 
 print("🔍 Diagnostic de l'environnement de test")
 print(f"Python version: {sys.version}")
@@ -16,14 +18,16 @@ print("\n📋 Test 1: Imports de base")
 try:
     import tkinter as tk
     print("✅ tkinter importé")
-except Exception as e:
-    print(f"❌ tkinter: {e}")
+except ImportError as e:
+    print(f"❌ tkinter: {e}")  # handled for visibility
+    traceback.print_exc()
 
 try:
     import json
     print("✅ json importé")
-except Exception as e:
-    print(f"❌ json: {e}")
+except ImportError as e:
+    print(f"❌ json: {e}")  # handled for visibility
+    traceback.print_exc()
 
 # Test 2: Vérification du fichier app.py
 print("\n📋 Test 2: Vérification du fichier app.py")
@@ -41,8 +45,9 @@ if os.path.exists(app_file):
         else:
             print("❌ Classe FaultEditor NON trouvée")
 
-    except Exception as e:
-        print(f"❌ Erreur lecture {app_file}: {e}")
+    except (OSError, UnicodeDecodeError) as e:
+        print(f"❌ Erreur lecture {app_file}: {e}")  # handled for visibility
+        traceback.print_exc()
 else:
     print(f"❌ {app_file} NON trouvé")
 
@@ -68,8 +73,7 @@ try:
 except ImportError as e:
     print(f"❌ ImportError: {e}")
 except Exception as e:
-    print(f"❌ Autre erreur: {e}")
-    import traceback
+    print(f"❌ Autre erreur: {e}")  # handled for visibility
     traceback.print_exc()
 
 # Test 4: Création d'un objet JSON simple
@@ -85,7 +89,8 @@ try:
     parsed = json.loads(json_str)
     print("✅ Désérialisation JSON réussie")
 
-except Exception as e:
-    print(f"❌ JSON: {e}")
+except json.JSONDecodeError as e:
+    print(f"❌ JSON: {e}")  # handled for visibility
+    traceback.print_exc()
 
 print("\n🏁 Diagnostic terminé")
