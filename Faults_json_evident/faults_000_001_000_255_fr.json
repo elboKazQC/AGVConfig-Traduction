@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 0,
+        "IdLevel3": 255,
+        "Language": "fr",
+        "Filename": "faults_000_001_000_255_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
+    "Version": 5,
+    "FaultDetailList": [
+        {
+            "Description": "Arrêt de sécurité AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Bouton arrêt d'urgence enfoncé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Arrêt de sécurité machine associé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Version code sécurité non compatible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Communication ethernet AMR accesoire",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Table élévatrice position non-basse",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Combinaison de commande invalide",
+            "IsExpandable": false
+        },
+        {
+            "Description": "PLC groupes sorties",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Vitesse AMR invalide",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Station Fixe bouton arrêt d'urgence enFoncé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Descente de table non autorisée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneurs",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Capteurs et détecteur de proximité",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Contacteur K1 ou K2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relais controleur du convoyeur station externe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relais R3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Température du PLC",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Courant station externe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Vitesse invalide AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Limite de vitesse invalide AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Commande invalide",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Déchargement non autorisé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Délais de séquence expiré",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Bras de contact: station non atteinte",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actuateur de la table élévatrice désynchronisé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Table élévatrice surchargée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Station externe non détectée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Palette mal positionnée convoyeur du haut",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Palette mal positionnée convoyeur du bas",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Controleur convoyeur station externe",
+            "IsExpandable": true
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

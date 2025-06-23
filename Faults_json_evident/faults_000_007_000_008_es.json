@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 0,
+        "IdLevel3": 8,
+        "Language": "es",
+        "Filename": "faults_000_007_000_008_es.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_24",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_25",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_30",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_31",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_40",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_41",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_42",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_43",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_44",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Sobrerrevoluciones del motor: CódigoErrorBase_30 CódigoErrorSecundario_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Sobrerrevoluciones del motor: CódigoErrorBase_30 CódigoErrorSecundario_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Sobrerrevoluciones del motor: CódigoErrorBase_30 CódigoErrorSecundario_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_5",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_6",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_7",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_8",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_9",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_10",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_11",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_12",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_13",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_14",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_15",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_16",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_17",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_18",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_19",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_20",
+            "IsExpandable": false
+        }
+    ]
+}

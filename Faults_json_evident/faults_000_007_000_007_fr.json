@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 0,
+        "IdLevel3": 7,
+        "Language": "fr",
+        "Filename": "faults_000_007_000_007_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_000_007_Drive_Left_PAC425T100C_Fault07",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_5",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_6",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance de l'arrêt thermique : CodeErreurDeBase_26 CodeErreurSecondaire_7",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit des MOSFET côté bas.M1 : CodeErreurBase_27 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit des MOSFET côté bas.M2 : CodeErreurBase_27 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Court-circuit des MOSFET côté bas.M3 : CodeErreurBase_27 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_5",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_6",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_7",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_8",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_9",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fil déconnecté détecté : CodeErreurDeBase_28 CodeErreurSecondaire_10",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_4",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_5",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_6",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_7",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_8",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_9",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_10",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_11",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_20",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_21",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_22",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaillance du nœud CAN : CodeErreurDeBase_29 CodeErreurSecondaire_23",
+            "IsExpandable": false
+        }
+    ]
+}

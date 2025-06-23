@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 1,
+        "IdLevel3": 255,
+        "Language": "fr",
+        "Filename": "faults_000_001_001_255_fr.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Arrêt de sécurité AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Arrêt de sécurité bouton",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Arrêt de sécurité station externe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Balayeur laser",
+            "IsExpandable": true
+        },
+        {
+            "Description": "PLC version",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Ethernet",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Sécurité inductive Basse Position",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mode de sélection",
+            "IsExpandable": false
+        },
+        {
+            "Description": "PLC groupes sorties",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mouvement non autorisé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Station Fixe bouton arrêt d'urgence",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Descente de table non autorisé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionneurs",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Capteurs et détecteur de proximité",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Trouble K1 ou K2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relais controleur du convoyeur station Fixe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relais R3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Température du PLC",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Cournant du moteur ou relais station Fixe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Vitesse de ARM hors limite 1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Vitesse de ARM hors limite 2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Commande invalide",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Déchargement non autorisé a la station Fixe",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Délais de séquence expiré",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Bras sortie aucun courant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actuateur de la table élévatrice désynchronisé",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Table élévatrice surchargée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Station Fixe non détectée",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Palette mal positionée convoyeur du haut",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Palette mal positionée convoyeur du bas",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Controleur convoyeur station fixe",
+            "IsExpandable": true
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

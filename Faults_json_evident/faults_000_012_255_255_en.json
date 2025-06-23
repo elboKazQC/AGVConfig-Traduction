@@ -1,0 +1,141 @@
+{
+    "header": {
+        "idLevel0": 0,
+        "idLevel1": 12,
+        "idLevel2": 255,
+        "idLevel3": 255,
+        "language": "en"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_012_255_255_Rfid_All",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Rear RFID Sensor Fault",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Front RFID Sensor Fault",
+            "IsExpandable": true
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

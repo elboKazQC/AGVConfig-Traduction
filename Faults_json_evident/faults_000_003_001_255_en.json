@@ -1,0 +1,141 @@
+{
+    "header": {
+      "idLevel0": 0,
+      "idLevel1": 3,
+      "idLevel2": 1,
+      "idLevel3": 255,
+      "language": "en"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_003_001_255_Battery_01_48V60TRX",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "High Temperature Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Low Temperature Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Over Temperature Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Overvoltage Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge Short Circuit Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Other Battery Charge Fault Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "MOSFET Temperature Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Severe Undervoltage Battery Charge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Communication with AFE Failed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Hardware Secondary Overvoltage Protection",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Reserved",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Pre-Charge Failed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Pack Parallel Error",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Charge Overcurrent Protection (OPC)",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Pre-Discharge Failed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Charge - Internal Communication Failure",
+            "IsExpandable": false
+        },
+        {
+            "Description": "High Temperature Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Low Temperature Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Over Temperature Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Under Voltage Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge Short Circuit Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Other Battery Discharge Fault Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "MOSFET Temperature Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Severe Undervoltage Battery Discharge Alert",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Communication with AFE Failed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Hardware Secondary Overvoltage Protection",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Reserved",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Reserved",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Pack Parallel Error",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Reserved",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Pre-Discharge Failed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Battery Discharge - Internal Communication Failure",
+            "IsExpandable": false
+        }
+    ]
+}

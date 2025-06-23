@@ -1,0 +1,142 @@
+{
+    "header": {
+        "idLevel0": 0,
+        "idLevel1": 11,
+        "idLevel2": 255,
+        "idLevel3": 255,
+        "language": "es",
+        "Filename": "faults_000_011_255_255_es.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_011_255_255_Plc_All",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Fallo PLC CR711S",
+            "IsExpandable": true
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

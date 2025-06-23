@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 0,
+        "IdLevel3": 0,
+        "Language": "en",
+        "Filename": "faults_000_007_000_000_en.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_000_000_Drive_Left_PAC425T100C_Fault00",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Torque limit due to controller temperature",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to motor temperature",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to current limit of the performance table",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to temporal current limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to I2T current limit step 1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to I2T current limit step 2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to I2T current limit step 3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to high voltage limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to low voltage limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to parking brake limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to advanced mode SPD1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to advanced mode SPD2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to maximum battery current limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit due to battery regeneration current limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit to maintain speed limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "No torque during braking limitation",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Hill hold torque",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit in advanced mode and IA",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit in IA mode",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Torque limit CAN",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor torque limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Speed torque limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain torque",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain speed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain flux",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain flux current",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain circle limitation",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to maintain hexagonal limit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor circular limitation",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor unable to position",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

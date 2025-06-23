@@ -1,0 +1,141 @@
+{
+    "header": {
+        "idLevel0": 0,
+        "idLevel1": 6,
+        "idLevel2": 0,
+        "idLevel3": 255,
+        "language": "es"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Error de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de tiempo de espera en la comunicación",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error CRC de comunicación",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de temperatura de la batería",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de tiempo de espera del software de pre-carga",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de batería",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de tiempo de espera en la comunicación CAN",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de tensión de red",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de bobina",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error del sensor de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Error de mala posicionamiento",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de ventilador",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de reducción de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de reducción de la batería",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de error de posicionamiento",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de carga deshabilitada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de reducción de tensión de red",
+            "IsExpandable": false
+        },
+        {
+            "Description": " Advertencia de reducción de potencia de red",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Advertencia de estado de reducción de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Estado de error de carga",
+            "IsExpandable": false
+        }
+    ]
+}

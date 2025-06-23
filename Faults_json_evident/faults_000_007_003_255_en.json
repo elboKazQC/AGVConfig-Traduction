@@ -1,0 +1,141 @@
+{
+    "header": {
+        "idLevel0": 0,
+        "idLevel1": 7,
+        "idLevel2": 3,
+        "idLevel3": 255,
+        "language": "en"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_003_255_Drive_Right_SBL2360T",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Overheat",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Overvoltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Undervoltage",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Short Circuit",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Emergency Stop",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Motor Sensor Fault",
+            "IsExpandable": false
+        },
+        {
+            "Description": "MOSFET Failure",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Default Configuration Loaded",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Left Motor Error (Computed)",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Right Motor Error (Computed)",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

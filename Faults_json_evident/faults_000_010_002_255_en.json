@@ -1,0 +1,141 @@
+{
+    "header": {
+        "idLevel0": 0,
+        "idLevel1": 10,
+        "idLevel2": 2,
+        "idLevel3": 255,
+        "language": "en"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_010_002_255_MagSensor_Back_MLSE_0300A2NP0",
+    "Version": 2,
+    "FaultDetailList": [
+        {
+            "Description": "Mag Sensor No Data Output",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mag Sensor Data Not Updating",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Line Detection Not Performed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Sensor Flipped",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Magnetic Field Too Strong",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Temperature Too High",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Temperature Too Low",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

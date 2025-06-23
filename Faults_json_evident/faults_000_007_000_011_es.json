@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 7,
+        "IdLevel2": 0,
+        "IdLevel3": 11,
+        "Language": "es",
+        "Filename": "faults_000_007_000_011_es.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_007_000_011_Drive_Left_PAC425T100C_Fault11",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_14",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_15",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_16",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_17",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_18",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_19",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_20",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_21",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_22",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_23",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_24",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parámetros del módulo del motor: CódigoErrorBase_34 CódigoErrorSecundario_13",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Calibración del sensor actual: CódigoErrorBase_35 CódigoErrorSecundario_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Calibración del sensor actual: CódigoErrorBase_35 CódigoErrorSecundario_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Temperatura del controlador superior a 100 grados: CódigoErrorBase_36",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Tiempo de espera genérico: CódigoErrorBase_39 CódigoErrorSecundario_1",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Tiempo de espera genérico: CódigoErrorBase_39 CódigoErrorSecundario_2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Tiempo de espera genérico: CódigoErrorBase_39 CódigoErrorSecundario_3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo del sistema: CódigoErrorBase_40",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

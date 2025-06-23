@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 0,
+        "IdLevel3": 12,
+        "Language": "es",
+        "Filename": "faults_000_001_000_012_es.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_000_012_Accessory_CSTE2010E_Faute12",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Actionador izquierdo: Error de parámetro",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Sobrecarga de corriente",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Error de voltaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Error de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Movimiento no controlado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Tiempo de espera del mensaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Error fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador izquierdo: Error de memoria",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Error de parámetro",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Sobrecarga de corriente",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Error de voltaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Error de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Movimiento no controlado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Tiempo de espera del mensaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Error fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador derecho: Error de memoria",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Error de parámetro",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Sobrecarga de corriente",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Error de voltaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Error de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Detección de contrarrotación",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Tiempo de espera del mensaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Error fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador delantero: Error de memoria",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Error de parámetro",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Sobrecarga de corriente",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Error de voltaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Error de temperatura",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Movimiento no controlado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Tiempo de espera del mensaje",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Error fatal",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actionador trasero: Error de memoria",
+            "IsExpandable": false
+        }
+    ]
+}

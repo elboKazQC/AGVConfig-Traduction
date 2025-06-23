@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 0,
+        "IdLevel2": 0,
+        "IdLevel3": 255,
+        "Language": "en",
+        "Filename": "faults_000_000_000_255_en.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Incompatible safety code version",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Emergency stop button pressed",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Emergency stop accessory",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Encoder: speed desynchronization",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Incompatible SoFtPLC code version",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Unrecognized AMR movement",
+            "IsExpandable": false
+        },
+        {
+            "Description": "PLC output group",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Auxiliary contactor contact",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Unauthorized movement with key",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner slowdown front left",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner slowdown rear right",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner stop front left",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner stop rear right",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner emergency stop front left",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Laser scanner emergency stop rear right",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Encoder: communication left",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Encoder: communication right",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

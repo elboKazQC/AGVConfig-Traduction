@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 0,
+        "IdLevel3": 255,
+        "Language": "es",
+        "Filename": "faults_000_001_000_255_es.json"
+    },
+    "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
+    "Version": 1,
+    "FaultDetailList": [
+        {
+            "Description": "Parada de seguridad AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Botón de paro de emergencia presionado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Parada de seguridad máquina asociada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Barrendero láser",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Versión de código de seguridad no compatible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Comunicación ethernet AMR accesorio",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mesa elevadora en posición no baja",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Combinación de comandos inválida",
+            "IsExpandable": false
+        },
+        {
+            "Description": "PLC grupos de salidas",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Velocidad AMR inválida",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Botón de paro de emergencia de estación fija presionado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Descenso de mesa no autorizado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actuadores",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Sensores y detectores de proximidad",
+            "IsExpandable": true
+        },
+        {
+            "Description": "Contactor K1 o K2",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relé controlador del transportador estación externa",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Relé R3",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Temperatura del PLC",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Corriente estación externa",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Velocidad inválida AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Límite de velocidad inválido AMR",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Comando inválido",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Descarga no autorizada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Secuencia de tiempo expirada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Brazo de contacto: estación no alcanzada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Actuador de mesa elevadora desincronizado",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mesa elevadora sobrecargada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Estación externa no detectada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Paleta mal posicionada transportador superior",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Paleta mal posicionada transportador inferior",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Controlador transportador estación externa",
+            "IsExpandable": true
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}
