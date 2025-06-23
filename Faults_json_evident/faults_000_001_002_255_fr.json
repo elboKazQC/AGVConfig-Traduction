@@ -1,142 +1,142 @@
 {
-  "Header": {
-    "IdLevel0": 0,
-    "IdLevel1": 1,
-    "IdLevel2": 2,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_001_002_255_fr.json"
-  },
-  "Version": 2,
-  "LinkedVariable": "g_stFaultsVehicle_000_001_002_255_Accessory_MiniPL_LiftingPlatform",
-  "FaultDetailList": [
-    {
-      "Description": "Mise à jour du statut général",
-      "IsExpandable": false
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 2,
+        "IdLevel3": 255,
+        "Language": "fr",
+        "Filename": "faults_000_001_002_255_fr.json"
     },
-    {
-      "Description": "Mode AGV: Arrêt",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Détection inductive avant indisponible",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Détection inductive arrière indisponible",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Élévation: Détection laser avant indisponible",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Élévation: Détection laser arrière indisponible",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Détection tunnel: Alerte d'arrêt",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Défaut position actionneur avant",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Défaut position actionneur arrière",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
-      "IsExpandable": false
-    }
-  ]
+    "Version": 2,
+    "LinkedVariable": "g_stFaultsVehicle_000_001_002_255_Accessory_MiniPL_LiftingPlatform",
+    "FaultDetailList": [
+        {
+            "Description": "Mise à jour du statut général",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Mode AGV: Arrêt",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Détection inductive avant indisponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Détection inductive arrière indisponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Élévation: Détection laser avant indisponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Élévation: Détection laser arrière indisponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Détection tunnel: Alerte d'arrêt",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaut position actionneur avant",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Défaut position actionneur arrière",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
 }

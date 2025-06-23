@@ -47,11 +47,11 @@ def extract_ids_from_filename(filename):
 def normalize_json_fields(data, filename):
     """Normalise les champs JSON et ajoute les champs manquants."""
     modified = False
-    
+
     # 1. Collecter tous les headers possibles
     header_data = {}
     header_keys = []
-    
+
     # Chercher toutes les variations possibles de "header"
     for key in data.keys():
         if key.lower() == 'header':
@@ -59,12 +59,12 @@ def normalize_json_fields(data, filename):
             header_content = data[key]
             if isinstance(header_content, dict):
                 header_data.update(header_content)
-    
+
     # Supprimer tous les anciens headers après la fusion
     for key in header_keys:
-        data.pop(key)  
+        data.pop(key)
         modified = True
-    
+
     # 2. Normaliser les champs du Header
     field_mapping = {
         'idLevel0': 'IdLevel0',
@@ -74,7 +74,7 @@ def normalize_json_fields(data, filename):
         'language': 'Language',
         'filename': 'Filename'
     }
-    
+
     # Convertir les champs en minuscules vers majuscules
     normalized_header = {}
     for key, value in header_data.items():
@@ -82,7 +82,7 @@ def normalize_json_fields(data, filename):
         normalized_header[normalized_key] = value
         if normalized_key != key:
             modified = True
-    
+
     # 3. S'assurer que les IDs sont présents et corrects
     ids = extract_ids_from_filename(filename)
     if ids:
@@ -91,41 +91,41 @@ def normalize_json_fields(data, filename):
             if key not in normalized_header or normalized_header[key] != value:
                 normalized_header[key] = value
                 modified = True
-    
+
     # 4. Ajouter ou corriger le Filename
     if 'Filename' not in normalized_header or normalized_header['Filename'] != filename:
         normalized_header['Filename'] = filename
         modified = True
-    
+
     # 5. Ajouter ou corriger la Language
     expected_lang = filename[-6:-5]  # Extrait 'fr', 'en' ou 'es' du nom de fichier
     if 'Language' not in normalized_header or normalized_header['Language'] in ('n', 'e', 'r', 's', ''):
         if expected_lang in ('fr', 'en', 'es'):
             normalized_header['Language'] = expected_lang
             modified = True
-    
+
     # 6. Reconstruire le fichier JSON dans le bon ordre
     ordered_data = {}
-    
+
     # Header en premier
     ordered_data['Header'] = normalized_header
-    
+
     # Puis les autres champs dans un ordre spécifique
     if 'Version' in data:
         ordered_data['Version'] = data.pop('Version')
-    
+
     if 'LinkedVariable' in data:
         ordered_data['LinkedVariable'] = data.pop('LinkedVariable')
-    
+
     # Copier tous les autres champs dans l'ordre où ils apparaissent
     for key, value in data.items():
         ordered_data[key] = value
-    
+
     # Remplacer les données par la version réordonnée
     data.clear()
     data.update(ordered_data)
     modified = True
-    
+
     return modified
 
 def check_translation_file_coherence(files_group):
@@ -166,7 +166,7 @@ def check_translation_file_coherence(files_group):
     for lang, file_info in loaded_files.items():
         data = file_info['data']
         filename = os.path.basename(file_info['path'])
-        
+
         # Vérifier si une normalisation est nécessaire
         if normalize_json_fields(data, filename):
             corrected_files[lang] = {
@@ -456,23 +456,23 @@ def fix_content_errors(loaded_files):
 def fix_all_metadata_errors(files_group):
     """Corrige tous les problèmes de métadonnées dans un groupe de fichiers."""
     fixes_applied = 0
-    
+
     for lang, file_info in files_group.items():
         file_path = file_info['path']
         data = file_info['data']
         filename = os.path.basename(file_path)
-        
+
         # 1. Normaliser les champs
         if normalize_json_fields(data, filename):
             fixes_applied += 1
-        
+
         # 2. Sauvegarder si des modifications ont été faites
         if fixes_applied > 0:
             if save_json_safe(data, file_path):
                 print(f"  ✅ Fichier normalisé et sauvegardé: {filename}")
             else:
                 print(f"  ❌ Erreur lors de la sauvegarde de {filename}")
-    
+
     return fixes_applied
 
 def fix_file_encoding(file_path):
@@ -487,7 +487,7 @@ def fix_file_encoding(file_path):
             # Si utf-8 échoue, essayer avec latin1 (qui peut lire n'importe quels octets)
             with open(file_path, 'r', encoding='latin1') as f:
                 content = f.read()
-            
+
             # Écrire le contenu en UTF-8
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
