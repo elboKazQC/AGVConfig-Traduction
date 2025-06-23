@@ -1,141 +1,149 @@
 {
-    "header": {
-      "idLevel0": 0,
-      "idLevel1": 1,
-      "idLevel2": 1,
-      "idLevel3": 255,
-      "language": "en"
+  "header": {
+    "idLevel0": 0,
+    "idLevel1": 1,
+    "idLevel2": 1,
+    "idLevel3": 255,
+    "language": "en"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "AMR safety stop",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Safety stop button",
+      "IsExpandable": false
+    },
+    {
+      "Description": "External safety stop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner",
+      "IsExpandable": true
+    },
+    {
+      "Description": "PLC version",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ethernet",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Low Position Inductive Safety",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Selection mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "PLC output groups",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized movement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fixed station emergency stop button",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized table descent",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Actuators",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Sensors and proximity detector",
+      "IsExpandable": true
+    },
+    {
+      "Description": "K1 or K2 trouble",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fixed station conveyor controller relay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relay R3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "PLC temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor current or fixed station relay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ARM speed out of limit 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "ARM speed out of limit 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid command",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized unloading at Fixed station",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sequence timeout expired",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Arm output no current",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Lift table actuator desynchronized",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overloaded lift table",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fixed station not detected",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Upper conveyor misaligned pallet",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Incorrectly positioned pallet on lower conveyor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fixed station conveyor controller",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ],
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 1,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_001_001_255_fr.json"
+  }
 }

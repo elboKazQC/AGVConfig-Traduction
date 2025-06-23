@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 1,
-        "IdLevel3": 4,
-        "Language": "es",
-        "Filename": "faults_000_007_001_004_es.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 4,
+    "Language": "fr",
+    "Filename": "faults_000_007_001_004_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_004_Drive_Right_PAC425T100C_Fault04",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Las entradas delanteras y traseras están activas: CódigoErrorBase_10",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_001_004_Drive_Right_PAC425T100C_Fault04",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Las entradas delantera y trasera están activas: CódigoErrorBase_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_0",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_12",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Acelerador a más del 50 %: CódigoErrorBase_13 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Acelerador a más del 50 %: CódigoErrorBase_13 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallos de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_0",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Conducción no autorizada: CódigoErrorBase_11 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de encendido: CódigoErrorBase_12 CódigoErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Acelerador por encima del 50 %: CódigoErrorBase_13 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Acelerador a más del 50 %: CódigoErrorBase_13 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas micro-desplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas micro-desplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas micro-desplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas de microdesplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallas micro-desplazamiento: CódigoErrorBase_14 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de alimentación: CódigoErrorBase_15 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    }
+  ]
 }

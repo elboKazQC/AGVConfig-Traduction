@@ -1,141 +1,141 @@
 {
-    "header": {
-        "idLevel0": 0,
-        "idLevel1": 9,
-        "idLevel2": 255,
-        "idLevel3": 255,
-        "language": "es"
+  "header": {
+    "idLevel0": 0,
+    "idLevel1": 9,
+    "idLevel2": 255,
+    "idLevel3": 255,
+    "language": "fr"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_009_255_255_Light_All",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "",
+      "IsExpandable": true
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_009_255_255_Light_All",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Fallo en el relé de luz LED",
-            "IsExpandable": true
-        },
-        {
-            "Description": "Fallo en la luz LED PWM",
-            "IsExpandable": true
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Sin dispositivo para luces",
-            "IsExpandable": true
-        }
-    ]
+    {
+      "Description": "Fallo de luz LED PWM",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": true
+    }
+  ]
 }

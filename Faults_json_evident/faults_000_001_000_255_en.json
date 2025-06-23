@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 1,
-        "IdLevel2": 0,
-        "IdLevel3": 255,
-        "Language": "en",
-        "Filename": "faults_000_001_000_255_en.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_001_000_255_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
+  "Version": 5,
+  "FaultDetailList": [
+    {
+      "Description": "AMR safety stop",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "AMR safety stop",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Emergency stop button pressed",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Associated machine safety stop",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner",
-            "IsExpandable": true
-        },
-        {
-            "Description": "Incompatible safety code version",
-            "IsExpandable": false
-        },
-        {
-            "Description": "AMR accessory ethernet communication",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Lift table non-lowered position",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Invalid control combination",
-            "IsExpandable": false
-        },
-        {
-            "Description": "PLC output groups",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Invalid AMR speed",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fixed Station emergency stop button pressed",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Unauthorized table descent",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Actuators",
-            "IsExpandable": true
-        },
-        {
-            "Description": "Sensors and proximity detector",
-            "IsExpandable": true
-        },
-        {
-            "Description": "Contactor K1 or K2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "External station conveyor controller relay",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Relay R3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "PLC temperature",
-            "IsExpandable": false
-        },
-        {
-            "Description": "External station current",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Invalid AMR speed",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Invalid AMR speed limit",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Invalid command",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Unauthorized unloading",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Sequence delay expired",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Contact arm: station not reached",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Lift table actuator desynchronized",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Lift table overloaded",
-            "IsExpandable": false
-        },
-        {
-            "Description": "External station not detected",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Upper conveyor pallet mispositioned",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Lower conveyor pallet mispositioned",
-            "IsExpandable": false
-        },
-        {
-            "Description": "External station conveyor controller",
-            "IsExpandable": true
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Emergency stop button pressed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Machine safety stop associated",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Laser scanner",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Incompatible security code version",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ethernet communication AMR accessory",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Elevating table not in low position",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid command combination",
+      "IsExpandable": false
+    },
+    {
+      "Description": "PLC output groups",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid AMR speed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fixed station emergency stop button pressed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized table descent",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Actuators",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Sensors and proximity detector",
+      "IsExpandable": true
+    },
+    {
+      "Description": "K1 or K2 contactor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "External conveyor controller relay",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relay R3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "PLC temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "External station current",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid speed AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid speed limit AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Invalid command",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized unloading",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Sequence timeout expired",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Contact arm: station not reached",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Elevating table actuator desynchronized",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Overloaded lift table",
+      "IsExpandable": false
+    },
+    {
+      "Description": "External station not detected",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Upper conveyor misaligned pallet",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bottom conveyor misaligned pallet",
+      "IsExpandable": false
+    },
+    {
+      "Description": "External conveyor controller",
+      "IsExpandable": true
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
 }

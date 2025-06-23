@@ -15,12 +15,12 @@
             "IsExpandable": true
         },
         {
-            "Description": "Accessoires",
-            "IsExpandable": true
+            "Description": "",
+            "IsExpandable": false
         },
         {
             "Description": "",
-            "IsExpandable": true
+            "IsExpandable": false
         },
         {
             "Description": "Batteries",

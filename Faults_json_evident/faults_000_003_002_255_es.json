@@ -1,141 +1,149 @@
 {
-    "header": {
-        "idLevel0": 0,
-        "idLevel1": 3,
-        "idLevel2": 2,
-        "idLevel3": 255,
-        "language": "es"
+  "header": {
+    "idLevel0": 0,
+    "idLevel1": 3,
+    "idLevel2": 2,
+    "idLevel3": 255,
+    "language": "es"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_003_002_255_Battery_02_48V60TRX",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "Carga de batería: Alta temperatura",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_003_002_255_Battery_02_48V60TRX",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Alerta de Carga de Batería a Alta Temperatura",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Carga de Batería a Baja Temperatura",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Carga de Batería por Sobrecalentamiento",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Sobrevoltaje en la Carga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Cortocircuito en la Carga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Otro Fallo en la Carga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Temperatura MOSFET en la Carga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Carga de Batería por Subtensión Severa",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Fallo de Comunicación con el AFE",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Protección Secundaria de Sobrevoltaje del Hardware",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Reservado",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Fallo en la Precarga",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Error de Paralelización de Packs",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Protección de Sobrecorriente de Carga (OPC)",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Fallo en la Predescarga",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Carga de la Batería - Fallo de Comunicación Interna",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Descarga de Batería a Alta Temperatura",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Descarga de Batería a Baja Temperatura",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Descarga de Batería por Sobrecalentamiento",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Descarga de Batería por Bajo Voltaje",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Cortocircuito en la Descarga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Otro Fallo en la Descarga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Temperatura MOSFET en la Descarga de la Batería",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Alerta de Descarga de Batería por Subtensión Severa",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Fallo de Comunicación con el AFE",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Protección Secundaria de Sobrevoltaje del Hardware",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Reservado",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Reservado",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Error de Paralelización de Packs",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Reservado",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Fallo en la Predescarga",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Descarga de la Batería - Fallo de Comunicación Interna",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Carga de batería: Baja temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Sobretemperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Sobretensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Otro defecto de carga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Temperatura de MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Subtensión severa",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Comunicación con AFE fallida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Protección secundaria contra sobretensión del equipo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Fallo en la precarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Error de paralelismo del paquete",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Protección contra sobrecorriente de carga (OPC)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Fallo en la pre-descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Carga de batería: Error de comunicación interna",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Alta temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Baja temperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Sobretemperatura",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Subtensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Otro fallo de descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Temperatura del MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Subtensión severa",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Comunicación con AFE fallida",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Protección secundaria contra sobretensión del equipo",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Error de paralelismo del paquete",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Reservado",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Descarga de batería: Fallo en la pre-descarga",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de comunicación interna de la batería",
+      "IsExpandable": false
+    }
+  ],
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 3,
+    "IdLevel2": 2,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_003_002_255_fr.json"
+  }
 }

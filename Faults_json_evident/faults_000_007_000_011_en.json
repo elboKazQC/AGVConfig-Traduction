@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 11,
-        "Language": "en",
-        "Filename": "faults_000_007_000_011_en.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 11,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_011_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_011_Drive_Left_PAC425T100C_Fault11",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_14",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_011_Drive_Left_PAC425T100C_Fault11",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_14",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_15",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_16",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_17",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_18",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_19",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_20",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_21",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_22",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_23",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_24",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Motor module parameters: BaseError_34 SecondaryError_13",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Current sensor calibration: BaseError_35 SecondaryError_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Current sensor calibration: BaseError_35 SecondaryError_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Controller temperature above 100 degrees: BaseError_36",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Generic timeout: BaseError_39 SecondaryError_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Generic timeout: BaseError_39 SecondaryError_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Generic timeout: BaseError_39 SecondaryError_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "System failure: BaseError_40",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor module parameters: BaseErrorCode_34 SecondaryErrorCode_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Current sensor calibration: BaseErrorCode_35 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Current sensor calibration: BaseErrorCode_35 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Controller temperature above 100 degrees: BaseErrorCode_36",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Generic timeout: BaseErrorCode_39 SecondaryErrorCode_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Generic timeout: BaseErrorCode_39 SecondaryErrorCode_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Generic timeout: BaseErrorCode_39 SecondaryErrorCode_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "System failure: BaseErrorCode_40",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
 }

@@ -23,6 +23,17 @@ def load_json_safe(file_path):
         traceback.print_exc()
         return None
 
+def save_json_safe(data, file_path):
+    """Sauvegarde un fichier JSON de manière sécurisée avec indentation."""
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+        return True
+    except Exception as e:
+        print(f"❌ Erreur lors de la sauvegarde de {file_path}: {e}")
+        traceback.print_exc()
+        return False
+
 def extract_ids_from_filename(filename):
     """Extrait les IDs du nom de fichier (ex: faults_000_001_002_255_fr.json -> [0,1,2,255])."""
     parts = filename.replace('.json', '').split('_')
@@ -288,12 +299,94 @@ def fix_metadata_errors(files_group, errors):
 
     return fixes_applied
 
+def fix_content_errors(loaded_files):
+    """Corrige automatiquement les erreurs de contenu en utilisant la version française comme référence."""
+    fixes_applied = 0
+
+    # S'assurer que nous avons une version française pour référence
+    if 'fr' not in loaded_files:
+        print("❌ Impossible de corriger : pas de version française trouvée")
+        return fixes_applied
+
+    ref_data = loaded_files['fr']['data']
+
+    for lang, file_info in loaded_files.items():
+        if lang == 'fr':  # Skip reference
+            continue
+
+        data = file_info['data']
+        file_path = file_info['path']
+        filename = os.path.basename(file_path)
+        modified = False
+
+        # 1. Corriger LinkedVariable
+        if data.get('LinkedVariable') != ref_data.get('LinkedVariable'):
+            print(f"  🔧 Correction LinkedVariable {lang}")
+            data['LinkedVariable'] = ref_data['LinkedVariable']
+            modified = True
+            fixes_applied += 1
+
+        # 2. Corriger Version
+        if data.get('Version') != ref_data.get('Version'):
+            print(f"  🔧 Correction Version {lang}")
+            data['Version'] = ref_data['Version']
+            modified = True
+            fixes_applied += 1
+
+        # 3. Corriger FaultDetailList
+        ref_list = ref_data.get('FaultDetailList', [])
+        curr_list = data.get('FaultDetailList', [])
+
+        if len(ref_list) != len(curr_list):
+            print(f"  🔧 Correction taille FaultDetailList {lang}")
+            # Copier la structure de la liste française en gardant les traductions existantes
+            new_list = []
+            for i, ref_item in enumerate(ref_list):
+                new_item = ref_item.copy()
+                if i < len(curr_list):
+                    # Garder la description traduite si elle existe
+                    if curr_list[i].get('Description', '').strip():
+                        new_item['Description'] = curr_list[i]['Description']
+                new_list.append(new_item)
+            data['FaultDetailList'] = new_list
+            modified = True
+            fixes_applied += 1
+        else:
+            # Corriger les IsExpandable tout en préservant les traductions
+            for idx, (ref_item, curr_item) in enumerate(zip(ref_list, curr_list)):
+                if ref_item.get('IsExpandable') != curr_item.get('IsExpandable'):
+                    print(f"  🔧 Correction IsExpandable {lang} à l'index {idx}")
+                    curr_item['IsExpandable'] = ref_item['IsExpandable']
+                    modified = True
+                    fixes_applied += 1
+
+                # Cohérence des descriptions vides
+                ref_desc = ref_item.get('Description', '').strip()
+                curr_desc = curr_item.get('Description', '').strip()
+
+                if (ref_desc == '') != (curr_desc == ''):
+                    print(f"  🔧 Correction Description vide {lang} à l'index {idx}")
+                    if ref_desc == '':
+                        curr_item['Description'] = ''
+                    modified = True
+                    fixes_applied += 1
+
+        # Sauvegarder le fichier si modifié
+        if modified:
+            if save_json_safe(data, file_path):
+                print(f"  ✅ Fichier sauvegardé: {filename}")
+            else:
+                print(f"  ❌ Erreur sauvegarde {filename}")
+
+    return fixes_applied
+
 def main():
     parser = argparse.ArgumentParser(description='Vérifie la cohérence des fichiers de traduction (optimisé)')
     parser.add_argument('base_dir', help='Répertoire de base à vérifier')
     parser.add_argument('--verbose', '-v', action='store_true', help='Mode verbeux')
     parser.add_argument('--quick', '-q', action='store_true', help='Vérification rapide (arrêt au premier problème critique)')
-    parser.add_argument('--fix', '-f', action='store_true', help='Corriger automatiquement les erreurs de métadonnées')
+    parser.add_argument('--fix', '-f', action='store_true', help='Corriger automatiquement les erreurs de métadonnées et de contenu')
+    parser.add_argument('--metadata-only', '-m', action='store_true', help='Corriger uniquement les erreurs de métadonnées')
 
     args = parser.parse_args()
 
@@ -304,6 +397,8 @@ def main():
     print(f"🔍 Vérification optimisée de cohérence dans : {args.base_dir}")
     if args.fix:
         print("🔧 Mode correction automatique activé")
+        if args.metadata_only:
+            print("   Mode correction métadonnées uniquement")
 
     # Trouver tous les groupes de fichiers
     file_groups = find_file_groups(args.base_dir)
@@ -317,6 +412,7 @@ def main():
     all_errors = {}
     groups_with_errors = 0
     total_fixes = 0
+    total_content_fixes = 0
 
     # Vérifier chaque groupe avec la nouvelle méthode
     for group in file_groups:
@@ -330,9 +426,8 @@ def main():
             all_errors[group['base_name']] = errors
 
             # Appliquer les corrections si demandé
-            if args.fix and errors['metadata']:
-                print(f"\n🔧 Correction des erreurs de métadonnées pour : {group['base_name']}")
-                  # Recharger les fichiers pour les corrections
+            if args.fix:
+                # Recharger les fichiers pour les corrections
                 loaded_files = {}
                 for lang, file_path in group['files'].items():
                     if os.path.exists(file_path):
@@ -340,9 +435,18 @@ def main():
                         if data is not None:
                             loaded_files[lang] = {'data': data, 'path': file_path}
 
-                fixes = fix_metadata_errors(loaded_files, errors)
-                total_fixes += fixes
-                print(f"  ✅ {fixes} corrections appliquées")
+                if errors['metadata']:
+                    print(f"\n🔧 Correction des erreurs de métadonnées pour : {group['base_name']}")
+                    fixes = fix_metadata_errors(loaded_files, errors)
+                    total_fixes += fixes
+                    print(f"  ✅ {fixes} corrections métadonnées appliquées")
+
+                # Corriger le contenu seulement si demandé et si des erreurs existent
+                if not args.metadata_only and (errors['critical'] or errors['content']):
+                    print(f"\n🔧 Correction des erreurs de contenu pour : {group['base_name']}")
+                    fixes = fix_content_errors(loaded_files)
+                    total_content_fixes += fixes
+                    print(f"  ✅ {fixes} corrections contenu appliquées")
 
             if args.quick:
                 print(f"⚠️ Mode rapide : arrêt après la première erreur critique détectée")
@@ -359,17 +463,15 @@ def main():
     print(f"   🔍 Total erreurs        : {total_errors}")
 
     if args.fix:
-        print(f"   🔧 Corrections appliquées : {total_fixes}")
+        print(f"   🔧 Corrections métadonnées : {total_fixes}")
+        if not args.metadata_only:
+            print(f"   🔧 Corrections contenu    : {total_content_fixes}")
+        print(f"   🔧 Total corrections      : {total_fixes + total_content_fixes}")
 
     if total_errors == 0:
         print("🎉 Tous les fichiers sont cohérents !")
-        sys.exit(0)
-    else:
-        if args.fix and total_fixes > 0:
-            print("✅ Des corrections ont été appliquées, relancez la vérification")
-        else:
-            print("⚠️ Des incohérences ont été détectées")
-        sys.exit(1)
+        return 0
+    return 1
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    sys.exit(main())

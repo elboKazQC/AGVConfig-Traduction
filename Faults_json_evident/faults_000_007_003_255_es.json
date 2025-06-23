@@ -1,141 +1,141 @@
 {
-    "header": {
-        "idLevel0": 0,
-        "idLevel1": 7,
-        "idLevel2": 3,
-        "idLevel3": 255,
-        "language": "es"
+  "header": {
+    "idLevel0": 0,
+    "idLevel1": 7,
+    "idLevel2": 3,
+    "idLevel3": 255,
+    "language": "fr"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_003_255_Drive_Right_SBL2360T",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Sobrecalentamiento",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_003_255_Drive_Right_SBL2360T",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Sobrecalentamiento",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Sobrevoltaje",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Bajovoltaje",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cortocircuito",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Parada de emergencia",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del sensor del motor",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de MOSFET",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Configuración predeterminada cargada",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Error en el motor izquierdo (calculado)",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Error en el motor derecho (calculado)",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Sobretensión",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bajo voltaje",
+      "IsExpandable": false
+    },
+    {
+      "Description": "cortocircuito",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parada de emergencia",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de sensor de motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de MOSFET",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración por defecto cargada",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error motor izquierdo (calculada)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Error motor derecho (calculada)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
 }

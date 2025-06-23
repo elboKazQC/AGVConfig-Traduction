@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 0,
-        "IdLevel2": 0,
-        "IdLevel3": 255,
-        "Language": "en",
-        "Filename": "faults_000_000_000_255_en.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 0,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_000_000_255_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+  "Version": 5,
+  "FaultDetailList": [
+    {
+      "Description": "Incompatible security code version",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Incompatible safety code version",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Emergency stop button pressed",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Emergency stop accessory",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Encoder: speed desynchronization",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Incompatible SoFtPLC code version",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Unrecognized AMR movement",
-            "IsExpandable": false
-        },
-        {
-            "Description": "PLC output group",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Auxiliary contactor contact",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Unauthorized movement with key",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner slowdown front left",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner slowdown rear right",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner stop front left",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner stop rear right",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner emergency stop front left",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Laser scanner emergency stop rear right",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Encoder: communication left",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Encoder: communication right",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Emergency stop button pressed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Emergency stop accessory",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Encoder: speed desynchronization",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Incompatible SoFtPLC version code",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unrecognized AMR movement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "PLC output group",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Auxiliary contact",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Unauthorized movement with key",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left front laser scanner deceleration",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right rear laser scanner slowdown",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left front laser scanner stop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right rear laser scanner stop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left front laser scanner emergency stop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right rear emergency stop laser scanner",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Left encoder communication",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Right encoder communication",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
 }

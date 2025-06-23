@@ -1,141 +1,149 @@
 {
-    "header": {
-        "idLevel0": 0,
-        "idLevel1": 6,
-        "idLevel2": 0,
-        "idLevel3": 255,
-        "language": "en"
+  "header": {
+    "idLevel0": 0,
+    "idLevel1": 6,
+    "idLevel2": 0,
+    "idLevel3": 255,
+    "language": "en"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
+  "Version": 2,
+  "FaultDetailList": [
+    {
+      "Description": "Temperature error",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
-    "Version": 2,
-    "FaultDetailList": [
-        {
-            "Description": "Temperature Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Communication Timeout Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Communication CRC Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Battery Temperature Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Precharge Software Timeout Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Battery Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "CAN Communication Timeout Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Grid Voltage Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Coil Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Temperature Sensor Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Bad Positioning Error",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fan Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Temperature Derating Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Battery Derating Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Positioning Error Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Charging Disabled Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Grid Voltage Derating Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": " Grid Power Derating Warning",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Temperature Derating Warning State",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Charging Error State",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Communication CRC error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Precharge software timeout error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN communication timeout error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Coil error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature sensor error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Incorrect positioning error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fan warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Positioning error warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network voltage downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network power downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature derating status warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ],
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 6,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_006_000_255_fr.json"
+  }
 }

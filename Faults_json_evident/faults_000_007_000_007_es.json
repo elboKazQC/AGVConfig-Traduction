@@ -1,142 +1,142 @@
 {
-    "Header": {
-        "IdLevel0": 0,
-        "IdLevel1": 7,
-        "IdLevel2": 0,
-        "IdLevel3": 7,
-        "Language": "es",
-        "Filename": "faults_000_007_000_007_es.json"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 7,
+    "Language": "fr",
+    "Filename": "faults_000_007_000_007_fr.json"
+  },
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_007_Drive_Left_PAC425T100C_Fault07",
+  "Version": 1,
+  "FaultDetailList": [
+    {
+      "Description": "Fallo del paro térmico: CódigoErrorBase_26 CódigoErrorSecundario_4",
+      "IsExpandable": false
     },
-    "LinkedVariable": "g_stFaultsVehicle_000_007_000_007_Drive_Left_PAC425T100C_Fault07",
-    "Version": 1,
-    "FaultDetailList": [
-        {
-            "Description": "Fallo de apagado térmico: CódigoErrorBase_26 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de apagado térmico: CódigoErrorBase_26 CódigoErrorSecundario_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de apagado térmico: CódigoErrorBase_26 CódigoErrorSecundario_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo de apagado térmico: CódigoErrorBase_26 CódigoErrorSecundario_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cortocircuito de MOSFET lado bajo.M1: CódigoErrorBase_27 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cortocircuito de MOSFET lado bajo.M2: CódigoErrorBase_27 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cortocircuito de MOSFET lado bajo.M3: CódigoErrorBase_27 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_1",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_2",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_3",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_4",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_5",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_6",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_7",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_8",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_9",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_10",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_11",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_20",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_21",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_22",
-            "IsExpandable": false
-        },
-        {
-            "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_23",
-            "IsExpandable": false
-        }
-    ]
+    {
+      "Description": "Fallo de parada térmica: CódigoErrorBase_26 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de parada térmica: CódigoErrorBase_26 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo de parada térmica: CódigoErrorBase_26 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET del lado inferior. M1: CódigoErrorBase_27 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET del lado inferior. M2: CódigoErrorBase_27 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cortocircuito de los MOSFET del lado inferior. M3: CódigoErrorBase_27 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Cable desconectado detectado: CódigoErrorBase_28 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del nodo CAN: CódigoErrorBase_29 CódigoErrorSecundario_23",
+      "IsExpandable": false
+    }
+  ]
 }
