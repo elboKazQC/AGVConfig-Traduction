@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 10,
-    "idLevel2": 2,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 10,
+    "IdLevel2": 2,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_010_002_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_010_002_255_MagSensor_Back_MLSE_0300A2NP0",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_010_002_255_MagSensor_Back_MLSE_0300A2NP0",
   "FaultDetailList": [
     {
       "Description": "Ningún dato de salida del sensor magnético",

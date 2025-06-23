@@ -1,14 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 11,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "fr",
-    "Filename": "faults_000_011_255_255_fr.json"
+  "Header": {
+    "Filename": "faults_000_011_255_255_es.json",
+    "IdLevel0": 0,
+    "IdLevel1": 11,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "es"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_011_255_255_Plc_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_011_255_255_Plc_All",
   "FaultDetailList": [
     {
       "Description": "Fallo PLC CR711S",

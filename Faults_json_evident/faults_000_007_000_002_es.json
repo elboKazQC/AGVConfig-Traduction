@@ -4,11 +4,11 @@
     "IdLevel1": 7,
     "IdLevel2": 0,
     "IdLevel3": 2,
-    "Language": "fr",
-    "Filename": "faults_000_007_000_002_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_007_000_002_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_007_000_002_Drive_Left_PAC425T100C_Fault02",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_002_Drive_Left_PAC425T100C_Fault02",
   "FaultDetailList": [
     {
       "Description": "Ajuste fuera de rango: CódigoErrorBase_7 CódigoErrorSecundario_22",

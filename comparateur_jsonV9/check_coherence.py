@@ -44,6 +44,90 @@ def extract_ids_from_filename(filename):
             return None
     return None
 
+def normalize_json_fields(data, filename):
+    """Normalise les champs JSON et ajoute les champs manquants."""
+    modified = False
+    
+    # 1. Collecter tous les headers possibles
+    header_data = {}
+    header_keys = []
+    
+    # Chercher toutes les variations possibles de "header"
+    for key in data.keys():
+        if key.lower() == 'header':
+            header_keys.append(key)
+            header_content = data[key]
+            if isinstance(header_content, dict):
+                header_data.update(header_content)
+    
+    # Supprimer tous les anciens headers après la fusion
+    for key in header_keys:
+        data.pop(key)  
+        modified = True
+    
+    # 2. Normaliser les champs du Header
+    field_mapping = {
+        'idLevel0': 'IdLevel0',
+        'idLevel1': 'IdLevel1',
+        'idLevel2': 'IdLevel2',
+        'idLevel3': 'IdLevel3',
+        'language': 'Language',
+        'filename': 'Filename'
+    }
+    
+    # Convertir les champs en minuscules vers majuscules
+    normalized_header = {}
+    for key, value in header_data.items():
+        normalized_key = field_mapping.get(key.lower(), key)
+        normalized_header[normalized_key] = value
+        if normalized_key != key:
+            modified = True
+    
+    # 3. S'assurer que les IDs sont présents et corrects
+    ids = extract_ids_from_filename(filename)
+    if ids:
+        for i, value in enumerate(ids):
+            key = f'IdLevel{i}'
+            if key not in normalized_header or normalized_header[key] != value:
+                normalized_header[key] = value
+                modified = True
+    
+    # 4. Ajouter ou corriger le Filename
+    if 'Filename' not in normalized_header or normalized_header['Filename'] != filename:
+        normalized_header['Filename'] = filename
+        modified = True
+    
+    # 5. Ajouter ou corriger la Language
+    expected_lang = filename[-6:-5]  # Extrait 'fr', 'en' ou 'es' du nom de fichier
+    if 'Language' not in normalized_header or normalized_header['Language'] in ('n', 'e', 'r', 's', ''):
+        if expected_lang in ('fr', 'en', 'es'):
+            normalized_header['Language'] = expected_lang
+            modified = True
+    
+    # 6. Reconstruire le fichier JSON dans le bon ordre
+    ordered_data = {}
+    
+    # Header en premier
+    ordered_data['Header'] = normalized_header
+    
+    # Puis les autres champs dans un ordre spécifique
+    if 'Version' in data:
+        ordered_data['Version'] = data.pop('Version')
+    
+    if 'LinkedVariable' in data:
+        ordered_data['LinkedVariable'] = data.pop('LinkedVariable')
+    
+    # Copier tous les autres champs dans l'ordre où ils apparaissent
+    for key, value in data.items():
+        ordered_data[key] = value
+    
+    # Remplacer les données par la version réordonnée
+    data.clear()
+    data.update(ordered_data)
+    modified = True
+    
+    return modified
+
 def check_translation_file_coherence(files_group):
     """Vérifie spécifiquement la cohérence d'un groupe de fichiers de traduction."""
     errors = {
@@ -60,11 +144,16 @@ def check_translation_file_coherence(files_group):
     loaded_files = {}
     for lang, file_path in files_group['files'].items():
         if os.path.exists(file_path):
+            # Essayer de corriger l'encodage si nécessaire
             data = load_json_safe(file_path)
-            if data is not None:
-                loaded_files[lang] = {'data': data, 'path': file_path}
-            else:
-                errors['critical'].append(f"❌ {lang}: Impossible de charger {file_path}")
+            if data is None:
+                print(f"⚠️ Tentative de correction de l'encodage pour {file_path}")
+                if fix_file_encoding(file_path):
+                    data = load_json_safe(file_path)
+                if data is None:
+                    errors['critical'].append(f"❌ {lang}: Impossible de charger {file_path}")
+                    continue
+            loaded_files[lang] = {'data': data, 'path': file_path}
         else:
             errors['critical'].append(f"❌ {lang}: Fichier manquant {file_path}")
 
@@ -72,52 +161,36 @@ def check_translation_file_coherence(files_group):
         errors['critical'].append(f"⚠️ Pas assez de fichiers valides pour la comparaison")
         return errors
 
-    # Référence : premier fichier trouvé
-    ref_lang = list(loaded_files.keys())[0]
+    # Vérifier et normaliser chaque fichier
+    corrected_files = {}
+    for lang, file_info in loaded_files.items():
+        data = file_info['data']
+        filename = os.path.basename(file_info['path'])
+        
+        # Vérifier si une normalisation est nécessaire
+        if normalize_json_fields(data, filename):
+            corrected_files[lang] = {
+                'data': data,
+                'path': file_info['path']
+            }
+            errors['metadata'].append(f"⚠️ {lang}: Normalisation des champs nécessaire")
+
+    # Sauvegarder les fichiers corrigés
+    for lang, file_info in corrected_files.items():
+        try:
+            with open(file_info['path'], 'w', encoding='utf-8') as f:
+                json.dump(file_info['data'], f, indent=2, ensure_ascii=False)
+            print(f"  ✅ Fichier sauvegardé: {os.path.basename(file_info['path'])}")
+        except Exception as e:
+            print(f"  ❌ Erreur sauvegarde {os.path.basename(file_info['path'])}: {e}")
+            errors['critical'].append(f"❌ {lang}: Erreur lors de la sauvegarde")
+
+    # Référence : préférer la version française, sinon premier fichier
+    ref_lang = 'fr' if 'fr' in loaded_files else list(loaded_files.keys())[0]
     ref_data = loaded_files[ref_lang]['data']
     ref_path = loaded_files[ref_lang]['path']
 
-    # 1. Vérifications de métadonnées et structure
-    expected_ids = extract_ids_from_filename(os.path.basename(ref_path))
-
-    for lang, file_info in loaded_files.items():
-        data = file_info['data']
-        file_path = file_info['path']
-        filename = os.path.basename(file_path)
-
-        # Vérifier la structure de base
-        required_keys = ['Header', 'LinkedVariable', 'Version', 'FaultDetailList']
-        for key in required_keys:
-            if key not in data:
-                errors['critical'].append(f"❌ {lang}: Clé manquante '{key}'")
-
-        if 'Header' in data:
-            header = data['Header']
-
-            # Vérifier les IDs dans le header
-            if expected_ids:
-                header_ids = [
-                    header.get('IdLevel0'), header.get('IdLevel1'),
-                    header.get('IdLevel2'), header.get('IdLevel3')
-                ]
-                if header_ids != expected_ids:
-                    errors['metadata'].append(
-                        f"⚠️ {lang}: IDs incohérents - Fichier: {expected_ids}, Header: {header_ids}"
-                    )
-
-            # Vérifier la langue dans le header
-            if header.get('Language') != lang:
-                errors['metadata'].append(
-                    f"⚠️ {lang}: Langue dans Header ('{header.get('Language')}') != nom fichier ('{lang}')"
-                )
-
-            # Vérifier le nom de fichier dans le header
-            if header.get('Filename') != filename:
-                errors['metadata'].append(
-                    f"⚠️ {lang}: Filename dans Header ('{header.get('Filename')}') != nom réel ('{filename}')"
-                )
-
-    # 2. Comparaisons entre fichiers
+    # Comparaisons entre fichiers
     languages = list(loaded_files.keys())
     for i, lang in enumerate(languages):
         if i == 0:  # Skip reference
@@ -379,6 +452,52 @@ def fix_content_errors(loaded_files):
                 print(f"  ❌ Erreur sauvegarde {filename}")
 
     return fixes_applied
+
+def fix_all_metadata_errors(files_group):
+    """Corrige tous les problèmes de métadonnées dans un groupe de fichiers."""
+    fixes_applied = 0
+    
+    for lang, file_info in files_group.items():
+        file_path = file_info['path']
+        data = file_info['data']
+        filename = os.path.basename(file_path)
+        
+        # 1. Normaliser les champs
+        if normalize_json_fields(data, filename):
+            fixes_applied += 1
+        
+        # 2. Sauvegarder si des modifications ont été faites
+        if fixes_applied > 0:
+            if save_json_safe(data, file_path):
+                print(f"  ✅ Fichier normalisé et sauvegardé: {filename}")
+            else:
+                print(f"  ❌ Erreur lors de la sauvegarde de {filename}")
+    
+    return fixes_applied
+
+def fix_file_encoding(file_path):
+    """Tente de corriger l'encodage d'un fichier JSON."""
+    try:
+        # Essayer d'abord avec utf-8
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return True
+    except UnicodeDecodeError:
+        try:
+            # Si utf-8 échoue, essayer avec latin1 (qui peut lire n'importe quels octets)
+            with open(file_path, 'r', encoding='latin1') as f:
+                content = f.read()
+            
+            # Écrire le contenu en UTF-8
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        except Exception as e:
+            print(f"❌ Impossible de corriger l'encodage de {file_path}: {e}")
+            return False
+    except Exception as e:
+        print(f"❌ Erreur lors de la lecture de {file_path}: {e}")
+        return False
 
 def main():
     parser = argparse.ArgumentParser(description='Vérifie la cohérence des fichiers de traduction (optimisé)')

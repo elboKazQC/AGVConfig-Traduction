@@ -4,11 +4,11 @@
     "IdLevel1": 1,
     "IdLevel2": 0,
     "IdLevel3": 30,
-    "Language": "fr",
-    "Filename": "faults_000_001_000_030_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_001_000_030_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_001_000_030_Accessory_CSTE2010E_Faute30",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_030_Accessory_CSTE2010E_Faute30",
   "FaultDetailList": [
     {
       "Description": "El comando del motor se da a través de una interfaz serie.",

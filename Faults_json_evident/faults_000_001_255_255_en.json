@@ -4,11 +4,11 @@
     "IdLevel1": 1,
     "IdLevel2": 255,
     "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_001_255_255_fr.json"
+    "Language": "en",
+    "Filename": "faults_000_001_255_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_001_255_255_Accessory_All",
   "Version": 6,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_255_255_Accessory_All",
   "FaultDetailList": [
     {
       "Description": "Stacked conveyor lift table 2000lbs 10in stroke, electric",

@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 9,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 9,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_009_255_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_009_255_255_Light_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_009_255_255_Light_All",
   "FaultDetailList": [
     {
       "Description": "",

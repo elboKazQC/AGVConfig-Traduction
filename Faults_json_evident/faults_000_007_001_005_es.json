@@ -4,11 +4,11 @@
     "IdLevel1": 7,
     "IdLevel2": 1,
     "IdLevel3": 5,
-    "Language": "fr",
-    "Filename": "faults_000_007_001_005_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_007_001_005_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_005_Drive_Right_PAC425T100C_Fault05",
   "FaultDetailList": [
     {
       "Description": "Tensión de la alimentación: CódigoErrorBase_15 CódigoErrorSecundario_4",

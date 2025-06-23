@@ -4,11 +4,11 @@
     "IdLevel1": 1,
     "IdLevel2": 1,
     "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_001_001_255_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_001_001_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_001_255_Accessory_PL_LiftingPlatform",
   "FaultDetailList": [
     {
       "Description": "Parada de seguridad AMR",

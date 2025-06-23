@@ -4,11 +4,11 @@
     "IdLevel1": 1,
     "IdLevel2": 0,
     "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_001_000_255_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_001_000_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
   "Version": 5,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_255_Accessory_CSTE2010E",
   "FaultDetailList": [
     {
       "Description": "Parada de seguridad AMR",

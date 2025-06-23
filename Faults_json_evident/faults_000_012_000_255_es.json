@@ -1,16 +1,17 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 12,
-    "idLevel2": 0,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 12,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_012_000_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_012_000_255_Rfid_DTC510_Back",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_012_000_255_Rfid_DTC510_Back",
   "FaultDetailList": [
     {
-      "Description": "Error detectada en la parte delantera",
+      "Description": "Error detectada en el frente",
       "IsExpandable": false
     },
     {
@@ -19,7 +20,7 @@
     },
     {
       "Description": "Error de lectura: Error de comando ISO - Sin respuesta",
-      "IsExpandable": true
+      "IsExpandable": false
     },
     {
       "Description": "Error de lectura: Error de comando ISO - Error RX",
@@ -137,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

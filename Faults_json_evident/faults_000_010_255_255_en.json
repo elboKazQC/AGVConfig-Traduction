@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 10,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 10,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_010_255_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_010_255_255_MagSensor_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_010_255_255_MagSensor_All",
   "FaultDetailList": [
     {
       "Description": "",

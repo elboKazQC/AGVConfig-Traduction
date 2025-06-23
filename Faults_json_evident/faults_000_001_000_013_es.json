@@ -4,11 +4,11 @@
     "IdLevel1": 1,
     "IdLevel2": 0,
     "IdLevel3": 13,
-    "Language": "fr",
-    "Filename": "faults_000_001_000_013_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_001_000_013_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_001_000_013_Accessory_CSTE2010E_Faute13",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_013_Accessory_CSTE2010E_Faute13",
   "FaultDetailList": [
     {
       "Description": "Sensores de paleta en AMR",

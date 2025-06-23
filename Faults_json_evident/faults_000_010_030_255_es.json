@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 10,
-    "idLevel2": 30,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 10,
+    "IdLevel2": 30,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_010_030_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_010_030_255_MagSensor_Back_zNoDevice",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_010_030_255_MagSensor_Back_zNoDevice",
   "FaultDetailList": [
     {
       "Description": "0",

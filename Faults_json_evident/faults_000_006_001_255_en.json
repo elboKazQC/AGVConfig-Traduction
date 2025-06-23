@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 6,
-    "idLevel2": 1,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 6,
+    "IdLevel2": 1,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_006_001_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_006_001_255_Charger_Ic650",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_006_001_255_Charger_Ic650",
   "FaultDetailList": [
     {
       "Description": "0",

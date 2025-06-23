@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 6,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "en"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 6,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_006_255_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_006_255_255_Charger_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_006_255_255_Charger_All",
   "FaultDetailList": [
     {
       "Description": "EtaLink3000 charger",
@@ -137,13 +138,5 @@
       "Description": "",
       "IsExpandable": false
     }
-  ],
-  "Header": {
-    "IdLevel0": 0,
-    "IdLevel1": 6,
-    "IdLevel2": 255,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_006_255_255_fr.json"
-  }
+  ]
 }

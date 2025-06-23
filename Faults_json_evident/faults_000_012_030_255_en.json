@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 12,
-    "idLevel2": 30,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 12,
+    "IdLevel2": 30,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_012_030_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_012_030_255_Rfid_zNoDevice_Back",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_012_030_255_Rfid_zNoDevice_Back",
   "FaultDetailList": [
     {
       "Description": "0",

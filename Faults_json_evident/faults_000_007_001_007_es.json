@@ -4,11 +4,11 @@
     "IdLevel1": 7,
     "IdLevel2": 1,
     "IdLevel3": 7,
-    "Language": "fr",
-    "Filename": "faults_000_007_001_007_fr.json"
+    "Language": "es",
+    "Filename": "faults_000_007_001_007_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_007_001_007_Drive_Right_PAC425T100C_Fault07",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_007_Drive_Right_PAC425T100C_Fault07",
   "FaultDetailList": [
     {
       "Description": "Fallo del paro térmico: CódigoErrorBase_26 CódigoErrorSecundario_4",

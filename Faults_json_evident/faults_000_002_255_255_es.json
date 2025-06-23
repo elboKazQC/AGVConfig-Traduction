@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 2,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "es"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 2,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_002_255_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_002_255_255_Audio_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_002_255_255_Audio_All",
   "FaultDetailList": [
     {
       "Description": "Alerta de zumbador de audio",
@@ -137,13 +138,5 @@
       "Description": "",
       "IsExpandable": false
     }
-  ],
-  "Header": {
-    "IdLevel0": 0,
-    "IdLevel1": 2,
-    "IdLevel2": 255,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_002_255_255_fr.json"
-  }
+  ]
 }

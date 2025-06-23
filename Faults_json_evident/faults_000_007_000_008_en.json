@@ -4,11 +4,11 @@
     "IdLevel1": 7,
     "IdLevel2": 0,
     "IdLevel3": 8,
-    "Language": "fr",
-    "Filename": "faults_000_007_000_008_fr.json"
+    "Language": "en",
+    "Filename": "faults_000_007_000_008_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_008_Drive_Left_PAC425T100C_Fault08",
   "FaultDetailList": [
     {
       "Description": "CAN node failure: BaseErrorCode_29 SecondaryErrorCode_24",

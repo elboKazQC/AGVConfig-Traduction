@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 3,
-    "idLevel2": 29,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 3,
+    "IdLevel2": 29,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_003_029_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_003_029_255_Battery_01_zNoDevice",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_003_029_255_Battery_01_zNoDevice",
   "FaultDetailList": [
     {
       "Description": "0",

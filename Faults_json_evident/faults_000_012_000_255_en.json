@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 12,
-    "idLevel2": 0,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 12,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_012_000_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_012_000_255_Rfid_DTC510_Back",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_012_000_255_Rfid_DTC510_Back",
   "FaultDetailList": [
     {
       "Description": "Front error detected",
@@ -19,7 +20,7 @@
     },
     {
       "Description": "Read error: ISO command error - No response",
-      "IsExpandable": true
+      "IsExpandable": false
     },
     {
       "Description": "Reading error: ISO command error - RX error",
@@ -58,7 +59,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "ISO tag error: Block not updatable",
+      "Description": "ISO tag error: Non-updatable block",
       "IsExpandable": false
     },
     {
@@ -137,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "en"
 }

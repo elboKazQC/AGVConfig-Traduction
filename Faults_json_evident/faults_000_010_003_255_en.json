@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 10,
-    "idLevel2": 3,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 10,
+    "IdLevel2": 3,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_010_003_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_010_003_255_MagSensor_Front_MLSE_0300A2NP0",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_010_003_255_MagSensor_Front_MLSE_0300A2NP0",
   "FaultDetailList": [
     {
       "Description": "No data output from the magnetic sensor",

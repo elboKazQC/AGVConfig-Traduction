@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 5,
-    "idLevel2": 255,
-    "idLevel3": 255,
-    "language": "en"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 5,
+    "IdLevel2": 255,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_005_255_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_005_255_255_Camera_All",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_005_255_255_Camera_All",
   "FaultDetailList": [
     {
       "Description": "",
@@ -137,13 +138,5 @@
       "Description": "",
       "IsExpandable": false
     }
-  ],
-  "Header": {
-    "IdLevel0": 0,
-    "IdLevel1": 5,
-    "IdLevel2": 255,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_005_255_255_fr.json"
-  }
+  ]
 }

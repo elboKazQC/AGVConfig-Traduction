@@ -4,11 +4,11 @@
     "IdLevel1": 7,
     "IdLevel2": 255,
     "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_007_255_255_fr.json"
+    "Language": "en",
+    "Filename": "faults_000_007_255_255_en.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_007_255_255_Drive_All",
   "Version": 4,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_255_255_Drive_All",
   "FaultDetailList": [
     {
       "Description": "Left motor fault (PAC425T100C)",

@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 0,
-    "idLevel2": 31,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 0,
+    "IdLevel2": 31,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_000_031_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_000_031_255_Safety_zNoDevice",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_031_255_Safety_zNoDevice",
   "FaultDetailList": [
     {
       "Description": "0",

@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 3,
-    "idLevel2": 1,
-    "idLevel3": 255,
-    "language": "es"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 3,
+    "IdLevel2": 1,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_003_001_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_003_001_255_Battery_01_48V60TRX",
   "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_003_001_255_Battery_01_48V60TRX",
   "FaultDetailList": [
     {
       "Description": "Carga de batería: Alta temperatura",
@@ -137,13 +138,5 @@
       "Description": "Fallo de comunicación interna: descarga de batería",
       "IsExpandable": false
     }
-  ],
-  "Header": {
-    "IdLevel0": 0,
-    "IdLevel1": 3,
-    "IdLevel2": 1,
-    "IdLevel3": 255,
-    "Language": "fr",
-    "Filename": "faults_000_003_001_255_fr.json"
-  }
+  ]
 }

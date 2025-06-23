@@ -1,13 +1,14 @@
 {
-  "header": {
-    "idLevel0": 0,
-    "idLevel1": 2,
-    "idLevel2": 0,
-    "idLevel3": 255,
-    "language": "fr"
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 2,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "es",
+    "Filename": "faults_000_002_000_255_es.json"
   },
-  "LinkedVariable": "g_stFaultsVehicle_000_002_000_255_Audio_Buzzer",
   "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_002_000_255_Audio_Buzzer",
   "FaultDetailList": [
     {
       "Description": "0",
