@@ -1272,8 +1272,16 @@ class FaultEditor:
         logger.info(f"Chargement du niveau {level} avec le fichier : {filename}")
         filepath = self.file_map.get(filename)
         if not filepath:
-            logger.error(f"Fichier introuvable : {filename}")
-            self.status.config(text=f"❌ Introuvable : {filename}")
+            logger.warning(f"Fichier introuvable : {filename}")
+            # Proposer de créer le fichier
+            response = messagebox.askyesno(
+                "Fichier manquant",
+                f"Le fichier {filename} n'existe pas.\n\nVoulez-vous le créer maintenant?"
+            )
+            if response:
+                self.create_missing_file(path, level)
+            else:
+                self.status.config(text=f"❌ Introuvable : {filename}")
             return
         try:
             with open(filepath, "r", encoding="utf-8") as f:
@@ -1362,6 +1370,110 @@ class FaultEditor:
 
     def path_to_filename(self, path):
         return f"faults_{'_'.join(str(p).zfill(3) for p in path)}_{self.lang}.json"
+
+    def create_missing_file(self, path, level):
+        """Crée un nouveau fichier JSON avec 32 descriptions vides"""
+        if not self.base_dir:
+            messagebox.showerror("Erreur", "Aucun dossier ouvert")
+            return False
+        
+        filename = self.path_to_filename(path)
+        filepath = os.path.join(self.base_dir, filename)
+        
+        # Demander la LinkedVariable à l'utilisateur
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Créer un nouveau fichier")
+        dialog.geometry("600x200")
+        dialog.configure(bg=COL_BG_MAIN)
+        dialog.transient(self.root)
+        dialog.grab_set()
+        
+        # Centrer la fenêtre
+        dialog.update_idletasks()
+        x = (dialog.winfo_screenwidth() // 2) - (600 // 2)
+        y = (dialog.winfo_screenheight() // 2) - (200 // 2)
+        dialog.geometry(f"600x200+{x}+{y}")
+        
+        tk.Label(dialog, text=f"Création du fichier : {filename}", 
+                 bg=COL_BG_MAIN, fg=COL_FG_TEXT, font=FONT_TITLE).pack(pady=10)
+        
+        tk.Label(dialog, text="LinkedVariable (ex: g_stFaultsVehicle_000_001_003_005_Description):", 
+                 bg=COL_BG_MAIN, fg=COL_FG_TEXT, font=FONT_DEFAULT).pack(pady=5)
+        
+        var_entry = tk.Entry(dialog, width=70, font=FONT_DEFAULT)
+        var_entry.pack(pady=5)
+        var_entry.focus()
+        
+        result = {"linked_var": None, "cancelled": False}
+        
+        def on_create():
+            linked_var = var_entry.get().strip()
+            if not linked_var:
+                messagebox.showwarning("Variable manquante", "Veuillez entrer une LinkedVariable")
+                return
+            result["linked_var"] = linked_var
+            dialog.destroy()
+        
+        def on_cancel():
+            result["cancelled"] = True
+            dialog.destroy()
+        
+        btn_frame = tk.Frame(dialog, bg=COL_BG_MAIN)
+        btn_frame.pack(pady=10)
+        
+        tk.Button(btn_frame, text="Créer", command=on_create, 
+                  bg=COL_GREEN, fg=COL_FG_TEXT, font=FONT_DEFAULT, 
+                  padx=20, pady=5).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="Annuler", command=on_cancel, 
+                  bg=COL_RED, fg=COL_FG_TEXT, font=FONT_DEFAULT, 
+                  padx=20, pady=5).pack(side="left", padx=5)
+        
+        # Permettre Enter pour créer
+        var_entry.bind("<Return>", lambda e: on_create())
+        
+        dialog.wait_window()
+        
+        if result["cancelled"] or not result["linked_var"]:
+            return False
+        
+        # Créer le fichier JSON
+        new_data = {
+            "Header": {
+                "IdLevel0": path[0],
+                "IdLevel1": path[1],
+                "IdLevel2": path[2],
+                "IdLevel3": path[3],
+                "Language": self.lang,
+                "Filename": filename
+            },
+            "Version": 1,
+            "LinkedVariable": result["linked_var"],
+            "FaultDetailList": [
+                {"Description": "", "IsExpandable": False} for _ in range(32)
+            ]
+        }
+        
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(new_data, f, indent=2, ensure_ascii=False)
+            
+            logger.info(f"Fichier créé avec succès : {filename}")
+            print(f"✅ Fichier créé : {filename}")
+            
+            # Rafraîchir la liste des fichiers
+            self.initialize_file_map(self.base_dir)
+            
+            # Charger le nouveau fichier
+            self.load_level(path, level)
+            
+            self.status.config(text=f"✅ Fichier {filename} créé")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Erreur lors de la création du fichier {filename}: {str(e)}")
+            messagebox.showerror("Erreur", f"Impossible de créer le fichier:\n{str(e)}")
+            self.status.config(text=f"❌ Erreur création {filename}")
+            return False
 
     # --- Gestion des clics sur les items ---
     def update_selected_file(self, fn):
