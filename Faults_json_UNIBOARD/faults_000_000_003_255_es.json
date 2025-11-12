@@ -1,0 +1,110 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Contactador de potencia #1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Contactador de potencia #2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Contacto de potencia #3"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Contactador de potencia #4"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Contactador de precarga"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "freno rueda derecha"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "freno de rueda izquierda"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé STO #1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé STO #1"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "es"
+}

@@ -1,0 +1,110 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Power contactor #1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Power contactor #2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Power contactor #3"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Power contactor #4"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Precharge contactor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "right wheel brake"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "left wheel brake"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "STO relay #1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "STO Relay #1"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

@@ -1,0 +1,126 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Izquierda delantera: velocidad reducida"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Izquierda delantera: velocidad cero"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Delante Izquierdo: Defecto"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Izquierda Delantera: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Izquierda Delantera: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Izquierda delantera: Parada de emergencia"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Reducida velocidad: trasera derecha"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Derecho: Velocidad cero"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Fallo trasero derecho"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Derecho Trasero: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Derecho: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Detrás Derecho: Parada de emergencia"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Derecha delantera: velocidad reducida"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Frente Derecho: Velocidad cero"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Delante Derecho: Defecto"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Delante Derecho: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Delante Derecho: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Frente Derecho: Parada de emergencia"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Izquierda: velocidad reducida"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Izquierda: Velocidad cero"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Fallo trasero izquierdo"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Izquierda: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Atrás Izquierdo: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Fondo Izquierdo: Parada de emergencia"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Reinicio"
+    }
+  ],
+  "Language": "es"
+}

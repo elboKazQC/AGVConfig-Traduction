@@ -1,0 +1,126 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Left front: reduced speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left front: Zero speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left front: Fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left Front: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left Front: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left front: Emergency stop"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right rear: reduced speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Rear: Zero speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right rear fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Rear: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Rear: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right rear: Emergency stop"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right front: reduced speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Front: Zero Speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Front: Fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Front: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Front: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Right Front: Emergency Stop"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left rear: reduced speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left rear: Zero speed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left rear: Fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left Rear: OSSD 1"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left Rear: OSSD 2"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Left rear: Emergency stop"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Restart"
+    }
+  ],
+  "Language": "en"
+}

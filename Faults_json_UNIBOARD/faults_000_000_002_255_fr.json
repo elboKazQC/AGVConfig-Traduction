@@ -2,112 +2,108 @@
   "Header": {
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 0,
+    "IdLevel2": 2,
     "IdLevel3": 255,
-    "Language": "en",
-    "Filename": "faults_000_000_000_255_en.json"
+    "Language": "fr",
+    "Filename": "faults_000_000_002_255_fr.json"
   },
-  "Version": 5,
-  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+  "Version": 6,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_002_255_Safety_LASER_SCANNER",
   "FaultDetailList": [
     {
-      "Description": "Incompatible security code version",
+      "Description": "Avant Gauche : vitesse réduite",
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop button pressed",
+      "Description": "Avant Gauche : Vitesse nulle",
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop accessory",
+      "Description": "Avant Gauche : Faute",
       "IsExpandable": false
     },
     {
-      "Description": "Laser scanner",
+      "Description": "Avant Gauche : OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "Remote emergency stop button pressed",
+      "Description": "Avant Gauche : OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "Encoder: speed desynchronization",
+      "Description": "Avant Gauche : Arrêt d'urgence",
       "IsExpandable": false
     },
     {
-      "Description": "Incompatible SoFtPLC version code",
+      "Description": "Arrière Droit : vitesse réduite",
       "IsExpandable": false
     },
     {
-      "Description": "Invalid safety constant configuration",
+      "Description": "Arrière Droit : Vitesse nulle",
       "IsExpandable": false
     },
     {
-      "Description": "PLC output group",
+      "Description": "Arrière Droit : Faute",
       "IsExpandable": false
     },
     {
-      "Description": "Auxiliary contact",
+      "Description": "Arrière Droit : OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "Motion selector",
+      "Description": "Arrière Droit : OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "Unauthorized movement with key",
+      "Description": "Arrière Droit : Arrêt d'urgence",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Avant Droit : vitesse réduite",
       "IsExpandable": false
     },
     {
-      "Description": "PLC Standard",
+      "Description": "Avant Droit : Vitesse nulle",
       "IsExpandable": false
     },
     {
-      "Description": "SAFE and Standard PLC Communication",
+      "Description": "Avant Droit : Faute",
       "IsExpandable": false
     },
     {
-      "Description": "Restart delay reached",
+      "Description": "Avant Droit : OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "Motor command: speed desynchronization",
+      "Description": "Avant Droit : OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "Emergency stop button pressed on controller",
+      "Description": "Avant Droit : Arrêt d'urgence",
       "IsExpandable": false
     },
     {
-      "Description": "General stop from the Fleet Manager",
+      "Description": "Arrière Gauche : vitesse réduite",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Arrière Gauche : Vitesse nulle",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Arrière Gauche : Faute",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Arrière Gauche : OSSD 1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Arrière Gauche : OSSD 2",
       "IsExpandable": false
     },
     {
-      "Description": "",
-      "IsExpandable": false
-    },
-    {
-      "Description": "",
+      "Description": "Arrière Gauche : Arrêt d'urgence",
       "IsExpandable": false
     },
     {
@@ -136,8 +132,11 @@
     },
     {
       "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Redémmarage",
       "IsExpandable": false
     }
-  ],
-  "Language": "en"
+  ]
 }

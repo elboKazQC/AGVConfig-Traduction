@@ -2,48 +2,48 @@
   "Header": {
     "IdLevel0": 0,
     "IdLevel1": 0,
-    "IdLevel2": 255,
+    "IdLevel2": 3,
     "IdLevel3": 255,
     "Language": "fr",
-    "Filename": "faults_000_000_255_255_fr.json"
+    "Filename": "faults_000_000_003_255_fr.json.json"
   },
-  "Version": 2,
-  "LinkedVariable": "g_stFaultsVehicle_000_000_255_255_Safety_All",
+  "Version": 6,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_003_255_Safety_CONTACTOR",
   "FaultDetailList": [
     {
-      "Description": "Arrêt d'urgence PLC de sécurité",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Avertissement PLC sécurité",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Balayeur laser",
-      "IsExpandable": true
-    },
-    {
-      "Description": "Contacteurs",
-      "IsExpandable": true
-    },
-    {
-      "Description": "",
+      "Description": "Contacteur de puissance #1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Contacteur de puissance #2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Contacteur de puissance #3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Contacteur de puissance #4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Contacteur de précharge",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Frein roue droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Frein roue gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais STO #1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais STO #1",
       "IsExpandable": false
     },
     {

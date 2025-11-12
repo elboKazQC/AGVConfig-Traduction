@@ -5,10 +5,10 @@
     "IdLevel2": 0,
     "IdLevel3": 255,
     "Language": "fr",
-    "Filename": "faults_000_000_000_255_fr.json"
+    "Filename": "faults_000_000_000_255_fr.json.json"
   },
-  "Version": 5,
-  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_STD_PL",
+  "Version": 6,
+  "LinkedVariable": "g_stFaultsVehicle_000_000_000_255_Safety_CRITICAL",
   "FaultDetailList": [
     {
       "Description": "Version code sécurité non compatible",
@@ -23,11 +23,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Balayeur Laser",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton arrêt d'urgence à diatance enfoncé",
       "IsExpandable": false
     },
     {
@@ -39,7 +39,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Mouvement AMR non reconnue",
+      "Description": "Configuration constante de sécurité invalide",
       "IsExpandable": false
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Sélecteur de mouvement",
       "IsExpandable": false
     },
     {
@@ -59,19 +59,31 @@
       "IsExpandable": false
     },
     {
-      "Description": "Balayeur laser ralentissement avant gauche",
+      "Description": "",
       "IsExpandable": false
     },
     {
-      "Description": "Balayeur laser ralentissement arrière droite",
+      "Description": "PLC Standard",
       "IsExpandable": false
     },
     {
-      "Description": "Balayeur laser arrêt avant gauche",
+      "Description": "Communication PLC SAFE et Standard",
       "IsExpandable": false
     },
     {
-      "Description": "Balayeur laser arrêt arrière droite",
+      "Description": "Délais de redémmarage atteint",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Commande moteur: désynchronisation de vitesse",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bouton arrêt d'urgence sur manette enfoncé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Arrêt général provenant du Gestionnaire de flotte",
       "IsExpandable": false
     },
     {
@@ -99,19 +111,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Balayeu laser arrêt d'urgence avant gauche",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Balayeu laser arrêt d'urgence arrière droite",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Encodeur : communication à gauche",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Encodeur : communication à droite",
+      "Description": "",
       "IsExpandable": false
     },
     {

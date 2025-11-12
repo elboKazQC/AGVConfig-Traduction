@@ -23,11 +23,11 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Escáner láser",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia a distancia presionado",
       "IsExpandable": false
     },
     {
@@ -39,7 +39,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Movimiento AMR no reconocido",
+      "Description": "Configuración constante de seguridad inválida",
       "IsExpandable": false
     },
     {
@@ -51,7 +51,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Selector de movimiento",
       "IsExpandable": false
     },
     {
@@ -59,19 +59,31 @@
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser de desaceleración delantero izquierdo",
+      "Description": "",
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser de desaceleración trasero derecho",
+      "Description": "Estándar PLC",
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser de parada delantero izquierdo",
+      "Description": "Comunicación PLC SEGURA y Estándar",
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser de parada trasera derecha",
+      "Description": "Se alcanzó el tiempo de reinicio",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Comando del motor: desincronización de velocidad",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Botón de parada de emergencia presionado en el controlador",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Parada general proveniente del Gestor de flota",
       "IsExpandable": false
     },
     {
@@ -99,19 +111,7 @@
       "IsExpandable": false
     },
     {
-      "Description": "Escáner láser izquierdo delantero parada de emergencia",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Escáner láser derecho trasero parada de emergencia",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Sensor: comunicación izquierda",
-      "IsExpandable": false
-    },
-    {
-      "Description": "Encoder: comunicación a la derecha",
+      "Description": "",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }
