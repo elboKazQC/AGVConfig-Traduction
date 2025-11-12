@@ -11,39 +11,39 @@
   "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_STD_MiniPL",
   "FaultDetailList": [
     {
-      "Description": "",
+      "Description": "Redémarrage bientot nécessaire",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence #1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence #2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence #3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence #4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence à distance",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Bouton d'arrêt d'urgence manette",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Temps de décélération contrôlée dépassé",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Temps de décélération par friction dépassé",
       "IsExpandable": false
     },
     {

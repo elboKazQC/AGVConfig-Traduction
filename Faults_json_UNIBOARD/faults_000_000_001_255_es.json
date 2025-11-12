@@ -8,42 +8,42 @@
     "Filename": "faults_000_000_001_255_es.json"
   },
   "Version": 1,
-  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_STD_MiniPL",
+  "LinkedVariable": "g_stFaultsVehicle_000_000_001_255_Safety_WARNING",
   "FaultDetailList": [
     {
-      "Description": "",
+      "Description": "Reinicio pronto necesario",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia #1",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia #2",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia #3",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia #4",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia remoto",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Botón de parada de emergencia del controlador",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Tiempo de desaceleración controlada excedido",
       "IsExpandable": false
     },
     {
-      "Description": "",
+      "Description": "Tiempo de desaceleración por fricción excedido",
       "IsExpandable": false
     },
     {
@@ -138,5 +138,6 @@
       "Description": "",
       "IsExpandable": false
     }
-  ]
+  ],
+  "Language": "es"
 }

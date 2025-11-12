@@ -15,8 +15,8 @@
       "IsExpandable": true
     },
     {
-      "Description": "",
-      "IsExpandable": false
+      "Description": "Avertissement PLC sécurité",
+      "IsExpandable": true
     },
     {
       "Description": "",
