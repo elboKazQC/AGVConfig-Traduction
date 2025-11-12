@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 0,
+    "IdLevel3": 10,
+    "Language": "es",
+    "Filename": "faults_000_007_000_010_es.json"
+  },
+  "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_000_010_Drive_Left_PAC425T100C_Fault10",
+  "FaultDetailList": [
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "parámetros del módulo motor: CódigoErrorBase_34 CódigoErrorSecundario_12",
+      "IsExpandable": false
+    }
+  ]
+}

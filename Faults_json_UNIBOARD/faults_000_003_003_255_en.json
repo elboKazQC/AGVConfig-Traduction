@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 3,
+    "IdLevel2": 3,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_003_003_255_en.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_003_003_255_Battery_03_48V60TRX",
+  "FaultDetailList": [
+    {
+      "Description": "Battery charge: High temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Low temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Overtemperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Overvoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Short circuit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Other charge fault",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: MOSFET temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Severe undervoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Communication with AFE failed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Secondary protection against equipment overvoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Reserved",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Pre-charge failure",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Pack parallelism error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Overcurrent charge protection (OCP)",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Pre-discharge failure",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery charge: Internal communication failure",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: High temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Low temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Overtemperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Undervoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Short circuit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Other discharge fault",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: MOSFET temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Severe undervoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Communication with AFE failed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Secondary protection against equipment overvoltage",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Reserved",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Reserved",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Pack parallelism error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Reserved",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Pre-discharge failure",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery discharge: Internal communication failure",
+      "IsExpandable": false
+    }
+  ]
+}

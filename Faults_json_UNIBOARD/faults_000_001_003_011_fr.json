@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 3,
+    "IdLevel3": 11,
+    "Language": "fr",
+    "Filename": "faults_000_001_003_011_fr.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_003_011_Accessory_CR512110_Faute11",
+  "FaultDetailList": [
+    {
+      "Description": "OverHeat",
+      "IsExpandable": false
+    },
+    {
+      "Description": "OverVolt",
+      "IsExpandable": false
+    },
+    {
+      "Description": "UnderVolt",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Short",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Estop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor Sensor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "MosFail",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Config",
+      "IsExpandable": false
+    },
+    {
+      "Description": "STO Fault",
+      "IsExpandable": false
+    },
+    {
+      "Description": "AmpLim",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Stall",
+      "IsExpandable": false
+    },
+    {
+      "Description": "LoopErr",
+      "IsExpandable": false
+    },
+    {
+      "Description": "QuickStop",
+      "IsExpandable": false
+    },
+    {
+      "Description": "FwdLimit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "RevLim",
+      "IsExpandable": false
+    },
+    {
+      "Description": "AmpTrig",
+      "IsExpandable": false
+    },
+    {
+      "Description": "FetsOff",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

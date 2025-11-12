@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 3,
+    "IdLevel3": 255,
+    "Language": "fr",
+    "Filename": "faults_000_001_003_255_fr.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_003_255_Accessory_CR512110",
+  "FaultDetailList": [
+    {
+      "Description": "Version code de sécurité non compatible",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Bouton d'arrêt d'urgence enfoncé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Erreur du véhicule",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Communication PLC-PLC_Safe",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Groupe Outputs",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Contacteurs de puissance",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Communication Accessoire-AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Capteur extrémité du convoyeur gauche",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Capteur extrémité du convoyeur droite",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Communication station externe DAD15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Signal de sécurité station externe BB10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Controlleur moteur du convoyeur",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Station externe",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Chargement du convoyeur",
+      "IsExpandable": true
+    },
+    {
+      "Description": "Pas de frein AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Commande non valide",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mauvaise position AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Pas de marqueur magnétique détecté",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

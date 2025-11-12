@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 0,
+    "IdLevel3": 30,
+    "Language": "es",
+    "Filename": "faults_000_001_000_030_es.json"
+  },
+  "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_000_030_Accessory_CSTE2010E_Faute30",
+  "FaultDetailList": [
+    {
+      "Description": "El comando del motor se da a través de una interfaz serie.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La orden del motor se da a través de una entrada de pulso.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "La orden del motor se da a través de una entrada analógica.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "bloqueo en uno de los canales del motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "límite de marcha adelante o atrás activado en uno de los canales del motor",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Las dos entradas STO están a tierra.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Ejecutar script",
+      "IsExpandable": false
+    },
+    {
+      "Description": "El proceso de configuración del motor/sensor se está ejecutando.",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

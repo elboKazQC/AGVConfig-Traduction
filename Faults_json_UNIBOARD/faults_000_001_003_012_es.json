@@ -1,0 +1,110 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Transportador fijo no listo"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Estación ocupada"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Comunicación con AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Posición AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Posición incorrecta de la paleta"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Ver fallo AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Esperando reinicio"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Reinicio enviado"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Parada de emergencia"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "es"
+}

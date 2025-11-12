@@ -1,0 +1,118 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Overheat"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "OverVolt"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "UnderVoltage"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Short"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Emergency stop"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Motor sensor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "MosFail"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Config"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "STO fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "AmpLim"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Stall"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Loop error"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "QuickStop"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "FwdLimit"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "RevLim"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "AmpTrig"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "FetsOff"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

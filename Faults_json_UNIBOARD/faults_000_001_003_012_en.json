@@ -1,0 +1,110 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Fixed conveyor not ready"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Station occupied"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Communication with AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "AMR position"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Incorrect pallet position"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "See AMR fault"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Waiting for reset"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Reset sent"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Emergency stop"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

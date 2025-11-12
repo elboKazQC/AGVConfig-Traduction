@@ -1,0 +1,118 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Sobrecalentamiento"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "OverVolt"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "BajoVolt"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Corto"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Parada de emergencia"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Sensor de motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "FalloMos"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Configuración"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Fallo de STO"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "AmpLim"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Parada"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Error de bucle"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Parada rápida"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "LímiteAdelante"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "RevLim"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "AmpTrig"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "FetsOff"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "es"
+}

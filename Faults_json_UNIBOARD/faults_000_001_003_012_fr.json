@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 3,
+    "IdLevel3": 12,
+    "Language": "fr",
+    "Filename": "faults_000_001_003_012_fr.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_003_012_Accessory_CR512110_Faute12",
+  "FaultDetailList": [
+    {
+      "Description": "Convoyeur fixe non pret",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Station occupée",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Communication avec AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Position AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Mauvaise position palette",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Voir Faute AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Attente de réarmement",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Reset envoyé",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Arrêt d'urgence",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "48V motor controller power supply"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "0V motor controller power supply"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Precharge power supply motor controller"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Motor controller electronic power supply"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Motor brake power supply"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "STO relay 1 motor controller"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "STO relay 2 motor controller"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "E-stop relay 1 to AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "E-stop relay 2 to AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Stop relay to AMR"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

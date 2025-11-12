@@ -1,0 +1,107 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Width position"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Width dimension"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Position length"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Length dimension"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Pallet weight"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Stuck loading"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

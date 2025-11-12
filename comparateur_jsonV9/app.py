@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, ttk, messagebox
 import os
+import sys
 import json
 from json.decoder import JSONDecodeError
 import subprocess
@@ -920,8 +921,10 @@ class FaultEditor:
             # Obtenir le chemin du dossier contenant app.py
             script_dir = os.path.dirname(os.path.abspath(__file__))
 
-            # Modifier la commande pour inclure le chemin complet du script
+            # Modifier la commande pour utiliser le Python de l'environnement virtuel
             if cmd[0] == "python":
+                # Utiliser sys.executable pour obtenir le Python actuel (de l'environnement virtuel)
+                cmd[0] = sys.executable
                 cmd[1] = os.path.join(script_dir, cmd[1])
 
             self.status.config(text=f"⏳ Exécution : {desc} ...")
@@ -949,6 +952,13 @@ class FaultEditor:
             if result.returncode == 0:
                 logger.info(f"Commande terminée avec succès: {desc}")
                 logger.debug(f"Sortie de la commande:\n{result.stdout}")
+
+                # Rafraîchir la liste des fichiers si c'est une synchronisation ou génération
+                if "Synchroniser" in desc or "Générer" in desc or "manquants" in desc:
+                    if self.base_dir:
+                        logger.info("Rafraîchissement de la liste des fichiers après synchronisation")
+                        self.initialize_file_map(self.base_dir)
+                        print("🔄 Liste des fichiers rafraîchie")
 
                 # Analyser la sortie pour voir si des traductions ont été effectuées
                 success_indicators = ["✅", "🎉", "mis à jour", "terminée avec succès"]
@@ -1407,7 +1417,8 @@ class FaultEditor:
             dot = tk.Canvas(row, width=14, height=14, bg=COL_BG_ROW, highlightthickness=0)
             dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
             dot.pack(side="left", padx=(6, 8))
-            label_text = f"{idx}: {fault.get('Description', '(vide)')}"
+            description = fault.get('Description', '')
+            label_text = f"{idx}: {description}" if description else f"{idx}:"
             label = tk.Label(row, text=label_text, fg=COL_FG_TEXT, bg=COL_BG_ROW,
                              anchor="w", font=FONT_DEFAULT)
             label.pack(side="left", fill="x", expand=True)
@@ -1429,7 +1440,8 @@ class FaultEditor:
         dot = tk.Canvas(row, width=14, height=14, bg=COL_BG_ROW, highlightthickness=0)
         dot.create_oval(2, 2, 12, 12, fill=color, outline=color)
         dot.pack(side="left", padx=(6,8))
-        label_text = f"{idx}: {fault.get('Description', '(vide)')}"
+        description = fault.get('Description', '')
+        label_text = f"{idx}: {description}" if description else f"{idx}:"
         label = tk.Label(row, text=label_text, fg=COL_FG_TEXT, bg=COL_BG_ROW, anchor="w", font=FONT_DEFAULT)
         label.pack(side="left", fill="x", expand=True)
         label.bind("<Button-1>", partial(self.handle_single_click, fault, idx, path, level, filename))

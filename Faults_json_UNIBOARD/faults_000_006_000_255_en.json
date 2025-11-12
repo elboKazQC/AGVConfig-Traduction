@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 6,
+    "IdLevel2": 0,
+    "IdLevel3": 255,
+    "Language": "en",
+    "Filename": "faults_000_006_000_255_en.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_006_000_255_Charger_EtaLink3000",
+  "FaultDetailList": [
+    {
+      "Description": "Temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Communication CRC error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery temperature error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Precharge software timeout error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "CAN communication timeout error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network voltage error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Coil error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature sensor error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Incorrect positioning error",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fan warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Battery downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Positioning error warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network voltage downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Network power downgrade warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Temperature derating status warning",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

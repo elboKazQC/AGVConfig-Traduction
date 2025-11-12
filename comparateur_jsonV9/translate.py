@@ -3,8 +3,8 @@ from openai import OpenAI, OpenAIError
 from dotenv import load_dotenv
 import traceback
 
-# Chargement direct du fichier .env
-env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+# Chargement direct du fichier .env dans le même dossier que ce script
+env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
 # Récupération de la clé API

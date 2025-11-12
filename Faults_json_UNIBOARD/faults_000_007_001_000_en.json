@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 0,
+    "Language": "en",
+    "Filename": "faults_000_007_001_000_en.json"
+  },
+  "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_000_Drive_Right_PAC425T100C_Fault00",
+  "FaultDetailList": [
+    {
+      "Description": "Torque limit due to the controller temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to motor temperature",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the current limit of the performance table",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the time current limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to I2T current limit step 1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to I2T current limit step 2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to I2T current limit step 3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to high voltage limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to low voltage limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the handbrake limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to advanced mode SPD1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to advanced mode SPD2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the maximum current limit of the battery",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit due to the battery regeneration current limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit to maintain speed limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "No torque during braking limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Hill hold torque",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit in advanced mode and AI",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit in AI mode",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit CAN",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor torque limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Torque limit speed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain torque",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain speed",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain the flow",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain flux current",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain circle limitation",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to maintain hexagonal limit",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor circular limitation",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Motor unable to position",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

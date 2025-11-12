@@ -1,0 +1,119 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Incompatible security code version"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Emergency stop button pressed"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Vehicle error"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "PLC-PLC_Safe communication"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Outputs Group"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Power contactors"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Accessory Communication-AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "left conveyor end sensor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "right conveyor end sensor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "External communication station DAD15"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "External safety signal BB10"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Conveyor motor controller"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "External station"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Conveyor loading"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "No brake AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Invalid command"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Wrong AMR position"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "No magnetic marker detected"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "en"
+}

@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 1,
+    "IdLevel2": 3,
+    "IdLevel3": 5,
+    "Language": "fr",
+    "Filename": "faults_000_001_003_005_fr.json"
+  },
+  "Version": 2,
+  "LinkedVariable": "g_stFaultsVehicle_000_001_003_005_Accessory_CR512110_Faute05",
+  "FaultDetailList": [
+    {
+      "Description": "Alimentation 48V controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alimentation 0V controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alimentation précharge controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alimentation électronique controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Alimentation frein moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais STO 1 controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais STO 2 controlleur moteur",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais Estop 1 vers AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais Estop 2 vers AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Relais arret vers AMR",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    },
+    {
+      "Description": "",
+      "IsExpandable": false
+    }
+  ]
+}

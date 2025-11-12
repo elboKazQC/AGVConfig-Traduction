@@ -1,0 +1,119 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Código de versión de seguridad no compatible"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Botón de parada de emergencia presionado"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Error del vehículo"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Comunicación PLC-PLC_Seguro"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Grupo de Salidas"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Contactores de potencia"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Comunicación Accesorio-AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Sensor de extremo de la cinta transportadora izquierda"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Sensor de extremo de la cinta transportadora derecha"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Comunicación estación externa DAD15"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Señal de seguridad estación externa BB10"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Controlador del motor del transportador"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Estación externa"
+    },
+    {
+      "IsExpandable": true,
+      "Description": "Carga del transportador"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Sin freno AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Comando no válido"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Posición incorrecta del AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "No se detectó marcador magnético."
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "es"
+}

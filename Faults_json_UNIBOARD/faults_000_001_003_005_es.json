@@ -1,0 +1,111 @@
+{
+  "FaultDetailList": [
+    {
+      "IsExpandable": false,
+      "Description": "Alimentación 48V controlador motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Alimentación 0V controlador motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Alimentación de pre carga controlador de motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Alimentación electrónica controlador motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Alimentación freno motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé STO 1 controlador de motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé STO 2 controlador de motor"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé Estop 1 hacia AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé de parada de emergencia 2 hacia AMR"
+    },
+    {
+      "IsExpandable": false,
+      "Description": "Relé de parada hacia AMR"
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    },
+    {
+      "IsExpandable": false
+    }
+  ],
+  "Language": "es"
+}

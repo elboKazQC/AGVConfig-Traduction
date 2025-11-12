@@ -1,0 +1,142 @@
+{
+    "Header": {
+        "IdLevel0": 0,
+        "IdLevel1": 1,
+        "IdLevel2": 2,
+        "IdLevel3": 255,
+        "Language": "es",
+        "Filename": "faults_000_001_002_255_es.json"
+    },
+    "Version": 2,
+    "LinkedVariable": "g_stFaultsVehicle_000_001_002_255_Accessory_MiniPL_LiftingPlatform",
+    "FaultDetailList": [
+        {
+            "Description": "Actualización de estado general",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Modo AGV: Parada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Detección inductiva delantera no disponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Detección inductiva trasera no disponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Elevación: Detección láser delantera no disponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Elevación: Detección láser trasera no disponible",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Detección túnel: Alerta de parada",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo posición actuador delantero",
+            "IsExpandable": false
+        },
+        {
+            "Description": "Fallo posición actuador trasero",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        },
+        {
+            "Description": "",
+            "IsExpandable": false
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+  "Header": {
+    "IdLevel0": 0,
+    "IdLevel1": 7,
+    "IdLevel2": 1,
+    "IdLevel3": 9,
+    "Language": "es",
+    "Filename": "faults_000_007_001_009_es.json"
+  },
+  "Version": 1,
+  "LinkedVariable": "g_stFaultsVehicle_000_007_001_009_Drive_Right_PAC425T100C_Fault09",
+  "FaultDetailList": [
+    {
+      "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "Fallo del motor: CódigoErrorBase_31 CódigoErrorSecundario_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo del motor: CódigoErrorBase_32 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_5",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_6",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_7",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_8",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_9",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_10",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_11",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_12",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_13",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_14",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_15",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_16",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_17",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_18",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_19",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_20",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_21",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_22",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_23",
+      "IsExpandable": false
+    },
+    {
+      "Description": "inicialización del módulo motor: CódigoErrorBase_32 CódigoErrorSecundario_24",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_1",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_2",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_3",
+      "IsExpandable": false
+    },
+    {
+      "Description": "configuración del módulo motor: CódigoErrorBase_33 CódigoErrorSecundario_4",
+      "IsExpandable": false
+    }
+  ]
+}
